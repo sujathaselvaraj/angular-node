@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</div>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Input</title>
+</head>
+<body>
+    <div>
+        <form>
+            <div>
+                <label>Name</label>
+                <input title="Login User name" name="User Name" required minlength="5" required maxlength="100" size="10">
+</div>
+<div>
+    <label>Password</label>
+    <input id="Password" type="password" pattern="[A-Za-z"]*[0-9[A-za-z]*" minlength="8" title="password must begin with letter and contain at least one digit and have atleast 8 char"/>  >
+
+</div>
+<div>
+    <label>Email Id</label>
+    <input title="Email Id" id="Email" type="email">
+</div>
+
+            <div>
+                <label>
+                    <input title="Enter your date of birth" id="date" type="date"/>
+                    <input title="Enter date and time" id="datetime-local" type="datetime-local"/>
+                    <input title="Enter time here" id="time" type="time"/>
+                    <input title="Enter the week of the year" id="week" type="week"/>
+                    <input title="status" id="color" type="color"/>
+                </label>
+            </div><div><label>Years of Experience</label>
+                    <input title="status" id="year" type="number" min=1 max=40 step=1 maxlength="3"/>
+                </div>
+            <div>
+                <label>range</label>
+                    <input id="range" type="range" step=10/>
+
+                
+            </div>
+            
+            
+
+            <div>
+                <label>telephone</label>
+                    <input type="tel" name="telid" required pattern="[0-9]{3}[0-9]{3}" placeholder="123-456-678"/>
+
+                
+            </div>
+            <div>
+                <label>Hobbies</label>
+                <input title="hobby" name="checkbox" checkes="true" name="items" value="Reading">Reading</input>
+    <input title="option1" type="checkbox" name="items" value="Music">Music</input>
+    <input title="option2" type="checkbox" name="items" value="Dance">Dance</input>
+</div>
+<div>
+    <label>Hidden content</label>
+    <input id="hid" type="hidden"/>
+
+</div>
+<div>
+    <label>Url</label>
+    <input title="Enter url" id="url" type="url"/>
+    
+</div>
+<div>
+    <label>comments</label>
+    <textarea title="Enter your comment here" id="comment" col="50" rows="5"/>comments</textarea>
+    
+</div>
+<div>
+    <label>Select course</label>
+    <select name="course list" title="Select a course">
+        <option selected>---Selected a value---</option>
+        <option>HTML</option>
+        <option>Java</option>
+        <option>Bootstrap</option>
+        <optgroup label="database">
+            <option>SQL</option>
+            <option>Oracle</option>
+            <option>MySQL</option>
+        </optgroup>
+    </select>
+</div><div>
+    <label>Photo</label>
+    <input placeholder="file" id="file" type="file" accept="audio/*,video/*,image/*"/>
+</div><div><input type="submit">
+</div>
+
+
+
+    </form>
+
+
+    
+</body>
+</html>
