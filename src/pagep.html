@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script DOM Learning</title>
+    <style>
+        .green{
+            background-color: green
+        }
+            li.yellow{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="friday">Tommorrow is a holiday
+    </div>
+   <div id="div01" class='green'>Hello world</div>
+   <h1>My Title</h1>
+   <p>The world is wonderful</p>
+   <ul>
+       <li class="green">List1</li>
+       <li>List2</li>
+       <li class="yellow">List3</li>
+       <li>List4</li>
+   </ul>
+   <p>
+       <img alt="TajMahal"
+       src="../images/wonder.jpg" width="200" height="230">
+   </p>
+   <p><input title="Enter your Name" type="text" id="txtName" id="txtName" value="Beautiful"
+    onchange="myfun()"/></p>
+   <script>
+    //    var listItems = document.getElementsByClassName('green')
+    //    for(var i=0;i<listItems.length;i++)
+    //    {
+    //     listItems[i].innerHTML="green color text updated";
+    //    }
+
+       
+    //    console.dir(document.querySelector('li'));
+    //    console.dir(document.querySelectorAll('li'));
+    //    console.dir(document.querySelector('ul>li'));
+    //    console.dir(document.querySelector('div'));
+    //    console.dir(document.querySelector('#div01'));
+    //    console.dir(document.querySelector('green'));
+    //    console.dir(document.querySelectorAll('div'));
+    //    document.getElementById("div01").style.color='purple'
+    //    console.dir(document.getElementsByClassName('green'));
+
+const arr=[1,2,3,4,5,6];
+console.log(arr);
+const strArr=JSON.stringify(arr);
+console.log(strArr);
+const myObj={ firstname:'myfirstname',lastname:'mylastname'};
+const strjson=JSON.stringify(myObj);
+console.log(strjson);
+var javastudentlist={"studentlist":[
+{"name":"Aji","age":"22"},
+{"name":"Suja","age":"22"},
+{"name":"Suji","age":"22"}
+    ]
+};
+console.log(javastudentlist);
+const arr1=JSON.parse(strjson);
+console.log(arr1);
+function myfun()
+{
+document.getElementById("div01").innerText=document.getElementById("txtName").value;
+document.getElementById("div01").style.color='purple'
+var output = document.getElementById('div01');
+output.style.backgroundColor="red";
+output.style.border="3px solid orange";
+}
+   </script>
+   </body>
+
+   </html>
+  <!-- <script>
+       document.getElementById("div01").innerHTML="Hello World Updated";
+       var a=document.getElementById("txtName");
+       console.log(a.value);
+       var listItems = document.getElementsByTagName('li') 
+       for(var i=0;i<listItems.length;i++)
+       {
+          listItems[i].innerHTML="item"+(i+1);
+       }
+       listItems[2].innerHTML="updated text";
+       var imglist=document.getElementsByTagName('img')
+       imglist[0].src="../images/food.jpg"
+   </script> 
+    <script>
+       console.dir(document);
+       console.log(document.URL);
+       console.dir(document.children[0]);
+       console.dir(document.children[0].children[1]);
+       console.dir(document.children[0].children[1].childNodes);
+
+   </script>->
