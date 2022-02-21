@@ -10,12 +10,41 @@
 <style>
     hr {
       width: 100%;
-      height: 30px;
+      height: 20px;
       margin-left: auto;
       margin-right: auto;
       background-color: pink;
     }
-  </style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: purple;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: purple;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+
 
 
 <body background="D:\htmlrepo\angular-node\images\images (1).jpg">
@@ -40,15 +69,14 @@
         <nav align="right">
             <a href="mailto:ajitha230700@gmil.com">Click here to mail</a><br>
             <a href="tel:+6385300519">0122237800</a>
-            <hr color="purple" paddind:"10px">
 
-            <div id="product" align="right">
-                <input type="button" onclick="window.location.href='product_landing_page.html';">Back</input><input
-                    type="button" onclick="window.location ='#exam_kit';">Exam Kit</input><input type="button"
-                    onclick="window.location ='#arts';">Arts</input> <input type="button"
-                    onclick="window.location ='#others';">Others</input>
+            <div class="topnav" id="product" align="right">
+                <a href="pen_product_launching.html">Back</a>
+                 <a href="#exam_kit">Exam Kit</a>
+                <a href ="#arts">Arts</a>
+                <a href ="#others">Others</a>
             </div>
-            <hr color="purple">
+
 
             <div id="exam_kit" align="center">
                 <h1>Exam Kit</h1>
@@ -66,7 +94,7 @@
                     <h2>Smothest of Leads<br>Comfortable to Hold<br>Rounded Edges-Made in 5 Degree</h2>
                     </p></a>
                 </div>
-                <h1 align="center"><i>Erase</i>r</h1>
+                <h1 align="center"><i>Eraser</i>r</h1>
                 <div align="center"><img src="../images/eraser.jpg" alt="Eraser" width="300" height="300">
                     <p>
                     <h2>Atleast Some mistakes We can Correct<br><a href="../images/combo_eraser.jpg">Combo offer</a>
@@ -195,7 +223,8 @@
             </div>
             <hr color="purple">
             <div align="left">
-                <input type="button" onclick="window.location.href='product_landing_page.html';">Back</input>
+             <a href ="#home">Back</a>
+                
             </div>            
             <hr color="purple">
                         

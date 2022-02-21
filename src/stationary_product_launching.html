@@ -13,7 +13,35 @@
       margin-left: auto;
       margin-right: auto;
       background-color: pink;
-    }
+    }body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: purple;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: purple;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
   </style>
 <body background="../images/color.jpg">
     <div id="home">
@@ -24,14 +52,12 @@
         <a href="mailto:ajitha230700@gmil.com">Click here to mail</a><br>
                     <a href="tel:+6385300519">0122237800</a>
     </nav>
-    <hr color="purple">
        
-       <div align="right">
+       <div class="topnav" id="product" align="right" align="right">
            
         <br>
             <input class="menu" type="button" onclick="window.location ='#home';">Home</input><input class="menu" type="button" onclick="window.location.href='menu-about.html';">About Us</input><input class="menu" type="button" onclick="window.location.href='menu-product.html';">Product</input> <input class="menu" type="button" onclick="window.location.href='menu-contact.html';">Contact</input>
         <br>
-        <hr color="purple">
         </div>
         <h1 align="center">Stationery Makes Everything Better.</h1>
         <div align="center"><image src="../images/stationery.jpeg" alt="Stationery Items" width="500" height="420"></image></div>
