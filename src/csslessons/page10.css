@@ -1,0 +1,34 @@
+h2{
+    background-color: green;
+    color: white;
+}
+h3{
+    background-color: blue;
+    color: black;
+}h1,h3{
+
+    color: black;
+}
+ul li{
+    color:red;
+}
+ul>li{
+    color:blue
+}
+li{
+    color:green;
+}
+.item{
+    color:pink;
+}
+#list-items{
+    color:aqua;
+}
+input[type="email"]
+{
+    background-color: yellowgreen;
+}
+input[type="date"]
+{
+    background-color: mediumvioletred;
+}
