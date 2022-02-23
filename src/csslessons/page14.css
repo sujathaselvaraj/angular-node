@@ -5,14 +5,14 @@ a:link{
 }
 a:visited
 {
-    color:aquamarine;
+    color:red;
 }
 a:hover
 {
     color:blue;
 }a:active
 {
-    color:aquamarine;
+    color:green;
 }
 .dropdown-content a{
     display:none;
