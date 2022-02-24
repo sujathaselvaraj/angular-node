@@ -50,7 +50,7 @@
         color: hsl(223, 47%, 23%);
     } 
     .music{
-        border-radius: 12px;
+        border-radius: 4px;
         height: 60px;
         width:80%;
         justify-content: center;
@@ -75,7 +75,7 @@
 
     }
     .change{
-        color:  hsl(224, 23%, 55%);
+        color:  blue;
             padding-left: 5px ;
             display: inline-block;
             width: 70px ;
@@ -83,19 +83,36 @@
             padding: 2px;
             justify-content: right;
         }
-        .payment{
+        /* .payment{
             color: white;
             font-size: smaller;
             border-width: 15px;
-            border-radius: 10px;
+            border-radius: 4px;
             height: 30px;
             width:80%;
             justify-content: center;
-            margin: auto;
             background-color:   blueviolet;
+        }*/
+        .payment{
+            color: white;
+            background-color: blue;
+            border-color: blue;
+            border-radius: 8px;
+            height: 30px;
+            width:80%;
+            box-shadow:  5px 10px 20px hsl(245, 75%, 90%);
+            color:white;
         }
         .cancel{
-            color: hsl(223, 47%, 23%);
+            color: blue;
+            background-color: white;
+            border-radius: 8px;
+            border-color: aliceblue;
+            height: 30px;
+            width:80%;
+        }
+        /* .cancel{
+            color: blueviolet;
             font-size: smaller;
             border-width: 15px;
             border-radius: 4px;
@@ -104,4 +121,18 @@
             justify-content: center;
             margin: auto;
             background-color:   white;
-        }
+        } */
+        a:hover{
+            color: red;
+        cursor: pointer;
+    opacity: 0.7;
+    text-decoration: underline;
+}
+.cancel:hover{
+    color: red;
+    cursor: pointer;
+}
+.payment:hover{
+    color: yellow;
+    cursor: pointer;
+}
