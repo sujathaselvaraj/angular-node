@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Red+Hat+Display:ital,wght@0,500;0,700;1,500;1,900&display=swap');
+    /* .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); } */
+    body {
+        background-color:  hsl(225, 100%, 94%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        font-family: 'Outfit', sans-serif;
+        font-family: 'Red Hat Display', sans-serif;
+    }
+    .bg_clr{
+        height: 150vh;
+        width: 350ch
+    }
+    .container {
+        position: relative;
+        background: hsl(0, 0%, 100%);
+        text-align: center;
+        margin: -20em auto;
+        border-radius: 18px;
+        max-width: 320px;
+        height: 90vh;
+    }
+    img {
+        border-radius: 15px;
+        display:flex;
+        width: 100%;
+        max-width: 100%;
+        padding-top: 0px;
+        margin: 1em auto;
+        height: 40%;    
+    }
+    h2{
+        margin: auto;
+        font-size: 1.2em;
+        color: hsl(223, 47%, 23%);
+        padding-right: 2%;
+        padding-left: 2%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+    p{ padding-right: 2%;
+        padding-left: 2%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        margin: auto;
+        font-size: 15px;
+        color: hsl(223, 47%, 23%);
+    } 
+    .music{
+        border-radius: 12px;
+        height: 60px;
+        width:80%;
+        justify-content: center;
+        margin: auto;
+        background-color: hsl(225, 100%, 98%);
+    }
+    .img_mus{
+        display: inline-block;
+        border-radius: 18%;
+        float:left;
+        width: 50px ;
+        height: 55px;
+        padding: 2px;
+        justify-content: flex-start;
+    }
+    .text{
+        display: inline-block;
+        width: 100px ;
+        height: 55px;
+        padding: 2px;
+        justify-content: center;
+
+    }
+    .change{
+        color:  hsl(224, 23%, 55%);
+            padding-left: 5px ;
+            display: inline-block;
+            width: 70px ;
+            height: 30px;
+            padding: 2px;
+            justify-content: right;
+        }
+        .payment{
+            color: white;
+            font-size: smaller;
+            border-width: 15px;
+            border-radius: 10px;
+            height: 30px;
+            width:80%;
+            justify-content: center;
+            margin: auto;
+            background-color:   blueviolet;
+        }
+        .cancel{
+            color: hsl(223, 47%, 23%);
+            font-size: smaller;
+            border-width: 15px;
+            border-radius: 4px;
+            height: 30px;
+            width:80%;
+            justify-content: center;
+            margin: auto;
+            background-color:   white;
+        }
