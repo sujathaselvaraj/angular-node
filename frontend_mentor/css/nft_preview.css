@@ -2,8 +2,9 @@
 body {
     background: hsl(0, 0%, 100%);
     display: flex;
-    min-height: 130vh;
+    min-height: 97vh;
     font-family: 'Outfit', sans-serif;
+    align-content: center;
 }
 
 img {
@@ -21,8 +22,8 @@ img {
     margin: auto;
     border: 5px;
     border-radius: 18px;
-    max-width: 340px;
-    height: 90vh;
+    max-width: 300px;
+    height: 80vh;
 }
 
 .box{
@@ -39,8 +40,9 @@ h3{
 .text4
     {
         color: hsl(215, 51%, 70%);
-        font-size: 19px;
+        font-size: 15px;
         text-align: right;
+        float: inline-end;
     
     }
 
@@ -52,11 +54,12 @@ h3{
     padding-left: 15px;
     color:  hsl(178, 100%, 50%);
     align-content: left;
+    float: inline-start;
 }
 .text{
     padding-left: 5px;
     color:  hsl(220, 15%, 55%);
-    font-size: 19px;
+    font-size: 15px;
 }
 .pic
 {
@@ -70,7 +73,6 @@ h3{
     border-color: hsl(0, 0%, 100%);
 }
 .footer{
-    padding-top: 16px;
+    max-height:  15px;
 }
-
       
