@@ -14,15 +14,6 @@
   
 </head>
 <body>
-    <script>
-        var slider = document.getElementById("myRange");
-        var output = document.getElementById("demo");
-        output.innerHTML = slider.value;
-        
-        slider.oninput = function() {
-          output.innerHTML = this.value;
-        }
-        </script>
     <main class="container">
     <img src="../image_frontend/bg-desktop.png"  class="bg_img">
     <div class="shape">
@@ -45,8 +36,11 @@
                     <th><div class="shape2">
                         <p>You’ve used 815 GB of your storage</p>
                         <div class="slidecontainer">
-                            <input type="range" min="0"GB max="1000" value="myRange" class="slider">
-                            <p>GB left <span id="demo"></span></p>
+                            <input type="range" min="0"GB max="1000" value="815" class="slider">
+                            <span class="value">
+                                <span class="zero">0 GB</span>
+                                <span class="thous">1000 GB</span>
+                            </span>
                     </div></th>
                 </tr>
         </table>
