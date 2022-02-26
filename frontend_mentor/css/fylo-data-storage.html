@@ -1,56 +1,51 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Fylo data storage component</title>
-  <link rel="stylesheet" href="fylo-data-strorage.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  
+    <title>Fylo data storage component</title>
+    <link rel="stylesheet" href="fylo-data-strorage.css">
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
 </head>
-<body>
-    <main class="container">
-    <img src="../image_frontend/bg-desktop.png"  class="bg_img">
-    <div class="shape">
-        <table>
-                <tr>
-                    <th><div class="shape1">
-                        <header><img src="../image_frontend/logo.svg"></header>
-                        <div><table><tr>
-                            <th><img src="../image_frontend/icon-document.svg"></th>
-                            <th><img src="../image_frontend/icon-folder.svg"></th>
-                            <th><img src="../image_frontend/icon-upload.svg"></th>
-                        </tr></table></div>
-                    </div></th>
-                    <th><div class="space">&#32;</div></th>
-                    <th><div class="space">&#32;</div></th>
-                    <th><div class="space">&#32;</div></th>
-                    <th><div class="space">&#32;</div></th>
-                    <th><div class="space">&#32;</div></th>
-                    <th><div class="space">&#32;</div></th>
-                    <th><div class="shape2">
-                        <p>You’ve used 815 GB of your storage</p>
-                        <div class="slidecontainer">
-                            <input type="range" min="0"GB max="1000" value="815" class="slider">
-                            <span class="value">
-                                <span class="zero">0 GB</span>
-                                <span class="thous">1000 GB</span>
-                            </span>
-                    </div></th>
-                </tr>
-        </table>
-    </div>
-    <!-- 
 
-  185 GB Left
-  
-  0 GB
-  1000 GB -->
-</main>
+<body>
+    <section>
+        <div class="shape">
+            <div class="shape1">
+
+                <div class="logo" ><img src="../image_frontend/logo.svg"></div>
+                <div class="icon">
+                <div class="document">
+                    <img src="../image_frontend/icon-document.svg">
+                </div>
+                <div class="folder"> <img src="../image_frontend/icon-folder.svg"></div>
+                <div class="upload"><img src="../image_frontend/icon-upload.svg"></div>
+            </div>
+        </div>
+    </div>
+        <div class="shape2">
+            <div class="text">You’ve used 815 GB of your storage</div>
+            <div class="slidecontainer">
+                <input type="range" min="0"GB max="1000" value="815" class="slider">
+            </div><div class="bubble">
+                <div class="storage">
+                  <span class="msg"> 185</span> GB LEFT
+                </div>
+              </div>
+
+            <div class="limit">
+                <p>0GB</p>
+                <p>1000GB</p>
+            </div>
+        </div>
+    </section>
 </body>
+
 </html>
