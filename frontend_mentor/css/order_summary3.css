@@ -21,7 +21,7 @@ html,body{
 }
 body{
     min-height: 100vh;
-    background-color: var(--background-color)
+    background-color: var(--background-color);
     background-image: url("frontend_mentor\image_frontend\pattern-background-desktop.svg");
     background-repeat: no-repeat;
     background-size: contain;
@@ -127,7 +127,7 @@ margin: top 3rem;
     font-family: var(--main-font);
     width: 80%;
     min-width: 80%;
-    padding: :1rem;
+    padding: 1rem;
     margin-top: 2rem;
     border: transparent;
     box-shadow: var(--btn-box-shadow);
