@@ -8,19 +8,19 @@ font-family: 'Raleway', sans-serif;
 font-family: 'Red Hat Display', sans-serif;
 font-family: 'Rubik', sans-serif;
 font-size: 18px;
+background-color: aliceblue;
 background-position: center center;
 background-size: cover;
 margin: 3px;
 text-align: center;
+
 /* max-width: 1200px;
 max-height: 1200vh;
 justify-content: center; */
 
 }
 header{
-    height: 35vh;
-    background-color: gold;
-    
+    height: 35vh;    
 }
 .logo{
     float: left;
@@ -54,7 +54,8 @@ header{
           align-items: center;
           border: 30px;
           height: 100vh;
-          background-color: blue;
+background-color: rgb(221, 243, 243);
+
       }
       .one{
           margin-top: 12vh;
@@ -65,7 +66,6 @@ header{
         align-items: center;
         border: 30px;
         height: 50vh;
-        background-color: purple;
         margin-top: 5vh;
     }
     .left{
@@ -75,7 +75,6 @@ header{
         margin-top: 50px;
         margin-left: 150px;
         justify-content: center;
-        background-color: aqua;
 
     }
     .right{
@@ -92,12 +91,19 @@ header{
         font-size: 100px;
         justify-content: center;
     }
-    .fifth{
+    .fifth_top{
         margin: 20px;
+    }
+    .fifth{
+      
+        margin-top: -10px;
         /* width: 100%; */
         height: 70vh;
         margin: 80px;
-        border: 5px solid rgb(167, 164, 164);
+        background-color: rgb(221, 243, 243);
+    }
+    .fifth_bot{
+        margin-top: -10px;
     }
     .left5{
         float:left;
@@ -111,3 +117,133 @@ header{
         width: 50%;
         height: 70vh;
     }
+    .four{
+        margin: 20px;
+        /* width: 100%; */
+        height: 70vh;
+        margin: 80px;
+    }
+    .right4{
+        float:right;
+        width:40%;
+        height: 30vh;
+        margin-top: 25vh;
+        background-color: aliceblue;
+
+    }
+    .left4 .pic{
+        float:left;
+        width: 50%;
+        height: 70vh;
+    }
+    .five_top{
+        margin: 20px;
+    }
+    .five{
+        margin-top: -10px;
+        /* width: 100%; */
+        height: 80vh;
+        margin-right: 40px;
+        margin-left: 70px;
+        border: 5px;
+background-color: rgb(221, 243, 243);
+
+    }
+    .five_bot{
+        margin-top: -10px;
+    }
+    .left7{
+        float:left;
+        width:40%;
+        height: 30vh;
+        margin-top: 25vh;
+        margin-left: 40px;
+}
+    .right7 .pic{
+        float:right;
+        width: 50%;
+        height: 70vh;
+    }
+    .six{
+        width: 60%;
+        height: 20vh;
+        border-radius: 12px;
+        background-color: white;
+        justify-content: center;
+        justify-self: center;
+        margin-left: 300px;
+        margin-top: 100px;
+        /* position: relative; */
+    
+    }
+    footer{
+        /* margin-left: 80px; */
+        margin-top: -10px;
+        /* width:1200px; */
+        height:50vh;
+        background-color: hsl(192, 100%, 9%);
+        justify-self: baseline;
+        /* position: absolute;  */
+        font-size: large;
+}
+    .boxes{
+        list-style-type: none;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .boxes .foot{
+        width: 30%;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        margin: 30px;
+        border-radius: 5px;
+        color: white;
+        justify-content: left;
+}
+a:hover
+{
+    color:beige
+}
+.type
+{    width: 60%;
+    border-color: aliceblue;
+    margin:20px;
+    height: 5vh;
+    border-radius: 12px;
+    float: left;
+} 
+.last{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.sub{
+             float: right;
+            width: 200px;
+              height: 40px;
+              color: white;
+             background-color: hsl(322, 100%, 66%);
+              border-radius: 10px;
+              border: hsl(322, 100%, 66%);
+}
+.new{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    float:right;
+}
+.new .icon{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    margin: 4px;
+    border-radius: 5px;
+    justify-content: space-evenly;
+    background-color: white;
+    color: black;
+    
+}
+.footer_top{
+    margin-top: 100px;
+}
