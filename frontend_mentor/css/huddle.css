@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;1,600&family=Barlow+Semi+Condensed:ital,wght@0,500;1,600&family=Open+Sans:wght@400;700&family=Outfit:wght@300;400;600&family=Raleway:ital,wght@0,700;1,400&family=Red+Hat+Display:ital,wght@0,500;0,700;1,500;1,900&family=Rubik:ital,wght@0,400;1,500;1,700&display=swap');
+body{
+    font-family: 'Bai Jamjuree', sans-serif;
+font-family: 'Barlow Semi Condensed', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Outfit', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Red Hat Display', sans-serif;
+font-family: 'Rubik', sans-serif;
+font-size: 18px;
+background-position: center center;
+background-size: cover;
+text-align: left;
+/* max-width: 1200px;
+max-height: 1200vh;
+justify-content: center; */
+background-color: hsl(257, 71%, 41%);
+background-image: url("../image_frontend/bg-desktop.svg");
+background-repeat: no-repeat;
+color: white;
+
+}
+.top{
+    height:100px;
+    width:100%;
+}
+.logo{
+    margin: 30px;
+    float: left;
+    width: 200px;
+    height: 50px;
+}
+
+/* header{
+    height: 5vh;
+    background-color: rgb(222, 251, 252);
+    margin-top: 0%;
+}
+
+.container{
+    margin-top: 150px;
+}*/
+.box{
+    width: 100%;
+    height:60vh;
+    margin-top: 5vh;
+}
+.left{
+    margin-left: 30px;
+    width: 60%;
+    height: 60vh;
+    float: left;
+
+}
+.right{
+    width: 30%;
+    height: 60vh;
+    float:right;
+    padding: 10px;
+    margin-right: 5%;
+    justify-content: left;
+}
+.reg{
+    color: rgb(138, 43, 226) ;
+    background-color: white;
+    border-radius: 15px;
+    border-color: aliceblue;
+    height: 40px;
+    width:50%;
+}
+    /* margin-right: 10px; */
+
+/* .left{
+    width:50%;
+    height:60vh;
+    float: left;
+    margin-top: 25px;
+    margin-left: 40px;
+    justify-content: left;
+    margin-right: 2%;
+    background-color: brown;
+}
+.right{
+    width:40%;
+    height:70vh;
+    float: right;
+    margin: 50px;
+    background-color: beige;
+}
+.left .image{
+    height: 90%;
+    width: 90%
+} */
+.new{
+    margin-top: 50px;
+    list-style-type: none;
+    display: flex;
+    float:right;
+    margin-left: 80%;
+}
+.new.icon{
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    margin: 4px;
+    border-radius: 5px;
+    justify-content: space-evenly;
+}
