@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;1,600&family=Barlow+Semi+Condensed:ital,wght@0,500;1,600&family=Big+Shoulders+Display:wght@700&family=Inter:wght@400;700&family=Josefin+Sans:ital,wght@1,300;1,400;1,600&family=Karla:ital@1&family=Kumbh+Sans:wght@400;700&family=Lexend+Deca&family=Open+Sans:wght@400;700&family=Outfit:wght@300;400;600&family=Raleway:ital,wght@0,700;1,400&family=Red+Hat+Display:ital,wght@0,500;0,700;1,500;1,900&family=Rubik:ital,wght@0,400;1,500;1,700&display=swap');
+body{
+    font-family: 'Bai Jamjuree', sans-serif;
+font-family: 'Barlow Semi Condensed', sans-serif;
+font-family: 'Big Shoulders Display', cursive;
+font-family: 'Inter', sans-serif;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Karla', sans-serif;
+font-family: 'Kumbh Sans', sans-serif;
+font-family: 'Lexend Deca', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Outfit', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Red Hat Display', sans-serif;
+font-family: 'Rubik', sans-serif;
+font-size: 12px;
+align-content: left;
+max-width: 1000px;
+max-height: 100vh;
+background-color: hsl(273, 97%, 56%);
+word-spacing: 1ch;
+}
+.box{
+    width: 800px;
+    height: 80vh;
+    background-color: hsl(0, 100%, 74%) ;
+    margin-left: 300px;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: row;
+    background-image: url("../image_frontend/bg-intro-desktop.png");
+}
+.left{
+    width: 29%;
+    height: 50%;
+    color: white;
+    padding-left: 8%;
+    padding-top: 15%;
+    padding-right: 3%;
+}
+.right{
+    width: 60%;
+    height: 100%;
+}
+.try{
+    background-color: rgb(116, 46, 196);
+    border-color: rgb(83, 24, 192);
+    border-radius: 5px;
+    width:70%;
+    color:white;
+    height: 6vh;
+    margin-left: 15%;
+    margin-top: 10%;
+}
+.bottom{
+    width: 70%;
+    height: 70%;
+    margin-left: 15%;
+    margin-top: 5%;
+    border-radius: 4px;
+    background-color: white;
+    border-bottom: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 2vh;
+}
+.but{
+    margin-bottom: 2vh;
+    border-radius: 5px;
+    width:70%;
+    background-color:white;
+    height: 5vh;
+    margin-left: 15%;
+    color: hsl(249, 82%, 24%);
+    border-color: hsl(249, 82%, 24%);
+}
+.claim{
+    border-radius: 5px;
+    width:72%;
+    color:white;
+    height: 6vh;
+    margin-left: 15%;
+    background-color: hsl(154, 59%, 51%);
+    border-color: hsl(154, 59%, 51%);
+}
