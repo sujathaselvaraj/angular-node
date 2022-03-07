@@ -1,9 +1,7 @@
 body{
-    background-color: cyan;
+    background-image: url("../angular-node/images/5490896.jpg");
+    background-repeat: no-repeat;
     line-break: 1vh;
-}
-table{
-    background-image: url("../angular-node/images/white.webp");
 }
 div{
     height: 5vh;
