@@ -19,9 +19,8 @@
         <div id="slide1">
             <div class="quotes"></div>
             <div class="bg"><img class="john" src="../image_frontend/image-john.jpg">
-                <div class="arrow"><input type="button" onclick="slide1()"><img class="prev"
-                        src="../image_frontend/icon-prev.svg"></input><input type="button" onclick="slide2()"><img
-                        class="next" src="../image_frontend/icon-next.svg"></input></div>
+                <div class="arrow"><a href="#slide1"><img class="prev" src="../image_frontend/icon-prev.svg"></a><a
+                        href="../js/slide2.html"><img class="next" src="../image_frontend/icon-next.svg"></a></div>
             </div>
             <div id="left"> “ If you want to lay the best foundation possible I’d recommend taking this course.
                 The depth the instructors go into is incredible. I now feel so confident about
@@ -34,9 +33,9 @@
         <!-- <div id="slide2">
             <div class="quotes"></div>
             <div class="bg"><img class="tanya" src="../image_frontend/image-tanya.jpg">
-                <div class="arrow"><input type="button" onclick="slide1()"><img class="prev"
-                        src="../image_frontend/icon-prev.svg"></input><input type="button" onclick="slide2()"><img
-                        class="next" src="../image_frontend/icon-next.svg"></input></div>
+                <div class="arrow"><a href="../js/testimonial.html"><img class="prev"
+                    src="../image_frontend/icon-prev.svg"></a><a type="button" onclick="#slide2"><img
+                    class="next" src="../image_frontend/icon-next.svg"></a></div>
             </div>
             <div id="right"> “ I’ve been interested in coding for a while but never taken the jump, until now.
                 I couldn’t recommend this course enough. I’m now in the job of my dreams and so
@@ -45,19 +44,9 @@
                 <span style="font-size: small;"><b>Tanya Sinclair</b>
                     UX Engineer</span>
             </div>
-        </div> -->
+        </div>  -->
 
     </main>
-    <script>
-        document.getElementById("button").addEventListener("click", mySliderActions);
-        function mySliderActions() {
-            _N2.r('#n2-ss-10', function () {
-                var slider = _N2['#n2-ss-10'];
-                slider.next();
-            });
-        }
-    </script> -->
-
 </body>
 
 </html>
