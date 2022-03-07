@@ -1,5 +1,5 @@
 body{
-    background-image: url("../angular-node/images/green.jpg");
+    background-image: url("./images/green.jpg");
     line-break: 1vh;
 }
 div{
@@ -7,4 +7,10 @@ div{
 }
 div:hover{
     color: rgb(44, 44, 235);
+}
+a:hover{
+    color: mediumvioletred
+}
+a:active{
+    color: rgb(252, 236, 15)
 }
