@@ -1,7 +1,10 @@
 body{
-    background-image: url("../angular-node/images/pink.jpg");
+    background-image: url("../angular-node/images/green.jpg");
     line-break: 1vh;
 }
 div{
     height: 5vh;
+}
+div:hover{
+    color: rgb(44, 44, 235);
 }
