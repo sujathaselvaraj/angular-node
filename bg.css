@@ -1,0 +1,28 @@
+body{
+    background-image: url("./images/8fc719ea1aff1c5555d84db1d09cf237.jpg");
+    background-size: cover;
+    font-size: larger;
+}
+h1{
+    margin-left: 500px;
+    color: rgb(240, 36, 114);
+    font-size: 32px;
+}
+.image{
+    width: 700px;
+    height: 60vh;
+    justify-content: center;
+    margin-left: 300px;
+    margin-top: 10vh;
+}
+.option{
+    float: right;
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    height: 5vh;
+    align-content:space-between;
+}
+a:hover{
+    color: palevioletred;
+}
