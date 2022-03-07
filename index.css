@@ -1,0 +1,10 @@
+body{
+    background-color: cyan;
+    line-break: 1vh;
+}
+table{
+    background-image: url("../angular-node/images/white.webp");
+}
+div{
+    height: 5vh;
+}

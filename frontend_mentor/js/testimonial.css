@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;1,600&family=Barlow+Semi+Condensed:ital,wght@0,500;1,600&family=Big+Shoulders+Display:wght@700&family=Inter:wght@300;500;700&family=Josefin+Sans:ital,wght@1,300;1,400;1,600&family=Karla:ital@1&family=Kumbh+Sans:wght@400;700&family=Lexend+Deca&family=Open+Sans:wght@400;700&family=Outfit:wght@300;400;600&family=Raleway:ital,wght@0,700;1,400&family=Red+Hat+Display:ital,wght@0,500;0,700;1,500;1,900&family=Rubik:ital,wght@0,400;1,500;1,700&display=swap');
+body{
+    font-family: 'Bai Jamjuree', sans-serif;
+font-family: 'Barlow Semi Condensed', sans-serif;
+font-family: 'Big Shoulders Display', cursive;
+font-family: 'Inter', sans-serif;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Karla', sans-serif;
+font-family: 'Kumbh Sans', sans-serif;
+font-family: 'Lexend Deca', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Outfit', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Red Hat Display', sans-serif;
+font-family: 'Rubik', sans-serif;
+font-size: 25px;
+align-content: left;
+max-width: 1000px;
+max-height: 100vh;
+background-color: black;
+}
+.container{
+    background-color: white;
+    width: 1000px;
+    height: 90vh;
+    margin-left: 18%;
+    margin-top: 5vh;
+    background-image: url("../image_frontend/pattern-curve.svg");
+    background-position:left bottom;
+    background-repeat: no-repeat;
+}
+
+.quotes{
+    width: 20%;
+    height: 20vh;
+    float: left;
+    margin-left: 15%;
+    margin-top: 25vh;
+    background-image: url("../image_frontend/pattern-quotes.svg");
+    background-repeat: no-repeat;
+    position: relative;
+}
+.bg{
+    width: 50%;
+    height: 70vh;
+    float: right;
+    margin-top: 10vh;
+    margin-right: 70px;
+    background-size: contain;
+    background-image: url("../image_frontend/pattern-bg.svg");
+    position: relative;
+}
+.john{
+    width: 70%;
+    height: 60vh;
+    float: right;
+    margin-top: 6vh;
+    margin-right: 70px;
+    position: relative;
+
+}
+#left{
+    width: 500px;
+    height: 30vh;
+    margin-top: 32vh;
+    margin-left: 5%;
+    position: absolute;
+}
+.tanya{
+    width: 70%;
+    height: 60vh;
+    float: right;
+    margin-top: 6vh;
+    margin-right: 70px;
+    position: relative;
+}
+#right{
+    width: 500px;
+    height: 30vh;
+    margin-top: 32vh;
+    margin-left: 5%;
+    position: absolute;
+}
+.arrow{
+    width: 80px;
+    height: 6vh;
+    border-radius: 19px;
+    background-color: white;
+    position: absolute;
+    margin-top: 64vh;
+    margin-left: 110px;
+    display: inline;
+    justify-content: space-between;
+}
+.prev{
+    float: left;
+    margin-top: 1.5vh;
+    margin-left: 10px;
+}
+.next{
+    margin-top: 1.5vh;
+    float: right;
+    margin-right: 10px;
+}
