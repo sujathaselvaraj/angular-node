@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;1,600&family=Barlow+Semi+Condensed:ital,wght@0,500;1,600&family=Big+Shoulders+Display:wght@700&family=Inter:wght@400;700&family=Josefin+Sans:ital,wght@1,300;1,400;1,600&family=Karla:ital@1&family=Kumbh+Sans:wght@400;700&family=Lexend+Deca&family=Open+Sans:wght@400;700&family=Outfit:wght@300;400;600&family=Raleway:ital,wght@0,700;1,400&family=Red+Hat+Display:ital,wght@0,500;0,700;1,500;1,900&family=Rubik:ital,wght@0,400;1,500;1,700&display=swap');
-body{
+body {
     font-family: 'Bai Jamjuree', sans-serif;
 font-family: 'Barlow Semi Condensed', sans-serif;
 font-family: 'Big Shoulders Display', cursive;
@@ -19,14 +19,14 @@ max-height: 90vh;
 background-color: rgb(201, 206, 206);
 line-height: 25px;
 }
-.box{
+.box {
     width: 80%;
     height: 60vh;
     margin-left: 25%;
     margin-top: 15%;
     background-color: white;
 }
-.right{
+.right {
     width: 45%;
     color: hsl(244, 43%, 21%);
     height: 40vh;
@@ -36,40 +36,40 @@ line-height: 25px;
     padding-left: 3%;
     padding-right: 4%;
 }
-.left{
+.left {
     width: 45%;
     height: 60vh;
     float: left;
 }
-.image{ 
+.image { 
     max-width: 100%;
     height: 60vh;
 }
-.detail{
+.detail {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
     height: 5vh;
 }
-.dp{
+.dp {
     width: 50px;
     height: 7vh;
     border-radius: 50px;
 }
-.dp1{
+.dp1 {
     width: 50px;
     height: 7vh;
     border-radius: 50px;
     background-color: hsl(218, 57%, 97%);
     align-content: center;
 }
-.share_img{
+.share_img {
     
     width: 40px;
     height: 4vh;
 }
-/* .arrow{
+/* .arrow {
     background-color: hsl(0, 36%, 70%);
     width: 5%;
     float: inline-end;

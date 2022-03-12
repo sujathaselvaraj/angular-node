@@ -29,18 +29,18 @@ img {
     height: 80vh;
 }
 
-.box{
+.box {
     margin: 18px auto;
     max-width: 100%;
 }
 
-h2{
+h2 {
     margin: auto;
     font-size: 1.4em;
     color: hsl(218, 44%, 22%);
 } 
 
-.text{
+.text {
     padding: 10px;
     color:  hsl(220, 15%, 55%);
     font-size: 15px;

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;1,600&family=Barlow+Semi+Condensed:ital,wght@0,500;1,600&family=Big+Shoulders+Display:wght@700&family=Inter:wght@400;700&family=Josefin+Sans:ital,wght@1,300;1,400;1,600&family=Karla:ital@1&family=Kumbh+Sans:wght@400;700&family=Lexend+Deca&family=Open+Sans:wght@400;700&family=Outfit:wght@300;400;600&family=Raleway:ital,wght@0,700;1,400&family=Red+Hat+Display:ital,wght@0,500;0,700;1,500;1,900&family=Rubik:ital,wght@0,400;1,500;1,700&display=swap');
-body{
+body {
     font-family: 'Bai Jamjuree', sans-serif;
 font-family: 'Barlow Semi Condensed', sans-serif;
 font-family: 'Big Shoulders Display', cursive;
@@ -20,11 +20,11 @@ max-width: 1000px;
 max-height: 90vh;
 justify-content: center;
 }
-header{
+header {
     margin-left: 60%;
     margin-top: 4vh;
 }
-.top{
+.top {
     width: 500px;
     height: 25vh;
     margin-left: 35%;
@@ -33,33 +33,33 @@ header{
     color: hsl(209, 33%, 12%);
     padding-left: 10%;
 }
-.bottom{
+.bottom {
     width: 600px;
     height: 45vh;
     margin-left: 35%;
     margin-top: 2%;
 }
-.share{
+.share {
     width: 600px;
     height: 10vh;
     margin-left: 35%;
     margin-top: 2%;
 }
-    .mini_box{
+    .mini_box {
         width: 300px;
         height: 7vh;
         margin-left: 250px;
     } 
-.head{
-    align: center;
+.head {
+    text-align: center;
     font-size: 38px;
 }
-.sub{
-    align: center;
+.sub {
+    text-align: center;
     font-size: smaller; 
     margin-left: 100px; 
 }
-.email{
+.email {
     width: 50%;
     height: 5vh;
     border-radius: 12px;
@@ -68,7 +68,7 @@ header{
     color: blue;
     margin-top: 3vh;
 }
-.arrow{width: 30%;
+.arrow {width: 30%;
     height: 5vh;
     border-radius: 12px;
     background-color: blue;
@@ -77,20 +77,20 @@ header{
     margin-top: 3vh;
 
 }
-.image{
+.image {
     width: 600px;
     height: 45vh;
 }
-.copy{
+.copy {
     margin-left: 150px;
     color:blue;
 }
-div:hover{
+div:hover {
     color: palevioletred;
 }
-input:hover{
+input:hover {
     color: lawngreen;
 }
-span:hover{
+span:hover {
     color: yellow;
 }

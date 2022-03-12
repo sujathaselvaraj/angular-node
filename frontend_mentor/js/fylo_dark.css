@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;1,600&family=Barlow+Semi+Condensed:ital,wght@0,500;1,600&family=Big+Shoulders+Display:wght@700&family=Inter:wght@300;500;700&family=Josefin+Sans:ital,wght@1,300;1,400;1,600&family=Karla:ital@1&family=Kumbh+Sans:wght@400;700&family=Lexend+Deca&family=Open+Sans:wght@400;700&family=Outfit:wght@300;400;600&family=Raleway:ital,wght@0,700;1,400&family=Red+Hat+Display:ital,wght@0,500;0,700;1,500;1,900&family=Rubik:ital,wght@0,400;1,500;1,700&display=swap');
-body{
+body {
     font-family: 'Bai Jamjuree', sans-serif;
     font-family: 'Barlow Semi Condensed', sans-serif;
     font-family: 'Big Shoulders Display', cursive;
@@ -17,7 +17,7 @@ body{
     color: black;
     
 }
-.container{
+.container {
     /* background-color: rgb(34, 33, 33); */
     background-color: black;
     max-width: 900px;
@@ -27,7 +27,7 @@ body{
     margin-top: 50px;
 
 }
-.first{
+.first {
     float: right;
     display: flex;
     flex-direction: row;
@@ -37,10 +37,10 @@ body{
     margin-left: 200px;
     margin-top: 50px;
 }
-.logo{
+.logo {
     margin:40px;
 }
-.second{
+.second {
     margin-top: 50px;
     width: 60%;
     height: 70vh;
@@ -48,26 +48,26 @@ body{
     margin-left: 20%;
     align-content: center;
 }
-.four{
+.four {
     width: 100%;
     height: 100%;
 }
-.five{
+.five {
     position: relative;
     width: 900px;
     height: 70vh;
     margin-top: 3px;
     background-image: url("../image_frontend/bg-curvy-desktop.svg");
 }
-.seven{
+.seven {
     position: absolute;
 
 }
-h1{
+h1 {
     margin-left: 22%;
     text-justify: auto;
 }
-.para{
+.para {
     margin-left: 20%;
     font-size: medium;
     text-justify: auto;

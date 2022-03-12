@@ -1,4 +1,4 @@
-:root{
+:root {
     --main-font:"Red Hat Display",sans-serf;
     --background-color: hsl(225, 100%, 94%);
     --container-box-shadow: -2px 10px 20px hsl(245, 75%, 90%);
@@ -11,15 +11,15 @@
     --white: rgb(255, 255, 255);
     --red: Red;
 }
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html,body{
+html,body {
     overflow-x:hidden;
 }
-body{
+body {
     min-height: 100vh;
     background-color: var(--background-color);
     background-image: url("frontend_mentor\image_frontend\pattern-background-desktop.svg");
@@ -28,7 +28,7 @@ body{
     overflow-y: scroll;
 }
 .order-center-container
-{
+ {
     position:relative;
     width: 90%;
     max-width: 28.3rem;
@@ -47,10 +47,7 @@ overflow: hidden;
 box-shadow:var(--container-box-shadow);
 
 }
-.order-center-container{
-
-}
-.order-header-image{
+.order-header-image {
     width: 100%;
     height: 100%;
     min-height: 14rem;
@@ -61,18 +58,18 @@ box-shadow:var(--container-box-shadow);
     border-radius: 25px 25px 0 0;
     overflow: hidden;
 }
-.order-title-container h1{
+.order-title-container h1 {
     font-size: 1.5rem;
     letter-spacing: 2px;
     font-weight: 900;
 }
-.order-title-container p{
+.order-title-container p {
     font-size: lighter;
     color: var(--desaturated-blue);
     margin-top: 1.2rem;
     line-height: 25px;
 }
-.order-title-container{
+.order-title-container {
 width: 80%;
 height:100%;
 max-height: 14rem;
@@ -82,7 +79,7 @@ text-align: center;
 margin: 0 auto;
 margin: top 3rem;
 }
-.order-pricing-container{
+.order-pricing-container {
     background-color: var(--very-pale-blue);
     font-family: var(--main-font);
     width: 70%;
@@ -98,7 +95,7 @@ margin: top 3rem;
     font-weight: 900;
     gap: 1rem;
 }
-.music-img{
+.music-img {
     width: 3.5rem;
     height: 3rem;
     background-image: url("frontend_mentor\image_frontend\icon-music.svg");
@@ -106,22 +103,22 @@ margin: top 3rem;
     background-repeat: no-repeat;
     background-size: contain;
 }
-.order-pricing-container .order-annual-plan{
+.order-pricing-container .order-annual-plan {
     color: var(--dark-blue);
     margin-bottom: 1rem;
 }
-.order-pricing-container p{
+.order-pricing-container p {
     color: hsl(224, 23%, 55%);
     line-height: 10px;
 }
-.btn-change{
+.btn-change {
     background-color: transparent;
     color:var(--bright-blue);
     font-weight: 900;
     font-size: 1rem;
 }
 .btn-payment
-{
+ {
     background-color: var(--bright-blue);
     border-radius: 15px;
     font-family: var(--main-font);
@@ -136,12 +133,12 @@ margin: top 3rem;
     font-weight: 700;
 }
 .btn-payment:hover,.btn-cancel:hover,
-.btn-change:hover{
+.btn-change:hover {
     cursor: pointer;
     opacity: 0.7;
     text-decoration: none;
 }
-.btn-cancel{
+.btn-cancel {
     background-color: transparent;
     border: none;
     margin-bottom: 10rem;
@@ -152,6 +149,6 @@ margin: top 3rem;
     text-decoration: none;
     font-size: 1rem;
 }
-.btn-cancel:hover{
+.btn-cancel:hover {
     color:var(--red);
 }

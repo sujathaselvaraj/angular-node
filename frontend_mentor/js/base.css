@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;1,600&family=Barlow+Semi+Condensed:ital,wght@0,500;1,600&family=Big+Shoulders+Display:wght@700&family=Inter:wght@400;700&family=Josefin+Sans:ital,wght@1,300;1,400;1,600&family=Karla:ital@1&family=Kumbh+Sans:wght@400;700&family=Lexend+Deca&family=Open+Sans:wght@400;700&family=Outfit:wght@300;400;600&family=Raleway:ital,wght@0,700;1,400&family=Red+Hat+Display:ital,wght@0,500;0,700;1,500;1,900&family=Rubik:ital,wght@0,400;1,500;1,700&display=swap');
-body{
+body {
     font-family: 'Bai Jamjuree', sans-serif;
 font-family: 'Barlow Semi Condensed', sans-serif;
 font-family: 'Big Shoulders Display', cursive;
@@ -19,13 +19,13 @@ max-height: 90vh;
 background-color: black;
 word-spacing: 5px;
 }
-.box{
+.box {
     width: 100%;
     height: 80vh;
     margin-left: 20%;
     margin-top: 5%;
 }
-.left{
+.left {
     width: 40%;
     color: hsl(0, 36%, 70%);
     height: 70vh;
@@ -39,25 +39,25 @@ word-spacing: 5px;
     padding-top: 5vh;
     padding-bottom: 5vh;
 }
-.right{
+.right {
     width: 45%;
     height: 80vh;
     float: right;
 }
-.image{ 
+.image { 
     max-width: 100%;
     max-height: 80vh;
 }
-h1{
+h1 {
 
 font-size: 50px;
 line-height: 55px;
 letter-spacing: 9px;
 }
-.mail{
+.mail {
     display: inline;
 }
-.email{
+.email {
     width: 60%;
     height: 5vh;
     border-radius: 12px;
@@ -65,7 +65,7 @@ letter-spacing: 9px;
     color: hsl(0, 36%, 70%);
     border: 2px solid hsl(0, 36%, 70%);
 }
-.arrow{
+.arrow {
     background-color: hsl(0, 36%, 70%);
     width: 5%;
     float: inline-end;

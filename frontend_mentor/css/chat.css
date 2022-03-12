@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;1,600&family=Barlow+Semi+Condensed:ital,wght@0,500;1,600&family=Outfit:wght@300;400;600&family=Raleway:ital,wght@0,700;1,400&family=Red+Hat+Display:ital,wght@0,500;0,700;1,500;1,900&family=Rubik:ital,wght@0,400;1,500;1,700&display=swap');
-body{
+body {
     font-family: 'Bai Jamjuree', sans-serif;
 font-family: 'Barlow Semi Condensed', sans-serif;
 font-family: 'Outfit', sans-serif;
@@ -13,7 +13,7 @@ margin: auto;
 
 font-size: 16px;
 }
-.bg{
+.bg {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -21,30 +21,30 @@ font-size: 16px;
     width: 100%;
     height: 100vh;
 }
-.top{
+.top {
     height: 100vh;
     width: 27%;
 }
 .top_bg
-{
+ {
     background-color:  hsl(283, 88%, 55%);
     border-radius: 0% 0% 50% 50%;
     width: 100%;
     height: 70vh;
 }
-.bottom{
+.bottom {
     width: 27%;
     height: 100vh;
 }
 .bottom_bg
-{   
+ {   
     margin-top: 30vh;
     background-color: hsl(270, 26%, 91%);
     border-radius: 50% 50% 0% 0%;
     width: 100%;
     height: 70vh; 
 }
-.first{
+.first {
     position: absolute;
     display: flex;
     flex-direction: row;
@@ -55,7 +55,7 @@ font-size: 16px;
     margin-left: 23%;
     margin-bottom: 8%;
 }
-.left{
+.left {
     width: 37%;
     height: 75vh;
     background-color: hsl(270, 20%, 96%);
@@ -65,13 +65,13 @@ font-size: 16px;
     border-width: 8px;
     justify-content: center;
 }
-.right{
+.right {
     width: 64%;
     height: 45vh;
     margin-top: 20vh;
     margin-left: 10%;
 }
-.cam{
+.cam {
     position: absolute;
     background-color: white;
     border-color: white;
@@ -82,14 +82,14 @@ font-size: 16px;
     margin-left: 60px;
     margin-top: -4px;
 }
-header{
+header {
     position: relative;
     width: 100%;
     height: 90px;
     background-color: hsl(283, 88%, 55%);
     border-radius: 20px 20px 0 0;
 }
-.second{
+.second {
     position: absolute;
     width: 100%;
     height: 40px;
@@ -98,7 +98,7 @@ header{
     flex-direction: row;
     justify-items: auto;
 }
-.prof{
+.prof {
     border-radius: 100%;
     border: 1px;
     bottom: 0%;
@@ -108,16 +108,16 @@ header{
     float: left;
     border-color: hsl(0, 0%, 100%);
 }
-.para{
+.para {
     font-size: small;
 }
-.box{
+.box {
     width:70%;
     height: 12vh;
     margin-top: 2vh;
     
 }
-.box1{
+.box1 {
     font-size: small;
     color:blueviolet;
     width:100%;
@@ -127,7 +127,7 @@ header{
     border: 2px solid rgb(207, 186, 226);
     margin: 4px;
 }
-.box2{
+.box2 {
     font-size: small;
     color:blueviolet;
     width:100%;
@@ -137,12 +137,12 @@ header{
     border: 2px solid rgb(207, 186, 226);
     margin: 4px;
 }
-.second_box{
+.second_box {
     list-style-type: none;
     display: flex;
     float:right;
 }
-.second_box .dog{
+.second_box .dog {
     width: 40px;
     height: 40px;
     display: flex;
@@ -151,7 +151,7 @@ header{
     border-radius: 5px;
     
 }
-.third_box{
+.third_box {
     float: right;
     font-size: small;
     color:blueviolet;
@@ -162,7 +162,7 @@ header{
     border: 2px solid rgb(207, 186, 226);
     margin: 4px;
 }
-.fourth_box{
+.fourth_box {
     float: right;
     font-size: small;
     color:blueviolet;
@@ -173,7 +173,7 @@ header{
     border: 2px solid rgb(207, 186, 226);
     margin: 4px;
 }
-.fifth_box{
+.fifth_box {
     font-size: small;
     color:blueviolet;
     width:70%;
@@ -183,7 +183,7 @@ header{
     border: 2px solid rgb(207, 186, 226);
     margin-top: 20vh;
 }
-.sixth_box{
+.sixth_box {
     font-size: small;
     color:white;
     width:60%;
@@ -193,7 +193,7 @@ header{
     border: 2px solid hsl(283, 88%, 55%);
     margin: 4px;
 }
-.seventh_box{
+.seventh_box {
     font-size: small;
     color:white;
     width:60%;
@@ -203,16 +203,15 @@ header{
     border: 2px solid hsl(283, 88%, 55%);
     margin: 4px;
 }
-
-.type
-{    width: 60%;
+.type {   
+    width: 60%;
     border-color: aliceblue;
     margin:20px;
     height: 5vh;
     border-radius: 12px;
     float: left;
 } 
-.circle{
+.circle {
     float:right;
     color: white;
     width: 30px;
@@ -223,7 +222,7 @@ header{
     margin-top: 20px;
     margin-right: 20px;
 }
-.paragraph{
+.paragraph {
     line-height: 5vh;
 }
     

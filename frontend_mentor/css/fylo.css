@@ -1,179 +1,189 @@
 body {
-    background-color: hsl(229, 57%, 11%);
-    background-image: url("../image_frontend/bg-desktop.png");
+   
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center bottom;
     font-family: 'Raleway', sans-serif;
     color: hsl(229, 7%, 55%);
-
-}
-
-.highlight {
-    color: hsl(243, 100%, 93%);
-}
-
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
     
 }
-
-.main {
+.container{
+    width: 100%;
+    height: 95vh;
+    background-color: rgb(2, 2, 24);
+    background-image: url("../image_frontend/bg-desktop.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+    margin: 1px solid rgb(3, 3, 17);
+}
+.box {
+    width : 70%;
+    height: 40vh;
+    margin-left: 21%;
+    margin-bottom: 10vh;
     display: flex;
-    min-width: 900px;
-}
-
-header {
-    flex: 1 1 auto;
-    background-color: hsl(228, 56%, 26%);
-    border-radius: 10px 70px 10px 10px;
-    padding: 30px 120px 30px 30px;
-    margin: 10px;
-    
-}
-
-.content {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 180px;
-}
-
-.content > * {
-    flex: 1 1 auto;
-}
-
-main {
-    flex: 1 1 500px;
-    background-color: hsl(228, 56%, 26%);
-    border-radius: 10px 10px 10px 10px;
-    padding: 30px 30px 30px 30px;
-    margin: 50px 10px 10px 10px;
-}
-
-.menu{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 30px 0 0 0 ;
-}
-
-.icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 10px;
-    background-color: hsl(229, 57%, 11%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.bar {
-    position: relative;
-}
-
-.empty {
-    background-color: hsl(229, 57%, 11%);
-    border-radius: 20px;
-    margin: 15px 0 5px 0;
-    height: 10px;
-}
-
-.hide {
-    display: none;
-}
-
-.empty:hover + .hide {
-    display: block;
-}
-
-.bubble {
+    flex: row;
     position: absolute;
-    left: 64%;
-    bottom: calc(100% + 30px);
+    margin-top: 30vh;
 }
-
-.left {
-    position: relative;
-    width: auto;
-	background: #f5f5f5;
-    border-radius: 10px 10px 0 10px;
-    padding: 20px;
+.bubble {
+    width: 200px;
+    height: 200px;
 }
-
-.left:after {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: auto;
-	width: 0;
-	height: 0;
-	border: 38px solid transparent;
-	border-top-color: #f5f5f5;
-	border-bottom: 0;
-	border-right: 0;
-	margin-left: -18px;
-	margin-bottom: -20px;
-}
-
-.left-msg {
-    font-size: xx-large;
-    font-weight: 700;
-    color: black;
-}
-
-.used {
-    background: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
-    border-radius: 20px;
-    height: 10px;
-    width: calc((815/1000)*100%);
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-.circle{
-    background-color: white;
-    height: 15px;
-    width: 15px;
-    border-radius: 15px;
-    margin: 3px;
-}
-
-.label {
-    display: flex;
-    justify-content: space-between;
-}
-
-footer {
-    margin-top: auto;
-}
-@media all and (max-width:1000px) {
-    .main{
-        min-width: auto;
-        max-width: auto;
+.content {
+    height: 55%;
+    font-display: flex;
+    flex-direction: column;   
+        display: flex;
         flex-wrap: wrap;
+        max-width: 160px;
+        background-color: hsl(228, 56%, 26%);
+        border-radius: 10px 70px 10px 10px;
+        padding: 30px 120px 30px 30px;
     }
-
-    main {
-        margin-top: 10px;
-        
+    
+    .content > * {
+        flex: 1 1 auto;
     }
-
-    .left:after {
+    
+    #main {
+        flex: 1 1 400px;
+        background-color: hsl(228, 56%, 26%);
+        border-radius: 10px 10px 10px 10px;
+        padding: 30px 30px 30px 30px;
+        height: 9vh;
+        max-width: 500px;
+        margin-left: 50px;
+        margin-top: 10vh;
+    }
+    
+    .menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 0 0 0 ;
+    }
+    
+    .icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        background-color: hsl(229, 57%, 11%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .empty {
+        background-color: hsl(229, 57%, 11%);
+        border-radius: 20px;
+        margin: 15px 0 5px 0;
+        height: 10px;
+    }
+.hide {
         display: none;
     }
-
-    .left {
-        border-radius: 10px;
+    
+    .empty:hover + .hide {
+        display: block;
     }
-
+    
     .bubble {
-        bottom: -110px;
-        left: 30%;
+        position: absolute;
+        left: 64%;
+        bottom: calc(100% + 30px);
     }
-  
-  }
+    
+    .left {
+        position: relative;
+        width: auto;
+        background: #f5f5f5;
+        border-radius: 10px 10px 0 10px;
+        padding: 20px;
+    }
+    
+    .left:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: auto;
+        width: 0;
+        height: 0;
+        border: 38px solid transparent;
+        border-top-color: #f5f5f5;
+        border-bottom: 0;
+        border-right: 0;
+        margin-left: -18px;
+        margin-bottom: -20px;
+    }
+    
+    .msg {
+        font-size: xx-large;
+        font-weight: 700;
+        color: black;
+    }
+    
+    .slider {
+        background: linear-gradient(90deg, hsl(6, 100%, 80%) to hsl(335, 100%, 65%));
+        border-radius: 20px;
+        height: 10px;
+        width: calc((815/1000)*100%);
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 500px;
+        background-color: palevioletred;
+    }
+    .left {
+        position: absolute;
+        width: auto;
+        background: #f5f5f5;
+        border-radius: 10px 10px 0 10px;
+      }
+      
+      .left:after  {
+      position: absolute;
+      bottom: 0;
+      left: auto;
+      width: 0;
+      height: 0;
+      border: 38px solid transparent;
+      border-top-color: #f5f5f5;
+      border-bottom: 0;
+      border-right: 0;
+      margin-left: -35px;
+      margin-bottom: -20px;
+      }
+    
+    .label {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    footer {
+        margin-top: auto;
+    }
+    @media all and (max-width:800px) {
+        #main {
+            min-width: auto;
+            max-width: auto;
+            flex-wrap: wrap;
+        }
+    
+        main {
+            margin-top: 10px;
+            
+        }
+    
+        .left:after {
+            display: none;
+        }
+    
+        .left {
+            border-radius: 10px;
+        }
+    
+        .bubble {
+            bottom: -110px;
+            left: 30%;
+        }
+      
+      } 

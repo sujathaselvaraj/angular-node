@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;1,600&family=Barlow+Semi+Condensed:ital,wght@0,500;1,600&family=Open+Sans:wght@400;700&family=Outfit:wght@300;400;600&family=Raleway:ital,wght@0,700;1,400&family=Red+Hat+Display:ital,wght@0,500;0,700;1,500;1,900&family=Rubik:ital,wght@0,400;1,500;1,700&display=swap');
-body{
+body {
     font-family: 'Bai Jamjuree', sans-serif;
 font-family: 'Barlow Semi Condensed', sans-serif;
 font-family: 'Open Sans', sans-serif;
@@ -19,17 +19,17 @@ max-height: 1200vh;
 justify-content: center; */
 
 }
-header{
+header {
     height: 35vh;    
 }
-.logo{
+.logo {
     float: left;
     width: 200px;
     height: 50px;
     margin-left:  80px;
     margin-top: 50px;
 }
-.try{
+.try {
     float: right;
     width: 150px;
     height: 40px;
@@ -40,7 +40,7 @@ header{
     margin-right:  80px;
     margin-top: 50px;
 }
-.start{
+.start {
     float: center;
           width: 250px;
           height: 40px;
@@ -50,25 +50,25 @@ header{
           border-radius: 10px;
           /* margin-left: 90px; */
       }
-      .third{
+      .third {
           align-items: center;
           border: 30px;
           height: 100vh;
 background-color: rgb(221, 243, 243);
 
       }
-      .one{
+      .one {
           margin-top: 12vh;
           width:60%;
           height: 90%
       }
-      .fourth{
+      .fourth {
         align-items: center;
         border: 30px;
         height: 50vh;
         margin-top: 5vh;
     }
-    .left{
+    .left {
         width:30%;
         height:40vh;
         float: left;
@@ -77,7 +77,7 @@ background-color: rgb(221, 243, 243);
         justify-content: center;
 
     }
-    .right{
+    .right {
         width:30%;
         height:40vh;
         float: right;
@@ -87,14 +87,14 @@ background-color: rgb(221, 243, 243);
         background-color: white;
 
     }
-    span{
+    span {
         font-size: 100px;
         justify-content: center;
     }
-    .fifth_top{
+    .fifth_top {
         margin: 20px;
     }
-    .fifth{
+    .fifth {
       
         margin-top: -10px;
         /* width: 100%; */
@@ -102,28 +102,28 @@ background-color: rgb(221, 243, 243);
         margin: 80px;
         background-color: rgb(221, 243, 243);
     }
-    .fifth_bot{
+    .fifth_bot {
         margin-top: -10px;
     }
-    .left5{
+    .left5 {
         float:left;
         width:40%;
         height: 30vh;
         margin-top: 25vh;
 
     }
-    .right5 .pic{
+    .right5 .pic {
         float:right;
         width: 50%;
         height: 70vh;
     }
-    .four{
+    .four {
         margin: 20px;
         /* width: 100%; */
         height: 70vh;
         margin: 80px;
     }
-    .right4{
+    .right4 {
         float:right;
         width:40%;
         height: 30vh;
@@ -131,15 +131,15 @@ background-color: rgb(221, 243, 243);
         background-color: aliceblue;
 
     }
-    .left4 .pic{
+    .left4 .pic {
         float:left;
         width: 50%;
         height: 70vh;
     }
-    .five_top{
+    .five_top {
         margin: 20px;
     }
-    .five{
+    .five {
         margin-top: -10px;
         /* width: 100%; */
         height: 80vh;
@@ -149,22 +149,22 @@ background-color: rgb(221, 243, 243);
 background-color: rgb(221, 243, 243);
 
     }
-    .five_bot{
+    .five_bot {
         margin-top: -10px;
     }
-    .left7{
+    .left7 {
         float:left;
         width:40%;
         height: 30vh;
         margin-top: 25vh;
         margin-left: 40px;
 }
-    .right7 .pic{
+    .right7 .pic {
         float:right;
         width: 50%;
         height: 70vh;
     }
-    .six{
+    .six {
         width: 60%;
         height: 20vh;
         border-radius: 12px;
@@ -176,7 +176,7 @@ background-color: rgb(221, 243, 243);
         /* position: relative; */
     
     }
-    footer{
+    footer {
         /* margin-left: 80px; */
         margin-top: -10px;
         /* width:1200px; */
@@ -186,12 +186,12 @@ background-color: rgb(221, 243, 243);
         /* position: absolute;  */
         font-size: large;
 }
-    .boxes{
+    .boxes {
         list-style-type: none;
         display: flex;
         justify-content: space-evenly;
     }
-    .boxes .foot{
+    .boxes .foot {
         width: 30%;
         height: 200px;
         display: flex;
@@ -202,23 +202,23 @@ background-color: rgb(221, 243, 243);
         justify-content: left;
 }
 a:hover
-{
+ {
     color:beige
 }
 .type
-{    width: 60%;
+ {    width: 60%;
     border-color: aliceblue;
     margin:20px;
     height: 5vh;
     border-radius: 12px;
     float: left;
 } 
-.last{
+.last {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.sub{
+.sub {
              float: right;
             width: 200px;
               height: 40px;
@@ -227,13 +227,13 @@ a:hover
               border-radius: 10px;
               border: hsl(322, 100%, 66%);
 }
-.new{
+.new {
     list-style-type: none;
     display: flex;
     flex-direction: row;
     float:right;
 }
-.new .icon{
+.new .icon {
     width: 40px;
     height: 40px;
     display: flex;
@@ -244,6 +244,6 @@ a:hover
     color: black;
     
 }
-.footer_top{
+.footer_top {
     margin-top: 100px;
 }

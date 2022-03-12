@@ -1,4 +1,4 @@
-body {
+body  {
     margin: 0;
     line-height: 1.15;
     font-family: sans-serif, "Overpass", sans-serif;
@@ -7,42 +7,42 @@ body {
   footer,
   header,
   nav,
-  section {
+  section  {
     display: block;
   }
-  h1 {
+  h1  {
     font-size: 2em;
     margin: 0.67em 0;
   }
- p:hover{
+ p:hover {
      color:chartreuse;
  }
-  a {
+  a  {
     background-color: transparent;
   }
-  h1:hover{
+  h1:hover {
       color: blue;
   }
  
-    img {
+    img  {
     border-style: none;
   }
  
   button,
-  input {
+  input  {
     overflow: visible;
   }
-  button{
+  button {
     text-transform: none;
   }
- .wrapper {
+ .wrapper  {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
   }
   
   button,
-  .buttonHold button:last-of-type:hover {
+  .buttonHold button:last-of-type:hover  {
     background-color: white;
     border: 2px solid transparent;
     border-radius: 25px;
@@ -55,18 +55,18 @@ body {
   }
   
   a:hover,
-  .open:hover {
+  .open:hover  {
     cursor: pointer;
     text-decoration: underline;
     color: darkturquoise;
   }
   .drop a:hover,
-  .drop a:focus {
+  .drop a:focus  {
     font-weight: bold;
     cursor: pointer;
     color: darkblue;
   } 
-  header {
+  header  {
     background-image: url("../image_frontend/bg-pattern-intro-desktop.svg"),
       linear-gradient(90deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
     height: 60vh;
@@ -76,13 +76,13 @@ body {
     color: white;
   }
   
-  nav {
+  nav  {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
   }
   
-  .menu {
+  .menu  {
     display: flex;
     justify-content: space-between;
     width: 40%;
@@ -90,37 +90,37 @@ body {
     flex-shrink: 0;
     align-items: center;
   }
-  .menu img {
+  .menu img  {
     object-fit: scale-down;
   }
   
-  .link {
+  .link  {
     position: relative;
     margin-left: 5px;
   }
   
-  .link a {
+  .link a  {
     text-decoration: none;
     color: inherit;
   }
   
-  .dropText a {
+  .dropText a  {
     display: block;
     margin: 17px auto;
   }
   
   .link img,
-  .headLink img {
+  .headLink img  {
     margin-left: 5px;
     transition-timing-function: ease;
     transition-duration: 0.4s;
   }
   
-  .rotate {
+  .rotate  {
     transform: rotate(180deg);
   }
   
-  .drop {
+  .drop  {
     background-color: white;
     border-radius: 8px;
     width: 150px;
@@ -132,29 +132,29 @@ body {
     transition: max-height 0.3s ease-out;
   }
   
-  .drop.show {
+  .drop.show  {
     display: block;
     max-height: 400px;
     height: auto;
     padding: 15px;
   }
   
-  .dropText {
+  .dropText  {
     display: none;
   }
   
-  .show {
+  .show  {
     display: block;
     height: auto;
   }
   
   
-  .smallMenu {
+  .smallMenu  {
     position: relative;
     display: none;
   }
   
-  .menuBtn {
+  .menuBtn  {
     position: relative;
     display: flex;
     justify-content: center;
@@ -165,7 +165,7 @@ body {
     transition: all 0.5s ease-in-out;
   }
   
-  .menuBrgr {
+  .menuBrgr  {
     width: 60px;
     height: 4px;
     background-color: white;
@@ -173,7 +173,7 @@ body {
   }
   
   .menuBrgr::before,
-  .menuBrgr::after {
+  .menuBrgr::after  {
     content: "";
     position: absolute;
     width: 60px;
@@ -183,7 +183,7 @@ body {
     z-index: 5;
   }
   
-  .mobMenu {
+  .mobMenu  {
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -199,24 +199,24 @@ body {
     box-shadow: 1px 5px 5px rgba(12, 12, 12, 0.3);
   }
   
-  .headLink {
+  .headLink  {
     text-decoration: none;
     color: inherit;
   }
   
-  .headLink:hover {
+  .headLink:hover  {
     cursor: pointer;
     text-decoration: none;
   }
   
-  .mobLink {
+  .mobLink  {
     width: 100%;
     text-align: center;
     margin: 20px auto;
     font-size: calc(1rem + 0.3vw);
   }
   
-  .dropMob {
+  .dropMob  {
     background-color: #efeff1;
     color: #5d6a7a;
     border-radius: 5px;
@@ -224,24 +224,24 @@ body {
     transition: all 0.3s ease-out;
   }
   
-  .dropTextMob a {
+  .dropTextMob a  {
     color: #5d6a7a;
     display: block;
     text-decoration: none;
     margin: 17px auto;
   }
   
-  .dropTextMob {
+  .dropTextMob  {
     display: none;
   }
   
   .dropTextMob a:hover,
-  .dropTextMob a:focus {
+  .dropTextMob a:focus  {
     cursor: pointer;
     color: hsl(356, 100%, 66%);
   }
   
-  .mobMenu .sign {
+  .mobMenu .sign  {
     display: flex;
     flex-direction: column;
     border-top: 1px solid hsl(240, 2%, 79%);
@@ -250,38 +250,38 @@ body {
     padding-top: 10px;
   }
   
-  .mobMenu .sign button {
+  .mobMenu .sign button  {
     background: linear-gradient(90deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
     border: white;
     color: white;
   }
   
-  .menuBrgr::before {
+  .menuBrgr::before  {
     transform: translateY(-16px);
   }
   
-  .menuBrgr::after {
+  .menuBrgr::after  {
     transform: translateY(16px);
   }
   
-  .menuBtn.move .menuBrgr {
+  .menuBtn.move .menuBrgr  {
     transform: translateX(-50px);
     background: transparent;
   }
-  .menuBtn.move .menuBrgr:before {
+  .menuBtn.move .menuBrgr:before  {
     transform: rotate(45deg) translate(35px, -35px);
   }
-  .menuBtn.move .menuBrgr:after {
+  .menuBtn.move .menuBrgr:after  {
     transform: rotate(-45deg) translate(35px, 35px);
   }
   
-  h1 {
+  h1  {
     font-size: calc(2.5rem + 1vw);
     font-weight: 400;
     margin-bottom: 10px;
   }
   
-  .sign {
+  .sign  {
     display: flex;
     justify-content: space-between;
     align-self: flex-end;
@@ -290,11 +290,11 @@ body {
     align-items: center;
   }
   
-  .sign button {
+  .sign button  {
     width: 120px;
   }
   
-  .holder {
+  .holder  {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -303,7 +303,7 @@ body {
     text-align: center;
   }
   
-  .buttonHold {
+  .buttonHold  {
     display: flex;
     width: calc(280px + 2%);
     justify-content: space-between;
@@ -311,27 +311,27 @@ body {
     margin-top: 25px;
   }
   
-  .buttonHold button:nth-of-type(2) {
+  .buttonHold button:nth-of-type(2)  {
     background-color: transparent;
     color: white;
     border: 1px solid white;
   }
   
   .sign button:first-of-type:hover,
-  .buttonHold button:first-of-type:hover {
+  .buttonHold button:first-of-type:hover  {
     background-color: #ff7b86;
     color: white;
     cursor: pointer;
   }
   
-  .text {
+  .text  {
     width: calc(50% - 2.5%);
     color: hsl(207, 13%, 34%);
     line-height: 2rem;
     font-weight: 400;
     font-family: "Overpass", sans-serif;
   }
-  h2 {
+  h2  {
     text-align: center;
     color: hsl(208, 49%, 24%);
     font-size: calc(1.7rem + 0.5vw);
@@ -339,12 +339,12 @@ body {
     margin: 105px auto;
   }
   
-  h3 {
+  h3  {
     font-size: calc(1.3rem + 0.5vw);
     color: hsl(208, 49%, 24%);
   }
   
-  .flex {
+  .flex  {
     display: flex;
     position: relative;
     justify-content: space-between;
@@ -352,13 +352,13 @@ body {
     margin: 25px auto;
   }
   
-  .up img:first-of-type {
+  .up img:first-of-type  {
     position: absolute;
     right: -400px;
     top: -200px;
   }
   
-  .middle {
+  .middle  {
     background-image: url("../image_frontend/bg-pattern-circles.svg"),
       linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
     background-position: -65% 87%;
@@ -367,187 +367,187 @@ body {
     border-radius: 0px 75px 0px 75px;
   }
   
-  .mid .text {
+  .mid .text  {
     color: white;
     margin-top: calc(120px - 15px);
     margin-bottom: 120px;
   }
   
-  .mid img {
+  .mid img  {
     position: absolute;
     left: -50px;
     top: -70px;
   }
   
-  .mid h2 {
+  .mid h2  {
     margin-bottom: 15px;
     color: white;
   }
   
-  .middle .flex {
+  .middle .flex  {
     justify-content: flex-end;
   }
   
-  .lower .flex {
+  .lower .flex  {
     justify-content: flex-end;
   }
   
-  .low img:not(.Mob) {
+  .low img:not(.Mob)  {
     position: absolute;
     left: -400px;
   }
   
   
-  footer {
+  footer  {
     background-color: hsl(240, 10%, 16%);
     margin-top: 250px;
     border-top-right-radius: 75px;
     padding-top: 25px;
   }
-  footer .flex {
+  footer .flex  {
     align-items: flex-start;
   }
   
   footer ul,
-  footer a {
+  footer a  {
     list-style: none;
     color: white;
     text-decoration: none;
   }
   
-  footer a {
+  footer a  {
     display: inline-block;
     margin-bottom: 15px;
   }
   
-  .listHead {
+  .listHead  {
     font-weight: 500;
     margin-bottom: 25px;
   }
   
   
   
-  @media (max-width: 1022px) {
-    .flex:not(.foot) {
+  @media (max-width: 1022px)  {
+    .flex:not(.foot)  {
       flex-direction: column;
       justify-content: space-around;
       text-align: center;
     }
-    .top .flex {
+    .top .flex  {
       flex-direction: column-reverse;
     }
   
-    .desk {
+    .desk  {
       display: none;
     }
   
-    .Mob {
+    .Mob  {
       display: block;
       position: static;
     }
   
-    h3 {
+    h3  {
       font-size: calc(2rem + 0.5vw);
     }
   
-    h2 {
+    h2  {
       font-size: calc(2.5rem + 0.5vw);
       line-height: 3rem;
     }
   
-    .flex .text {
+    .flex .text  {
       width: calc(100% - 40px);
     }
-    .flex .text p {
+    .flex .text p  {
       font-size: calc(1rem + 0.3vw);
     }
   
-    .middle {
+    .middle  {
       background-position: center;
       background-size: cover;
       position: relative;
       margin-bottom: 100px;
     }
   
-    .middle .flex {
+    .middle .flex  {
       justify-content: space-around;
       align-items: center;
     }
   
-    .middle h2 {
+    .middle h2  {
       margin-top: 0px;
     }
   
-    .mid img {
+    .mid img  {
       position: absolute;
       left: initial;
       top: -300px;
     }
   
-    .mid .text {
+    .mid .text  {
       margin: 300px auto 50px auto;
     }
   }
   
-  @media (max-width: 625px) {
-    header {
+  @media (max-width: 625px)  {
+    header  {
       padding-top: 10px;
     }
-    .smallMenu {
+    .smallMenu  {
       display: block;
     }
   
     .link,
     .sign,
-    .mobMenu {
+    .mobMenu  {
       display: none;
     }
     .dropMob.show,
-    .drop.show {
+    .drop.show  {
       display: block;
       max-height: 400px;
       height: auto;
       padding: 15px;
     }
-    .show {
+    .show  {
       display: block;
     }
   
     .dropTextMob.show,
-    .dropText.show {
+    .dropText.show  {
       display: initial;
     }
   
-    .sign {
+    .sign  {
       font-size: calc(0.9rem + 0.3vw);
     }
   
-    footer .flex {
+    footer .flex  {
       flex-direction: column;
       align-items: center;
       text-align: center;
     }
   
-    .foot ul {
+    .foot ul  {
       padding-left: 0px;
       font-size: calc(1rem + 0.3vw);
     }
   
-    .foot img {
+    .foot img  {
       margin-bottom: 25px;
     }
   }
   
-  @media (max-width: 523px) {
-    html {
+  @media (max-width: 523px)  {
+    html  {
       font-size: 15px;
     }
   
-    h1 {
+    h1  {
       font-size: calc(2.2rem + 1vw);
     }
   
-    .menu {
+    .menu  {
       min-width: initial;
     }
   }

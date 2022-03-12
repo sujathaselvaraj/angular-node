@@ -1,10 +1,10 @@
-body{
+body {
     border: 5px;
     max-width: 900px;
     max-height: 100vh;
     background-color: black;
 }
-.container{
+.container {
     padding: 50px;
     width: 800px;
     height: 80vh;
@@ -14,7 +14,7 @@ margin-top: 3vh;
 overflow-block: hidden;  
 background-color: white;
 } 
-.bg{
+.bg {
     width:500px;
     height: 400px;
     float: right;
@@ -25,7 +25,7 @@ background-color: white;
     position: relative;
 }
 
-header{
+header {
     width:67%;
     border: 5%;
     height: 9vh;
@@ -34,7 +34,7 @@ header{
     display: flex;
     flex-direction: row;
 }
-.menu{
+.menu {
     width: 400px;
     justify-content: space-between;
     display: flex;
@@ -44,42 +44,42 @@ header{
     float: right;
     margin-left: 400px;
 } 
-.first{
+.first {
     width: 67%;
     height: 70vh;
     position: absolute;
     margin-left: -50px;
 margin-top: 15vh;
 }
-.left{
+.left {
     width:50%;
     height: 90%;
     float: left;
 }
-.right{
+.right {
     width:50%;
     height: 90%;
     float:right;
 }
-.illus{
+.illus {
     width: 120%;
     height: 100%;
 }
-.second{
+.second {
     width:80%;
     height: 5vh;
     margin-left:20%;
 }
-.new{
+.new {
     background-color: black;
     color: white;
     border-radius: 50px;
 }
-h1{
+h1 {
     font-size: 45px;
     margin-left: 0px;
 }
-.demo{
+.demo {
     width: 150px;
     height: 5vh;
     border-radius: 8px;
@@ -87,21 +87,21 @@ h1{
     background-color: red;
 
 }
-.five{
+.five {
     margin-top: 6vh;
 }
-a:hover{
+a:hover {
     color: pink;
 }
-span:hover{
+span:hover {
     color: blueviolet;
 }
-h1:hover{
+h1:hover {
     color: lawngreen;
 }
-input:hover{
+input:hover {
     color: cyan;
 }
-p:hover{
+p:hover {
     color: darkblue;
 }

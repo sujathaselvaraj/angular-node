@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;1,600&family=Barlow+Semi+Condensed:ital,wght@0,500;1,600&family=Big+Shoulders+Display:wght@700&family=Inter:wght@400;700&family=Karla:ital@1&family=Kumbh+Sans:wght@400;700&family=Lexend+Deca&family=Open+Sans:wght@400;700&family=Outfit:wght@300;400;600&family=Raleway:ital,wght@0,700;1,400&family=Red+Hat+Display:ital,wght@0,500;0,700;1,500;1,900&family=Rubik:ital,wght@0,400;1,500;1,700&display=swap');
-body{
+body {
     font-family: 'Bai Jamjuree', sans-serif;
 font-family: 'Barlow Semi Condensed', sans-serif;
 font-family: 'Big Shoulders Display', cursive;
@@ -16,7 +16,7 @@ font-family: 'Nunito Sans', sans-serif;
 box-sizing: content-box;
   
 }
-.container{
+.container {
     width: 900px;
     height: 90vh;
      background-color:  rgb(67, 120, 151);
@@ -24,7 +24,7 @@ box-sizing: content-box;
     overflow: hidden;
     
 }
-.bg{
+.bg {
     width: 800px;
     height: 90vh;
     display: flex;
@@ -32,7 +32,7 @@ box-sizing: content-box;
    position: relative;
 
 } 
-.bg_top{
+.bg_top {
     width:70%;
     height: 75vh;
     float: left;
@@ -41,7 +41,7 @@ box-sizing: content-box;
   background-size: contain;
   background-repeat: no-repeat;
 }
-.bg_bottom{
+.bg_bottom {
     width:70%;
     height: 45vh;
     float: right;
@@ -51,7 +51,7 @@ box-sizing: content-box;
     background-image: url("../image_frontend/bg-pattern-bottom.svg");
     background-size: cover;
 }  
-/* .box{
+/* .box {
     width: 200px;
     height: 70vh;
     margin-left: 30%;
@@ -59,7 +59,7 @@ box-sizing: content-box;
     background-attachment: maroon;
     position: absolute;
 }  */
-#background {
+#background  {
     height: 140px;
     width: 320px;
     border-radius: 10px 10px 0px 0px;
@@ -67,13 +67,13 @@ box-sizing: content-box;
     background-image: url("../image_frontend/bg-pattern-card.svg");
   }
   
-  #tekst-persoon {
+  #tekst-persoon  {
     height: 100px;
     position: relative;
     top: 64%; 
   }
   
-  #tekst-volgers {
+  #tekst-volgers  {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -82,11 +82,11 @@ box-sizing: content-box;
     top: 60%; 
   }
   
-  .numberTekst {
+  .numberTekst  {
   font-weight: 600;
   }
   
-  .onderTekst {
+  .onderTekst  {
     font-weight: 200;
     font-size: 8.5px;
     letter-spacing: 2px;
@@ -94,22 +94,22 @@ box-sizing: content-box;
     top: -5px; 
   }
   
-  .victor {
+  .victor  {
     font-weight: 600
   }
   
-  .city {
+  .city  {
     font-size: 13px;
     top: 3px;
   }
   
-  .image {
+  .image  {
     position: relative;
     top: 64%; 
     border-radius: 50%;
     border: solid 3px white;
   }
-  .box{
+  .box {
       position: absolute;
       width: 300px;
       height: 50vh;
@@ -118,37 +118,37 @@ box-sizing: content-box;
       background-color: white;
       border-radius: 12px;
   } 
-  .toppest{
+  .toppest {
       width:100%;
       height:20vh;
       background-image: url("../image_frontend/bg-pattern-card.svg");
       border-radius: 12px 12px 0px 0px;
   }
-.victor{
+.victor {
     width: 70px;
     height: 70px;
     border-radius: 100%;
     margin-top: 17vh;
     margin-left: 40%;
 }
-span{
+span {
     font-size: large;
 }
-.name{
+.name {
     margin-top: 8vh;
     margin-left: 30%;
     color:rgb(5, 5, 26);
 }
-.second{
+.second {
     margin-left: 23%;
     font-size: small;
 }
-hr{
+hr {
     margin-top: 4vh;
     width: 300px;
     margin-left: -90px;
 }
-.footer{
+.footer {
     display: flex;
     flex-direction: row;
     position: absolute;

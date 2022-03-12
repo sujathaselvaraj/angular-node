@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;1,600&family=Barlow+Semi+Condensed:ital,wght@0,500;1,600&family=Inter:wght@400;700&family=Open+Sans:wght@400;700&family=Outfit:wght@300;400;600&family=Raleway:ital,wght@0,700;1,400&family=Red+Hat+Display:ital,wght@0,500;0,700;1,500;1,900&family=Rubik:ital,wght@0,400;1,500;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;1,600&family=Barlow+Semi+Condensed:ital,wght@0,500;1,600&family=Inter:wght@400;700&family=Lexend+Deca&family=Open+Sans:wght@400;700&family=Outfit:wght@300;400;600&family=Raleway:ital,wght@0,700;1,400&family=Red+Hat+Display:ital,wght@0,500;0,700;1,500;1,900&family=Rubik:ital,wght@0,400;1,500;1,700&display=swap');
-body{
+body {
     font-family: 'Bai Jamjuree', sans-serif;
 font-family: 'Barlow Semi Condensed', sans-serif;
 font-family: 'Inter', sans-serif;
@@ -25,11 +25,11 @@ background-size: cover;
 margin: 3px;
 text-align: center;
 }
-.container{
+.container {
     display: inline;
     justify-content: center;
 }
-.box1{
+.box1 {
     width:40%;
     height:50vh;
     float: left;
@@ -41,7 +41,7 @@ text-align: center;
     flex-direction: column;
     color:white;
 }
-.box2{
+.box2 {
     width:40%;
     height:50vh;
     float: right;
@@ -53,31 +53,31 @@ text-align: center;
     margin-right: 10%;
 
 }
-.image{
+.image {
     height:50vh;
     width: 100%;
 }
-.clr{
+.clr {
     height:50vh;
     width: 100%;
 }
-.bottom{
+.bottom {
     display: flex;
     justify-content: space-evenly;
 }
-/* .span{
+/* .span {
     color: hsl(277, 64%, 61%);
 } */
-.top{
+.top {
     align-content: left;
     margin-left: 50px;
     margin-right: 50px;
     margin-bottom: 20px;
 }
-img {
+img  {
     opacity: 0.7;
   }
-/* .second{
+/* .second {
     margin-left: 40px;
     margin-right: 40px;
     margin-bottom: 20px;
