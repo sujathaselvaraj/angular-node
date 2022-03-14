@@ -12,22 +12,18 @@ background-position: center center;
 background-size: cover;
 margin: 3px;
 text-align: center;
-/* max-width: 1200px;
-max-height: 1200vh;
-justify-content: center; */
-
 }
-header{
+header {
     height: 90vh;
     background-color: rgb(222, 251, 252);
 }
-.logo{
+.logo {
     margin: 30px;
     float: left;
     width: 200px;
     height: 50px;
 }
-.try{
+.try {
     margin: 30px;
     float: right;
     width: 120px;
@@ -35,16 +31,14 @@ header{
     background-color: white;
     border-radius: 10px;
 }
-.second{
+.second {
     position: absolute;
     width: 100%;
     height:60vh;
     margin-top: -500px;
     position: inline;
-
-    /* margin-right: 10px; */
 }
-.box1{
+.box1 {
     width:40%;
     height:60vh;
     float: left;
@@ -53,7 +47,7 @@ header{
     justify-content: left;
     margin-right: 2%;
 }
-.box2{
+.box2 {
     width:50%;
     height:70vh;
     float: right;
@@ -66,7 +60,7 @@ header{
 h1{
     line-height: 40px;
 }
-.start{
+.start {
   float: center;
          width: 250px;
         height: 40px;
@@ -74,16 +68,14 @@ h1{
         background-color:  hsl(322, 100%, 66%);
         border-radius: 10px;
         border: hsl(322, 100%, 66%);
-        /* margin-left: 90px; */
     }
-    .third{
+    .third {
         margin: 20px;
-        /* width: 100%; */
         height: 70vh;
         margin: 80px;
         border: 5px solid rgb(167, 164, 164);
     }
-    .left{
+    .left {
         float:left;
         width:40%;
         height: 30vh;
@@ -91,19 +83,18 @@ h1{
         margin-left: 40px;
 
     }
-    .right .pic{
+    .right .pic {
         float:right;
         width: 50%;
         height: 70vh;
     }
-    .four{
+    .four {
         margin: 20px;
-        /* width: 100%; */
         height: 70vh;
         margin: 80px;
         border: 5px solid rgb(167, 164, 164);
     }
-    .right4{
+    .right4 {
         float:right;
         width:40%;
         height: 30vh;
@@ -111,34 +102,31 @@ h1{
         background-color: aliceblue;
 
     }
-    .left4 .pic{
+    .left4 .pic {
         float:left;
         width: 50%;
         height: 70vh;
     }
-    .five{
+    .five {
         margin: 20px;
-        /* width: 100%; */
         height: 70vh;
         margin-right: 40px;
         margin-left: 80px;
         border: 5px solid rgb(167, 164, 164);
     }
-    .left{
+    .left {
         float:left;
         width:40%;
         height: 30vh;
         margin-top: 25vh;
         margin-left: 40px;
-
-
     }
-    .right .pic{
+    .right .pic {
         float:right;
         width: 50%;
         height: 70vh;
     }
-    .six{
+    .six {
         width: 60%;
         height: 20vh;
         border-radius: 12px;
@@ -147,53 +135,94 @@ h1{
         justify-self: center;
         margin-left: 300px;
         margin-top: -90px;
-        /* position: relative; */
     
     }
-    footer{
-        /* margin-left: 80px; */
+    footer {
         margin-top: 300px;
-        /* width:1200px; */
         height:90vh;
         background-color: hsl(192, 100%, 9%);
         justify-self: baseline;
-        /* position: absolute;  */
         font-size: large;
     
 
     }
-    .boxes{
+    .boxes {
         list-style-type: none;
         display: flex;
         justify-content: space-evenly;
+        color:white;
     }
-    .boxes .foot{
-        width: 200px;
-        height: 200px;
-        display: flex;
-        flex-direction: column;
-        margin: 60px;
-        border-radius: 5px;
-        color: white;
-        justify-content: left;
+.left8 {
+margin-top: 5vh;
 }
-a:hover
-{
-    color:beige
+.left8 p {
+    font-size:1em;
+    margin-left:20px;
+    margin-top:30px;
+    width:300px;
 }
-.new{
-    list-style-type: none;
-    display: flex;
-    float:right;
+.left2 {
+    align-items:center;
+    display:flex;
+    justify-content:center;
 }
-.new.icon{
-    width: 40px;
-    height: 40px;
-    display: flex;
-    flex-direction: row;
-    margin: 4px;
-    border-radius: 5px;
-    justify-content: space-evenly;
-    
+.contact {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    width:200px;
+
+}
+.contact div {
+    align-items:center;
+    display:flex;
+    justify-content:center;
+    margin-top:-10px;
+ }
+.contact p {
+    margin-left:20px;
+}
+.last {
+    display:inline-grid;
+    grid-template-columns: 150px 150px;
+    grid-template-rows:35px 35px 35px 35px;
+	margin:0;
+    margin-left:100px;
+    margin-top:130px;
+    padding:0;
+    width:400px;
+}
+.last li {
+    cursor: pointer;
+    color:hsl(0, 0%, 100%);
+    list-style-type:none;
+
+}
+.last li:hover {
+    color:hsl(176, 68%, 64%);
+}
+.share {
+    display:grid;
+    grid-template-columns: 35px 35px 35px;
+    grid-template-rows:35px;
+    grid-gap:10px;
+    margin-top:150px;
+    padding:0;
+}
+.share li {
+    align-items:center;
+    border:1px solid hsl(0, 0%, 100%);
+    border-radius:50%;
+    color:hsl(0, 0%, 100%);
+    cursor: pointer;
+    display:flex;
+    font-size:1.5em;
+    justify-content:center;
+    list-style-type:none;
+   
+}
+.share li:hover {
+    border:1px solid hsl(176, 68%, 64%);
+    color:hsl(176, 68%, 64%);
 }
     

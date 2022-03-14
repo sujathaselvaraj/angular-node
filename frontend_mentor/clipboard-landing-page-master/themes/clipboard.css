@@ -145,3 +145,38 @@ footer {
 a:hover {
     color: greenyellow;
 }
+@media only screen and (max-width: 605px) {
+body {
+  max-width: 480px;
+  align-content: center;
+  justify-content: center;
+}
+.but {
+display: flex;
+flex-direction: column;
+}
+.second {
+width : 480px;
+}
+.third {
+  display: flex;
+  flex-direction: column;
+}
+.com {
+  width: 400px;
+  height: 70vh;
+  align-self: center;
+}
+.five {
+  width: 300px;
+  height: 70vh;
+  align-self: center;
+}
+.eight {
+  display: flex;
+  flex-direction: column;
+}
+.final1 {
+width:480px;
+}
+}

@@ -4,21 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- displays site properly based on user's device -->
-
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
     <title>Frontend Mentor | Huddle landing page with alternating feature blocks</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <link href="huddle_landing_blocks.css" rel="stylesheet">
+    <link href="./themes/huddle_landing_blocks.css" rel="stylesheet">
 </head>
 
 <body>
     <main class="container">
         <div class="first">
             <header>
-                <img class="logo" src="../image_frontend/huddle.svg">
+                <img class="logo" src="./images/huddle.svg" alt="Logo">
                 <button class="try" type="button" onclick="">Try it Free</button>
 
             </header>
@@ -32,7 +27,8 @@
 
                     </button>
                 </div>
-                <div class="box2"><img src="../image_frontend/illustration-mockups.svg" class="image"></div>
+                <div class="box2"><img src="./images/illustration-mockups.svg" alt="illustration Mockups" class="image">
+                </div>
             </div>
             <div class="third">
                 <div class="left" align="left">
@@ -41,10 +37,12 @@
                         Think of the insightful conversations you miss out on with a feedback form.
                     </p>
                 </div>
-                <div class="right"><img src="../image_frontend/illustration-grow-together.svg" class="pic"></div>
+                <div class="right"><img src="./images/illustration-grow-together.svg" class="pic"
+                        alt="illustration-grow-together"></div>
             </div>
             <div class="four">
-                <div class="left4"><img src="../image_frontend/illustration-flowing-conversation.svg" class="pic"></div>
+                <div class="left4"><img src="./images/illustration-flowing-conversation.svg"
+                        alt="illustration-flowing-conversation" class="pic"></div>
                 <div class="right4" align="left">
                     <h2>Flowing Conversations</h2>
                     <p>You wouldn't paginate a conversation in real life, so why do it online? Our threads
@@ -58,7 +56,7 @@
                         This means, once signed in to your app, your users can start chatting immediately.
                     </p>
                 </div>
-                <div class="right"><img src="../image_frontend/illustration-your-users.svg" class="pic"></div>
+                <div class="right"><img src="./images/illustration-your-users.svg" alt="Users" class="pic"></div>
             </div>
 
             <footer>
@@ -70,28 +68,47 @@
                     </button>
                 </div>
                 <div class="boxes">
-                    <div class="foot">
-                        <h2>Huddle</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua</p>
-                        <address>+1-543-123-4567<br>
-                            example@huddle.com</address>
-                    </div>
-                    <div class="foot"><a href="">About Us</a><br><a href=""> What We Do</a><br><a href="">FAQ</a></div>
-                    <div class="foot"><a href="">Career</a><br><a href=""> Blog</a><br><a href="">Contact Us </a></div>
 
-                    <div class="foot">
-                        <div class="new">
-                            <div><img class="icon" src="../image_frontend/icon-facebook.svg"></div>
-                            <div><img class="icon" src="../image_frontend/icon-twitter.svg"></div>
-                            <div><img class="icon" src="../image_frontend/icon-instagram.svg"></div>
+                    <div class="left8">
+                        <img id="logo" src="./images/huddle.svg" alt="logo">
+                        <div class="left2">
+                            <img id="pin" src="./images/icon-location.svg" alt="location pin">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore
+                                et dolore magna aliqua</p>
                         </div>
+                        <div class="contact">
+                            <div><img src="./images/icon-phone.svg" alt="phone">
+                                <p>+1-543-123-4567</p>
+                            </div>
+                            <div><img src="./images/icon-email.svg" alt="email">
+                                <p>example@huddle.com</p>
+                            </div>
+                        </div>
+
                     </div>
+                    <ul class="last">
+                        <li>About Us</li>
+                        <li>What We Do</li>
+                        <li>FAQ</li>
+                        <li>Career</li>
+                        <li>Blog</li>
+                        <li>Contact Us</li>
+                    </ul>
+                    <ul class="share">
+                        <li><a href="https://www.facebook.com/"><img src="../../image_frontend/icon-facebook.svg"
+                                    alt="Facebook"></a></li>
+                        <li><a href="https://twitter.com/explore"><img src="../../image_frontend/icon-twitter.svg"
+                                    alt="Twitter"></a></li>
+                        <li> <a href="https://www.instagram.com/?hl=en"><img
+                                    src="../../image_frontend/icon-instagram.svg" alt="Instagram"></a></li>
+                    </ul>
                 </div>
             </footer>
-            <div class="foot">
-                <p>&copy; Copyright 2018 Huddle. All rights reserved</p>
-            </div>
+        </div>
+        <div class="foot">
+            <p>&copy; Copyright 2018 Huddle. All rights reserved</p>
+        </div>
         </div>
     </main>
 
