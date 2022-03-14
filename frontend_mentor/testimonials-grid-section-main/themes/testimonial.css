@@ -1,86 +1,74 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,500;1,600&family=Outfit:wght@300;400;600&family=Red+Hat+Display:ital,wght@0,500;0,700;1,500;1,900&display=swap');
 body {
+    background-color:  hsl(210, 46%, 95%);
     font-family: 'Barlow Semi Condensed', sans-serif;
     font-family: 'Outfit', sans-serif;
+    font-size: 13px;
     font-family: 'Red Hat Display', sans-serif;
     text-align: center;
-    background-color:  hsl(210, 46%, 95%);
-    font-size: 13px;
 }
 main {
     background: fixed;
 }
  #card1 {
     background-color:  hsl(263, 55%, 52%);
-    text-align: left;
-    margin: auto;
-    padding: 30px;
     border-radius: 18px;
+    color:hsl(0, 0%, 100%);
+    margin: auto;
     max-width: 600px;
     height: 240px;
-    color:hsl(0, 0%, 100%);
+    padding: 30px;
+    text-align: left;
 }
 #card2 {
     background-color:  hsl(217, 19%, 35%);
-    text-align: left;
-    margin: auto;
-    padding: 30px;
     border-radius: 18px;
-    max-width: 220px;
-    height: 240px;
     color:hsl(0, 0%, 100%);
+    height: 240px;
+    margin: auto;
+    max-width: 220px;
+    padding: 30px;
+    text-align: left;
 }
 #card3 {
     background-color:  white ;
-    text-align: left;
-    margin: auto;
-    padding: 30px;
     border-radius: 18px;
-    max-width: 220px;
-    height: 220px;
     color: hsl(219, 29%, 14%);
+    height: 220px;
+    margin: auto;
+    max-width: 220px;
+    padding: 30px;
+    text-align: left;
+
 }
 #card4 {
     background-color:  hsl(219, 29%, 14%);
-    text-align: left;
-    margin: auto;
-    padding: 30px;
     border-radius: 18px;
-    max-width: 600px;
-    height: 220px;
     color:hsl(0, 0%, 100%);
+    height: 220px;
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+    padding: 30px;
 }
 #card5 {
     background-color:  hsl(0, 0%, 100%);
-    text-align: left;
+    border-radius: 18px;
+    color: hsl(219, 29%, 14%);
+    height: 540pxpx;
+    max-width: 200px;
     margin: auto;
     padding: 30px;
-    border-radius: 18px;
-    max-width: 200px;
-    height: 540pxpx;
-    color: hsl(219, 29%, 14%);
+    text-align: left;
 }
-/* .container #card1 {
-    display: flow-root;
-    flex-direction: column;
-    flex-wrap: wrap;
-} */
-/* .container .card2 {
-    display: inline-flexbox;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-.container div {
-    padding: 20px;
-    margin: 10px;
-} */
 header img {
-        width: 3.5rem;
-        height: 3rem;
+       
         background-position: center center;
+        border-radius: 100%;
         background-repeat: no-repeat;
         background-size: contain;
-        border-radius: 100%;
+        height: 3rem;
+        width: 3.5rem;
 }
 header {
     max-height: 38px;
@@ -94,12 +82,12 @@ header {
     }
  
     .container  {
-        display: grid;
-        margin: 0 5% 0 5%;
-       grid-template-columns: repeat(4, 1fr);
-       grid-template-rows: auto auto;
        grid-column-gap: 2rem;
        grid-row-gap: 2rem;
+       grid-template-columns: repeat(4, 1fr);
+       grid-template-rows: auto auto;
+       display: grid;
+       margin: 0 5% 0 5%;
    }
 
    #card1 {

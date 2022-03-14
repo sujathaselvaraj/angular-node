@@ -1,25 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;1,600&family=Barlow+Semi+Condensed:ital,wght@0,500;1,600&family=Outfit:wght@300;400;600&family=Raleway:ital,wght@0,700;1,400&family=Red+Hat+Display:ital,wght@0,500;0,700;1,500;1,900&family=Rubik:ital,wght@0,400;1,500;1,700&display=swap');
 body {
-    font-family: 'Bai Jamjuree', sans-serif;
-font-family: 'Barlow Semi Condensed', sans-serif;
-font-family: 'Outfit', sans-serif;
-font-family: 'Raleway', sans-serif;
-font-family: 'Red Hat Display', sans-serif;
-font-family: 'Rubik', sans-serif;
-background-color: hsl(240, 9%, 87%);
-background-position: "center";
-background-repeat: no-repeat;
-margin: auto;
-
-font-size: 16px;
+  background-color: hsl(240, 9%, 87%);
+  background-position: "center";
+  background-repeat: no-repeat;
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-family: 'Outfit', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-family: 'Red Hat Display', sans-serif;
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+  margin: auto;
 }
 .bg {
-    position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
     height: 100vh;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
 }
 .top {
     height: 100vh;
@@ -29,198 +28,202 @@ font-size: 16px;
  {
     background-color:  hsl(283, 88%, 55%);
     border-radius: 0% 0% 50% 50%;
-    width: 100%;
     height: 70vh;
+    width: 100%;
 }
 .bottom {
-    width: 27%;
     height: 100vh;
+    width: 27%;
 }
 .bottom_bg
  {   
-    margin-top: 30vh;
     background-color: hsl(270, 26%, 91%);
     border-radius: 50% 50% 0% 0%;
-    width: 100%;
     height: 70vh; 
+    margin-top: 30vh;
+    width: 100%;
 }
 .first {
-    position: absolute;
     display: flex;
     flex-direction: row;
-    width: 60%;
     height: 70vh;
     margin-top: 8%;
     margin-right: 25%;
     margin-left: 23%;
     margin-bottom: 8%;
+    position: absolute;
+    width: 60%;
+
+
 }
 .left {
-    width: 37%;
-    height: 75vh;
     background-color: hsl(270, 20%, 96%);
+    border-color: white;
     border-radius: 20px;
     border-style: solid;
-    border-color: white;
     border-width: 8px;
     justify-content: center;
+    height: 75vh;
+    width: 37%;
 }
 .right {
-    width: 64%;
     height: 45vh;
-    margin-top: 20vh;
     margin-left: 10%;
+    margin-top: 20vh;
+    width: 64%;
 }
 .cam {
-    position: absolute;
     background-color: white;
     border-color: white;
     border-radius: 15px;
     height: 35px;
-    width: 140px;
     justify-self: center;
     margin-left: 60px;
     margin-top: -4px;
+    position: absolute;
+    width: 140px;
 }
 header {
-    position: relative;
-    width: 100%;
-    height: 90px;
     background-color: hsl(283, 88%, 55%);
     border-radius: 20px 20px 0 0;
+    height: 90px;
+    position: relative;
+    width: 100%;
 }
 .second {
-    position: absolute;
-    width: 100%;
-    height: 40px;
-    margin-top: 37px;
     display: flex;
     flex-direction: row;
+    height: 40px;
     justify-items: auto;
+    margin-top: 37px;
+    position: absolute;
+    width: 100%;
 }
 .prof {
-    border-radius: 100%;
-    border: 1px;
     bottom: 0%;
-    position: sticky;
-    max-width: 35px;
-    max-height: 35px;
-    float: left;
+    border: 1px;
     border-color: hsl(0, 0%, 100%);
+    border-radius: 100%;
+    float: left;
+    max-height: 35px;
+    max-width: 35px;
+    position: sticky;
+   
 }
 .para {
     font-size: small;
 }
 .box {
-    width:70%;
     height: 12vh;
     margin-top: 2vh;
-    
+    width:70%; 
 }
 .box1 {
-    font-size: small;
-    color:blueviolet;
-    width:100%;
-    height: 5vh;
-    border-radius: 12px;
     background-color: rgb(207, 186, 226);
     border: 2px solid rgb(207, 186, 226);
+    border-radius: 12px;
+    color:blueviolet;
+    font-size: small;
+    height: 5vh; 
     margin: 4px;
+    width:100%;
 }
 .box2 {
-    font-size: small;
-    color:blueviolet;
-    width:100%;
-    height: 5vh;
-    border-radius: 12px;
     background-color: rgb(207, 186, 226);
     border: 2px solid rgb(207, 186, 226);
+    border-radius: 12px;
+    color:blueviolet;
+    font-size: small;
+    height: 5vh;
     margin: 4px;
+    width:100%;
 }
 .second_box {
-    list-style-type: none;
     display: flex;
     float:right;
+    list-style-type: none;
 }
 .second_box .dog {
-    width: 40px;
-    height: 40px;
+    border-radius: 5px;
     display: flex;
     flex-direction: row;
+    height: 40px;
     margin: 4px;
-    border-radius: 5px;
-    
+    width: 40px;    
 }
 .third_box {
+    background-color: rgb(207, 186, 226);
+    border: 2px solid rgb(207, 186, 226);
+    border-radius: 12px;
     float: right;
     font-size: small;
     color:blueviolet;
-    width:70%;
     height: 5vh;
-    border-radius: 12px;
-    background-color: rgb(207, 186, 226);
-    border: 2px solid rgb(207, 186, 226);
     margin: 4px;
+    width:70%;
 }
 .fourth_box {
-    float: right;
-    font-size: small;
-    color:blueviolet;
-    width:50%;
-    height: 3vh;
-    border-radius: 8px;
     background-color: rgb(207, 186, 226);
     border: 2px solid rgb(207, 186, 226);
+    border-radius: 8px;
+    color:blueviolet;
+    float: right;
+    font-size: small;
+    height: 3vh;
+    width:50%;
     margin: 4px;
 }
 .fifth_box {
-    font-size: small;
-    color:blueviolet;
-    width:70%;
-    height: 8vh;
-    border-radius: 12px;
     background-color: rgb(207, 186, 226);
     border: 2px solid rgb(207, 186, 226);
+    border-radius: 12px;
+    color:blueviolet;
+    font-size: small;
     margin-top: 20vh;
+    height: 8vh;
+    width:70%;
 }
 .sixth_box {
-    font-size: small;
-    color:white;
-    width:60%;
-    height: 3vh;
-    border-radius: 8px;
     background-color: hsl(283, 88%, 55%);
     border: 2px solid hsl(283, 88%, 55%);
+    border-radius: 8px;
+    color:white;
+    font-size: small;
     margin: 4px;
+    height: 3vh;
+    width:60%; 
 }
 .seventh_box {
-    font-size: small;
-    color:white;
-    width:60%;
-    height: 3vh;
-    border-radius: 8px;
     background-color: hsl(283, 88%, 55%);
     border: 2px solid hsl(283, 88%, 55%);
+    border-radius: 8px;
+    color:white;
+    font-size: small;
+    height: 3vh;
     margin: 4px;
+    width:60%;
+    
 }
 .type {   
-    width: 60%;
-    border-color: aliceblue;
-    margin:20px;
-    height: 5vh;
     border-radius: 12px;
+    border-color: aliceblue;
     float: left;
+    height: 5vh;
+    margin:20px;
+    width: 60%;
 } 
 .circle {
-    float:right;
-    color: white;
-    width: 30px;
-    height: 30px;
-    border-radius: 15px;
     background-color: black;
+
+    border-radius: 15px;
+    color: white;
+    float:right;
     font-size: larger;
     margin-top: 20px;
     margin-right: 20px;
+    height: 30px;
+    width: 30px;
+    
 }
 .paragraph {
     line-height: 5vh;
