@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | FAQ Accordion Card</title>
+    <link rel="stylesheet" href="themes/faq.css">
+
+
+</head>
+
+<body>
+    <main class="container">
+        <div class="box">
+            <div class="left">
+                <div> <img class="image" src="./images/illustration-woman-online-desktop.svg"
+                        alt="Women online Desktop"><img class="img_box" src="./images/illustration-box-desktop.svg"
+                        alt="Illustration box desktop">
+
+                </div>
+            </div>
+            <div class="right">
+                <h1>FAQ</h1>
+                <div class="answer">
+                    <div class="ans1">How many team members can I invite? &#160; &#160; &#160; &#160;<button
+                            type="button" onclick="answer1()" ondblclick="myFunction1()"><img
+                                src="./images/icon-arrow-down.svg" alt="Arrow"></button></div>
+                    <br>
+                    <div id="reply1"></div>
+                </div>
+                <hr>
+                <div class="answer">
+                    <div class="ans2">What is the maximum file upload size? &#160; &#160; &#160; &#160;&#160;<button
+                            type="button" onclick="answer2()" ondblclick="myFunction2()"><img
+                                src="./images/icon-arrow-down.svg" alt="Arrow"></button></div> <br>
+                    <div id="reply2"></div>
+                </div>
+                <hr>
+                <div class="answer">
+                    <div class="ans3"> How do I reset my password? &#160; &#160;&#160; &#160; &#160; &#160; &#160;
+                        &#160; &#160;
+                        &#160; &#160;&#160;&#160;&#160;&#160;<button type="button" onclick="answer3()"
+                            ondblclick="myFunction3()"><img src="./images/icon-arrow-down.svg" alt="Arrow"></button>
+                    </div>
+                    <br>
+                    <div id="reply3"></div>
+                </div>
+                <hr>
+                <div class="answer">
+                    <div class="ans4">Can I cancel my subscription? &#160; &#160; &#160; &#160; &#160; &#160; &#160;
+                        &#160; &#160;
+                        &#160; &#160;
+                        &#160;<button type="button" onclick="answer4()" ondblclick="myFunction4()"><img
+                                src="./images/icon-arrow-down.svg" alt="Arrow"></button></div>
+                    <br>
+                    <div id="reply4"></div>
+                </div>
+                <hr>
+                <div class="answer">
+                    <div class="ans5">Do you provide additional support? &#160; &#160; &#160; &#160; &#160; &#160;
+                        &#160;&#160;<button type="button" onclick="answer5()" ondblclick="myFunction5()"><img
+                                src="./images/icon-arrow-down.svg" alt="Arrow"></button></div> <br>
+                    <div id="reply5"></div>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </main>
+    <script type="text/javascript" src="./script/faq.js"></script>
+</body>
+
+</html>

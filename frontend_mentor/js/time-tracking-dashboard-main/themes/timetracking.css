@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;1,600&family=Barlow+Semi+Condensed:ital,wght@0,500;1,600&family=Big+Shoulders+Display:wght@700&family=Inter:wght@300;500;700&family=Josefin+Sans:ital,wght@1,300;1,400;1,600&family=Karla:ital@1&family=Kumbh+Sans:wght@400;700&family=Lexend+Deca&family=Open+Sans:wght@400;700&family=Outfit:wght@300;400;600&family=Raleway:ital,wght@0,700;1,400&family=Red+Hat+Display:ital,wght@0,500;0,700;1,500;1,900&family=Rubik:ital,wght@0,400;1,500;1,700&display=swap');
+body {
+  background-color: white;
+  color: white;
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-family: 'Big Shoulders Display', cursive;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Karla', sans-serif;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-family: 'Lexend Deca', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Outfit', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-family: 'Red Hat Display', sans-serif;
+  font-family: 'Rubik', sans-serif;
+}
+.container {
+  background-color: hsl(226, 43%, 10%);
+  display: flex;
+  flex-direction: row;
+  height: 60vh;
+  justify-content: space-around;
+  margin-left:20%;
+  margin-top: 4vh;
+  padding: 100px 5vh 100px 5vh;
+  width:800px;
+}
+.box1 {
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 12px;
+    height: 58vh;
+    margin-right: 1%;
+    width:25%;
+}
+.box2 {
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    margin-right: 1%;
+    width:25%;
+}
+.work{
+    background-color: hsl(43, 84%, 65%);
+    border-radius: 12px;
+    height: 50%;
+    width:100%; 
+}
+.excercise{
+    background-color: hsl(145, 58%, 55%);
+    border-radius: 12px;
+    height: 50%;
+    margin-top: 1vh;
+    width:100%; 
+}
+.box3 {
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    margin-right: 1%;
+    width:25%;
+}
+.play{
+    background-color: hsl(195, 74%, 62%);
+    border-radius: 12px;
+    height: 50%;
+    width:100%; 
+}
+.social{
+    background-color: hsl(264, 64%, 52%);
+    border-radius: 12px;
+    height: 50%;
+    margin-top: 1vh;
+    width:100%; 
+}
+.box4 {
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    margin-right: 1%;
+    width:25%;
+}
+.study{
+    background-color:  hsl(15, 100%, 70%);
+    border-radius: 12px;
+    height: 50%;
+    width:100%; 
+}
+.selfcare{
+    background-color: hsl(43, 84%, 65%);
+    border-radius: 12px;
+    height: 50%;
+    margin-top: 1vh;
+    width:100%; 
+}
+.profile{
+    background-color: hsl(246, 80%, 60%);
+    border-radius: 12px;
+    height: 65%;
+    width:100%;
+}
+.profile_pic{
+    border-radius: 100%;
+    height:50px;
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 50px;
+    border: 2px solid white;
+}

@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;1,600&family=Barlow+Semi+Condensed:ital,wght@0,500;1,600&family=Big+Shoulders+Display:wght@700&family=Inter:wght@400;700&family=Josefin+Sans:ital,wght@1,300;1,400;1,600&family=Karla:ital@1&family=Kumbh+Sans:wght@400;700&family=Lexend+Deca&family=Open+Sans:wght@400;700&family=Outfit:wght@300;400;600&family=Raleway:ital,wght@0,700;1,400&family=Red+Hat+Display:ital,wght@0,500;0,700;1,500;1,900&family=Rubik:ital,wght@0,400;1,500;1,700&display=swap');
+body {
+    font-family: 'Bai Jamjuree', sans-serif;
+font-family: 'Barlow Semi Condensed', sans-serif;
+font-family: 'Big Shoulders Display', cursive;
+font-family: 'Inter', sans-serif;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Karla', sans-serif;
+font-family: 'Kumbh Sans', sans-serif;
+font-family: 'Lexend Deca', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Outfit', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Red Hat Display', sans-serif;
+font-family: 'Rubik', sans-serif;
+background-color: rgb(234, 241, 241);
+font-size: 15px;
+align-content: center;
+max-width: 1000px;
+max-height: 90vh;
+}
+
+header {
+    margin-left: 60%;
+    margin-top: 4vh;
+}
+.top {
+    width: 500px;
+    height: 25vh;
+    margin-left: 35%;
+    margin-top: 2%;
+    color: hsl(209, 33%, 12%);
+    padding-left: 10%;
+}
+.bottom {
+    width: 600px;
+    height: 45vh;
+    margin-left: 35%;
+    margin-top: 2%;
+}
+.share {
+    width: 600px;
+    height: 10vh;
+    margin-left: 35%;
+    margin-top: 2%;
+}
+    .mini_box {
+        width: 300px;
+        height: 7vh;
+        margin-left: 250px;
+    
+    } 
+.head {
+    font-size: 38px;
+}
+.sub {
+    font-size: smaller; 
+    margin-left: 100px; 
+}
+.email {
+    width: 50%;
+    height: 5vh;
+    border-radius: 12px;
+    background-color: white;
+    border-color: blue;
+    color: blue;
+    margin-top: 3vh;
+}
+.arrow {
+    width: 30%;
+    height: 5vh;
+    border-radius: 12px;
+    background-color: blue;
+    border-color: blue;
+    color: white;
+    margin-top: 3vh;
+
+}
+.image {
+    width: 600px;
+    height: 45vh;
+}
+.copy {
+    margin-left: 150px;
+    color:blue;
+}
+div:hover {
+    color: palevioletred;
+}
+input:hover {
+    color: lawngreen;
+}
+span:hover {
+    color: yellow;
+}
+* {
+    justify-content: center;
+    align-content: center;
+    text-align: justify;
+}
+.media_icon {
+    border: 10px;
+    border-radius: 20px;
+    display: inline;
+    justify-content: space-between;
+    height: 20px;
+    width: 20px;
+    background-color: aliceblue;
+}
+

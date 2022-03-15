@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Ping coming soon page</title>
+    <link rel="stylesheet" href="themes/ping.css">
+
+</head>
+
+<body>
+    <main class="container">
+        <header><img src="./images/logo.svg" alt="Ping"></header>
+        <div class="top">
+            <div class="head"><span style="color: hsl(0, 0%, 59%);">We are launching </span>soon!</div>
+            <div class="sub">Subscribe and get notified</div>
+            <div class="mail">
+                <input class="email" style="color: hsl(0, 36%, 70%);" placeholder="Enter Address" type="email"
+                    name="email" size="30">
+                <input class="arrow" type="submit" value="Notify Me" onClick="checkForm(); return False">
+            </div>
+        </div>
+        <div class="bottom"><img class="image" src="./images/illustration-dashboard.png"></div>
+        <div class="share">
+            <div class="mini_box">
+                <a href="https://www.facebook.com/"><img src="../../image_frontend/icon_facebook.png" alt="Facebook"
+                        class="media_icon" id="media_icon"></a>
+                <a href="https://www.instagram.com/?hl=en"><img src="../../image_frontend/icon_insta.jpg"
+                        alt="Instagram" class="media_icon" id="media_icon"></a>
+                <a href="https://twitter.com/explore"><img src="../../image_frontend/icon_twitter.png" alt="Twitter"
+                        class="media_icon" id="media_icon"></a>
+            </div>
+            <div class="copy">&copy; Copyright Ping. All rights reserved.</div>
+        </div>
+    </main>
+    <script type="text/javascript" src="./script/ping.js">
+
+    </script>
+</body>
+
+</html>

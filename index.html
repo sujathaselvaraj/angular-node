@@ -6,14 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
+    <link rel="stylesheet" href="themes/bg.css">
+    <script type="text/javascript" src="themes/index.js"></script>
 </head>
-<link rel="stylesheet" href="bg.css">
 
 <body>
     <header>
         <h1><i>Mind Units</i></h1>
         <div class="option">
-            <div><a onclick="about()" ondblclick="myFunction()">About Me</a></div>&#160;&#160;
+            <div><a onclick="display_about_me()" ondblclick="hide_about_me()">About Me</a></div>&#160;&#160;
             <div><a href="./indexes.html">Project</a></div>
         </div>
         <br>
@@ -23,15 +24,6 @@
     <main class="container">
         <img class="image" src="./images/frontend.jpg">
     </main>
-    <script>
-        var a = "<b>I am Sujatha Selvaraj</b>.I am in the process of Learning.Area that I am focusing is Frontend of a page.I like to learn from my mistake that'swhat I am doing in my coding.This will updated soon with lots of learning.. ";
-        function about() {
-            document.getElementById("reply").innerHTML = a;
-        }
-        function myFunction() {
-            document.getElementById('reply').innerHTML = "";
-        }
-    </script>
 </body>
 
 </html>

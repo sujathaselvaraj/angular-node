@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;1,600&family=Barlow+Semi+Condensed:ital,wght@0,500;1,600&family=Big+Shoulders+Display:wght@700&family=Inter:wght@300;500;700&family=Josefin+Sans:ital,wght@1,300;1,400;1,600&family=Karla:ital@1&family=Kumbh+Sans:wght@400;700&family=Lexend+Deca&family=Open+Sans:wght@400;700&family=Outfit:wght@300;400;600&family=Raleway:ital,wght@0,700;1,400&family=Red+Hat+Display:ital,wght@0,500;0,700;1,500;1,900&family=Rubik:ital,wght@0,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;1,600&family=Barlow+Semi+Condensed:ital,wght@0,500;1,600&family=Big+Shoulders+Display:wght@700&family=Inter:wght@300;500;700&family=Josefin+Sans:ital,wght@1,300;1,400;1,600&family=Karla:ital@1&family=Kumbh+Sans:wght@400;700&family=Lexend+Deca&family=Open+Sans:wght@400;700&family=Outfit:wght@300;400;600&family=Raleway:ital,wght@0,700;1,400&family=Red+Hat+Display:ital,wght@0,500;0,700;1,500;1,900&family=Rubik:ital,wght@0,400;1,500;1,700&display=swap');
+body {
+    border: 5px;
+    max-width: 900px;
+    max-height: 400vh;
+    background-color: black;
+    font-family: 'Bai Jamjuree', sans-serif;
+font-family: 'Barlow Semi Condensed', sans-serif;
+font-family: 'Big Shoulders Display', cursive;
+font-family: 'Inter', sans-serif;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Karla', sans-serif;
+font-family: 'Kumbh Sans', sans-serif;
+font-family: 'Lexend Deca', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Outfit', sans-serif;
+font-family: 'Bai Jamjuree', sans-serif;
+font-family: 'Barlow Semi Condensed', sans-serif;
+font-family: 'Big Shoulders Display', cursive;
+font-family: 'Inter', sans-serif;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Karla', sans-serif;
+font-family: 'Kumbh Sans', sans-serif;
+font-family: 'Lexend Deca', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Outfit', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Red Hat Display', sans-serif;
+font-family: 'Rubik', sans-serif;
+    
+}
+.container {
+    width: 800px;
+    height: 350vh;
+  border: 2px solide white;  
+margin-left: 200px;
+margin-top: 3vh;
+overflow-block: hidden;  
+background-color: white;
+} 
+.bg {
+    width:800px;
+    height: 70vh;
+    background-size: cover;
+       position: relative;
+    background-image: url("../images/desktop/image-header.jpg");
+    background-repeat: no-repeat;
+}
+
+header {
+    width:67%;
+    border: 5%;
+    height: 9vh;
+    position: absolute;
+    margin-left: -50px;
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+.menu {
+    width: 300px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    color:aliceblue;
+    position: absolute;
+    float: right;
+    margin-left: 300px;
+} 
+.open1 {
+    width: 100px;
+    background-color: white;
+    border: 2px solid white;
+    color:rgb(2, 2, 20);
+    height: 5vh;
+    border-radius: 15px;
+}
+.first {
+    text-align: center;
+    letter-spacing: 2px;
+    color: white;
+    font-size: 28px;
+    margin-left: 20%;
+    height: 15vh;
+    margin-top: -52vh;
+    position: absolute;
+}
+.arrow {
+    width: 20px;
+    height: 60px;
+    margin-left:30%;
+    margin-top: -38vh;
+    position: absolute;
+} 
+.second {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+}
+.left2 {
+    width: 37%;
+    float: left;
+    height: 30vh;
+    padding-left: 8%;
+    padding-right: 5%;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    background-color: white;
+    color:rgb(2, 2, 29);
+}
+.right2 {
+    width: 50%;
+    float: right;
+    height: 50vh;
+}
+.egg {
+    width: 100%;
+    height: 50vh;
+}
+.third {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+}
+.left3 {
+    width: 50%;
+    float: left;
+    height: 50vh;
+}
+.right3 {
+    width: 37%;
+    float: right;
+    height: 30vh;
+    padding-left: 8%;
+    padding-right: 5%;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    background-color: white;
+    color:rgb(2, 2, 29);
+
+}
+.stand-out {
+    width: 100%;
+    height: 50vh;
+}
+.four {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+}
+.left4 {
+    width: 50%;
+    float: left;
+    height: 50vh;
+}
+.right4 {
+    width: 50%;
+    float: right;
+    height: 50vh;
+}
+.fourth {
+    width: 100%;
+    height: 50vh;
+    position: relative;
+}
+.text1 {
+    color:rgb(2, 2, 29);
+    margin-top: -23vh; 
+    width: 20%;
+    position: absolute;
+    height: 19vh;
+    float:left;
+    text-align: center;
+    margin-left: 5%;
+}
+.text2 {
+    color:rgb(2, 2, 29);
+    margin-top: -23vh;
+    width: 20%;
+    position: absolute;
+    height: 19vh;
+    float:right;
+    text-align: center;
+    margin-left: 5%;
+} 
+.five {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+}
+.left5 {
+    float: left;
+    width:33.33%;
+    height: 100%;
+}
+.center {
+    width:33.33%;
+    height: 100%;
+    
+}
+.right5 {
+    width:33.33%;
+    height: 100%;
+    float:right;
+
+}
+.mini {
+    width:50px;
+    height:50px;
+    border-radius: 100%;
+    margin-top: 16vh;
+    margin-left: 40%;
+}
+.heading {
+    margin-top: 6vh;
+}
+.profile1_text {
+    text-align: center;
+    padding: 5px;
+    font-size: 13px;
+    margin-top: 5vh;
+}
+.last {
+    text-align: center;
+    margin-top: 6vh;
+}
+.foot {
+    font-size: 17px;
+}
+span {
+    font-size: 15px;
+}
+.mini1 {
+    width:50px;
+    height:50px;
+    border-radius: 100%;
+    margin-top: 3vh;
+    margin-left: 40%;
+}
+.profile_text {
+    text-align: center;
+    padding: 5px;
+    font-size: 13px;
+    margin-top: 5vh;
+}
+.six {
+    margin-top: 10vh;
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+}
+.pic1 {
+    width:25%;
+    height:100%;
+}
+.pic2 {
+    width:25%;
+    height:100%;
+}.pic3 {
+    width:25%;
+    height:100%;
+}
+.pic4 {
+    width:25%;
+    height:100%;
+}
+.picture {
+    width:100%;
+    height:100%;
+}
+.seven {
+    text-align: center;
+    width: 100%;
+    height: 30vh;
+    color: hsl(167, 35%, 32%);
+    background-color: hsl(167, 26%, 69%);
+    position: relative;
+    padding-top: 4vh;
+}
+.menus {
+    margin-left: 300px;
+    width: 200px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+} 
+a {
+    text-decoration-line: none;
+    color: hsl(167, 35%, 32%);
+}
+.icon {
+    margin-top: 10vh;
+}
+a:hover {
+    color:fuchsia;
+}
+div:hover {
+    color: lawngreen;
+}
+nav .display{
+    display: none;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdwn_content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+  }
+  
+  .dropdwn_content {
+    display: none;
+  }
+@media only screen and (max-width: 893px) {
+    nav .menu {
+      display: none;
+    }
+    nav .display {
+      display: block;
+    }
+  }
+  @media only screen and (max-width: 605px) {
+    body {
+    justify-content: center;
+    width: fit-content;
+    }
+    .bg {
+        width: auto;
+    }
+    .menu {
+      display: none;
+    }
+    .menus {
+      display: block;
+    }
+    .container {
+      flex-direction: column;
+    }
+    .second {
+        flex-direction: column;
+      }
+      .third {
+          flex-direction: column;
+      }
+      .four {
+            flex-direction: column;
+      }
+      .five {
+        flex-direction: column;
+        position: absolute;
+  }
+  .dropdwn_content {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+}
+  .six {
+    flex-direction: column;
+}
+.seven {
+    width:auto;
+}
+.first {
+    width:auto
+}
+.left *, .right * {
+    max-width: auto;
+}
+.last {
+    max-width: auto;
+}
+* .pic {
+    position: absolute;
+    width: 100%;
+}
+}

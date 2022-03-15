@@ -1,0 +1,118 @@
+body {
+    border: 5px;
+    max-width: 900px;
+    max-height: 100vh;
+    background-color: black;
+    overflow:hidden;
+}
+.container {
+    padding: 50px;
+    width: 800px;
+    height: 80vh;
+  border: 2px solide white;  
+margin-left: 200px;
+margin-top: 3vh;
+overflow-block: hidden;  
+background-color: white;
+} 
+.bg {
+    width:500px;
+    height: 400px;
+    float: right;
+    border-radius: 0px 0px 50px 50px;
+    background-color: hsl(207, 33%, 95%);
+    margin-top: -50px;
+    margin-right: -50px;
+    overflow: hidden;
+}
+
+header {
+    padding-left: 50px;
+    width:60%;
+    border: 5%;
+    height: 9vh;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+}
+.menu {
+    width: 400px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    color:aliceblue;
+    position: absolute;
+    float: right;
+    margin-left: 300px;
+}
+.open, .open1{
+    text-decoration-line: none;
+    text-decoration-color: none;
+} 
+.open{
+    color: rgb(35, 11, 70);
+}
+.open1{
+    color: rgb(167, 124, 231);
+}
+.first {
+    width: 67%;
+    height: 70vh;
+    position: absolute;
+    margin-left: -50px;
+margin-top: 15vh;
+}
+.left {
+    width:50%;
+    height: 90%;
+    float: left;
+}
+.right {
+    width:50%;
+    height: 90%;
+    float:right;
+}
+.illus {
+    width: 120%;
+    height: 100%;
+}
+.second {
+    width:80%;
+    height: 5vh;
+    margin-left:20%;
+}
+.new {
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+}
+h1 {
+    font-size: 45px;
+    margin-left: 0px;
+}
+.demo {
+    width: 150px;
+    height: 5vh;
+    border-radius: 8px;
+    color: white;
+    background-color: red;
+
+}
+.five {
+    margin-top: 6vh;
+}
+a:hover {
+    color: pink;
+}
+span:hover {
+    color: blueviolet;
+}
+h1:hover {
+    color: lawngreen;
+}
+input:hover {
+    color: cyan;
+}
+p:hover {
+    color: darkblue;
+}
