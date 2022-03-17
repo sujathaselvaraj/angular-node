@@ -16,95 +16,199 @@ body {
   font-family: 'Red Hat Display', sans-serif;
   font-family: 'Rubik', sans-serif;
 }
-.container {
+.container_weekly, .container_daily,
+.container_monthly {
   background-color: hsl(226, 43%, 10%);
   display: flex;
   flex-direction: row;
   height: 60vh;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin-left:20%;
   margin-top: 4vh;
   padding: 100px 5vh 100px 5vh;
-  width:800px;
+  width:900px;
+  display: fixed;
 }
-.box1 {
+
+.box1_week,
+.boxa_month,
+.boxw_day {
     background-color: hsl(235, 46%, 20%);
-    border-radius: 12px;
-    height: 58vh;
-    margin-right: 1%;
-    width:25%;
+    float: left;
 }
-.box2 {
+.box3_week,
+.boxc_month,
+.boxy_day {
+    float: center;
+}
+
+.box2_week,
+.box1_week,
+.box3_week ,
+.box4_week,
+.boxa_month,
+.boxb_month,
+.boxc_month,
+.boxd_month,
+.boxw_day,
+.boxx_day,
+.boxy_day,
+.boxz_day {
+    border-radius: 12px;
     display: flex;
     flex-direction: column;
+    margin-right: 2%;
+    width: 200px;
     height: 60vh;
-    margin-right: 1%;
-    width:25%;
 }
-.work{
+.work,
+.work1,
+.work2 {
     background-color: hsl(43, 84%, 65%);
-    border-radius: 12px;
-    height: 50%;
-    width:100%; 
 }
-.excercise{
+.excercise,
+.excercise1,
+.excercise2 {
     background-color: hsl(145, 58%, 55%);
-    border-radius: 12px;
-    height: 50%;
-    margin-top: 1vh;
-    width:100%; 
 }
-.box3 {
-    display: flex;
-    flex-direction: column;
-    height: 60vh;
-    margin-right: 1%;
-    width:25%;
-}
-.play{
+.play,
+.play1,
+.play2 {
     background-color: hsl(195, 74%, 62%);
-    border-radius: 12px;
-    height: 50%;
-    width:100%; 
 }
-.social{
+.social,
+.social1,
+.social2 {
     background-color: hsl(264, 64%, 52%);
-    border-radius: 12px;
-    height: 50%;
-    margin-top: 1vh;
-    width:100%; 
 }
-.box4 {
-    display: flex;
-    flex-direction: column;
-    height: 60vh;
-    margin-right: 1%;
-    width:25%;
-}
-.study{
+.study,
+.study1,
+.study2 {
     background-color:  hsl(15, 100%, 70%);
+}
+.selfcare,
+.study,
+.social,
+.play,
+.excercise,
+.work,
+.selfcare1,
+.study1,
+.social1,
+.play1,
+.excercise1,
+.work1,
+.selfcare2,
+.study2,
+.social2,
+.play2,
+.excercise2,
+.work2 {
     border-radius: 12px;
     height: 50%;
     width:100%; 
 }
-.selfcare{
+.selfcare,
+.social,
+.excercise,
+.selfcare1,
+.social1,
+.excercise1,
+.selfcare2,
+.social2,
+.excercise2 {
+    margin-top: 2vh;
+}
+.selfcare,
+.selfcare1,
+.selfcare2 {
     background-color: hsl(43, 84%, 65%);
-    border-radius: 12px;
-    height: 50%;
-    margin-top: 1vh;
-    width:100%; 
 }
 .profile{
     background-color: hsl(246, 80%, 60%);
     border-radius: 12px;
-    height: 65%;
-    width:100%;
+    height: 55%;
+    width:80%;
 }
 .profile_pic{
     border-radius: 100%;
     height:50px;
     margin-left: 20px;
-    margin-top: 20px;
     width: 50px;
     border: 2px solid white;
+}
+* {
+    font-size: 12px;
+}
+
+#image,
+#image1,
+#image2 {
+    float: right;
+    height: 40px;
+    width: 40px;
+}
+.selfcare_in,
+.study_in,
+.social_in,
+.play_in,
+.excercise_in,
+.work_in,
+.selfcare_in1,
+.study_in1,
+.social_in1,
+.play_in1,
+.excercise_in1,
+.work_in1,
+.selfcare_in2,
+.study_in2,
+.social_in2,
+.play_in2,
+.excercise_in2,
+.work_in2 {
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 12px;
+    height: 62%;
+    margin-top: 20%;
+    padding: 10%;
+}
+span {
+font-size: 30px;
+}
+.profile {
+padding: 10%;
+}
+#option {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#option > button {
+    color: hsl(236, 38%, 54%);
+    margin-left: 10%;
+    margin-top: 10%;
+    background-color: hsl(235, 46%, 20%);
+    width: 50%;
+}
+button:active {
+    color: white;
+}
+button:hover {
+    color: paleturquoise;
+    opacity: 0.8sec;
+}
+div > p {
+    font-size: 15px;
+    margin-top: 1vh;
+}
+#footer,
+#footer1,
+#footer2 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2vh;
+}
+.container_monthly,
+.container_daily {
+    display: none;
 }

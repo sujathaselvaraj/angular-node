@@ -11,29 +11,354 @@
 
 <body>
     <div class="container">
-        <div class="box1">
-            <div class="profile">
-                <img src="./images/image-jeremy.png" alt="Jeremy" class="profile_pic" id="profile_pic">
-                <p>Report for <br> <span>Jeremy <br>Robson</span>
-                </p>
+        <section class="container_weekly" id="container_weekly">
+            <div class="box1_week">
+                <div class="profile">
+                    <img src="./images/image-jeremy.png" alt="Jeremy" class="profile_pic" id="profile_pic">
+                    <p style="margin-top:20px;">Report for <br> <span>Jeremy <br>Robson</span>
+                    </p>
+                </div>
+                <div id="option" class="option">
+                    <button id="daily" type="submit" onclick="daily()">Daily</button>
+                    <button id="weekly" type="submit" onclick="weekly()">Weekly </button>
+                    <button id="monthly" type="submit" onclick="monthly()">Monthly</button>
+                </div>
             </div>
-        </div>
-        <div class="box2">
-            <div class="work"></div>
-            <div class="excercise"></div>
-        </div>
-        <div class="box3">
-            <div class="play"></div>
-            <div class="social"></div>
-        </div>
-        <div class="box4">
-            <div class="study"></div>
-            <div class="selfcare"></div>
-        </div>
 
+            <div class="box2_week">
+                <div class="work"><img src="./images/icon-work.svg" alt="Work_image" id="image" class="work_image">
+                    <div class="work_in">
+                        <p>Work</p>
+                        <div class="activity_time">
+                            <span class="activity_current_time">32hrs</span>
+                        </div>
+                        <div class="activity_previous_time">
+                            <div id="footer">
+                                <div class="time_window">Last Week</div>
+                                <div> &nbsp;- &nbsp;</div>
+                                <div class="time">36hrs</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="excercise"><img src="./images/icon-exercise.svg" alt="Exercise_image" id="image"
+                        class="excercise_image">
+                    <div class="excercise_in">
+                        <p>Exercise</p>
+                        <div class="activity_time">
+                            <span class="activity_current_time">4hrs</span>
+                        </div>
+                        <div class="activity_previous_time">
+                            <div id="footer">
+                                <div class="time_window">Last Week</div>
+                                <div> &nbsp;- &nbsp;</div>
+                                <div class="time">5hrs</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box3_week">
+                <div class="play"><img src="./images/icon-play.svg" alt="PLay_image" id="image" class="play_image">
+                    <div class="play_in">
+                        <p>Play</p>
+                        <div class="activity_time">
+                            <span class="activity_current_time">10hrs</span>
+                        </div>
+                        <div class="activity_previous_time">
+                            <div id="footer">
+                                <div class="time_window">Last Week</div>
+                                <div> &nbsp;- &nbsp;</div>
+                                <div class="time">8hrs</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="social"><img src="./images/icon-social.svg" alt="Social_image" id="image"
+                        class="social_image">
+                    <div class="social_in">
+                        <p>Social</p>
+                        <div class="activity_time">
+                            <span class="activity_current_time">5hrs</span>
+                        </div>
+                        <div class="activity_previous_time">
+                            <div id="footer">
+                                <div class="time_window">Last Week</div>
+                                <div> &nbsp;- &nbsp;</div>
+                                <div class="time">10hrs</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box4_week">
+                <div class="study"><img src="./images/icon-study.svg" alt="Study_image" id="image" class="study_image">
+                    <div class="study_in">
+                        <p>Study</p>
+                        <div class="activity_time">
+                            <span class="activity_current_time">4hrs</span>
+                        </div>
+                        <div class="activity_previous_time">
+                            <div id="footer">
+                                <div class="time_window">Last Week</div>
+                                <div> &nbsp;- &nbsp;</div>
+                                <div class="time">7hrs</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="selfcare"><img src="./images/icon-self-care.svg" alt="Selfcare_image" id="image"
+                        class="selfcare_image">
+                    <div class="selfcare_in">
+                        <p>Selfcare</p>
+                        <div class="activity_time">
+                            <span class="activity_current_time">2hrs</span>
+                        </div>
+                        <div class="activity_previous_time">
+                            <div id="footer">
+                                <div class="time_window">Last Week</div>
+                                <div> &nbsp;- &nbsp;</div>
+                                <div class="time">2hrs</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container_monthly" id="container_monthly">
+            <div class="boxa_month">
+                <div class="profile">
+                    <img src="./images/image-jeremy.png" alt="Jeremy" class="profile_pic" id="profile_pic">
+                    <p style="margin-top:20px;">Report for <br> <span>Jeremy <br>Robson</span>
+                    </p>
+                </div>
+                <div id="option" class="option">
+                    <button id="daily" type="submit" onclick="daily()">Daily</button>
+                    <button id="weekly" type="submit" onclick="weekly()">Weekly </button>
+                    <button id="monthly" type="submit" onclick="monthly()">Monthly</button>
+                </div>
+            </div>
+            <div class="boxb_month">
+                <div class="work2"><img src="./images/icon-work.svg" alt="Work_image" id="image2" class="work_image2">
+                    <div class="work_in2">
+                        <p>Work</p>
+                        <div class="activity_time2">
+                            <span class="activity_current_time2">103hrs</span>
+                        </div>
+                        <div class="activity_previous_time2">
+                            <div id="footer2">
+                                <div class="time_window2">Last Month</div>
+                                <div> &nbsp;- &nbsp;</div>
+                                <div class="time2">128hrs</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="excercise2"><img src="./images/icon-exercise.svg" alt="Exercise_image2" id="image2"
+                        class="excercise_image2">
+                    <div class="excercise_in2">
+                        <p>Exercise</p>
+                        <div class="activity_time2">
+                            <span class="activity_current_time2">11hrs</span>
+                        </div>
+                        <div class="activity_previous_time2">
+                            <div id="footer2">
+                                <div class="time_window2">Last Month</div>
+                                <div> &nbsp;- &nbsp;</div>
+                                <div class="time2">18hrs</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxc_month">
+                <div class="play2"><img src="./images/icon-play.svg" alt="PLay_image" id="image2" class="play_image">
+                    <div class="play_in2">
+                        <p>Play</p>
+                        <div class="activity_time2">
+                            <span class="activity_current_time2">23hrs</span>
+                        </div>
+                        <div class="activity_previous_time2">
+                            <div id="footer2">
+                                <div class="time_window2">Last Month</div>
+                                <div> &nbsp;- &nbsp;</div>
+                                <div class="time2">29hrs</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="social"><img src="./images/icon-social.svg" alt="Social_image" id="image2"
+                        class="social_image2">
+                    <div class="social_in2">
+                        <p>Social</p>
+                        <div class="activity_time2">
+                            <span class="activity_current_time2">21hrs</span>
+                        </div>
+                        <div class="activity_previous_time2">
+                            <div id="footer2">
+                                <div class="time_window2">Last Month</div>
+                                <div> &nbsp;- &nbsp;</div>
+                                <div class="time2">23hrs</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxd_month">
+                <div class="study"><img src="./images/icon-study.svg" alt="Study_image2" id="image2"
+                        class="study_image2">
+                    <div class="study_in2">
+                        <p>Study</p>
+                        <div class="activity_time2">
+                            <span class="activity_current_time2">13hrs</span>
+                        </div>
+                        <div class="activity_previous_time2">
+                            <div id="footer2">
+                                <div class="time_window2">Last Month</div>
+                                <div> &nbsp;- &nbsp;</div>
+                                <div class="time2">19hrs</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="selfcare"><img src="./images/icon-self-care.svg" alt="Selfcare_image" id="image2"
+                        class="selfcare_image2">
+                    <div class="selfcare_in2">
+                        <p>Selfcare</p>
+                        <div class="activity_time2">
+                            <span class="activity_current_time2">7hrs</span>
+                        </div>
+                        <div class="activity_previous_time">
+                            <div id="footer2">
+                                <div class="time_window2">Last Month</div>
+                                <div> &nbsp;- &nbsp;</div>
+                                <div class="time2">11hrs</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container_daily" id="container_daily">
+            <div class="boxw_day">
+                <div class="profile">
+                    <img src="./images/image-jeremy.png" alt="Jeremy" class="profile_pic" id="profile_pic">
+                    <p style="margin-top:20px;">Report for <br> <span>Jeremy <br>Robson</span>
+                    </p>
+                </div>
+                <div id="option" class="option">
+                    <button id="daily" type="submit" onclick="daily()">Daily</button>
+                    <button id="weekly" type="submit" onclick="weekly()">Weekly </button>
+                    <button id="monthly" type="submit" onclick="monthly()">Monthly</button>
+                </div>
+            </div>
+            <div class="boxx_day">
+                <div class="work1"><img src="./images/icon-work.svg" alt="Work_image" id="image1" class="work_image1">
+                    <div class="work_in1">
+                        <p>Work</p>
+                        <div class="activity_time1">
+                            <span class="activity_current_time1">5hrs</span>
+                        </div>
+                        <div class="activity_previous_time">
+                            <div id="footer1">
+                                <div class="time_window1">Last Day</div>
+                                <div> &nbsp;- &nbsp;</div>
+                                <div class="time1">7hrs</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="excercise1"><img src="./images/icon-exercise.svg" alt="Exercise_image" id="image1"
+                        class="excercise_image1">
+                    <div class="excercise_in1">
+                        <p>Exercise</p>
+                        <div class="activity_time1">
+                            <span class="activity_current_time1">1hr</span>
+                        </div>
+                        <div class="activity_previous_time1">
+                            <div id="footer1">
+                                <div class="time_window1">Last Day</div>
+                                <div> &nbsp;- &nbsp;</div>
+                                <div class="time1">1hr</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxy_day">
+                <div class="play1"><img src="./images/icon-play.svg" alt="PLay_image" id="image1" class="play_image1">
+                    <div class="play_in1">
+                        <p>Play</p>
+                        <div class="activity_time1">
+                            <span class="activity_current_time1">1hr</span>
+                        </div>
+                        <div class="activity_previous_time1">
+                            <div id="footer1">
+                                <div class="time_window1">Last Day</div>
+                                <div> &nbsp;- &nbsp;</div>
+                                <div class="time1">2hrs</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="social1"><img src="./images/icon-social.svg" alt="Social_image" id="image1"
+                        class="social_image1">
+                    <div class="social_in1">
+                        <p>Social</p>
+                        <div class="activity_time1">
+                            <span class="activity_current_time1">1hr</span>
+                        </div>
+                        <div class="activity_previous_time1">
+                            <div id="footer1">
+                                <div class="time_window1">Last Day</div>
+                                <div> &nbsp;- &nbsp;</div>
+                                <div class="time1">3hrs</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxz_day">
+                <div class="study1"><img src="./images/icon-study.svg" alt="Study_image" id="image1"
+                        class="study_image1">
+                    <div class="study_in1">
+                        <p>Study</p>
+                        <div class="activity_time1">
+                            <span class="activity_current_time1">0hrs</span>
+                        </div>
+                        <div class="activity_previous_time1">
+                            <div id="footer1">
+                                <div class="time_window1">Last Day</div>
+                                <div> &nbsp;- &nbsp;</div>
+                                <div class="time1">1hr</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="selfcare1"><img src="./images/icon-self-care.svg" alt="Selfcare_image" id="image1"
+                        class="selfcare_image1">
+                    <div class="selfcare_in1">
+                        <p>Selfcare</p>
+                        <div class="activity_time1">
+                            <span class="activity_current_time1">0hrs</span>
+                        </div>
+                        <div class="activity_previous_time1">
+                            <div id="footer1">
+                                <div class="time_window1">Last Day</div>
+                                <div> &nbsp;- &nbsp;</div>
+                                <div class="time1">1hrs</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script type="text/javascript" src="script/projecttracking.js"></script>
     </div>
-
-
 </body>
 
 </html>
