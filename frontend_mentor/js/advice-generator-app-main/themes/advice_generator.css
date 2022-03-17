@@ -49,3 +49,21 @@ p{
     margin-top: -1vh;
     text-align: center;
 }
+  @keyframes glowing {
+    0% {
+      background-color: hsl(150, 100%, 66%);;
+      box-shadow: 0 0 15px hsl(150, 100%, 66%);;
+    }
+    50% {
+      background-color: hsl(150, 100%, 66%);;
+      box-shadow: 0 0 20px hsl(150, 100%, 66%);;
+    }
+    100% {
+      background-color: hsl(150, 100%, 66%);;
+      box-shadow: 0 0 5px hsl(150, 100%, 66%);;
+
+    }
+  }
+  .button_img {
+    animation: glowing 1300ms infinite;
+}
