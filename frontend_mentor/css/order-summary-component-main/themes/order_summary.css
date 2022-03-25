@@ -1,118 +1,117 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Red+Hat+Display:ital,wght@0,500;0,700;1,500;1,900&display=swap');
-    /* .attribution  { font-size: 11px; text-align: center; }
-    .attribution a  { color: hsl(228, 45%, 44%); } */
-    body  {
-        background-color:  hsl(225, 100%, 94%);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        font-family: 'Outfit', sans-serif;
-        font-family: 'Red Hat Display', sans-serif;
-    }
-    .bg_clr {
-        height: 150vh;
-        width: 350ch
-    }
-    .container  {
-        position: relative;
-        background: hsl(0, 0%, 100%);
-        text-align: center;
-        margin: -20em auto;
-        border-radius: 18px;
-        max-width: 320px;
-        height: 90vh;
-    }
-    img  {
-        border-radius: 15px;
-        display:flex;
-        width: 100%;
-        max-width: 100%;
-        padding-top: 0px;
-        margin: 1em auto;
-        height: 40%;    
-    }
-    h2 {
-        margin: auto;
-        font-size: 1.2em;
-        color: hsl(223, 47%, 23%);
-        padding-right: 2%;
-        padding-left: 2%;
-        padding-top: 2%;
-        padding-bottom: 2%;
-    }
-    p { padding-right: 2%;
-        padding-left: 2%;
-        padding-top: 2%;
-        padding-bottom: 2%;
-        margin: auto;
-        font-size: 15px;
-        color: hsl(223, 47%, 23%);
-    } 
-    .music {
-        border-radius: 4px;
-        height: 60px;
-        width:80%;
-        justify-content: center;
-        margin: auto;
-        background-color: hsl(225, 100%, 98%);
-    }
-    .img_mus {
-        display: block;
-        border-radius: 18%;
-        float:left;
-        width: 50px ;
-        height: 55px;
-        padding: 2px;
-        justify-content: flex-start;
-    }
-    .text {
-        display: inline-block;
-        width: 100px ;
-        height: 55px;
-        padding: 2px;
-        justify-content: center;
-
-    }
-    .change {
-        color:  blue;
-            padding-left: 5px ;
-            display: inline-block;
-            width: 70px ;
-            height: 30px;
-            padding: 2px;
-            justify-content: right;
-        }
-        .payment {
-            color: white;
-            background-color: blue;
-            border-color: blue;
-            border-radius: 8px;
-            height: 30px;
-            width:80%;
-            box-shadow:  5px 10px 20px hsl(245, 75%, 90%);
-            color:white;
-        }
-        .cancel {
-            color: blue;
-            background-color: white;
-            border-radius: 8px;
-            border-color: aliceblue;
-            height: 30px;
-            width:80%;
-        }
-        
-        a:hover {
-            color: red;
-        cursor: pointer;
-    opacity: 0.7;
-    text-decoration: underline;
-}
+body  {
+  align-items: center;
+  background-color:  hsl(225, 100%, 94%);
+  display: flex;
+  font-family: 'Outfit', sans-serif;
+  font-family: 'Red Hat Display', sans-serif;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  scroll-behavior: none;
+  }
+.bg_clr {
+  height: 150vh;
+  width: 350ch
+  }
+.container  {
+  background: hsl(0, 0%, 100%);
+  border-radius: 18px;
+  height: 90vh;
+  margin: -20em auto;
+  max-width: 320px;
+  position: relative;
+  text-align: center;
+  }
+img  {
+  border-radius: 15px;
+  display:flex;
+  height: 40%;
+  margin: 1em auto;
+  max-width: 100%;
+  padding-top: 0px;
+  width: 100%;
+  }
+h2 {
+  color: hsl(223, 47%, 23%);
+  font-size: 1.2em;
+  margin: auto;
+  padding-bottom: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 2%;
+  }
+p {
+ color: hsl(223, 47%, 23%);
+ font-size: 15px;
+ margin: auto;
+ padding-bottom: 2%;
+ padding-left: 2%;
+ padding-right: 2%;
+ padding-top: 2%;
+} 
+.music {
+  background-color: hsl(225, 100%, 98%);
+  border-radius: 4px;
+  height: 60px;
+  justify-content: center;
+  margin: auto;
+  width:80%;
+  }
+.img_mus {
+  border-radius: 18%;
+  display: block;
+  float:left;
+  height: 55px;
+  justify-content: flex-start;
+  padding: 2px;
+  width: 50px ;
+  }
+.text {
+  display: inline-block;
+  height: 55px;
+  justify-content: center;
+  padding: 2px;
+  width: 100px ;
+  }
+.change {
+  color:  blue;
+  display: inline-block;
+  height: 30px;
+  justify-content: right;
+  padding-left: 5px ;
+  padding: 2px;
+  width: 70px ;
+  }
+.payment {
+  background-color: blue;
+  border-color: blue;
+  border-radius: 8px;
+  box-shadow:  5px 10px 20px hsl(245, 75%, 90%);
+  color: white;
+  color:white;
+  height: 30px;
+  width:80%;
+  }
+.cancel {
+  background-color: white;
+  border-color: aliceblue;
+  border-radius: 8px;
+  color: blue;
+  height: 30px;
+  width:80%;
+  }
+a:hover {
+  color: red;
+  cursor: pointer;
+  opacity: 0.7;
+  text-decoration: underline;
+  }
 .cancel:hover {
-    color: red;
-    cursor: pointer;
-}
+  color: red;
+  cursor: pointer;
+  }
 .payment:hover {
-    color: yellow;
-    cursor: pointer;
-}
+  color: yellow;
+  cursor: pointer;
+  }

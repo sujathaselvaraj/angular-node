@@ -4,10 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- displays site properly based on user's device -->
-
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
     <title>Frontend Mentor | Ping coming soon page</title>
     <link rel="stylesheet" href="themes/ping.css">
 
@@ -19,12 +16,15 @@
         <div class="top">
             <div class="head"><span style="color: hsl(0, 0%, 59%);">We are launching </span>soon!</div>
             <div class="sub">Subscribe and get notified</div>
-            <div class="mail">
-                <input class="email" style="color: hsl(0, 36%, 70%);" placeholder="Enter Address" type="email"
-                    name="email" size="30">
-                <input class="arrow" type="submit" value="Notify Me" onClick="checkForm(); return False">
-            </div>
+            <form name="form1" action="#">
+                <input class="email" style="color: hsl(0, 36%, 70%);" placeholder="Enter Address" type='text'
+                    name="text1" size="30">
+                <input class="validate" type="submit" value="Notify Me" name="Validate"
+                    onclick="ValidateEmail(document.form1.text1)" />
         </div>
+        <div id="error"></div>
+        <div id="success"></div>
+        </form>
         <div class="bottom"><img class="image" src="./images/illustration-dashboard.png"></div>
         <div class="share">
             <div class="mini_box">

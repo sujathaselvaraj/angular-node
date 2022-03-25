@@ -17,80 +17,79 @@ body {
     font-size: 13px;
     line-height: 25px;
     max-height: 90vh;
-  max-width: 1000px;
-}
+    max-width: 1000px;
+  }
 .box {
     background-color: white;
     height: 60vh;
     margin-left: 25%;
     margin-top: 15%;
     width: 80%;
-}
+  }
 .right {
     background-color: white;
     color: hsl(244, 43%, 21%);
     float: right;
+    height: 40vh;
     padding-left: 3%;
     padding-right: 4%;
     padding-top: 10vh;
-    height: 40vh;
     width: 45%;
-}
+  }
 .left {
     float: left;
     height: 60vh;
     width: 45%;
-}
-.image { 
-    height: 60vh;
-    max-width: 100%;
-}
+  }
+.image {
+     height: 60vh;
+     max-width: 100%;
+   }
 .detail {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
     height: 5vh;
+    justify-content: space-evenly;
     width: 100%;
-}
+  }
 .dp {
     border-radius: 50px;
     height: 7vh;
     width: 50px;
-}
+  }
 .dp1 {
     align-content: center;
     background-color: hsl(218, 57%, 97%);
     border-radius: 50px;
     height: 7vh;
-    width: 50px;  
-}
+    width: 50px;
+  }
 .share_img {
-    
-    height: 4vh;
-    width: 40px;
-}
+        height: 4vh;
+        width: 40px;
+      }
 .share{
     display: flex;
     flex-direction: column;
     height: 300px;
     justify-content: space-around;
     margin: 30px;
-    width: 400px;    
-}
+    width: 400px;
+  }
 .row1{
     display: flex;
     flex-direction: row;
-}
+  }
 .row2{
     display: flex;
     flex-direction: row;
-}
+  }
 .icon{
-    border: 20px solid black;
     border-radius: 12px;
+    border: 20px solid black;
     height: 50px;
     width: 50px;
-}
+  }
 .sharing{
     background-color: black;
     display: none;
@@ -101,6 +100,21 @@ body {
     margin-top: 30vh;
     position: fixed;
     top: 0;
-    width: 30%; 
+    width: 30%;
     z-index: 1;
-}
+  }
+.topic {
+    color: white;
+    column-gap: 170px;
+    display: grid;
+    font-size: 30px;
+    font-weight: bold;
+    grid-template-columns: auto auto;
+    margin-left: 100px;
+    margin-top: 2vh;
+  }
+.cross {
+    color: red;
+    cursor: pointer;
+    float: right;
+  }

@@ -1,70 +1,68 @@
 body{
     background-color: white;
+    font-size: 14px;
     height:200vh;
     margin-left: 50px;
     margin-top: -10vh;
     width:1250px;
-    font-size: 14px;
-}
+  }
 .container {
     padding: 100px 0vh;
-}
+  }
 #head {
     background-image: url("../images/desktop/image-hero.jpg");
     color: white;
     display: flex;
     flex-direction: row;
     height: 80vh;
-    
-}
+  }
 .logo,
 .logo1 {
-    padding: 70px;
     float: left;
-}
+    padding: 70px;
+  }
 #nav_bar,
 #nav_bar1 {
+    cursor: pointer;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 400px;
-
-}
+  }
 #nav_bar {
     float :right;
     margin-left: 500px;
     margin-top: 70px;
-}
+  }
 #nav_bar1 {
     float :left;
     margin-left: -270px;
     margin-top: 18vh;
-}
+  }
 #menu,
 #menu1 {
     color:antiquewhite;
     text-decoration-color: beige;
     text-decoration-line: none;
-}
+  }
 .head_text,
 #interactiveVrText {
-  border: 3px solid white;
-  height:200px;
-  margin-left: 70px;
-  margin-top: 30vh;
-  padding: 30px;
-  width: 300px;
-
+    border: 3px solid white;
+    height:200px;
+    margin-left: 70px;
+    margin-top: 30vh;
+    padding: 30px;
+    width: 300px;
 }
 #text {
-  font-size: 40px;
-  letter-spacing: 5px;
-  margin-top: 2vh;
+    font-size: 40px;
+    letter-spacing: 5px;
+    margin-top: 2vh;
 }
 #interactiveVR {
     padding: 170px 70px 200px 70px;
     position: relative;
-}
+  }
 #interactiveVrText {
     background-color: white;
     color:  hsl(0, 0%, 55%);
@@ -72,55 +70,54 @@ body{
     margin-top: -70vh;
     padding: 30px 50px;
     position: absolute;
-}
+  }
 h1,
 #text {
-    text-transform: uppercase;
     color:  hsl(0, 0%, 55%);
-}
+    text-transform: uppercase;
+  }
 #creation {
     margin-top: -20vh;
-}
+  }
 #image_arrangement,
 #creation {
     padding: 70px;
-}
+  }
 #image_arrangement1,
 #image_arrangement2 {
+    cursor: pointer;
     display: flex;
     flex-direction: row;
     height: 40vh;
     margin-left: 100px;
-
-}
+  }
 .creation_image {
     height: 50vh;
     margin-right: 2%;
     width: 22%;
-}
+  }
 #image_arrangement2 {
     margin-top: 15vh;
-}
+  }
 #footer{
     background-color: black;
     color: white;
     height: 30vh;
     margin-top: 250vh;
     width: 100%;
-    
-}
+  }
 .logo1 {
     margin-top: -3vh;
-}
+  }
 .foot2 {
     display: flex;
     flex-direction: column;
     float: right;
     padding: 70px;
-}
+  }
 .share {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width:200px;
-}
+  }

@@ -1,110 +1,121 @@
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;1,600&family=Barlow+Semi+Condensed:ital,wght@0,500;1,600&family=Big+Shoulders+Display:wght@700&family=Inter:wght@400;700&family=Josefin+Sans:ital,wght@1,300;1,400;1,600&family=Karla:ital@1&family=Kumbh+Sans:wght@400;700&family=Lexend+Deca&family=Open+Sans:wght@400;700&family=Outfit:wght@300;400;600&family=Raleway:ital,wght@0,700;1,400&family=Red+Hat+Display:ital,wght@0,500;0,700;1,500;1,900&family=Rubik:ital,wght@0,400;1,500;1,700&display=swap');
 body {
+    align-content: center;
+    background-color: rgb(234, 241, 241);
     font-family: 'Bai Jamjuree', sans-serif;
-font-family: 'Barlow Semi Condensed', sans-serif;
-font-family: 'Big Shoulders Display', cursive;
-font-family: 'Inter', sans-serif;
-font-family: 'Josefin Sans', sans-serif;
-font-family: 'Karla', sans-serif;
-font-family: 'Kumbh Sans', sans-serif;
-font-family: 'Lexend Deca', sans-serif;
-font-family: 'Open Sans', sans-serif;
-font-family: 'Outfit', sans-serif;
-font-family: 'Raleway', sans-serif;
-font-family: 'Red Hat Display', sans-serif;
-font-family: 'Rubik', sans-serif;
-background-color: rgb(234, 241, 241);
-font-size: 15px;
-align-content: center;
-max-width: 1000px;
-max-height: 90vh;
-}
-
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Karla', sans-serif;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Outfit', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    font-size: 15px;
+    max-height: 90vh;
+    max-width: 1000px;
+  }
 header {
     margin-left: 60%;
     margin-top: 4vh;
-}
+  }
 .top {
-    width: 500px;
+    color: hsl(209, 33%, 12%);
     height: 25vh;
     margin-left: 35%;
     margin-top: 2%;
-    color: hsl(209, 33%, 12%);
     padding-left: 10%;
-}
+    width: 500px;
+  }
 .bottom {
-    width: 600px;
     height: 45vh;
     margin-left: 35%;
-    margin-top: 2%;
-}
-.share {
+    margin-top: 4%;
     width: 600px;
+  }
+.share {
     height: 10vh;
     margin-left: 35%;
     margin-top: 2%;
-}
-    .mini_box {
-        width: 300px;
-        height: 7vh;
-        margin-left: 250px;
-    
-    } 
+    width: 600px;
+  }
+.mini_box {
+    cursor: pointer;
+    height: 7vh;
+    margin-left: 250px;
+    width: 300px;
+  } 
 .head {
     font-size: 38px;
-}
+  }
 .sub {
-    font-size: smaller; 
-    margin-left: 100px; 
-}
+    font-size: smaller;
+    margin-left: 100px;
+  }
 .email {
-    width: 50%;
-    height: 5vh;
-    border-radius: 12px;
     background-color: white;
     border-color: blue;
-    color: blue;
-    margin-top: 3vh;
-}
-.arrow {
-    width: 30%;
-    height: 5vh;
     border-radius: 12px;
+    color: blue;
+    height: 5vh;
+    margin-top: 3vh;
+    width: 50%;
+  }
+.validate {
     background-color: blue;
     border-color: blue;
+    border-radius: 12px;
     color: white;
+    cursor: pointer;
+    height: 5vh;
     margin-top: 3vh;
-
-}
+    padding-left: 30px;
+    width: 25%;
+  }
 .image {
-    width: 600px;
     height: 45vh;
-}
+    width: 600px;
+  }
 .copy {
-    margin-left: 150px;
     color:blue;
-}
+    margin-left: 150px;
+  }
 div:hover {
     color: palevioletred;
-}
+  }
 input:hover {
     color: lawngreen;
-}
+  }
 span:hover {
     color: yellow;
-}
+  }
 * {
-    justify-content: center;
     align-content: center;
+    justify-content: center;
     text-align: justify;
-}
+  }
 .media_icon {
-    border: 10px;
-    border-radius: 20px;
-    display: inline;
-    justify-content: space-between;
-    height: 20px;
-    width: 20px;
     background-color: aliceblue;
-}
-
+    border-radius: 20px;
+    border: 10px;
+    cursor: pointer;
+    display: inline;
+    height: 20px;
+    justify-content: space-between;
+    width: 20px;
+  }
+#error,
+#success {
+    margin-left: 460px;
+    margin-top: -5vh;
+  }
+#error {
+    color: red;
+  }
+#succes {
+    color: lawngreen;
+  }

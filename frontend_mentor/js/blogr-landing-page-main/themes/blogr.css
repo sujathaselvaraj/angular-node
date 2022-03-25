@@ -1,8 +1,11 @@
 body  {
-    margin: 0;
-    line-height: 1.15;
     font-family: sans-serif, "Overpass", sans-serif;
     font-size: 16px;
+    line-height: 1.15;
+    margin: 0;
+    max-height: 200vh;
+    max-width: 1100px;
+    overflow-x: hidden;
   }
   footer,
   header,
@@ -10,485 +13,419 @@ body  {
   section  {
     display: block;
   }
+  .text1 {
+    margin-left: 300px;
+  }
   h1  {
     font-size: 2em;
     margin: 0.67em 0;
   }
  p:hover {
      color:chartreuse;
- }
+   }
   a  {
     background-color: transparent;
   }
   h1:hover {
       color: blue;
-  }
- 
-    img  {
-    border-style: none;
-  }
- 
+    }
   button,
   input  {
     overflow: visible;
   }
-  button {
-    text-transform: none;
-  }
  .wrapper  {
-    width: 90%;
-    max-width: 1200px;
     margin: 0 auto;
-  }
-  
+    max-width: 1200px;
+    width: 90%;
+  }  
   button,
   .buttonHold button:last-of-type:hover  {
     background-color: white;
-    border: 2px solid transparent;
     border-radius: 25px;
-    width: 140px;
-    padding: 15px;
-    display: inline-block;
+    border: 2px solid transparent;
     color: hsl(353, 100%, 62%);
-    font-weight: 700;
     cursor: pointer;
-  }
-  
+    display: inline-block;
+    font-weight: 700;
+    padding: 15px;
+    width: 140px;
+  }  
   a:hover,
   .open:hover  {
+    color: darkturquoise;
     cursor: pointer;
     text-decoration: underline;
-    color: darkturquoise;
   }
   .drop a:hover,
   .drop a:focus  {
-    font-weight: bold;
-    cursor: pointer;
     color: darkblue;
+    cursor: pointer;
+    font-weight: bold;
   } 
   header  {
-    background-image: url("./images/bg-pattern-intro-desktop.svg"),
-      linear-gradient(90deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
-    height: 60vh;
-    border-bottom-left-radius: 85px;
+    background-image: url("./images/bg-pattern-intro-desktop.svg");
     background-position: 34% 53%;
     background-repeat: no-repeat;
+    background: linear-gradient(90deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    border-bottom-left-radius: 85px;
     color: white;
-  }
-  
+    height: 60vh;
+  }  
   nav  {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-  }
-  
-  .menu  {
-    display: flex;
     justify-content: space-between;
-    width: 40%;
-    min-width: 340px;
-    flex-shrink: 0;
+  }  
+  .menu  {
     align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: space-between;
+    min-width: 340px;
+    width: 40%;
   }
   .menu img  {
     object-fit: scale-down;
-  }
-  
+  }  
   .link  {
-    position: relative;
     margin-left: 5px;
-  }
-  
+    position: relative;
+  }  
   .link a  {
-    text-decoration: none;
     color: inherit;
-  }
-  
+    text-decoration: none;
+  }  
   .dropText a  {
     display: block;
     margin: 17px auto;
-  }
-  
+  }  
   .link img,
   .headLink img  {
     margin-left: 5px;
-    transition-timing-function: ease;
     transition-duration: 0.4s;
-  }
-  
+    transition-timing-function: ease;
+  }  
   .rotate  {
     transform: rotate(180deg);
-  }
-  
+  }  
   .drop  {
     background-color: white;
     border-radius: 8px;
-    width: 150px;
+    color: black;
+    left: -12px;
+    max-height: 0px;
     position: absolute;
     top: 50px;
-    left: -12px;
-    color: black;
-    max-height: 0px;
     transition: max-height 0.3s ease-out;
-  }
-  
+    width: 150px;
+  }  
   .drop.show  {
     display: block;
-    max-height: 400px;
     height: auto;
+    max-height: 400px;
     padding: 15px;
-  }
-  
+  }  
   .dropText  {
     display: none;
-  }
-  
+  }  
   .show  {
     display: block;
     height: auto;
-  }
-  
-  
+  }  
   .smallMenu  {
-    position: relative;
     display: none;
-  }
-  
-  .menuBtn  {
     position: relative;
-    display: flex;
-    justify-content: center;
+  }  
+  .menuBtn  {
     align-items: center;
-    width: 80px;
-    height: 80px;
     cursor: pointer;
+    display: flex;
+    height: 80px;
+    justify-content: center;
+    position: relative;
     transition: all 0.5s ease-in-out;
-  }
-  
+    width: 80px;
+  }  
   .menuBrgr  {
-    width: 60px;
-    height: 4px;
     background-color: white;
+    height: 4px;
     transition: all 0.2s ease-in-out;
-  }
-  
+    width: 60px;
+  }  
   .menuBrgr::before,
   .menuBrgr::after  {
-    content: "";
-    position: absolute;
-    width: 60px;
-    height: 4px;
     background-color: white;
+    content: "";
+    height: 4px;
+    position: absolute;
     transition: all 0.2s ease-in-out;
+    width: 60px;
     z-index: 5;
-  }
-  
+  }  
   .mobMenu  {
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 5px 5px rgba(12, 12, 12, 0.3);
+    color: black;
     display: flex;
     flex-direction: column;
-    background-color: white;
-    color: black;
-    padding: 25px 15px;
-    align-items: center;
-    width: 250px;
-    border-radius: 10px;
-    position: absolute;
-    left: -200px;
-    top: 100px;
     justify-content: space-between;
-    box-shadow: 1px 5px 5px rgba(12, 12, 12, 0.3);
-  }
-  
+    left: -200px;
+    padding: 25px 15px;
+    position: absolute;
+    top: 100px;
+    width: 250px;
+  }  
   .headLink  {
-    text-decoration: none;
     color: inherit;
-  }
-  
+    text-decoration: none;
+  }  
   .headLink:hover  {
     cursor: pointer;
     text-decoration: none;
-  }
-  
+  }  
   .mobLink  {
-    width: 100%;
-    text-align: center;
-    margin: 20px auto;
     font-size: calc(1rem + 0.3vw);
-  }
-  
+    margin: 20px auto;
+    text-align: center;
+    width: 100%;
+  }  
   .dropMob  {
     background-color: #efeff1;
-    color: #5d6a7a;
     border-radius: 5px;
+    color: #5d6a7a;
     max-height: 0px;
     transition: all 0.3s ease-out;
-  }
-  
+  }  
   .dropTextMob a  {
     color: #5d6a7a;
     display: block;
-    text-decoration: none;
     margin: 17px auto;
-  }
-  
+    text-decoration: none;
+  }  
   .dropTextMob  {
     display: none;
-  }
-  
+  }  
   .dropTextMob a:hover,
   .dropTextMob a:focus  {
-    cursor: pointer;
     color: hsl(356, 100%, 66%);
-  }
-  
+    cursor: pointer;
+  }  
   .mobMenu .sign  {
+    align-items: center;
+    border-top: 1px solid hsl(240, 2%, 79%);
     display: flex;
     flex-direction: column;
-    border-top: 1px solid hsl(240, 2%, 79%);
-    align-items: center;
     margin: auto;
     padding-top: 10px;
-  }
-  
+  }  
   .mobMenu .sign button  {
     background: linear-gradient(90deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
     border: white;
     color: white;
-  }
-  
+  }  
   .menuBrgr::before  {
     transform: translateY(-16px);
-  }
-  
+  }  
   .menuBrgr::after  {
     transform: translateY(16px);
-  }
-  
+  }  
   .menuBtn.move .menuBrgr  {
-    transform: translateX(-50px);
     background: transparent;
+    transform: translateX(-50px);
   }
   .menuBtn.move .menuBrgr:before  {
     transform: rotate(45deg) translate(35px, -35px);
   }
   .menuBtn.move .menuBrgr:after  {
     transform: rotate(-45deg) translate(35px, 35px);
-  }
-  
+  }  
   h1  {
     font-size: calc(2.5rem + 1vw);
     font-weight: 400;
     margin-bottom: 10px;
-  }
-  
+  }  
   .sign  {
-    display: flex;
-    justify-content: space-between;
-    align-self: flex-end;
-    width: 190px;
-    flex-shrink: 0;
     align-items: center;
-  }
-  
+    align-self: flex-end;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: space-between;
+    width: 190px;
+  }  
   .sign button  {
     width: 120px;
-  }
-  
+  }  
   .holder  {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: space-around;
     margin-top: 40px;
     text-align: center;
-  }
-  
+  }  
   .buttonHold  {
     display: flex;
-    width: calc(280px + 2%);
     justify-content: space-between;
-    text-align: center;
     margin-top: 25px;
-  }
-  
+    text-align: center;
+    width: calc(280px + 2%);
+  }  
   .buttonHold button:nth-of-type(2)  {
     background-color: transparent;
-    color: white;
     border: 1px solid white;
-  }
-  
+    color: white;
+  }  
   .sign button:first-of-type:hover,
   .buttonHold button:first-of-type:hover  {
     background-color: #ff7b86;
     color: white;
     cursor: pointer;
-  }
-  
+  }  
   .text  {
-    width: calc(50% - 2.5%);
     color: hsl(207, 13%, 34%);
-    line-height: 2rem;
-    font-weight: 400;
     font-family: "Overpass", sans-serif;
+    font-weight: 400;
+    line-height: 2rem;
+    width: calc(50% - 2.5%);
   }
   h2  {
-    text-align: center;
     color: hsl(208, 49%, 24%);
     font-size: calc(1.7rem + 0.5vw);
     font-weight: 400;
     margin: 105px auto;
-  }
-  
+    text-align: center;
+  }  
   h3  {
-    font-size: calc(1.3rem + 0.5vw);
     color: hsl(208, 49%, 24%);
-  }
-  
+    font-size: calc(1.3rem + 0.5vw);
+  }  
   .flex  {
-    display: flex;
-    position: relative;
-    justify-content: space-between;
     align-items: center;
+    display: flex;
+    justify-content: space-between;
     margin: 25px auto;
-  }
-  
+    position: relative;
+  }  
   .up img:first-of-type  {
     position: absolute;
     right: -400px;
     top: -200px;
-  }
-  
+  }  
   .middle  {
-    background-image: url("./images/bg-pattern-circles.svg"),
-      linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+    background-image: url("./images/bg-pattern-circles.svg");
     background-position: -65% 87%;
     background-repeat: no-repeat;
-    margin: 270px auto;
+    background: linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
     border-radius: 0px 75px 0px 75px;
-  }
-  
+    margin: 270px auto;
+  }  
   .mid .text  {
     color: white;
-    margin-top: calc(120px - 15px);
     margin-bottom: 120px;
-  }
-  
+    margin-top: calc(120px - 15px);
+  }  
   .mid img  {
-    position: absolute;
     left: -50px;
+    position: absolute;
     top: -70px;
-  }
-  
+  }  
   .mid h2  {
-    margin-bottom: 15px;
     color: white;
-  }
-  
+    margin-bottom: 15px;
+  }  
   .middle .flex  {
     justify-content: flex-end;
-  }
-  
+  }  
   .lower .flex  {
     justify-content: flex-end;
-  }
-  
+  }  
   .low img:not(.Mob)  {
-    position: absolute;
     left: -400px;
-  }
-  
-  
+    position: absolute;
+  }  
   footer  {
     background-color: hsl(240, 10%, 16%);
-    margin-top: 250px;
     border-top-right-radius: 75px;
+    margin-top: 250px;
     padding-top: 25px;
   }
   footer .flex  {
     align-items: flex-start;
-  }
-  
+  }  
   footer ul,
   footer a  {
-    list-style: none;
     color: white;
+    list-style: none;
     text-decoration: none;
-  }
-  
+  }  
   footer a  {
     display: inline-block;
     margin-bottom: 15px;
-  }
-  
+  }  
   .listHead  {
     font-weight: 500;
     margin-bottom: 25px;
-  }
-  
-  
-  
+  }  
   @media (max-width: 1022px)  {
-    .flex:not(.foot)  {
+    flex:not(.foot)  {
       flex-direction: column;
       justify-content: space-around;
       text-align: center;
     }
+
+    .
     .top .flex  {
       flex-direction: column-reverse;
     }
-  
     .desk  {
       display: none;
     }
-  
     .Mob  {
       display: block;
       position: static;
     }
-  
     h3  {
       font-size: calc(2rem + 0.5vw);
     }
-  
     h2  {
       font-size: calc(2.5rem + 0.5vw);
       line-height: 3rem;
     }
-  
     .flex .text  {
       width: calc(100% - 40px);
     }
     .flex .text p  {
       font-size: calc(1rem + 0.3vw);
     }
-  
     .middle  {
       background-position: center;
       background-size: cover;
-      position: relative;
       margin-bottom: 100px;
+      position: relative;
     }
-  
     .middle .flex  {
-      justify-content: space-around;
       align-items: center;
+      justify-content: space-around;
     }
-  
     .middle h2  {
       margin-top: 0px;
     }
-  
     .mid img  {
-      position: absolute;
       left: initial;
+      position: absolute;
       top: -300px;
     }
-  
     .mid .text  {
       margin: 300px auto 50px auto;
     }
   }
-  
+  header,
+  footer,
+  .middle {
+    width: 1380px;
+  }  
   @media (max-width: 625px)  {
     header  {
       padding-top: 10px;
@@ -496,7 +433,6 @@ body  {
     .smallMenu  {
       display: block;
     }
-  
     .link,
     .sign,
     .mobMenu  {
@@ -505,48 +441,40 @@ body  {
     .dropMob.show,
     .drop.show  {
       display: block;
-      max-height: 400px;
       height: auto;
+      max-height: 400px;
       padding: 15px;
     }
     .show  {
       display: block;
     }
-  
     .dropTextMob.show,
     .dropText.show  {
       display: initial;
     }
-  
     .sign  {
       font-size: calc(0.9rem + 0.3vw);
     }
-  
     footer .flex  {
-      flex-direction: column;
       align-items: center;
+      flex-direction: column;
       text-align: center;
     }
-  
     .foot ul  {
-      padding-left: 0px;
       font-size: calc(1rem + 0.3vw);
+      padding-left: 0px;
     }
-  
     .foot img  {
       margin-bottom: 25px;
     }
-  }
-  
+  }  
   @media (max-width: 523px)  {
     html  {
       font-size: 15px;
     }
-  
     h1  {
       font-size: calc(2.2rem + 1vw);
     }
-  
     .menu  {
       min-width: initial;
     }
