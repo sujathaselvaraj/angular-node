@@ -1,0 +1,47 @@
+
+ body {
+      background-color: gray;
+     }
+  input,
+  select,
+  th,
+  td,
+  #primary,
+  #secondary {
+      background-color: rgb(243, 190, 14);
+     }
+  h1 {
+      margin: auto;
+     }
+  input {
+      appearance: none;
+      background: transparent;
+      border: none;
+      outline: none;
+      text-align: center;
+     }
+  select {
+      appearance: none;
+      background: transparent;
+      border: none;
+      font-weight: bold;
+      outline: none;
+      text-align: center;
+     }
+  th,
+  td {
+      appearance: none;
+      font-weight: 900;
+      padding: 30px;
+     }
+  table {
+      background-color: white;
+      box-shadow: 5px 5px 10px black;
+      height: 50px;
+      margin: auto;
+      margin-top: 15%;
+      padding: 10px;
+      table-layout: fixed;
+      text-align: center;
+      width: 500px;
+     }
