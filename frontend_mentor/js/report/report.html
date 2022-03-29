@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RT-PCR report</title>
+    <link rel="stylesheet" href="./report.css">
+</head>
+
+<body background="../../../images/color.jpg">
+    <center>
+        <h1>RT-PCR report</h1>
+    </center>
+    <form name="myForm" method="post">
+        <section class="addingInput" id="addingInput">
+            <div>
+                <label name="PersonName">
+                    Person Name :
+                </label>
+                <input type="text" name="Person Name" placeholder="Enter your name" id="personName">
+            </div>
+            <br>
+            <div>
+                <label name="AadharCardNo">
+                    Aadhar Card No :
+                </label>
+                <input type="number" name="Aadhar Card No" placeholder="eg:3005 4651 3091 0987" id="aadharNumber">
+            </div>
+            <br>
+            <div>
+                <label name="dob">
+                    Date Of Birth :
+                </label>
+                <input type="date" name="dob" id="dob">
+            </div>
+            <br>
+            <div>
+                <label name="city">
+                    City :
+                </label>
+                <select id="cities" class="cities"></select>
+            </div>
+            <br>
+            <div>
+                <label name="doTest">
+                    Date Of Test :
+                </label>
+                <input type="date" name="dateOftest" id="dateoftest">
+            </div>
+            <br>
+            <div>
+                <label name="toTest">
+                    Time Of Test :
+                </label>
+                <input type="time" name="timeOftest" id="timeoftest">
+            </div><br>
+            <div>
+                <label id="result">Result :</label><br>
+                <input type="radio" id="positive" name="result" value="Positive">
+                <label>Positive</label><br>
+                <input type="radio" id="negative" name="result" value="Negative">
+                <label>Negative</label><br>
+            </div><br>
+            <div>
+                <label name="labName">
+                    Lab Name :
+                </label>
+                <input type="text" name="Lab Name" placeholder="Enter your Lab name" id="labname">
+            </div>
+            <br>
+            <div>
+                <label name="reportNo">
+                    Report No :
+                </label>
+                <input type="number" name="Report No" placeholder="0900" id="reportno">
+            </div>
+            <br>
+            <div>
+                <label name="gender" id="genders">
+                    Gender :
+                </label>
+                <select id="gender" class="gender"></select>
+            </div>
+            <br>
+            <div>
+                <button type="submit" value="submit" id="submit" onclick="display()">Submit</button>
+            </div>
+            <p id="demo"></p>
+        </section>
+    </form>
+    <script type=" text/javascript" src="./city.js">
+    </script>
+</body>
+
+</html>
