@@ -1,5 +1,17 @@
-<h1 class="text-danger">Welcomeeeeeeeeee {{title}}</h1>
+<h1 class="text-danger">Welcomeeeeeeeeee {{title}} from {{location}}</h1>
 <hr>
-<div>
-  <app-boxa></app-boxa>
+<!-- <div>
+  <app-boxa labelValue="Location" [data]="location" (onBoxDataChange)="onBoxValueChange($event)"></app-boxa>
 </div>
+<div>
+  <app-boxa [data]="location"></app-boxa>
+</div>
+<div>
+  <app-customer-form></app-customer-form>
+</div> -->
+<div>
+  <app-count-display></app-count-display>
+  <div>
+    <app-hit-button></app-hit-button>
+    <app-counter-app></app-counter-app>
+  </div>

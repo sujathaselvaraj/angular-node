@@ -6,9 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'demoa-app';
+  title = 'all';
+  location = 'Tuticorin';
+  onBoxValueChange(paramData: any) {
+    console.log("app component:" + paramData.value);
+  }
 }
 
-class AboutComponent {
+// class AboutComponent {
 
-}
+// }

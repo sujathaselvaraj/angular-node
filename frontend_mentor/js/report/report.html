@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="./report.css">
 </head>
 
-<body background="../../../images/color.jpg">
+<body background="./images/color.jpg">
     <center>
         <h1>RT-PCR report</h1>
     </center>
-    <form name="myForm" method="post">
+    <form action="">
         <section class="addingInput" id="addingInput">
             <div>
                 <label name="PersonName">
@@ -58,9 +58,9 @@
             </div><br>
             <div>
                 <label id="result">Result :</label><br>
-                <input type="radio" id="positive" name="result" value="Positive">
+                <input type="radio" id="myresult" name="result" value="Positive" onclick="radiores()">
                 <label>Positive</label><br>
-                <input type="radio" id="negative" name="result" value="Negative">
+                <input type="radio" id="myresult1" name="result" value="Negative" onclick="radiores1()">
                 <label>Negative</label><br>
             </div><br>
             <div>
@@ -85,13 +85,30 @@
             </div>
             <br>
             <div>
-                <button type="submit" value="submit" id="submit" onclick="display()">Submit</button>
+                <button type="submit" value="submit" id="submit">Submit</button>
             </div>
-            <p id="demo"></p>
         </section>
     </form>
-    <script type=" text/javascript" src="./city.js">
-    </script>
+    <table id="table">
+        <tr>
+            <th>Person Name</th>
+            <th>Aadhar Card No</th>
+            <th>Date of birth</th>
+            <th>City</th>
+            <th>Date Of Test</th>
+            <th>Time Of Test</th>
+            <th>Result</th>
+            <th>Lab Name</th>
+            <th> Report No</th>
+            <th> Gender</th>
+        </tr>
+    </table>
+    <div id="search">
+        <label for="valueTosearch">Enter Aadhar Value to search :</label>
+        <input id="searchTerm" class="form-control" placeholder="Enter Aadhar Card Number" onkeyup="doSearch()">
+    </div>
+    <script type="text/javascript" src="./city.js"></script>
+
 </body>
 
 </html>

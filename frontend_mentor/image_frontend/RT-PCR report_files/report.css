@@ -18,7 +18,7 @@ border-color: black;
 color:maroon;
 }
 table {
-    background-image: url("./images/green.jpg");
+    background-image: url("../../../images/green.jpg");
     line-break: 1vh;
     margin-top: 5vh;
     table-layout: auto;
