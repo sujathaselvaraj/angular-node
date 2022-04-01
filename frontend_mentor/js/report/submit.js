@@ -1,5 +1,5 @@
 export var submit =document.getElementById("submit");
-submit.addEventListener('click', function doSubmit() {
+submit.addEventListener('click', function () {
     
                     var table = document.getElementById("table");
                     var row = table.insertRow(-1);

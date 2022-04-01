@@ -1,22 +1,25 @@
-
 * {
     font-size: 15px bold;
-    font-family:serif;
+    font-family: serif;
 }
+
 .addingInput {
     display: grid;
     grid-template-columns: auto auto auto auto;
     gap: 20px;
     font-weight: 800;
 }
-#submit {
-border-radius: 15px;
-height: 5vh;
-width: 200px;
-background-color: rgb(132, 247, 78);
-border-color: black;
-color:maroon;
+
+#submit,
+#search1 {
+    border-radius: 15px;
+    height: 5vh;
+    width: 200px;
+    background-color: rgb(132, 247, 78);
+    border-color: black;
+    color: maroon;
 }
+
 table {
     background-image: url("./images/green.jpg");
     line-break: 1vh;
@@ -27,18 +30,24 @@ table {
     border-collapse: collapse;
     border: 1px Solid black;
 }
+
 div {
     height: 7vh;
 }
+
 div:hover {
     color: magenta;
 }
-#search, .addingInput {
+
+#search,
+.addingInput {
     margin-left: 300px;
 }
+
 #search {
     margin-top: 10vh;
 }
+
 th,
 td {
     border: 1px Solid black;
