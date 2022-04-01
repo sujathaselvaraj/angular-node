@@ -1,15 +1,8 @@
 import { submit } from "./submit.js";
 import { search } from "./search.js";
 import {cities, city, gender, genders } from "./option.js";
+import { radio, radiobtn, radiobtn1 } from "./radio.js";
 
-      var radio;
-       
-      function radiores() {
-        radio = document.getElementById("myresult").value;
-      }
-      function radiores1() {
-        radio = document.getElementById("myresult1").value;
-      }
        document.getElementById("table").style.display="block";
        
                 const btn = document.getElementById('submit');
@@ -23,7 +16,14 @@ import {cities, city, gender, genders } from "./option.js";
                     input.value = '';
                   });
                 });
-    
+              function radioButton() {
+                radiores();
+              };
+              radioButton();
+              function radioButton1() {
+                radiores1();
+              };
+              radioButton1();
                 function searchCall() {
                 doSearch();
                };
