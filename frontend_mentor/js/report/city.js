@@ -134,12 +134,13 @@ const cities = {
     // }
     // function myOption(result) {
     //   document.getElementById("demo").value = result;
-    function radiores() {
-      radio = document.getElementById("myresult").value;
-    }
-    function radiores1() {
-      radio = document.getElementById("myresult1").value;
-    }
+  
+    document.addEventListener("click", radiores(){
+      radio = document.getElementById("myresult").value
+    });
+    document.addEventListener("click", radiores1(){
+      radio = document.getElementById("myresult1").value
+    });
     // }
      document.getElementById("table").style.display="block";
      document.getElementById("submit").onclick = function () {

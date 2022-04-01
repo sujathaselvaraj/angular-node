@@ -9,7 +9,7 @@ function showOption() {
 showOption();
 
 import { doSearch } from "./search.js";
-function xu() {
+function searchAadhar() {
     function doSearch() {
         var searchText = document.getElementById('searchTerm').value;
         var targetTable = document.getElementById('table');
@@ -33,4 +33,4 @@ function xu() {
     }
     
 };
-xu();
+searchAadhar();
