@@ -108,40 +108,13 @@ const cities = {
     }
     const genders=document.getElementById('gender');
     genders.innerHTML = generateOptions(gender);
-  //   function generateOptions(data) {
-  //     return Object.entries(data)
-  //       .map(
-  //         ([code, city]) =>
-  //           `<option value="${code}">${code == 'OPTION' ? " " : code}  ${city}</option>`
-  //       )
-  //       .join("");
-  //   }
-  // var form = document.querySelectorAll('myform')
-  // var name= document.getElementById("personName");
-  // var aadharNo= document.getElementById("aadharNumber");
-  // var dob= document.getElementById("dob");
-  // var dateTest= document.getElementById("dateoftest");
-  // var timeOfTest= document.getElementById("timeoftest");
-  // var result= document.getElementById("result");
-  // var labName= document.getElementById("labname");
-  // var reportNo= document.getElementById("reportno");
-  // // console.log(name.form);
-  // var resultelement = document.getElementById('demo');
   
-    // function display(values) {
-    //   // resultelement.innerText = values;
-    //   return values;
-    // }
-    // function myOption(result) {
-    //   document.getElementById("demo").value = result;
-  
-    document.addEventListener("click", radiores(){
-      radio = document.getElementById("myresult").value
-    });
-    document.addEventListener("click", radiores1(){
-      radio = document.getElementById("myresult1").value
-    });
-    // }
+        function radiores() {
+      radio = document.getElementById("myresult").value;
+    }
+    function radiores1() {
+      radio = document.getElementById("myresult1").value;
+    }
      document.getElementById("table").style.display="block";
      document.getElementById("submit").onclick = function () {
   
@@ -155,7 +128,6 @@ const cities = {
                   var tot = row.insertCell(5);
                   var res = row.insertCell(6);
                   var labName = row.insertCell(7);
-                  // var aadhar = row.insertCell(8);
                   var reportNo = row.insertCell(8);
                   var gender = row.insertCell(9);
                   personName.innerHTML = document.getElementById("personName").value;
@@ -174,8 +146,7 @@ const cities = {
               const btn = document.getElementById('submit');
   
               btn.addEventListener('click', function handleClick(event) {
-                // 👇️ if you are submitting a form
-                event.preventDefault();
+              event.preventDefault();
               
                 const inputs = document.querySelectorAll('#personName, #aadharNumber, #dob, #cities, #dateoftest, #timeoftest, #radio, #labname, #reportno, #gender');
               
@@ -188,34 +159,21 @@ const cities = {
                 var searchText = document.getElementById('searchTerm').value;
                 var targetTable = document.getElementById('table');
                 var targetTableColCount;
-                
-    
-                //Loop through table rows
                 for (var rowIndex = 0; rowIndex < targetTable.rows.length; rowIndex++ ) {
                     var rowData = '';
     
-                    //Get column count from header row
+  
                     if (rowIndex == 0) {
                         targetTableColCount = targetTable.rows.item(rowIndex).cells.length;
-                        continue; //do not execute further code for header row.
+                        continue; 
                     }
                     var colIndex = 1;
     
-                    //Process data rows. (rowIndex >= 1)
-                    // for (var colIndex = 0; colIndex < targetTableColCount; colIndex++) {
                         var cellText = '';
                         cellText = targetTable.rows.item(rowIndex).cells.item(colIndex).textContent;
   
-    
-                        // if (navigator.appName == 'Microsoft Internet Explorer')
-                        //     cellText = targetTable.rows.item(rowIndex).cells.item(colIndex).innerText;
-                        // else
-                        //     cellText = targetTable.rows.item(rowIndex).cells.item(colIndex).textContent;
-    
                         rowData += cellText;
-                    // }
-    
-                    
+                           
                     if (rowData.indexOf(searchText) == -1)
                         targetTable.rows.item(rowIndex).style.display = 'none';
                     else
