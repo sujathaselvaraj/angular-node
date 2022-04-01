@@ -1,4 +1,5 @@
-export function doSearch() {
+export var search =document.getElementById("search");
+search.addEventListener('click',function doSearch() {
     var searchText = document.getElementById('searchTerm').value;
     var targetTable = document.getElementById('table');
     var targetTableColCount;
@@ -18,4 +19,4 @@ export function doSearch() {
         else
             targetTable.rows.item(rowIndex).style.display = 'table-row';
     }
-}
+} );

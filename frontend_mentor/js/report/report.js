@@ -1,4 +1,6 @@
-import { submit } from "./submit";
+import { submit } from "./submit.js";
+import { search } from "./search.js";
+// import {doSearch, doSubmit}  from "./functioncal.js"
 const cities = {
     OPTION: 'Select a City',
     TN01: 'Chennai Central (Ayanavaram)',
@@ -140,12 +142,9 @@ const cities = {
       
                       if (rowIndex == 0) {
                           targetTableColCount = targetTable.rows.item(rowIndex).cells.length;
-                          continue; //do not execute further code for header row.
+                          continue;
                       }
                       var colIndex = 1;
-      
-                      //Process data rows. (rowIndex >= 1)
-                      // for (var colIndex = 0; colIndex < targetTableColCount; colIndex++) {
                           var cellText = '';
                           cellText = targetTable.rows.item(rowIndex).cells.item(colIndex).textContent;
     
@@ -156,4 +155,12 @@ const cities = {
                           targetTable.rows.item(rowIndex).style.display = 'table-row';
                   }
               }
+              function searchCall() {
+                doSearch();
+               };
+               searchCall();
+               function submitCall() {
+                   doSubmit();
+               };
+               submitCall();
     
