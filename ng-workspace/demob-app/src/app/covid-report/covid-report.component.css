@@ -1,0 +1,55 @@
+* {
+    font-size: 15px bold;
+    font-family: serif;
+}
+
+.addingInput {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 20px;
+    font-weight: 800;
+}
+
+#submit,
+#search1 {
+    border-radius: 15px;
+    height: 5vh;
+    width: 180px;
+    background-color: rgb(132, 247, 78);
+    border-color: black;
+    color: maroon;
+}
+
+table {
+    background-image: url("../../assets/green.jpg");
+    line-break: 1vh;
+    margin-top: 5vh;
+    table-layout: auto;
+    margin-left: 150px;
+    width: 85%;
+    border-collapse: collapse;
+    border: 1px Solid black;
+}
+
+div {
+    height: 7vh;
+}
+
+div:hover {
+    color: magenta;
+}
+
+#search,
+.addingInput {
+    margin-left: 300px;
+}
+
+#search {
+    margin-top: 10vh;
+}
+
+th,
+td {
+    border: 1px Solid black;
+    padding: 3vh;
+}

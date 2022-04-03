@@ -1,0 +1,275 @@
+<!-- <div class="panel-heading">Customer Form</div> -->
+<form name="customerForm" #customerFormGroup="ngForm" (submit)="saveCustomer(customerFormGroup)">
+    <!-- <div class="form-group" [class.has-error]="firstNameFormControl.invalid && firstNameFormControl.touched">
+        <label for="fName">
+            First Name:
+        </label>
+        <input class="form-control" placeholder="Enter first name" name="fName" [ngModel]="customerModel.firstName"
+            required minlength="3" #firstNameFormControl="ngModel">
+        <div class="help-block" *ngIf="firstNameFormControl.invalid && firstNameFormControl.touched">
+            <span *ngIf="firstNameFormControl.errors?.['required']">
+                <strong>First name Required!</strong>
+            </span>
+            <span *ngIf="firstNameFormControl.errors?.['minlength']">
+                <strong>First Name must be more than 3 characters</strong>
+            </span>
+
+        </div>
+    </div> -->
+    <div class="form-group" [class.has-error]="firstNameFormControl.invalid && firstNameFormControl.touched">
+        <label name="PersonName">
+            Person Name :
+        </label>
+        <input class="form-control" type="text" name="Person Name" placeholder="Enter your name" id="personName"
+            [ngModel]="customerModel.firstName" required minlength="3" #firstNameFormControl="ngModel">
+        <div class="help-block" *ngIf="firstNameFormControl.invalid && firstNameFormControl.touched">
+            <span *ngIf="firstNameFormControl.errors?.['required']">
+                <strong>Person name Required!</strong>
+            </span>
+            <span *ngIf="firstNameFormControl.errors?.['minlength']">
+                <strong>Person Name must be more than 3 characters</strong>
+            </span>
+        </div>
+        <br>
+    </div>
+    <div class="form-group">
+        <label name="AadharCardNo">
+            Aadhar Card No :
+        </label>
+        <input class="form-control" type="number" name="Aadhar Card No" placeholder="eg:3005 4651 3091 0987"
+            id="aadharNumber" [ngModel]="customerModel.aadharNumber" required minlength="12"
+            #aadharNumberFormControl="ngModel">
+        <div class="help-block" *ngIf="aadharNumberFormControl.invalid && aadharNumberFormControl.touched">
+            <span *ngIf="aadharNumberFormControl.errors?.['required']">
+                <strong>Aadhar Number Required!</strong>
+            </span>
+            <span *ngIf="aadharNumberFormControl.errors?.['minlength']">
+                <strong>Aadhar Number must have 12 digits</strong>
+            </span>
+        </div>
+        <br>
+    </div>
+    <br>
+    <div>
+        <label name="city">
+            City :
+        </label> <input class="form-control" type="text" name="City" placeholder="Enter your City name" id="city"
+            [ngModel]="customerModel.city" required minlength="3" #cityFormControl="ngModel">
+        <div class="help-block" *ngIf="cityFormControl.invalid && cityFormControl.touched">
+            <span *ngIf="cityFormControl.errors?.['required']">
+                <strong>city name Required!</strong>
+            </span>
+            <span *ngIf="cityFormControl.errors?.['minlength']">
+                <strong>city name must be more than 3 characters</strong>
+            </span>
+        </div>
+    </div>
+    <br>
+
+    <!-- <ejs-dropdownlist id='localData' #local [dataSource]='cities' [fields]='localFields' [placeholder]='localWaterMark'>
+    </ejs-dropdownlist> -->
+    <div class="form-group">
+        <label name="dob">
+            Date Of Birth :
+        </label>
+        <input class="form-control" type="date" name="dob" id="dob" [ngModel]="customerModel.dob"
+            #dobFormControl="ngModel" required>
+        <div class="help-block" *ngIf="dobFormControl.invalid && dobFormControl.touched">
+            <span *ngIf="dobFormControl.errors?.['required']">
+                <strong>Date Of Birth is Required!</strong>
+            </span>
+        </div>
+    </div>
+    <br>
+
+    <div class="form-group">
+        <label name="doTest">
+            Date Of Test :
+        </label>
+        <input class="form-control" type="date" name="dateOftest" id="dateoftest" [ngModel]="customerModel.dateoftest"
+            #dateoftestFormControl="ngModel" required>
+        <div class="help-block" *ngIf="dateoftestFormControl.invalid && dateoftestFormControl.touched">
+            <span *ngIf="dateoftestFormControl.errors?.['required']">
+                <strong>Data Of Test is Required!</strong>
+            </span>
+        </div>
+    </div>
+    <br>
+    <div class="form-group">
+        <label name="toTest">
+            Time Of Test :
+        </label>
+        <input class="form-control" type="time" name="timeOftest" id="timeoftest" [ngModel]="customerModel.timeoftest"
+            #timeoftestFormControl="ngModel" required>
+        <div class="help-block" *ngIf="timeoftestFormControl.invalid && timeoftestFormControl.touched">
+            <span *ngIf="timeoftestFormControl.errors?.['required']">
+                <strong>Time Of Test is Required!</strong>
+            </span>
+        </div>
+    </div><br>
+    <div class="form-group">
+        <label id="result">Result :</label><br>
+        <input class="form-control" type="radio" id="myresult" name="result" value="Positive">
+        <label>Positive</label><br>
+        <input class="form-control" type="radio" id="myresult1" name="result" value="Negative">
+        <label>Negative</label><br>
+    </div><br>
+    <div class="form-group">
+        <label name="labName">
+            Lab Name :
+        </label>
+        <input class="form-control" type="text" name="Lab Name" placeholder="Enter your Lab name" id="labname"
+            [ngModel]="customerModel.timeoftest" #labnameFormControl="ngModel" required>
+        <div class="help-block" *ngIf="labnameFormControl.invalid && labnameFormControl.touched">
+            <span *ngIf="labnameFormControl.errors?.['required']">
+                <strong>Lab Name is Required!</strong>
+            </span>
+        </div>
+    </div>
+    <br>
+    <div class="form-group">
+        <label name="reportNo">
+            Report No :
+        </label>
+        <input class="form-control" type="number" name="Report No" placeholder="0900" id="reportno"
+            [ngModel]="customerModel.reportno" #reportnoFormControl="ngModel" required>
+        <div class="help-block" *ngIf="reportnoFormControl.invalid && reportnoFormControl.touched">
+            <span *ngIf="reportnoFormControl.errors?.['required']">
+                <strong>Report Number is Required!</strong>
+            </span>
+        </div>
+    </div>
+    <br>
+    <div class="form-group">
+        <label name="gender" id="genders">
+            Gender :
+        </label>
+        <select id="gender" class="gender">
+            <option value="option">Gender</option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="others">Others</option>
+        </select>
+    </div>
+    <br>
+    <div class="form-group">
+        <button type="submit" value="submit" id="submit">Submit</button>
+    </div>
+</form>
+<!-- <div>
+    <table id="table">
+        <tr>
+            <th>Person Name</th>
+            <th>Aadhar Card No</th>
+            <th>Date of birth</th>
+            <th>City</th>
+            <th>Date Of Test</th>
+            <th>Time Of Test</th>
+            <th>Result</th>
+            <th>Lab Name</th>
+            <th> Report No</th>
+            <th> Gender</th>
+        </tr>
+    </table>
+</div>
+<div id="search">
+    <label for="valueTosearch">Enter Aadhar Value to search :</label>
+    <input class="form-control" id="searchTerm" class="form-control" placeholder="Enter Aadhar Card Number">
+    <button class="btn btn-primary" type="submit" value="search" id="search1">Search</button>
+</div> -->
+<div class="search">
+    <input type="text" id="find" (keyup)="removefield()" placeholder="Enter name to search">
+    <input type="submit" (click)="search()" id="submit">
+    <div id="msg"></div>
+</div>
+<div>
+    <h2>REGISTRATION DATABASE</h2>
+</div>
+<div class="tab">
+    <table id="table">
+        <tr>
+            <th *ngFor="let column of headers">
+                {{column}}
+            </th>
+        </tr>
+        <tr *ngFor="let value of store">
+            <td>
+                {{ value.fname }}
+            </td>
+            <td>
+                {{ value.aadhar }}
+            </td>
+            <td>
+                {{ value.dob }}
+            </td>
+            <td>
+                {{ value.gender }}
+            </td>
+            <td>
+                {{ value.city }}
+            </td>
+            <td>
+                {{ value.date }}
+            </td>
+            <td>
+                {{ value.time }}
+            </td>
+            <td>
+                {{ value.lab }}
+            </td>
+            <td>
+                {{ value.report }}
+            </td>
+            <td>
+                {{ value.result }}
+            </td>
+            <td>
+                {{ value.aadhar }}
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="tab">
+    <table id="table1">
+        <tr>
+            <th *ngFor="let column of headers">
+                {{column}}
+            </th>
+        </tr>
+        <tr *ngFor="let value of searchvalue" id="tr">
+            <td>
+                {{ value.fname }}
+            </td>
+            <td>
+                {{ value.lname }}
+            </td>
+            <td>
+                {{ value.dob }}
+            </td>
+            <td>
+                {{ value.gender }}
+            </td>
+            <td>
+                {{ value.city }}
+            </td>
+            <td>
+                {{ value.date }}
+            </td>
+            <td>
+                {{ value.time }}
+            </td>
+            <td>
+                {{ value.lab }}
+            </td>
+            <td>
+                {{ value.report }}
+            </td>
+            <td>
+                {{ value.result }}
+            </td>
+            <td>
+                {{ value.aadhar }}
+            </td>
+        </tr>
+    </table>
+</div>
