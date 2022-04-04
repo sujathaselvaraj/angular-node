@@ -1,11 +1,7 @@
-.container {
-    background-image: url("../assets/color.jpg");
-}
-
 .tab {
     align-items: center;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto auto;
     margin-bottom: 50px;
     margin-left: -400px;
 }
@@ -30,7 +26,7 @@ label {
 }
 
 .buttons button {
-    background-color: grey;
+    background-color: green;
     border-radius: 10px;
     border: none;
     color: white;
@@ -65,20 +61,8 @@ td {
     padding: 3vh;
 }
 
-.tab-container {
-    background-color: white;
-    border-radius: 10px;
-    padding-top: 20px;
-    width: 450px;
-}
-
-.search {
-    margin-bottom: 40px;
-    margin-top: 10px;
-    text-align: center;
-}
-
 .container {
+    background-image: url("../assets/color.jpg");
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -94,28 +78,14 @@ input {
 }
 
 #submit {
-    border: 2px solid white;
+    border: 2px solid purple;
     height: 30px;
     margin-left: 20px;
     width: 100px;
 }
 
 #find {
-    border: 2px solid white;
+    border: 2px solid purple;
     height: 30px;
     width: 350px;
-}
-
-.buttons button:hover {
-    background-color: green;
-    border-radius: 5px;
-    color: white;
-    padding: 5px;
-}
-
-#submit:hover {
-    background-color: green;
-    border: none;
-    color: white;
-    outline: none;
 }
