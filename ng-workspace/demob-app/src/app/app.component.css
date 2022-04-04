@@ -1,4 +1,4 @@
-body {
+.container {
     background-image: url("../assets/color.jpg");
 }
 
@@ -20,7 +20,6 @@ label {
 
 .field {
     align-self: center;
-    background-color: white;
     color: black;
     display: flex;
     justify-content: space-between;
@@ -119,13 +118,4 @@ input {
     border: none;
     color: white;
     outline: none;
-}
-
-h1 {
-    color: white;
-}
-
-#msg {
-    color: red;
-    margin-top: 30px;
 }

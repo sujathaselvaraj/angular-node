@@ -15,7 +15,7 @@ export class AppComponent {
   });
   store: any = [];
   input: any;
-  headers = ["First Name", , "Aadhar Number", "Date of Birth", "Gender", "City", "Date Of Test", "Time Of Test", "Lab Name",
+  headers = ["First Name", "Aadhar Number", "Date of Birth", "Gender", "City", "Date Of Test", "Time Of Test", "Lab Name",
     "Report Number", "Result"];
   title: any;
   searchvalue: any = [];

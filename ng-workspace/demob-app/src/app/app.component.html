@@ -1,6 +1,6 @@
-<h1 align="center">RT-PCR REGISTRATION FORM</h1>
 <div class="container">
-  <form class="tab tab-container" [formGroup]="fg">
+  <h1 align="center">RT-PCR REGISTRATION FORM</h1>
+  <form [formGroup]="fg">
     <div class="field">
       <label for="fname">First Name :</label>
       <input type="text" name="fname" id="fname" formControlName="fname" required>
@@ -62,6 +62,9 @@
           {{ value.fname }}
         </td>
         <td>
+          {{ value.aadhar }}
+        </td>
+        <td>
           {{ value.dob }}
         </td>
         <td>
@@ -85,9 +88,7 @@
         <td>
           {{ value.result }}
         </td>
-        <td>
-          {{ value.aadhar }}
-        </td>
+
       </tr>
     </table>
   </div>
@@ -103,9 +104,12 @@
           {{column}}
         </th>
       </tr>
-      <tr *ngFor="let value of searchvalue" id="tr">
+      <tr *ngFor="let value of searchvalue">
         <td>
           {{ value.fname }}
+        </td>
+        <td>
+          {{ value.aadhar }}
         </td>
         <td>
           {{ value.dob }}
@@ -131,9 +135,7 @@
         <td>
           {{ value.result }}
         </td>
-        <td>
-          {{ value.aadhar }}
-        </td>
+
       </tr>
     </table>
   </div>
