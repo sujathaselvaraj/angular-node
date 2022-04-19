@@ -35,11 +35,9 @@ export class BooksdaoService {
   }
   addBook(book: any) {
     console.log('New book added ' + book.name + ' ' + book.author)
-    console.log('Total Number of books' + book.List.length)
+    console.log('Total Number of books' + this.bookList.length)
     this.bookList.push(book);
-    console.log('Total Number of books' + book.List.length)
-
-
+    console.log('Total Number of books' + this.bookList.length)
   }
   updateBook(book: any) {
     console.log('Book Modified ' + book.name + ' ' + book.author)

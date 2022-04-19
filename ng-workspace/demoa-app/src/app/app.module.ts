@@ -12,8 +12,7 @@ import { CountDisplayComponent } from './count-display/count-display.component';
 import { HitButtonComponent } from './hit-button/hit-button.component';
 import { CounterAppComponent } from './counter-app/counter-app.component';
 import { EmployeeFormComponent } from './employee-form/employee-form.component';
-import { NewsComponent } from './news/news.component';
-import { MenuComponent } from './menu/menu.component';
+
 
 @NgModule({
   declarations: [
@@ -26,10 +25,7 @@ import { MenuComponent } from './menu/menu.component';
     CountDisplayComponent,
     HitButtonComponent,
     CounterAppComponent,
-    EmployeeFormComponent,
-    BookListComponent,
-    NewsComponent,
-    MenuComponent
+    EmployeeFormComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +34,6 @@ import { MenuComponent } from './menu/menu.component';
     ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [HomeComponent, AppHeaderComponent, AppFooterComponent, AppComponent]
+  bootstrap: [AppHeaderComponent, AppFooterComponent, AppComponent]
 })
 export class AppModule { }

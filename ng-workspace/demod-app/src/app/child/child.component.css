@@ -1,0 +1,11 @@
+h1 {
+    background-image: linear-gradient(violet, red);
+    background-clip: text;
+    color: transparent;
+}
+
+h3 {
+    background-image: linear-gradient(yellow, rgba(248, 69, 69, 0.521));
+    background-clip: text;
+    color: transparent;
+}

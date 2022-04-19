@@ -6,14 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./counter-app.component.css']
 })
 export class CounterAppComponent implements OnInit {
-  totalCount: number = 0;
-  hitIncrementValue: number = 10;
+  totalCount: number = 10;
+  hitIncrementValue: number = 0;
+  hit: number = 0;
 
   constructor() { }
 
   ngOnInit(): void {
   }
   increaseCount(value: number) {
-    this.totalCount += value;
+    this.hit += 1;
+    // this.totalCount += this.totalCount;
+    this.hitIncrementValue += this.totalCount;
   }
 }

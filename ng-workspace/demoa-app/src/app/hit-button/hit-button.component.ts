@@ -17,7 +17,7 @@ export class HitButtonComponent implements OnInit {
   }
 
   btnClickHandler() {
-    // this.label = this.label + 1;
+    this.label = this.label + 1;
     this.hit.emit(this.label);
   }
 }

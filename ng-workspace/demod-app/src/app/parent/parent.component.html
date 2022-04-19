@@ -1,0 +1,10 @@
+<h1>Parent works!</h1>
+<button (click)="toggleOf()">Click Me to See Child Component</button>
+<input type="text" [(ngModel)]="channelName">
+<app-child *ngIf="isChild" [channelName]="channelName">
+    <h2 #projectedContent>New Learning by Sujatha Selvaraj</h2>
+
+</app-child>
+<!-- <h3>{{channelName}}</h3> -->
+
+<!-- <app-child></app-child> -->

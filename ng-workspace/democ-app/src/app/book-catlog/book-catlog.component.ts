@@ -8,7 +8,7 @@ import { BooksdaoService } from '../booksdao.service'
   styleUrls: ['./book-catlog.component.css']
 })
 export class BookCatlogComponent implements OnInit {
-  books: Array<any> = []
+  books: Array<any> = [];
 
   constructor(private booksvc: BooksdaoService) { }
 
@@ -16,3 +16,4 @@ export class BookCatlogComponent implements OnInit {
     this.books = this.booksvc.getBooks();
   }
 }
+

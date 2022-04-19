@@ -1,4 +1,4 @@
-import { Component, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
@@ -13,6 +13,7 @@ import { NewsComponent } from './news/news.component';
 import { MenuComponent } from './menu/menu.component';
 import { HomeComponent } from './home/home.component';
 import { BookformComponent } from './bookform/bookform.component';
+// import { BooksdaoService } from './booksdao.service'
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'news', component: NewsComponent },
