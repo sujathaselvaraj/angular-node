@@ -1,0 +1,397 @@
+//*******************************************************************
+//**  Revision Log:
+//**	
+
+//**	28-APR-2009 	411.101   		DSK   	Initial Code
+//**	29-APR-2009	 	411.102			DSK		Added isEnterKey function
+//**	29-APR-2009		411.103			DSK		Added negateReturnValue function
+
+//********************************************************************/
+
+
+var IE4 = (document.all && !document.getElementById) ? true : false;
+var NS4 = (document.layers) ? true : false;
+var IE5 = (document.all && document.getElementById) ? true : false;
+var NS6 =  (document.getElementById && !document.all) ? true : false;
+var OP=navigator.userAgent.toLowerCase().indexOf('opera')!=-1?1:0;
+var targetField;
+
+
+
+function find_Browser()
+{
+	d=document;
+ 	this.agt=navigator.userAgent.toLowerCase();
+ 	this.major = parseInt(navigator.appVersion);
+ 	this.dom=(d.getElementById)?1:0; // true for ie6, ns6
+ 	this.ns=(d.layers);
+ 	this.ns4up=(this.ns && this.major >=4);
+ 	this.ns6=(this.dom&&navigator.appName=="Netscape");
+ 	this.op=this.agt.indexOf('opera')!=-1;
+ 	this.ie=(d.all);
+ 	this.ie4=(d.all&&!this.dom)?1:0;
+ 	this.ie4up=(this.ie && this.major >= 4);
+ 	this.ie5=(d.all&&this.dom);
+ 	this.win=((this.agt.indexOf("win")!=-1) || (this.agt.indexOf("16bit")!=-1));
+ 	this.mac=(this.agt.indexOf("mac")!=-1);
+}
+
+
+var oBw = new find_Browser();
+
+
+function ylib_setX(o,x)
+{
+	(oBw.ns)? o.left=x:(oBw.op)? o.style.pixelLeft=x:o.style.left=x;
+}
+
+function ylib_setW(o,w)
+{
+	if(oBw.ns)
+	{
+		if(o.clip)
+			o.clip.right=w;
+	}
+	else if(oBw.op)
+		o.style.pixelWidth=w;
+	else o.style.width=w;
+}
+
+function ylib_getW(o)
+{
+	var w=0;
+	if(oBw.ns)
+	{
+		w=(o.width)? o.width:o.clip.width;
+		return w;
+	}
+	w=(oBw.op)? o.style.pixelWidth:o.offsetWidth;
+	return w;
+}
+
+function ylib_getH(o)
+{
+	var h=0;
+	if (oBw.ns)
+	{
+		h=(o.height)? o.height:o.clip.height;
+		return h;
+	}
+
+	h=(oBw.op)? o.style.pixelHeight:
+	o.offsetHeight;
+	return h;
+}
+
+
+function ylib_setH(o,h)
+{
+	if(oBw.ns)
+	{
+		if(o.clip)
+			o.clip.bottom=h;
+	}
+	else if(oBw.op)
+		o.style.pixelHeight=h;
+	else
+		o.style.height=h;
+}
+
+function getParentElement(focusObj, tagType)
+{
+	var lParent = focusObj;
+		
+	if(!lParent){
+		return lParent;
+	}
+	
+	while(lParent.tagName.toUpperCase()!=tagType.toUpperCase())
+	{
+		if(IE4 || IE5)
+		{
+			lParent = lParent.parentElement;
+		}
+		else
+		{
+			lParent = lParent.parentNode;
+		}
+		
+		if(!lParent || lParent==document){
+			lParent = null;
+			break;
+		}
+	}
+	
+	return lParent;
+}
+
+
+function getPreviousSibling(currentTag, tagname)
+{
+	var previousTag;
+	if(currentTag)
+	{
+		do
+		{
+			previousTag = currentTag.previousSibling;
+			
+			if(previousTag)
+			{
+				currentTag = previousTag;
+			}
+		}
+		while(previousTag && previousTag.tagName!=tagname.toUpperCase())
+	}
+	
+	return currentTag;
+}
+
+function getTableBodyObject(doc, tableId)
+{
+	return doc.getElementById(tableId).getElementsByTagName("tbody")[0];
+}
+
+function isDownArrowKey(e)
+{
+    if(IE4 || IE5)
+    {
+    	return (event.keyCode==40);
+    }
+    else
+    {
+    	return (e.keyCode==40);
+    }
+}
+
+function isTabKeyWithoutShift(e)
+{
+    if(IE4 || IE5)
+    {
+    	return (!event.shiftKey && event.keyCode==9);
+    }
+    else
+    {
+    	return (!e.shiftKey && e.keyCode==9);
+    }
+}
+
+function getFirstChild(parentTag, tagname)
+{
+	var firstTag;
+	if(parentTag)
+	{
+		firstTag = parentTag.getElementsByTagName(tagname)[0];
+	}
+	
+	return firstTag;
+}
+
+function getNextSibling(currentTag, tagname)
+{
+	var nextTag;
+	if(currentTag)
+	{
+		do
+		{
+			nextTag = currentTag.nextSibling;
+			currentTag = nextTag;
+		}
+		while(nextTag.tagName!=tagname)
+	}
+
+	return nextTag;
+}
+
+function isUpArrowKey(e)
+{
+    if(IE4 || IE5)
+    {
+    	return (event.keyCode==38);
+    }
+    else
+    {
+    	return (e.keyCode==38);
+    }
+}
+
+function isTabKeyWithShift(e)
+{
+    if(IE4 || IE5)
+    {
+    	return (event.shiftKey && event.keyCode==9);
+    }
+    else
+    {
+    	return (e.shiftKey && e.keyCode==9);
+    }
+}
+
+function isHomeKey(e)
+{
+    if(IE4 || IE5)
+    {
+    	return (event.keyCode==36);
+    }
+    else
+    {
+    	return (e.keyCode==36);
+    }
+}
+
+function isEndKey(e)
+{
+    if(IE4 || IE5)
+    {
+    	return (event.keyCode==35);
+    }
+    else
+    {
+    	return (e.keyCode==35);
+    }
+}
+
+function isEscKey(e)
+{
+    if(IE4 || IE5)
+    {
+    	return (event.keyCode==27);
+    }
+    else
+    {
+    	return (e.keyCode==27);
+    }
+}
+
+function createInput(doc, name, type)
+{
+	var lInput;
+	
+	if(IE4 || IE5)
+	{
+		lInput = doc.createElement("<input type='"+type+"' name='"+name+"'>");
+	}
+	else if(OP)
+	{
+		lInput = doc.createElement("<input type='"+type+"' name='"+name+"'>");
+	}
+	else
+	{
+		lInput = doc.createElement("input");
+		setAttribute(lInput, "name", name);
+		setAttribute(lInput, "type", type);
+	}
+	
+	return lInput;
+}
+
+function addElementTo(toElement, addElement)
+{
+	toElement.appendChild(addElement);
+}
+
+function setAttribute(element, attrib, val)
+{
+	if(attrib=='class' && (IE4 || IE5))
+	{
+		element.setAttribute('className', val);
+	}
+	else if(attrib=='style')
+	{
+		eval("element.style."+val+";");
+	}
+	else if(attrib=='readonly' && val=='true')
+	{
+		element.setAttribute(attrib, val);
+		if(IE4 || IE5)
+		{
+			element.readOnly = true;
+		}
+		else
+		{
+			element.readOnly = true;
+			//setEventListener(element, 'keydown', shiftFocus);
+		}
+	}
+	else if(attrib=='readonly' && val=='false')
+	{
+		element.removeAttribute('readonly');
+		if(IE4 || IE5)
+		{
+			element.readOnly = false;
+		}
+		else
+		{
+			element.readOnly = false;
+			//removeEventListener(element, 'keydown', shiftFocus);
+		}
+	}
+	else
+	{
+		element.setAttribute(attrib, val);
+	}
+}
+
+
+function deleteElement(parentElement, childElement)
+{
+	parentElement.removeChild(childElement);
+}
+
+function isEnterKey(e)
+{
+    if(IE4 || IE5)
+    {
+    	return (event.keyCode==13);
+    }
+    else
+    {
+    	return (e.keyCode==13);
+    }
+}
+
+function negateReturnValue(e)
+{
+    if(IE4 || IE5)
+    {
+    	event.returnValue = false;
+    }
+    else
+    {
+    	e.preventDefault();
+    }
+}
+
+function hidePopup() {	
+	window.opener.disablePopupField();	
+	if(targetField && targetField.tagName.toUpperCase()=='INPUT') {
+		if(targetField.type.toUpperCase()!='HIDDEN') {
+			targetField.focus();
+		}
+	}
+	hidePopCalLayer();	
+	
+}
+function hidePopCalLayer() {
+	try{
+		opener.document.getElementById('PopCalLayer').style.display='none';
+		opener.	document.getElementById('PopCalLayer').style.visibility='hidden';
+	} catch(err) {
+		
+	}
+}
+function showPopCalLayer() {
+	try {
+		opener.document.getElementById('PopCalLayer').style.display='';
+		opener.document.getElementById('PopCalLayer').style.visibility='visible';
+		opener.document.getElementById('PopCalLayer').style.width = opener.document.body.clientWidth;
+		opener.document.getElementById('PopCalLayer').style.height = opener.document.body.clientHeight;
+	} catch(err) {
+		
+	}
+}
+
+
+
+function closePopup() {	
+	self.close();	
+}

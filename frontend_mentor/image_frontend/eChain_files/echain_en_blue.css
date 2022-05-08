@@ -1,0 +1,2192 @@
+/*Style for button text*/
+.btn {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+/*Style for tab text*/
+.tab {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFFFFF;
+}
+
+/*Style for tab text on mouse over*/
+.tabover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+}
+
+/*Style for tab left image*/
+.tableft{
+	BACKGROUND-IMAGE: url(/echain/images/tab_l_blue.gif);
+	WIDTH : 11px; 
+	HEIGHT: 19px;
+	CURSOR: pointer;
+}
+
+/*Style for tab mid image*/
+.tabmid{
+	BACKGROUND-IMAGE: url(/echain/images/tab_mid_blue.gif);
+	HEIGHT: 19px;
+	TEXT-ALIGN:CENTER;
+	CURSOR: pointer;
+}
+
+/*Style for tab right image*/
+.tabright{
+	BACKGROUND-IMAGE: url(/echain/images/tab_r_blue.gif);
+	WIDTH : 11px; 
+	HEIGHT: 19px;
+	CURSOR: pointer;
+}
+
+/*Style for tab over left image*/
+.taboverleft{
+	BACKGROUND-IMAGE: url(/echain/images/tab_w_l_blue.gif);
+	WIDTH : 11px; 
+	HEIGHT: 19px;
+	CURSOR: pointer;
+}
+
+/*Style for tab over mid image*/
+.tabovermid{
+	BACKGROUND-IMAGE: url(/echain/images/tab_w.gif);
+	HEIGHT: 19px;
+	TEXT-ALIGN:CENTER;
+	CURSOR: pointer;
+}
+
+/*Style for tab over right image*/
+.taboverright{
+	BACKGROUND-IMAGE: url(/echain/images/tab_w_r_blue.gif);
+	WIDTH : 11px; 
+	HEIGHT: 19px;
+	CURSOR: pointer;
+}
+
+/*Style for button left image*/
+.btnleft{
+	BACKGROUND-IMAGE: URL(/echain/images/btn_l.gif);
+	WIDTH : 7px; 
+	HEIGHT: 19px;
+	CURSOR: pointer;
+}
+
+/*Style for button mid image*/
+.btnmid{
+	BACKGROUND-IMAGE: url(/echain/images/btn.gif);
+	HEIGHT: 19px;
+	TEXT-ALIGN:CENTER;
+	CURSOR: pointer;
+}
+
+/*Style for button right image*/
+.btnright{
+	BACKGROUND-IMAGE: url(/echain/images/btn_r.gif);
+	WIDTH : 7px; 
+	HEIGHT: 19px;
+	CURSOR: pointer;
+}
+
+/*Style for button over left image*/
+.btnoverleft{
+	BACKGROUND-IMAGE: url(/echain/images/btn_l_over_blue.gif);
+	WIDTH : 7px; 
+	HEIGHT: 19px;
+	CURSOR: pointer;
+}
+
+/*Style for button over mid image*/
+.btnovermid{
+	BACKGROUND-IMAGE: url(/echain/images/btn_mid_over_blue.gif);
+	HEIGHT: 19px;
+	TEXT-ALIGN:CENTER;
+	CURSOR: pointer;
+}
+
+/*Style for button over right image*/
+.btnoverright{
+	BACKGROUND-IMAGE: url(/echain/images/btn_r_over_blue.gif);
+	WIDTH : 7px; 
+	HEIGHT: 19px;
+	CURSOR: pointer;
+}
+
+.HomeBG
+{
+	BACKGROUND-IMAGE: url(/echain/images/home_V45.jpg);
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+	background-position:top;
+}
+
+/*Style for the border color (the C structure)*/
+.BorderColor
+{
+    BACKGROUND: #DEF3FE;
+}
+
+/*Style for the main body color (the color filled with in the C struture)*/
+.BodyColor
+{
+    BACKGROUND: #FFFFFF;
+}
+
+/*Style for the border curve (the C structure)*/
+.BorderTopCurve
+{
+    BACKGROUND-IMAGE: url(/echain/images/curve-top1.jpg); 
+}
+
+/*Style for the border curve (the C structure)*/
+.BorderBottomCurve
+{
+    BACKGROUND-IMAGE: url(/echain/images/curve-bottom1.jpg); 
+}
+
+/*Style for the layer to cover the whole page to make it model window */
+.LayerClass
+{
+	BACKGROUND-IMAGE: url(/echain/images/transperent.gif); 
+	LAYER-BACKGROUND-IMAGE: url(/echain/images/transperent.gif); 
+}
+
+
+/*Style for the font of the heading of a alert*/
+.AlertHeadingFont
+{
+	COLOR: WHITE;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 14px;
+    FONT-FAMILY: arial, heveltica, sans-serif
+}
+
+/*Style for the alert body*/
+.AlertMainBody
+{
+    BACKGROUND: #b0c4de
+}
+
+/*Style for the alert header*/
+.AlertHeadingBody
+{
+    BACKGROUND: blue
+}
+
+/*Style for the popup heading font*/
+.PopupHeadingFont
+{
+	COLOR: WHITE;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 14px;
+    FONT-FAMILY: arial, heveltica, sans-serif
+}
+
+/*Style for the popup body*/
+.PopupOuterBody
+{
+    BACKGROUND: #0676B0;
+    BORDER-BOTTOM: #0281C5 1PX SOLID;
+    BORDER-TOP: #0281C5 1PX SOLID;
+    BORDER-LEFT: #0281C5 1PX SOLID;
+    BORDER-RIGHT: #0281C5 1PX SOLID;
+}
+
+/*Style for the popup body*/
+.PopupMainBody
+{
+    BACKGROUND: #A1DFFE;
+}
+
+/*Style for the popup heading font*/
+.PopupHeadingBody
+{
+    BACKGROUND: #A1DFFE;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    FONT-FAMILY: arial, heveltica, sans-serif;
+    COLOR: #0056AB;
+}
+
+/*Style for the popup title body */
+.PopupTitleBody
+{
+    BACKGROUND: #336699;
+}
+
+/*Style for the popup border */
+.PopupFrameBorder
+{
+	background-color:#b0c4de;
+    BORDER-TOP: 0px SOLID #000000 ;
+    BORDER-BOTTOM: 0px SOLID #000000;
+    BORDER-LEFT: 0px SOLID #000000;
+    BORDER-RIGHT: 0px SOLID #000000;
+}
+
+/*Style for the popup results fonts */
+.PopupResultFont
+{
+    FONT-SIZE: 10px;
+    FONT-FAMILY: arial, heveltica, sans-serif;
+    BORDER-BOTTOM: 1px SOLID #949494;
+    BORDER-LEFT: 1px SOLID #949494;
+    PADDING-LEFT: 3px;
+    
+}
+
+/*Style for the popup result table */
+.PopupTableStyle
+{
+    BACKGROUND: white;
+}
+
+/*Style for the popup result table */
+.PopupHeadStyle
+{
+    BACKGROUND: #b0c4de;
+}
+
+.CloseFont
+{
+	BACKGROUND-IMAGE:url('/echain/images/popup_close_blue.gif');
+	cursor:pointer;
+	BACKGROUND-POSITION:right;	
+}
+
+
+/*Style for the popup heading font*/
+.CalendarHeadingFont
+{
+	COLOR: #325A70;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    FONT-FAMILY: arial, heveltica, sans-serif;
+    BORDER-TOP: #0A79B2 SOLID 1PX;    
+}
+
+/*Style for the popup heading font*/
+.CalendarBodyFont
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    FONT-FAMILY: arial, heveltica, sans-serif;
+    COLOR: #325A70;
+}
+
+.CalendarMonthFont
+{
+	COLOR: #325A70;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    FONT-FAMILY: arial, heveltica, sans-serif;
+    BORDER-TOP: #0A79B2 SOLID 1PX;   
+}
+
+/*Style for the current month date in calendar*/
+.ActiveFont
+{
+	BACKGROUND:#FFFFFF;
+	COLOR:blue;
+    FONT-SIZE: 11px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    BORDER-BOTTOM: 1px SOLID #51B0E1;
+    BORDER-LEFT: 1px SOLID #51B0E1;
+}
+
+/*Style for the selected date in calendar*/
+.SelectedActiveFont
+{
+	BACKGROUND:#ADD8E6;
+	COLOR:blue;
+    FONT-SIZE: 11px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    BORDER-BOTTOM: 1px SOLID #949494;
+    BORDER-LEFT: 1px SOLID #949494;
+}
+
+/*Style for the inactive date in calendar*/
+.InactiveFont
+{
+	COLOR:grey;
+    FONT-SIZE: 11px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    BORDER-BOTTOM: 1px SOLID #51B0E1;
+    BORDER-LEFT: 1px SOLID #51B0E1;
+}
+
+
+.AllSideBorderBlack
+{
+    BORDER-BOTTOM: #000000 1PX SOLID;
+    BORDER-TOP: #000000 1PX SOLID;
+    BORDER-LEFT: #000000 1PX SOLID;
+    BORDER-RIGHT: #000000 1PX SOLID;
+}
+
+.TopRightBorder1PX
+{
+    BORDER-TOP: #000000 1PX SOLID;
+}
+
+.TopBorder
+{
+    BORDER-TOP: #000000 1PX SOLID;
+}
+
+/*Style for all the borders with 1px width*/
+.BLRBorderBlack1PX
+{
+    BORDER-BOTTOM: #000000 1PX SOLID;
+    BORDER-LEFT: #000000 1PX SOLID;
+    BORDER-RIGHT: #000000 1PX SOLID;
+}
+
+/*Style for all the borders with 2px width*/
+.AllSideBorderBlack1PX
+{
+    BORDER-BOTTOM: #000000 2PX SOLID;
+    BORDER-TOP: #000000 2PX SOLID;
+    BORDER-LEFT: #000000 2PX SOLID;
+    BORDER-RIGHT: #000000 2PX SOLID;
+}
+
+/*Style for all the borders with 2px width*/
+.AllSideBorderColor5PX
+{
+    BORDER-BOTTOM: #4967a1 5PX SOLID;
+    BORDER-TOP: #4967a1 5PX SOLID;
+    BORDER-LEFT: #4967a1 5PX SOLID;
+    BORDER-RIGHT: #4967a1 5PX SOLID;
+}
+
+/*Style for all the borders with 2px width*/
+.AllSideBorderColor1PX
+{
+    BORDER-BOTTOM: #4967a1 1PX SOLID;
+    BORDER-TOP: #4967a1 1PX SOLID;
+    BORDER-LEFT: #4967a1 1PX SOLID;
+    BORDER-RIGHT: #4967a1 1PX SOLID;
+}
+
+/*Style for the bottom border with 1px width*/
+.BottomBorder1PX
+{
+    BORDER-BOTTOM: #000000 2PX SOLID;
+}
+
+/*Style for the left border with 1px width*/
+.LeftBorder1PX
+{
+    BORDER-LEFT: #000000 2PX SOLID;
+}
+
+/*Style for the right border with 1px width*/
+.RightBorder1PX
+{
+    BORDER-RIGHT: #000000 2PX SOLID;
+}
+
+/*Style for the top border with 1px width*/
+.TopBorder1PX
+{
+    BORDER-TOP: #000000 2PX SOLID;
+}
+
+/*Style for the right & bottom border with 1px width*/
+.RightBottomBorder1PX
+{
+    BORDER-BOTTOM: #000000 1PX SOLID;
+    BORDER-RIGHT: #000000 1PX SOLID;
+}
+
+/*Style for the left & bottom border with 1px width*/
+.LeftBottomBorder1PX
+{
+    BORDER-BOTTOM: #000000 1PX SOLID;
+    BORDER-LEFT: #000000 1PX SOLID;
+}
+
+/*Style for the right & top border with 1px width*/
+.RightTopBorder1PX
+{
+    BORDER-RIGHT: #000000 1PX SOLID;
+    BORDER-TOP: #000000 1PX SOLID;
+}
+
+/*Style for the left & top border with 1px width*/
+.LeftTopBorder1PX
+{
+    BORDER-TOP: #000000 1PX SOLID;
+    BORDER-LEFT: #000000 1PX SOLID;
+}
+
+
+/*Style for the fonts of the labels in header page*/
+.HeaderFont
+{
+    FONT-SIZE: 11px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    BACKGROUND-IMAGE: url(/echain/images/top_strip_body.gif);
+}
+
+/*Style for the fonts in the footer page*/
+.FooterFont
+{
+    FONT-SIZE: 11px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    COLOR: #07509C;
+}
+
+/*Style for the font of the heading of a page*/
+.PageHeadingFont
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 15px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    COLOR: #07509C;
+}
+
+.LabelTopBorderFont
+{
+    BORDER-BOTTOM: #000000 2PX SOLID;
+    FONT-SIZE: 11px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    TEXT-ALIGN:LEFT;
+    PADDING-LEFT:3px;
+}
+
+/*Style for the fonts of the labels AS NUMBERS in a List page*/
+.ListNumberFont
+{
+	FONT-SIZE: 11px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    TEXT-ALIGN:RIGHT;
+    PADDING-RIGHT:3px;
+}
+  
+/*Style for the fonts of the labels in a List page*/
+.ListLabelFont
+{
+	FONT-SIZE: 11px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    TEXT-ALIGN:LEFT;
+    PADDING-LEFT:3px;
+}
+  
+/*Style for the fonts of the labels in a List page*/
+.PeriodOpenFont
+{
+	FONT-SIZE: 11px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    TEXT-ALIGN:LEFT;
+    PADDING-LEFT:3px;
+    COLOR:RED;
+}
+ 
+ 
+ 
+/*Style for the fonts of the labels in a header or plain page*/
+.LabelFont
+{
+    FONT-SIZE: 11px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    TEXT-ALIGN:RIGHT;
+    PADDING-RIGHT:2px;
+}
+
+/*Style for the fonts of the labels in a header or plain page*/
+.SmallLabelFont
+{
+    FONT-SIZE: 11px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    TEXT-ALIGN:CENTER
+}
+
+/*Style for the Transaction messages in the main page*/
+.TrnMessageFont
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 15px;
+    COLOR: #F0FF00;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif
+}
+
+/*Style for the background color and font of row header columns in a lines page*/
+.SummaryRowBodyHeader
+{
+	BACKGROUND-IMAGE: url(/echain/images/menu_strip_blue.gif);
+	BACKGROUND-COLOR:#35BAFF;
+	BACKGROUND-REPEAT:repeat-x;
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 11px;
+	VERTICAL-ALIGN: middle;
+	COLOR: #0056AB;
+	FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+	TEXT-ALIGN: left;
+}
+
+.SummaryRowIndicatorFont
+{
+	BACKGROUND-COLOR: #4BC1FE;
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 9px;
+	VERTICAL-ALIGN: middle;
+	COLOR: #FFFFFF;
+	FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+	TEXT-ALIGN: left;
+}
+
+/*Style for the background color of row header in a lines page*/
+.FloatingHeader
+{
+	BACKGROUND-COLOR: #4967a1;
+	table-layout:fixed;
+	width:100%;
+	height:0px;
+	overflow:none;
+	position:absolute;
+	visibility:hidden;
+	vertical-align:center;
+}
+
+/*Style for the background color of row header in a lines page*/
+.SummaryRowHeader
+{
+	BACKGROUND-IMAGE: url(/echain/images/menu_strip_blue.gif);
+
+}
+
+/*Style for the displaying errors */
+.ErrorHeaderFont
+{
+    FONT-SIZE: 15px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif
+}
+
+/*Style for the displaying errors */
+.ErrorDisplayFont
+{
+    FONT-SIZE: 13px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif
+}
+
+/*Style for the normal text boxes*/
+.TextboxFont
+{
+    FONT-SIZE: 12px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    BORDER:none;
+    BORDER-BOTTOM: #A5A8A9 1PX SOLID;
+    BORDER-LEFT: #A5A8A9 1PX SOLID;
+    BORDER-TOP: #A5A8A9 1PX SOLID;
+    BORDER-RIGHT: #A5A8A9 1PX SOLID;
+    BACKGROUND-COLOR:WHITE;
+	PADDING-LEFT: 4px;
+}
+
+/*Style for the font for indicating mandatory in white color*/
+.MandatoryTextboxFont
+{
+    FONT-SIZE: 12px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    BORDER:none;
+    BORDER-BOTTOM: #039BEC 1PX SOLID;
+    BORDER-LEFT: #039BEC 1PX SOLID;
+    BORDER-TOP: #039BEC 1PX SOLID;
+    BORDER-RIGHT: #039BEC 1PX SOLID;
+    BACKGROUND-COLOR: #DEF3FE;
+	PADDING-LEFT: 4px;
+}
+
+/*Style for the readonly textbox which will have numbers(right aligned) */
+.NumberTextboxFont
+{
+    FONT-SIZE: 12px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    TEXT-ALIGN: right;
+	PADDING-RIGHT: 4px;
+    COLOR:#676567;
+    BORDER:none;
+    BORDER-BOTTOM: #A5A8A9 1PX SOLID;
+    BORDER-LEFT: #A5A8A9 1PX SOLID;
+    BORDER-TOP: #A5A8A9 1PX SOLID;
+    BORDER-RIGHT: #A5A8A9 1PX SOLID;
+	BACKGROUND-COLOR: WHITE;
+	
+}
+
+/*Style for the readonly textbox which will have numbers(right aligned) */
+.MandatoryNumberTextboxFont
+{
+    FONT-SIZE: 12px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    TEXT-ALIGN: right;
+	PADDING-RIGHT: 4px;
+    COLOR:#676567;
+    BORDER:none;
+    BORDER-BOTTOM: #039BEC 1PX SOLID;
+    BORDER-LEFT: #039BEC 1PX SOLID;
+    BORDER-TOP: #039BEC 1PX SOLID;
+    BORDER-RIGHT: #039BEC 1PX SOLID;
+	BACKGROUND-COLOR: #DEF3FE;
+}
+
+/*Style for the readonly text boxes*/
+.ReadonlyTextboxFont
+{
+    FONT-SIZE: 12px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    COLOR:#6B756B;
+    BORDER:none;
+    BORDER-BOTTOM: #000000 1PX SOLID;
+    BORDER-LEFT: #000000 1PX SOLID;
+    BORDER-TOP: #000000 1PX SOLID;
+    BORDER-RIGHT: #000000 1PX SOLID;
+	BACKGROUND-COLOR: #eeeeee;
+	PADDING-LEFT: 4px;
+}
+
+/*Style for the readonly textbox which will have numbers(right aligned) */
+.ReadonlyTextboxNumberFont
+{
+    FONT-SIZE: 12px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    TEXT-ALIGN: right;
+	PADDING-RIGHT: 4px;
+    COLOR:#676567;
+    BORDER:none;
+    BORDER-BOTTOM: #000000 1PX SOLID;
+    BORDER-LEFT: #000000 1PX SOLID;
+    BORDER-TOP: #000000 1PX SOLID;
+    BORDER-RIGHT: #000000 1PX SOLID;
+	BACKGROUND-COLOR: #eeeeee;
+	
+}
+
+/*Style for the textbox in lines*/
+.LinesTextboxFont
+{
+    FONT-SIZE: 12px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    BORDER:none;
+	border-bottom: #A5A8A9 solid 1px;
+	border-right: #A5A8A9 solid 1px;
+	border-left: #A5A8A9 solid 1px;
+	border-top:  #A5A8A9 solid 1px;
+	PADDING-LEFT: 4px;
+}
+
+/*Style for the font for indicating mandatory in white color*/
+.MandatoryLineTextboxFont
+{
+	BACKGROUND-COLOR: #DEF3FE;
+    FONT-SIZE: 12px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    BORDER: none;
+	border-bottom: #039BEC solid 1px;
+	border-right: #039BEC solid 1px;
+	border-left: #039BEC solid 1px;
+	border-top:  #039BEC solid 1px;
+	PADDING-LEFT: 4px;
+}
+
+/*Style for the textbox which will have numbers(right aligned) in lines*/
+.LinesTextBoxNumberFont 
+{
+    FONT-SIZE: 12px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    TEXT-ALIGN:right;
+	PADDING-RIGHT: 4px;
+    BORDER:none;
+	border-bottom: #b6c7e5 solid 1px;
+	border-right: #b6c7e5 solid 1px;
+	border-left: #b6c7e5 solid 1px;
+	border-top:  #b6c7e5 solid 1px;
+	
+}
+
+/*Style for the font for indicating mandatory in white color*/
+.MandatoryLineTextboxNumberFont
+{
+	BACKGROUND-COLOR: #DEF3FE;
+    FONT-SIZE: 12px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    TEXT-ALIGN: right;
+	PADDING-RIGHT: 4px;
+    BORDER:none;
+	border-bottom: #039BEC solid 1px;
+	border-right: #039BEC solid 1px;
+	border-left: #039BEC solid 1px;
+	border-top:  #039BEC solid 1px;
+}
+
+/*Style for the readonly text boxes*/
+.LinesReadonlyTextboxFont
+{
+    FONT-SIZE: 12px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    COLOR:#676567;
+    BORDER:none;
+	border-bottom: #b6c7e5 solid 1px;
+	border-right: #b6c7e5 solid 1px;
+	border-left: #b6c7e5 solid 1px;
+	border-top:  #b6c7e5 solid 1px;
+	PADDING-LEFT: 4px;
+}
+
+/*Style for the readonly text boxes*/
+.LinesReadonlyTextboxNumberFont
+{
+    FONT-SIZE: 12px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    TEXT-ALIGN: right;
+	PADDING-RIGHT: 4px;
+    COLOR:#676567;
+    BORDER:none;
+	border-bottom: #b6c7e5 solid 1px;
+	border-right: #b6c7e5 solid 1px;
+	border-left: #b6c7e5 solid 1px;
+	border-top:  #b6c7e5 solid 1px;
+}
+
+/*Style for the readonly text boxes*/
+.LinesOverTextboxFont
+{
+    FONT-SIZE: 12px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    TEXT-ALIGN: right;
+	PADDING-RIGHT: 4px;
+    COLOR:#676567;
+    BORDER:none;
+	border-bottom: #ffdead solid 1px;
+	border-right: #ffdead solid 1px;
+	border-left: #c07300 solid 1px;
+	border-top:  #c07300 solid 1px;
+}
+
+/* Style For Past Date */
+.LinesReadonlyTextboxFontPast
+{
+    FONT-SIZE: 12px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    TEXT-ALIGN: right;
+	PADDING-RIGHT: 4px;
+    COLOR:#676567;
+    BORDER:none;
+	border-bottom: #b6c7e5 solid 1px;
+	border-right: #b6c7e5 solid 1px;
+	border-left: #4967a1 solid 1px;
+	border-top:  #4967a1 solid 1px;
+	BACKGROUND-COLOR:#33FF99;
+}
+
+/* Style For Future Date */
+.LinesReadonlyTextboxFontFuture
+{
+    FONT-SIZE: 12px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    BORDER:none;
+	border-bottom: #b6c7e5 solid 1px;
+	border-right: #b6c7e5 solid 1px;
+	border-left: #4967a1 solid 1px;
+	border-top:  #4967a1 solid 1px;
+	BACKGROUND-COLOR:silver;
+PADDING-LEFT:4px;
+}
+
+/*Style for the textbox with errors in lines*/
+.ErrorsTextboxFont
+{
+    FONT-SIZE: 12px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    BORDER:none;
+	border-bottom: #b6c7e5 solid 1px;
+	border-right: #b6c7e5 solid 1px;
+	border-left: #4967a1 solid 1px;
+	border-top:  #4967a1 solid 1px;
+    BACKGROUND-COLOR:CYAN;
+	PADDING-LEFT: 4px;
+}
+
+/*Style for the textbox which will have numbers(right aligned) with errors in line*/
+.ErrorsTextboxNumberFont
+{
+    FONT-SIZE: 12px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    TEXT-ALIGN: right;
+	PADDING-RIGHT: 4px;
+	BORDER:none;
+	border-bottom: #b6c7e5 solid 1px;
+	border-right: #b6c7e5 solid 1px;
+	border-left: #4967a1 solid 1px;
+	border-top:  #4967a1 solid 1px;
+    BACKGROUND-COLOR:CYAN;
+}
+
+/*Style for the row that needs an anchor on mouse over*/
+.AnchorRow
+{
+	CURSOR: pointer;
+} 
+
+/*Style for the row that needs an anchor on mouse over*/
+.AnchorRowOver
+{
+	BACKGROUND-COLOR: #b6c7e5;
+	CURSOR: pointer;
+} 
+
+.ComboLayer
+{
+	POSITION: absolute;
+	BACKGROUND-COLOR: #B4ECFF;
+	VISIBILITY: hidden; 
+	HEIGHT: 0px; 
+	OVERFLOW:auto;
+    BORDER-BOTTOM: #039BEC 1PX SOLID;
+    BORDER-LEFT: #039BEC 1PX SOLID;
+    BORDER-TOP: #039BEC 1PX SOLID;
+    BORDER-RIGHT: #039BEC 1PX SOLID;
+    z-index:20;
+}
+
+.ComboBG
+{
+	BACKGROUND-COLOR: #B4ECFF;
+	width:100%;
+}
+
+.ComboFont
+{
+    FONT-SIZE: 10px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    color: #00528F;
+    outline: none;
+}
+
+.ItemLayerLB
+{
+  	BACKGROUND: #eeeeee;
+  	BORDER-BOTTOM: #000000 1PX SOLID;
+    BORDER-LEFT: #000000 1PX SOLID;
+}
+.ItemLayerLBR
+{
+  	BACKGROUND: #eeeeee;
+  	BORDER-BOTTOM: #000000 1PX SOLID;
+    BORDER-LEFT: #000000 1PX SOLID;
+    BORDER-RIGHT: #000000 1PX SOLID;
+}
+.atpDemand{
+BACKGROUND-IMAGE: url(/echain/images/red.gif);
+}
+.atpSupply{
+BACKGROUND-IMAGE: url(/echain/images/yellow.gif);
+}
+
+.atpCumulaiveDemand{
+BACKGROUND-COLOR:#94c92a;
+}
+
+.atpCurrentDemand{
+BACKGROUND-COLOR:#c4492b;
+}
+
+.atpQohSupply{
+BACKGROUND-COLOR:#e40eef;
+}
+
+.atpPOReqSupply{
+BACKGROUND-COLOR:#510eef;
+}
+
+.atpPOSupply{
+BACKGROUND-COLOR:#efb70e;
+}
+
+.atpSFOSupply{
+BACKGROUND-COLOR:#0ebeef;
+}
+
+.MenuBody {
+	BORDER-RIGHT: #4967a1 1px solid; BORDER-TOP: #4967a1 1px solid; FONT-WEIGHT: bold; FONT-SIZE: 10px; BACKGROUND: #DEEFFF; BORDER-LEFT: #4967a1 1px solid; BORDER-BOTTOM: #4967a1 1px solid; FONT-FAMILY: Times New Roman
+}
+
+/*Style for the font for indicating mandatory in white color*/
+.DropdownMenuFont
+{
+    BORDER:none;
+    BORDER-BOTTOM:#908E8E 1px solid;
+	BACKGROUND-IMAGE: url('/echain/images/dropdownMenuBG_blue.gif');
+}
+
+.DropdownMenuOverFont
+{
+    BORDER:none;
+    BORDER-BOTTOM:#DEEFFF 1px solid;
+	BACKGROUND-IMAGE: url('/echain/images/dropdownMenuOverBG_blue.gif');
+}
+
+.TopMenuBG
+{
+	BACKGROUND-IMAGE: url(/echain/images/menu_strip_blue.gif);
+}
+
+.DropdownMenuBG
+{
+	BACKGROUND-COLOR: #DEEFFF;
+}
+
+/*Style for the font for indicating mandatory in white color*/
+.TopMenuFont
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;	
+	text-decoration: none;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 2px;
+	COLOR: #000000;
+    BORDER:none;
+    BORDER-RIGHT:#0A79B2 1px solid;
+    CURSOR:pointer;
+}
+
+/*Style for all the borders with 2px width*/
+.TopMenuFrame
+{
+	WIDTH: 100%; 
+	POSITION: relative; 
+	HEIGHT: 25px; 
+	margin-top: 0px; 
+	margin-left: 0px;
+}
+
+/*Style for all the borders with 2px width*/
+.DropdownMenuFrame
+{
+	POSITION: absolute; 
+	margin-top: 0px; 
+	margin-left: 0px; 
+	visibility: hidden;
+	BORDER-BOTTOM: #908E8E 1PX SOLID;
+    BORDER-TOP: #908E8E 1PX SOLID;
+    BORDER-LEFT: #908E8E 1PX SOLID;
+    BORDER-RIGHT: #908E8E 1PX SOLID;
+    z-index : 1000;
+}
+
+/*Style for all the anchors in menu*/
+.MenuHref
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 2px;
+	text-decoration: none;
+	COLOR: #666666;	
+}
+
+/*Style for all the anchors in menu*/
+.MenuOverHref
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 2px;
+	COLOR: black;
+	text-decoration: none;
+	outline: none;
+}
+
+.SfmTransComp
+{
+     FONT-SIZE: 11px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    TEXT-ALIGN: right;
+	PADDING-RIGHT: 4px;
+    BORDER:none;
+	border-bottom: #b6c7e5 solid 1px;
+	border-right: #b6c7e5 solid 1px;
+	border-left: #4967a1 solid 1px;
+	border-top:  #4967a1 solid 1px;
+  BACKGROUND-COLOR: BLACK;
+}
+.SfmTransInsuff
+{
+     FONT-SIZE: 11px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    TEXT-ALIGN: right;
+	PADDING-RIGHT: 4px;
+    BORDER:none;
+	border-bottom: #b6c7e5 solid 1px;
+	border-right: #b6c7e5 solid 1px;
+	border-left: #4967a1 solid 1px;
+	border-top:  #4967a1 solid 1px;
+   BACKGROUND-COLOR: RED;
+}
+.SfmAllocMore
+{
+     FONT-SIZE: 11px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    TEXT-ALIGN: right;
+	PADDING-RIGHT: 4px;
+    BORDER:none;
+	border-bottom: #b6c7e5 solid 1px;
+	border-right: #b6c7e5 solid 1px;
+	border-left: #4967a1 solid 1px;
+	border-top:  #4967a1 solid 1px;
+   BACKGROUND-COLOR: BLUE; 
+}     
+  
+
+ /*Style for the fonts of the labels in alert areas like MDSLoad*/
+.LabelFontRed
+{
+    COLOR:#ff0000;
+    FONT-SIZE: 11px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    TEXT-ALIGN:RIGHT;
+    PADDING-RIGHT:2px;
+}
+
+ /*************** FOR REPORTS *******************/ 
+ 
+/*Style for the fonts of the labels in Report page*/
+.ReportColumnHeaderFont
+{
+	FONT-SIZE: 11px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    FONT-WEIGHT:BOLD;
+    TEXT-ALIGN:LEFT;
+    PADDING-LEFT:3px;
+    BORDER-BOTTOM: #000000 1PX SOLID;
+    BORDER-TOP: #000000 1PX SOLID;
+    BORDER-RIGHT: #000000 1PX SOLID;
+    COLOR: SILVER;
+    
+}
+.ReportColumnFontWithRightBorder
+{
+	FONT-SIZE: 11px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    TEXT-ALIGN:LEFT;
+    PADDING-LEFT:3px;
+	BORDER-RIGHT: #000000 1PX SOLID;    
+}
+.ReportColumnFont
+{
+	FONT-SIZE: 11px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    TEXT-ALIGN:LEFT;
+    PADDING-LEFT:3px;
+    BORDER-RIGHT: #000000 1PX SOLID;  
+      
+}
+.ReportHeaderFont
+{
+	FONT-SIZE: 13px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+     FONT-WEIGHT:BOLD;
+    PADDING-LEFT:3px;
+}
+.ReportFooterFont
+{
+	FONT-SIZE: 9px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    FONT-WEIGHT:BOLD;
+    PADDING-LEFT:3px;
+    BORDER-TOP: #000000 1PX SOLID;
+}
+
+/*Style for the fonts of the tables in Report page*/
+.Trtopbottomborder
+{
+	BORDER-BOTTOM: #000000 1PX SOLID;
+    BORDER-TOP: #000000 1PX SOLID;
+}
+
+.Trbottomborder
+{
+	BORDER-BOTTOM: #000000 1PX SOLID;
+}
+
+.Trtopborder
+{
+	BORDER-TOP: #000000 1PX SOLID;
+}
+
+.Tdrightborder
+{
+	BORDER-RIGHT: #000000 1PX SOLID;
+}
+
+.Tdleftborder
+{
+	BORDER-LEFT: #000000 1PX SOLID;
+}
+ 
+.ReportColumnLineFont0
+{
+	FONT-SIZE: 12px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    BORDER:none;
+	border-bottom: #b6c7e5 solid 1px;
+	border-right: #b6c7e5 solid 1px;
+	border-left: #4967a1 solid 1px;
+	border-top:  #4967a1 solid 1px;
+	PADDING-LEFT: 4px;
+}
+
+.ReportColumnLineFont
+{
+	FONT-SIZE: 12px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    BORDER:none;
+	border-bottom: #b6c7e5 solid 1px;
+	border-right: #b6c7e5 solid 1px;
+	border-left: #4967a1 solid 1px;
+	border-top:  #4967a1 solid 1px;
+	PADDING-LEFT: 4px;
+}
+
+.ReportColumnHeaderFont0
+{
+	FONT-SIZE: 11px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    FONT-WEIGHT:BOLD;
+    TEXT-ALIGN:LEFT;
+    PADDING-LEFT:3px;
+    BORDER-BOTTOM: #000000 1PX SOLID;
+    BORDER-TOP: #000000 1PX SOLID;
+    BORDER-RIGHT: #000000 1PX SOLID;
+    COLOR: SILVER;
+    
+}
+
+.FooterChangedFont
+{
+	FONT-SIZE: 12px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    FONT-WEIGHT:BOLD;
+    PADDING-LEFT:3px;
+}
+
+.NewlyAddedSalaryComponentTextboxFont
+	{
+	    FONT-SIZE: 12px;
+	    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+	    TEXT-ALIGN: right;
+		PADDING-RIGHT: 4px;
+	    COLOR:WHITE;
+	    BORDER:none;
+	    BORDER-BOTTOM: #000000 1PX SOLID;
+	    BORDER-LEFT: #000000 1PX SOLID;
+	    BORDER-TOP: #000000 1PX SOLID;
+	    BORDER-RIGHT: #000000 1PX SOLID;
+		BACKGROUND-COLOR: RED;
+	}
+	
+	.NewlyAddedSalaryComponentForPercentageTextboxFont
+	{
+	    FONT-SIZE: 12px;
+	    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+	    TEXT-ALIGN: right;
+		PADDING-RIGHT: 4px;
+	    COLOR:BLACK;
+	    BORDER:none;
+	    BORDER-BOTTOM: #000000 1PX SOLID;
+	    BORDER-LEFT: #000000 1PX SOLID;
+	    BORDER-TOP: #000000 1PX SOLID;
+	    BORDER-RIGHT: #000000 1PX SOLID;
+		BACKGROUND-COLOR: #FFB9B9;
+	}
+	
+.ScheduleCalendarHeadingFont
+{
+	COLOR: WHITE;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 7px;
+    FONT-FAMILY: arial, heveltica, sans-serif
+}
+
+.ScheduleCalendarSelectedActiveFont
+{
+	BACKGROUND:#ADD8E6;
+	COLOR:blue;
+    FONT-SIZE: 7px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    BORDER-BOTTOM: 1px SOLID #949494;
+    BORDER-LEFT: 1px SOLID #949494;
+}
+.ScheduleCalendarActiveFont
+{
+	BACKGROUND:#FFFFFF;
+	COLOR:blue;
+    FONT-SIZE: 7px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    BORDER-BOTTOM: 1px SOLID #949494;
+    BORDER-LEFT: 1px SOLID #949494;
+}
+.ScheduleCalendarInactiveFont
+{
+	COLOR:grey;
+    FONT-SIZE: 7px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    BORDER-BOTTOM: 1px SOLID #949494;
+    BORDER-LEFT: 1px SOLID #949494;
+}
+
+.ProcessImage
+{
+	BACKGROUND-IMAGE: url(/echain/images/loading_blue.gif);
+}
+/*Style for the textbox with Orange background in lines*/
+.OrangeTextBox 
+{
+	BACKGROUND-COLOR: #FDCF7E;
+    FONT-SIZE: 12px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    BORDER: none;
+	border-bottom: #b6c7e5 solid 1px;
+	border-right: #b6c7e5 solid 1px;
+	border-left: #4967a1 solid 1px;
+	border-top:  #4967a1 solid 1px;
+	PADDING-LEFT: 4px;
+}
+/*Style for the textbox with Grey background in lines*/
+.GreyTextBox
+{
+	BACKGROUND-COLOR: #D5D6D8;
+    FONT-SIZE: 12px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    BORDER: none;
+	border-bottom: #b6c7e5 solid 1px;
+	border-right: #b6c7e5 solid 1px;
+	border-left: #4967a1 solid 1px;
+	border-top:  #4967a1 solid 1px;
+	PADDING-LEFT: 4px;	
+}
+/*Style for the textbox with White background in lines*/
+.WhiteTextBox
+{
+	BACKGROUND-COLOR: #FFFFFF;
+    FONT-SIZE: 12px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    BORDER: none;
+	border-bottom: #b6c7e5 solid 1px;
+	border-right: #b6c7e5 solid 1px;
+	border-left: #4967a1 solid 1px;
+	border-top:  #4967a1 solid 1px;
+	PADDING-LEFT: 4px;
+	}
+/*Style for the textbox with Orange background and which will have numbers(right aligned) in lines*/
+.NumberOrangeTextBox
+{
+	background-color: #FDCF7E;
+    FONT-SIZE: 12px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    TEXT-ALIGN: right;
+	PADDING-RIGHT: 4px;
+    BORDER:none;
+	border-bottom: #b6c7e5 solid 1px;
+	border-right: #b6c7e5 solid 1px;
+	border-left: #4967a1 solid 1px;
+	border-top:  #4967a1 solid 1px;
+}
+/*Style for the textbox with Grey background and which will have numbers(right aligned) in lines*/
+.NumberGreyTextBox
+{
+	background-color: #D5D6D8;
+    FONT-SIZE: 12px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    TEXT-ALIGN: right;
+	PADDING-RIGHT: 4px;
+    BORDER:none;
+	border-bottom: #b6c7e5 solid 1px;
+	border-right: #b6c7e5 solid 1px;
+	border-left: #4967a1 solid 1px;
+	border-top:  #4967a1 solid 1px;
+	}
+/*Style for the textbox with White background and which will have numbers(right aligned) in lines*/
+.NumberWhiteTextBox
+{
+	background-color: #FFFFFF;
+    FONT-SIZE: 12px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    TEXT-ALIGN: right;
+	PADDING-RIGHT: 4px;
+    BORDER:none;
+	border-bottom: #b6c7e5 solid 1px;
+	border-right: #b6c7e5 solid 1px;
+	border-left: #4967a1 solid 1px;
+	border-top:  #4967a1 solid 1px;
+}
+
+.HelpButton
+{
+	background: url(/echain/images/help_blue.gif);
+}
+.HomeButton
+{
+	background: url(/echain/images/home_blue.gif);
+}
+.SignoutButton
+{
+	background: url(/echain/images/signout_blue.gif);
+}
+.ReportButton
+{
+	background: url(/echain/images/reportcenter_blue.gif);
+}
+
+.popupIcon
+{
+	background: url(/echain/images/popup_icon_blue.gif);
+}
+
+/*Style for the Transaction messages in the main page withrespect to css skin*/
+.TrnMessageFontNormal
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 15px;
+    COLOR: white;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif
+}
+
+/* For Report Center DIV Tag */
+.RepCentBackground {
+	background-color:#E9F6FC;
+}
+
+/* For Report Center Menu Font Tag */
+.rgmenufont {
+	font-family:Arial;
+	font-weight:bold;
+	font-size:11;
+	color:#5583A6;
+	padding-left:5px;
+}
+
+/* For Report Center Default List */
+.defaultList {
+	font-family:Arial;
+	font-weight:BOld;
+	font-size:11;
+	color:#5583A6;
+	border-bottom:solid 1px #83B5CB;
+	border-right:solid 1px #83B5CB;
+	padding-left:5px;	
+}
+
+/* For Report Center Default Left List */
+.defaultLeftList {
+	font-family:Arial;
+	font-weight:bold;
+	font-size:11;
+	color:#5583A6;
+	border-bottom:solid 1px #A9C4D1;
+	border-left:solid 1px #A9C4D1;
+	padding-left:5px;
+}
+
+/* For Report Center Highlight Sub Menu List */
+.highlightSubMenu {
+	font-family:Arial;
+	font-weight:bold;
+	font-size:11;
+	padding-left:5px;
+	background-color:#2E7DCC;
+	color:white;
+}
+
+/* For Report Center Default Sub Menu List */
+.defaultSubMenu {
+	font-family:Arial;
+	font-weight:bold;
+	font-size:11;
+	padding-left:5px;
+	color:#5583A6;
+}
+
+/* For Report Center Highlight Menu List */
+.highlight {
+	border-bottom:solid 1px #000000;
+	border-right:solid 1px #000000;
+	padding-left:5px;
+	font-family:Arial;
+	font-weight:bold;
+	font-size:11;
+	background-color:#2E7DCC;
+	color:white;
+	padding-left:5px;
+}
+
+/* For Report Center Default Menu List */
+.default {
+	border-bottom:solid 1px #A9C4D1;
+	border-right:solid 1px #A9C4D1;
+	padding-left:5px;
+	font-family:Arial;
+	font-weight:bold;
+	font-size:11;
+	padding-left:5px;
+	color:#5583A6;
+}
+
+/* For Report Center Default Left List */
+.defaultLeft {
+	font-family:Arial;
+	font-weight:bold;
+	font-size:11;
+	padding-left:5px;
+	border-bottom:solid 1px #A9C4D1;
+	border-left:solid 1px #A9C4D1;
+	padding-left:5px;
+	color:#5583A6;
+}
+
+.stylebottomthin {
+	border-bottom:solid 1px #2E7DCC;
+}
+
+.stylebottomrightthin {
+	border-bottom:solid 1px #2E7DCC;
+	border-right:solid 1px #2E7DCC;
+	padding-left:5px;
+}
+
+.stylebottomleftthin {
+	border-bottom:solid 1px #2E7DCC;
+	border-left:solid 1px #2E7DCC;
+	padding-left:5px;
+}
+
+.styletopleftthin {
+	border-top:solid 1px #2E7DCC;
+	border-left:solid 1px #2E7DCC;
+	padding-left:5px;
+}
+
+.styletoprightthin {
+	border-top:solid 1px #2E7DCC;
+	border-right:solid 1px #2E7DCC;
+	padding-left:5px;
+}
+
+.stylebottomleftrightthin {
+	border-bottom:solid 1px #2E7DCC;
+	border-right:solid 1px #2E7DCC;
+	border-left:solid 1px #2E7DCC;
+}
+
+.menuRow {
+	height:18px;
+}
+
+.styleallthin {
+	border-top:solid 1px #2E7DCC;
+	border-bottom:solid 1px #2E7DCC;
+	border-left:solid 1px #2E7DCC;
+	border-right:solid 1px #2E7DCC;
+}
+
+/* Style for CLOSE icon */
+.closeIcon {
+	BACKGROUND-IMAGE: url(/echain/images/close-blue.gif);
+	CURSOR: pointer;
+	WIDTH : 14px; 
+	HEIGHT: 14px;
+	background-repeat:no-repeat;	
+}
+/* Style for BACK icon */
+.backIcon {
+	BACKGROUND-IMAGE: url(/echain/images/back-blue.gif);
+	CURSOR: pointer;
+	WIDTH : 25px; 
+	HEIGHT: 25px;
+	background-repeat:no-repeat;
+}
+/* Style for PRINT icon */
+.printIcon {
+	BACKGROUND-IMAGE: url(/echain/images/print-blue.gif);
+	CURSOR: pointer;
+	WIDTH : 25px; 
+	HEIGHT: 25px;
+	background-repeat:no-repeat;
+}
+
+/* Style for GRAPHS icon */
+.graphIcon {
+	BACKGROUND-IMAGE: url(/echain/images/graphs.gif);
+	CURSOR: hand;
+	WIDTH : 24px; 
+	HEIGHT: 20px;
+	background-repeat:no-repeat;
+	TITLE: test
+}
+
+.graphListHeader
+{
+	background: #5982A2;
+}
+
+/*CSS for pop up hint box */
+#hintbox
+{ 
+	position:absolute;
+	top: 0;
+	background-color: lightyellow;
+	width: 150px; /*Default width of hint.*/ 
+	padding: 3px;
+	border:1px solid black;
+	font:normal 11px Verdana;
+	line-height:18px;
+	z-index:100;
+	border-right: 3px solid black;
+	border-bottom: 3px solid black;
+	visibility: hidden;
+}
+
+/*CSS for link that shows hint onmouseover*/
+.hintanchor{ 
+	font-weight: bold;
+	color: navy;
+	margin: 3px 8px;
+}
+
+.dashBoardBGColor
+{
+	background: #6C88BC;
+}
+
+.dashBoardBorderColor
+{
+	background: #ADBDDC;
+}
+
+.dashBoardBorderPattern
+{
+	background: #E3EAF6;
+}
+
+.GadgetWindowTitle
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight:bold;
+	text-decoration: none;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 5px;
+	COLOR: white;
+	BORDER:none;    	
+}
+
+.GadgetSubMenu
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;	
+	padding-left: 5px;
+	background: #BCC9E1;
+	color: #4968A1;
+	cursor: pointer;
+}
+
+.GadgetSubMenuOver
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;	
+	padding-left: 5px;
+	background: #5673AA;
+	color: #ffffff;
+	cursor: pointer;
+}
+
+.GadgetWindowContent
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	text-decoration: none;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 3px;
+	COLOR: #4968A1;
+	BORDER:none;    	
+}
+
+.gadgetBodyBG {
+	BACKGROUND-IMAGE: url(/echain/images/dashboard/divBG_blue.gif);
+	border: 1px;
+	border-color: #4968A1;
+	border-style: solid;
+}
+
+.gadgetHeader {
+	background-image:url(/echain/images/dashboard/headerBG_blue.gif);
+}
+
+.gadgetHeaderOver {
+	background-image:url(/echain/images/dashboard/headerOverBG_blue.gif);
+}
+
+.dashBoardBG {
+	background-image:url(/echain/images/dashboard/dashboardBG_blue.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.gadgetSelect {
+	background-image: url(/echain/images/dashboard/headerSelect_blue.gif);
+	background-repeat: no-repeat;
+	background-position: right;	
+	border-bottom: #4968A1 solid 1px;
+}
+
+.borderBottomSkin {
+	border-bottom: #4968A1 solid 1px;	
+}
+
+.nextIcon {
+	background-image: url(/echain/images/dashboard/next_blue.jpg);
+	background-repeat: no-repeat;
+	background-position: right;
+	cursor: pointer;	
+}
+
+.nextOverIcon {
+	background-image: url(/echain/images/dashboard/next_blue_over.jpg);
+	background-repeat: no-repeat;
+	background-position: left;	
+	cursor: pointer;	
+}
+
+.previousIcon {
+	background-image: url(/echain/images/dashboard/previous_blue.jpg);
+	background-repeat: no-repeat;
+	background-position: left;	
+	cursor: pointer;	
+}
+
+.previousOverIcon {
+	background-image: url(/echain/images/dashboard/previous_blue_over.jpg);
+	background-repeat: no-repeat;
+	background-position: left;	
+	cursor: pointer;	
+}
+
+.searchIcon {
+	background-image: url(/echain/images/find_blue.jpg);
+	background-repeat: no-repeat;
+	background-position: left;
+	cursor: pointer;
+}
+
+.TrnMessageFontSmall
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #4967A1;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif
+}
+
+.ItemConfigurationTreeHeaderBG
+{
+	BACKGROUND: #B7C7DE;
+	FONT-WEIGHT: bold;
+    FONT-SIZE: 15px;
+    COLOR: #47659E;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif
+}
+
+.ItemConfigurationTreeText
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #7B097C;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif
+}
+
+.topBG
+{
+	BACKGROUND: #2E7DCC;
+}
+
+.HeaderStrip
+{
+	BACKGROUND-IMAGE: url(/echain/images/top_strip_corner_blue.gif);
+}
+
+.echainLogo
+{
+	BACKGROUND-IMAGE: url(/echain/images/echain_power_blue.gif);
+	background-repeat: no-repeat;
+	background-position: left;
+}
+
+.bottomStrip
+{
+	BACKGROUND-IMAGE: url(/echain/images/bottom_strip_body_blue.gif);
+}
+
+.bottomStripCorner
+{
+	BACKGROUND-IMAGE: url(/echain/images/bottom_strip_cornor_blue.gif);	
+}
+
+.footerBG
+{
+	BACKGROUND: #2E7DCC;
+    COLOR: #FFFFFF;
+}
+
+.comboOver
+{
+	BACKGROUND: #039BEC;
+}
+
+.echainQuickLinkWindow {
+	position:absolute; 
+	visibility: hidden; 
+	border: 1px solid #4967a1; 
+	background-color: #EFF6F6; 
+	width: 200px; 
+	padding: 0px;
+	z-index:900;	
+}
+/*Style for the fonts of the labels in the echain QuickLink window*/
+.ListQuickLinkFont
+{
+	FONT-SIZE: 13px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    TEXT-ALIGN:LEFT;
+    PADDING-LEFT:3px;
+    COLOR: #3F3E3E;
+    BACKGROUND: #EFF6F6;    
+}
+.ListQuickLinkFontOver
+{
+	FONT-SIZE: 13px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    TEXT-ALIGN:LEFT;
+    PADDING-LEFT:3px;
+    COLOR: #4967a1;
+    WEIGHT: BOLD;
+    BACKGROUND: #CFDFFC;   
+}
+.QuickLinkButton
+{
+	background: url(/echain/images/quicklink_blue.gif);
+}
+.ChainLinkButton
+{
+	background: url(/echain/images/chainlink_blue.gif);
+}
+
+.bodyBorderColor{
+	border-right:#039BEC solid 1px;
+	border-left: #039BEC solid 1px;
+}
+
+.clientInstanceText {
+	FONT-SIZE: 15px;
+	FONT-WEIGHT: BOLD;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    COLOR: #B4E2FA;
+}
+
+.popupHeader
+{
+	BACKGROUND: #2E7DCC;
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 11px;
+	VERTICAL-ALIGN: middle;
+	COLOR: white;
+	FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+	TEXT-ALIGN: left;
+}
+
+.PopupResultOverFont
+{
+    FONT-SIZE: 11px;
+    FONT-FAMILY: arial, heveltica, sans-serif;
+    BORDER-BOTTOM: 1px SOLID #949494;
+    BORDER-LEFT: 1px SOLID #949494;
+    PADDING-LEFT: 3px;       
+    background-color:#DEF3FE;
+    cursor:pointer;    
+    
+}
+.whocolumnBG
+{
+	BACKGROUND: #94DDFE;
+}
+
+.whocolumDiv
+{
+	margin-top:10px;
+	left:0px;
+	visibility:hidden;
+	position:absolute;
+	background-color: #94DDFE;
+	border-color:#039BEC;
+	overflow-auto:true;
+}	
+
+.calendarHeader
+{
+	BACKGROUND: #4BC1FE;
+}
+
+.calendarMainBody
+{
+	BACKGROUND: #DEF3FE;
+}
+
+.selectBoxNormalFont
+{
+	color: #00528F;
+	outline: none;
+}
+.selectBoxOverFont
+{
+	BACKGROUND: #2D84BC;
+	color: white;	
+	outline: none;
+}
+
+.LoaderMenuBG
+{
+	BACKGROUND: #2E7DCC;
+}
+
+.LoaderMenuFont
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;	
+	text-decoration: none;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 2px;
+	COLOR: white;
+    BORDER:none;
+    BORDER-RIGHT:#2E7DCC 1px solid;
+    CURSOR:pointer;
+}
+
+.LoaderSubMenuFont
+{
+  	BORDER:none;
+    BORDER-BOTTOM:#2E7DCC 1px solid;
+	BACKGROUND: #A5E9FE;
+}
+
+.LoaderMenuHref
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 2px;
+	text-decoration: none;
+	COLOR: #194B7D;	
+}
+
+.LoaderMenuOverHref
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 2px;
+	COLOR: #194B7D;
+	text-decoration: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.LoaderMenuOver
+{
+    BACKGROUND: #DEF3FE;
+    BORDER-BOTTOM:#2E7DCC 1px solid;
+}
+
+
+/*Style for the font of the transaction reason message box*/
+.ReasonMessageFont
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 15px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    COLOR: #07509C;
+    BACKGROUND: #D3EEFD;
+}
+
+.EntityLinkButton
+{
+	background: url(/echain/images/entitylink_blue_v45.gif);
+}
+
+.FormLinkButton
+{
+	background: url(/echain/images/formbuilder/formlink_blue.gif);
+}
+
+.TransactionReasonImage
+{
+	background: url(/echain/images/reason_image_blue.gif);
+}
+
+/* Styles for Dash Board */
+
+.GadgetCurveRTop 
+{
+	display:block;
+	background: #eef8fe;
+}
+.GadgetCurveRTop b
+{
+	display:block;height: 1px;
+    overflow: hidden; 
+    background: #9BD1FA
+}
+.GadgetCurveRBottom b
+{
+	display:block;height: 1px;
+    overflow: hidden; 
+    background: #9BD1FA
+}
+.GadgetCurveR1
+{
+	margin: 0 5px
+}
+.GadgetCurveR2
+{
+	margin: 0 3px
+}
+.GadgetCurveR3
+{
+	margin: 0 2px
+}
+.GadgetCurveR4
+{
+	margin: 0 1px;
+	height: 2px
+}
+.GadgetCurveRBottom 
+{ 
+	display:block;
+	background: #eef8fe;
+}
+.GadgetBoxBG
+{
+	background-image: url('/echain/images/gadget_box_bg_blue.gif');
+}
+.PanelHeading 
+{
+	FONT-SIZE: 12px;
+	FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+	PADDING-LEFT:3px;COLOR:#0E4E6F;
+}
+.PanelContent
+{
+	border:#67AADE solid 1px;
+	background:white;
+}
+.GadgetBullet 
+{
+	background-image:url('/echain/images/bullet_blue.gif');
+	background-repeat:no-repeat;
+	background-position:center;
+}
+
+.GadgetListMOver 
+{
+	background:#EEF8FE;
+}
+
+.GadgetListMout 
+{
+	background:white;
+}
+ 
+.GadgetSummaryHeader 
+{
+	background:#CFEBFD;
+	border-bottom:#67AADE solid 1px;
+	PADDING-LEFT:3px; 
+}
+ 
+.GadgetListHeaderFont 
+{	FONT-SIZE: 11px;
+	FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+	TEXT-ALIGN:LEFT;
+    color:#1E5994;
+}
+    
+.GadgetListLabelFont 
+{
+	FONT-SIZE: 11px;
+	FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+	TEXT-ALIGN:LEFT;
+    PADDING-LEFT:5px; 
+    color:#1E5994;
+    cursor:pointer;
+    border-bottom:#CCEAFD solid 1px;
+}
+.GadgetListNumberFont 
+{
+	FONT-SIZE: 11px;
+	FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+	TEXT-ALIGN:RIGHT;
+    color:#1E5994;
+    cursor:pointer;
+    border-bottom:#CCEAFD solid 1px;
+}
+
+.stepcarouselBorder
+{
+	border-left: #9BD1FA solid 5px;
+	border-right: #9BD1FA solid 5px;	
+}
+
+
+.AttachmentButton
+{
+	background: url(/echain/images/attachment_blue.gif);
+}
+
+.eHRMSProductLinkButton
+{
+	background: url(/echain/images/ehrms_blue_v45.gif);
+}
+
+
+/*Style for the popup body*/
+.ConcurrentInlineMonitorBody
+{
+    BACKGROUND: #3090C7;
+    BORDER-BOTTOM: #0281C5 1PX SOLID;
+    BORDER-TOP: #0281C5 1PX SOLID;
+    BORDER-LEFT: #0281C5 1PX SOLID;
+    BORDER-RIGHT: #0281C5 1PX SOLID;
+}
+
+.ConcurrentInlineMonitorInnerBody
+{
+    BACKGROUND: #58B8EF;
+    BORDER-BOTTOM: #0281C5 1PX SOLID;
+    BORDER-TOP: #0281C5 1PX SOLID;
+    BORDER-LEFT: #0281C5 1PX SOLID;
+    BORDER-RIGHT: #0281C5 1PX SOLID;
+}
+
+/*Style for the Lot/Serial Form Div*/
+.as-selection-item {
+	color: #fcfcfc;
+	font-size: 13px;
+	font-family: "Lucida Grande", arial, sans-serif;
+	/*text-shadow: 0 1px 1px #fff;*/
+	background-color: #2e7dcc;
+	/*background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ddeefe), to(#bfe0f1));*/
+	border: 1px solid #17497a;
+	padding: 3px 2px 3px 10px;
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	box-shadow: 0 1px 1px #e4edf2;
+	-webkit-box-shadow: 0 1px 1px #e4edf2;
+	-moz-box-shadow: 0 1px 1px #e4edf2;
+	
+}
+
+.as-selection-item a.as-close  {
+	float: right;
+	margin: 0px 3px 7px 10px;
+	padding: 1px;
+	cursor: pointer;
+	background-color: #9aedff;
+	color: #2e7dcc;
+	font-family: "Helvetica", helvetica, arial, sans-serif;
+	font-size: 13px;
+	line-height:75%;
+	height:11px;
+	width:11px;
+	text-align:center;
+	font-weight: bold;
+	border-radius: 7px;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	-webkit-transition: color .1s ease-in;
+}
+
+.as-selection-lotItem {
+	color: #fcfcfc;
+	font-size: 13px;
+	font-family: "Lucida Grande", arial, sans-serif;
+	/*text-shadow: 0 1px 1px #fff;*/
+	cursor: pointer;
+	background-color: none;
+	/*background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ddeefe), to(#bfe0f1));*/
+	border: 1px solid #17497a;
+	padding: 3px 2px 3px 10px;
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	box-shadow: 0 1px 1px #e4edf2;
+	-webkit-box-shadow: 0 1px 1px #e4edf2;
+	-moz-box-shadow: 0 1px 1px #e4edf2;
+}
+
+.styleleftthin
+{
+	border-left:solid 1px #2E7DCC;		
+}
+
+.stylebottomwithfont {
+	border-bottom:solid 1px #2E7DCC;
+	FONT-WEIGHT: bold;
+  	FONT-SIZE: 15px;
+   	FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+   	COLOR: #1E5994;
+}
+
+/* Style for Addrow icon */
+.addrowIcon {
+	BACKGROUND-IMAGE: url(/echain/images/new-blue.png);
+	CURSOR: pointer;
+	WIDTH : 20px; 
+	HEIGHT: 20px;
+	background-repeat:no-repeat;	
+}
+
+.clearrowIcon {
+	BACKGROUND-IMAGE: url(/echain/images/clear-blue.png);
+	CURSOR: pointer;
+	WIDTH : 20px; 
+	HEIGHT: 20px;
+	background-repeat:no-repeat;	
+}
+
+.ui-state-default {
+	color: #000000 !important;
+	BACKGROUND-IMAGE: url(/echain/images/menu_strip_blue.gif) !important;
+}
+
+.google-visualization-orgchart-node {
+  border-left: 1px solid #2E7DCC !important;
+  border-right: 1px solid #2E7DCC !important;
+  border-top: 1px solid #2E7DCC !important;
+  border-bottom: 1px solid #2E7DCC !important;
+  background-color: #9BD1FA !important;
+  background: #9BD1FA !important;
+}

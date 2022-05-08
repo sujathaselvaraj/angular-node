@@ -1,0 +1,3901 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0052)http://192.168.0.102:2020/echain/projmgmt/Issue.echn -->
+<html lang="ch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Description" content="e.Chain">
+<link rel="shortcut icon" href="http://192.168.0.102:2020/echain/images/eChain.ico">
+</head>
+<body leftmargin="0" topmargin="0" class="BodyColor">
+<!--
+*	Revisions:
+* 	Date          		version                Name             	Comment
+*   23-jun-2006          411.101		       US		      	included css & js for modal window
+*	04-OCT-2007			 411.102	           MDR				Added echainDate.js file
+*	18-mar-2007			 411.103	           US				Added /echain/js/dropdowncontent.js
+*	14-OCT-2013			 451.104			   MPK				Added /echain/js/jquery_min.js
+-->
+
+
+
+
+
+
+
+
+
+<title>
+
+
+eChain
+
+</title>
+
+<meta http-equiv="Expires" content="Mon, 01 Jan 2002 11:11:11 GMT">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-store">
+<meta http-equiv="Cache-Control" content="must-revalidate">
+
+
+	<link rel="stylesheet" type="text/css" href="./eChain_files/echain_en_blue.css">
+
+
+<script type="text/javascript" src="./eChain_files/MathContext.js.download"></script>
+<script type="text/javascript" src="./eChain_files/BigDecimal.js.download"></script>
+<script language="JavaScript" src="./eChain_files/echainCore.js.download">
+</script>
+<script type="text/javascript" src="./eChain_files/ajax.js.download"></script>
+<script type="text/javascript" src="./eChain_files/modal-message.js.download"></script>
+<script type="text/javascript" src="./eChain_files/ajax-dynamic-content.js.download"></script>
+<script type="text/javascript" src="./eChain_files/echainDate.js.download"></script>
+<link rel="stylesheet" href="./eChain_files/modal-message.css" type="text/css">
+<link rel="stylesheet" href="./eChain_files/bubble-tooltip.css" media="screen">
+<script type="text/javascript" src="./eChain_files/bubble-tooltip.js.download"></script>
+<script type="text/javascript" src="./eChain_files/dropdowncontent.js.download"> </script>
+<script type="text/javascript" src="./eChain_files/jquery_min.js.download"></script>
+
+
+
+<!--
+13-AUG-2013		405.101		RUBAN		Rearrange Header Icon
+27-JAN-2013		405.102		RUBAN		Icon Order Change & alert Message Change	
+28-MAY-2016     405.103     PANDI       Worked on phoenix to hrms navigation hide url
+ -->
+
+
+
+
+
+
+
+
+
+
+<script>
+
+function navigateQuickLinkWindow(){
+	
+	var newWindow = confirm("Are you Sure you want to redirect to Chainsys Knowledge Base");
+	if ( newWindow == true)
+	  {
+		//window.open("/echain/chainlink/ChainlinkHomeForm.echn");
+		document.forms[0].action="/echain/chainlink/ChainlinkHomeForm.echn";
+		document.forms[0].submit();	
+		return false;
+	  }
+	}
+function logoutWindow(){
+	
+	var newWindow = confirm("Are you sure do you want to logout the session?");
+	if ( newWindow == true)
+	  {
+		document.forms[0].action="/echain/core/LoginForm.echn";
+		document.forms[0].submit();
+		return false;
+	  }
+	}
+	/*  function navigateQuickLinkWindow(url, newWindow){
+	
+		if(newWindow == 'TRUE'){
+			window.open(url);
+		}else{
+			location.href= url;
+		}
+	} 
+	 */
+	function navigateEHRMSProduct() {
+		
+		//window.open("/echain/core/EHRMSProductAction.echn?userName="+loggedUserName);
+		$.ajax({
+			type:'POST',
+			url:'/echain/core/EHRMSProductAction.echn',
+			dataType: "text",
+			contentType: "application/text",
+			async: true,
+			success:function(data) {
+	   			var myData = new Array();
+	       		myData = data.split("||");
+	       	
+	       		if (myData.length > 1) {
+	       		 	var ip = myData[0];
+		         	var curr = myData[1];
+		         	ajaxSuccessHrmsNavigation(ip,curr);
+	       		}
+  			}
+      }); 
+	}
+	 
+	 function ajaxSuccessHrmsNavigation(ip,curr) {
+	    	var loggedUserName = 'SUJA3005';
+	    	
+	    	var mapForm = document.createElement("form");
+			mapForm.method = "POST";
+			mapForm.target ="_blank";
+			mapForm.action = ip;
+			
+			var tempUserName = document.createElement("input");
+			tempUserName.type = "hidden";
+			tempUserName.name = "userName";
+			tempUserName.value = loggedUserName;
+		    
+		    var tempCurr = document.createElement("input");
+		    tempCurr.type = "hidden";
+		    tempCurr.name = "curr";
+		    tempCurr.value = curr;
+		    
+		    var tempLang = document.createElement("input");
+		    tempLang.type = "hidden";
+		    tempLang.name = "language";
+		    tempLang.value = "ch_CH";
+		    
+		    mapForm.appendChild(tempUserName);
+		    mapForm.appendChild(tempCurr);
+		    mapForm.appendChild(tempLang);
+		    
+		    document.body.appendChild(mapForm);
+		    mapForm.submit();
+	    }
+</script>
+
+  <table style="WIDTH: 100%" cellpadding="0" cellspacing="0">
+    <tbody><tr style="heigh: 35px">
+      <td class="topBG">
+        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tbody><tr>
+            <td width="152px" align="left" class="echainLogo">
+            	&nbsp;
+            </td>
+			 <td width="35%" align="right" class="clientInstanceText" style="BORDER-RIGHT:#0A79B2 0px solid">
+            		Production Instance
+            </td>                        
+              <td width="84px" align="right" class="HeaderStrip">
+	           	&nbsp;
+            </td>                              
+            <td align="right" class="HeaderFont" height="35px">
+              
+              			
+              				<table width="100%" cellpadding="0" cellspacing="0">
+              					<tbody><tr>
+              						<td align="right">
+				              			<img src="./eChain_files/transperant-button.gif" height="30px" width="28px" border="0" style="cursor:pointer;" class="HelpButton" title="Help" onclick="navigateHelpPage()">&nbsp;
+              						</td>
+              						<!-- <td width="5px">
+              							&nbsp;
+              						</td> -->
+              						
+              						
+	              						<td width="34px" id="echainQuickLinkId" rel="echainQuickLinkRel" rev="/echain/core/EchainQuickLinkAjaxAction.echn?searchValue=null" align="right">
+              								<img src="./eChain_files/transperant-button.gif" height="30px" width="28px" border="0" style="cursor:pointer;" class="QuickLinkButton" title="Quick Link">&nbsp;
+              							</td>
+	              						<td width="34px" id="echainFormLinkId" rel="echainFormLinkRel" onclick="callEchainFormLinkAjaxList()" align="right">
+		          							<img src="./eChain_files/transperant-button.gif" height="30px" width="28px" border="0" style="cursor:pointer;" class="FormLinkButton" title="Echain Forms">&nbsp;
+		          						</td>
+		          						<td width="34px" id="echainEntityLinkId" rel="echainEntityLinkRel" onclick="callEntityLinkAjaxList()" align="right">
+	              							<img src="./eChain_files/transperant-button.gif" height="30px" width="28px" border="0" style="cursor:pointer;" class="EntityLinkButton" title="Entity Link">&nbsp;
+	              						</td> 
+              							<td width="34px" id="echainAttachmentLinkId" rel="echainAttachmentLinkRel" onclick="callAttachmentAjaxList()" align="right">
+              								<img src="./eChain_files/transperant-button.gif" height="30px" width="28px" border="0" style="cursor:pointer;" class="attachmentButton" title="Attachments">&nbsp;
+              							</td>
+              						
+	              						
+              							<td width="34px" id="echainReportLinkId" rel="echainReportLinkRel" onclick="callReportCenter()" align="right">
+              								<img src="./eChain_files/transperant-button.gif" height="30px" width="28px" border="0" style="cursor:pointer;" class="ReportButton" title="Reports">&nbsp;
+              							</td>
+              							<td width="34px" id="eHRMSProductLinkId" rel="eHRMSProductLinkRel" align="right">
+	              							<img src="./eChain_files/transperant-button.gif" height="30px" width="28px" border="0" style="cursor:pointer;" class="eHRMSProductLinkButton" title="e.HRMS/Swan" onclick="navigateEHRMSProduct()">&nbsp;
+              							</td>
+              							<td width="34px" id="eHRMSProductLinkId" rel="eHRMSProductLinkRel" align="right">
+              								<img src="./eChain_files/transperant-button.gif" height="30px" width="28px" border="0" style="cursor:pointer;" class="ChainLinkButton" title="ChainLink" onclick="navigateQuickLinkWindow()">&nbsp;
+              							</td>
+              							<td width="66px" id="echainERPProductLinkId" rel="echainERPProductLinkRel" align="right">				              			
+				              				<a href="http://192.168.0.102:2020/echain/home.echn"><img src="./eChain_files/transperant-button.gif" height="30px" width="28px" border="0" class="HomeButton" title="Home"></a>
+				              				<img src="./eChain_files/transperant-button.gif" height="30px" width="28px" border="0" class="SignoutButton" title="Log Out" onclick="logoutWindow()">&nbsp;
+              							</td> 
+              						</tr>
+              					</tbody></table>
+              			
+           	 	
+             </td>                       
+          </tr>
+        </tbody></table>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <table style="HEIGHT:20px;WIDTH:100%" cellpadding="0" cellspacing="0">
+          <tbody><tr>
+            <td style="HEIGHT:27px;WIDTH:100%" class="MenuBody" align="middle">
+              
+            	
+
+
+
+<table style="WIDTH: 100%; HEIGHT: 20px" cellspacing="0" cellpadding="0">
+  <tbody>
+	<tr>
+		<td>
+		    <script>
+var topMenu = new Array('Employee Project Menu');
+var subMenu_1 = new Array(new Menu('Client Issues', 'MENUITEM', '/echain/projmgmt/Issue.echn'),
+new Menu('Issue List', 'MENUITEM', '/echain/projmgmt/IssueListAction.echn'),
+new Menu('Approved Tasks', 'MENUITEM', '/echain/projmgmt/EChainApprovedTaskList.echn'),
+new Menu('Todays Tasks', 'MENUITEM', '/echain/projmgmt/EChainTodaysTaskList.echn'));
+
+
+
+
+</script>
+<div id="sub_1" class="DropdownMenuFrame" onmouseout="mouseOutDropdownLayer()" onmouseover="mouseOverDropdownLayer()"></div>
+
+            <div class="TopMenuFrame" id="primaryMenu">
+              <table cellspacing="0" cellpadding="0" width="100%" align="left" class="TopMenuBG" border="0" height="25px">
+                <tbody><tr>
+                  <td class="TopMenuFont" id="top_1" width="12%" nowrap="nowrap" onclick="openSubMenu(this)">Employee Project Menu</td>
+                  <td class="TopMenuFont" id="top_2" width="12%" nowrap="nowrap" onclick="openSubMenu(this)"></td>
+                  <td class="TopMenuFont" id="top_3" width="12%" nowrap="nowrap" onclick="openSubMenu(this)"></td>
+                  <td class="TopMenuFont" id="top_4" width="12%" nowrap="nowrap" onclick="openSubMenu(this)"></td>
+                  <td class="TopMenuFont" id="top_5" width="12%" nowrap="nowrap" onclick="openSubMenu(this)"></td>
+                  <td class="TopMenuFont" id="top_6" width="12%" nowrap="nowrap" onclick="openSubMenu(this)"></td>
+                  <td class="TopMenuFont" id="top_7" width="12%" nowrap="nowrap" onclick="openSubMenu(this)"></td>
+                  <td class="TopMenuFont" id="top_8" width="12%" nowrap="nowrap" onclick="openSubMenu(this)"></td>
+                </tr>
+              </tbody></table>
+            </div>
+            <script>
+                document.onkeydown = initMenuKey;
+				document.onkeyup = openMenu;
+
+                firstTopMenu = 'top_1';
+                lastTopMenu = 'top_'+topMenu.length;
+
+                createTopMenu(topMenu);
+            </script>
+		</td>
+	</tr>
+  </tbody>
+</table>
+
+              
+              
+            </td>
+          </tr>
+        </tbody></table>
+      </td>
+    </tr>
+  </tbody></table>
+
+<!--
+*	Revisions:
+* 	Date          		version                Name             	Comment
+*   07-03-2006          411.101		            US		      	included iframe for audit info
+*   08-03-2006          411.102		            ESC		      	border curves images got from style sheet
+*   15-FEB-2006			411.103					MA				Block Layer Added (by US)
+*   16-JUN-2006			411.104					US				Added height for the curves TD
+*	05-DEC-2006			411.105					TR				Increased the TR and TD height where the borderbottomcurve is given
+*   15-DEC-2006 		411.106					MA				Hidden SourceName and SourceId added (Date wrongly given)
+*   09-DEC-2006			411.107					US				Called executeDefaultFunction
+*	19-APR-2007			411.108					TR				Added a script in transactionmessage display code to set the style class of the transaction message
+*	21-APR-2007			411.109					TR				Added a script variable econfigTemplateActive and given its value FALSE
+*	25-APR-2007			411.110					TR				Modified the transaction message codes by placing the script to set the css class for mesasge outside the DIV 
+*	16-MAY-2007			411.111					MA				window.onresize Added
+*	16-MAY-2007			411.111					MA				File Recommit
+*	16-MAY-2007			411.112					TR				File Recommit
+*	23-JUN-2007			411.113					US				Added modal message window
+*	30-JUL-2007			411.114					ESC				Added submitFlag for refresh script
+*   06-OCT-2007			410.115					KAM				Added script for createhintbox 
+*   20-FEB-2008			410.116					MA				detectRefresh Added
+*   18-MAR-2008			410.117					US				Added hidden div for echain quicklink
+*   18-JUN-2008			410.118					VAS				Added Function showQuestionnaire
+*	02-SEP-2008			410.119					TR				new echain UI Implemented
+*	29-SEP-2008			410.120					ABI				Added callEntityLinkAjaxList ,navigateHelpPage and div for entity link
+*	05-OCT-2008			410.121					ABI				Changed current form bean as hidden 
+*	06-OCT-2008		    410.122					ABI				Change the opener window doc name
+*   22-OCT-2008         410.123                 EDW				New echain UI Implemented
+*   17-NOV-2008         410.124                 AR				Introduced echain announcements
+*   25-FEB-2009         410.125               Tamil             Added Resize Event & Align Page heading to center when page is resized.
+*   31-MAR-2009         410.126               Tamil             Changes in callBlockSubmit - Hide Process Image when Download file
+*   06-APR-2009			410.127					RRK				Scrolling attribute set to No and value of src attribute is removed in WhoColumn Iframe
+*   03-APR-2009         410.128               Tamil             Added callViewAttachmentFiles,callAttachments
+*	20-MAY-2009         410.129               PS             	change the Query String name in the QuestionnaireView href
+*	22-MAY-2009         410.130               PS             	questionnaire view page display the opener window format
+*	24-AUG-2009         410.131               AR             	isNaN checked in callQuestionnaire
+*	28-DEC-2009			410.132				  TR				Added logic:not equal empty for pageHeading row
+*	06-AUG-2010         410.133               AR             	Implemented echain form links.
+*																Added callEchainForms, callEchainFormLinkAjaxList, showEchainForms
+*	11-JUL-2013			405.100				 Pravin				Added type of validation in showLOVPopup to solve array[i].indexof is not a function issue
+*	21-AUG-2013			411.134				  DSK				For Popup		
+*	03-SEP-2013			450.103				RV					Height increased in showLOVPopup()
+*	17-OCT-2013			450.104				  DSK				Uncommented the refreshURL Code
+*	22-OCT-2013			450.105				DSK					Added callAfterAddRow function 
+*	30-JAN-2014			450.106				DSK					Worked for Popup validation
+*	07-JUN-2014			450.107				SBG					added undefined logic for accessing attachment functionality in nested:nest forms
+*   23-FEB-2016         450.108             PANDI               Worked phoenix to report navigation(callReportCenter)
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Begin Body block -->
+
+<!--
+	MA			15-FEB-2006 		410.101		Blocklayer Added
+	TR			15-MAR-2006			410.102		Added Processing Image
+   Tamil        01-FEB-2007         410.103     Added DescriptionLayerWithoutLoad for readonly longtextbox
+   SUN			05-MAR-2007			410.104		popup UI problem solved while use multiselect.
+   SUN			05-MAR-2007			410.104		popup UI problem solved while use multiselect.
+   SEK			04-MAY-2007			410.105		budgetConsumptionLayer Added.
+   SK			15-may-2007			410.105		Set the value to hidden description on showdescription method
+   ESC			25-may-2007			410.106		IFrame Rectification
+   PSD			16-JUL-2007			410.107		Modified Iframe width inside messageLayer.
+   TR			22-AUG-2008			410.108		New echain UI Implemented
+   RRK			14-APR-2009			410.109		Forecast and Budget Consumption iframe will be loaded only if the corresponding layer is called in
+   													showPopupLayer()
+  Tamil         17-APR-2009         410.110     Added iFrame for Common Attachments  	
+  Tamil         10-OCT-2009         410.110     Added showIFrameLOVPopup		
+  Tamil			13-OCT-2009         410.111     Change embossFrame Width			
+  EDW			05-NOV-2009			410.112		Worked for close button in message Layer
+  MPK			14-OCT-2013			451.113		Worked for Echain V.4.5.1. Release
+  MPK			14-NOV-2013			451.114		Worked for Echain V.4.5.1. Concurrent Release
+  MANO			10-MAR-2016			451.115		Added encodeURIComponent for showPopup
+-->
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="./eChain_files/jquery_min.js(1).download"></script>
+<script>
+	var endFunctionRef;
+	var descriptionField;
+	var hiddenDescription;
+	var targetField;
+
+	var dragLayer;
+	var dragFlag = false;
+    var	xDist = 0;
+    var	yDist = 0;
+    var moveTime;
+    
+    var concurrentIntervalName;
+    
+    function clearDragFlag(e)
+    {
+		dragFlag = false;
+    	xDist = 0;
+    	yDist = 0;
+    	
+    	if(moveTime!=null)
+    		clearTimeout(moveTime);
+    }
+    
+    function setDragFlag(e)
+    {
+		dragFlag = true;
+    	eventObj = getEvent(e);
+    	eventTarget = dragLayer.getElementsByTagName('TABLE')[0];
+    	xDist = getClickX(eventObj) - ylib_getPageX(eventTarget);
+    	yDist = getClickY(eventObj) - ylib_getPageY(eventTarget);
+    }
+    
+    function dragModalLayer(e)
+    {
+    	if(dragFlag==true)
+    	{
+			embossLayer = document.getElementById('embossFrame');	
+			eventObj = getEvent(e);
+			eventTarget = getActualTarget(eventObj);
+    		ylib_setX(dragLayer, getClickX(eventObj) - xDist);
+    		ylib_setY(dragLayer, getClickY(eventObj) - yDist);
+    		ylib_setX(embossLayer, getClickX(eventObj) - xDist);
+    		ylib_setY(embossLayer, getClickY(eventObj) - yDist);    		
+	   		negateReturnValue(eventObj);
+    	}
+    }
+
+	function showPopupLayer(layer, poupHeight, poupWidth)
+	{
+		embossLayer = document.getElementById('embossFrame');
+		dragLayer = document.getElementById(layer);
+ 		document.getElementById('ModalLayer').style.left = 0;
+		document.getElementById('ModalLayer').style.top = 0;
+		document.getElementById('ModalLayer').style.width = document.body.clientWidth;
+		document.getElementById('ModalLayer').style.height = document.body.clientHeight;
+		document.getElementById(layer).style.height = poupHeight;
+		document.getElementById(layer).style.width = poupWidth;
+		document.getElementById(layer).style.top = document.body.scrollTop + (document.body.clientHeight / 2) - (poupHeight/2);
+		document.getElementById(layer).style.left = (document.body.clientWidth / 2) - (poupWidth/2);
+		embossLayer.style.height = poupHeight;
+		embossLayer.style.width = poupWidth;
+		embossLayer.style.top = document.body.scrollTop + (document.body.clientHeight / 2) - (poupHeight/2);
+		embossLayer.style.left = (document.body.clientWidth / 2) - (poupWidth/2);
+
+		document.getElementById('ModalLayer').style.visibility = 'visible';
+		document.getElementById(layer).style.visibility = 'visible';
+		
+		if (layer == 'messageLayer') 
+		{
+			frames["forecastConsumptionFrame"].location.href = '/echain/MessageForm.echn';
+		} 
+		else if (layer == 'budgetConsumptionLayer') 
+		{
+			frames["budgetConsumptionFrame"].location.href = '/echain/BudgetConsumptionForm.echn';
+		}
+	//	embossLayer.style.visibility = 'visible';
+	}
+	
+	function hidePopupLayer(layer)
+	{
+		document.getElementById('ModalLayer').style.visibility = 'hidden';
+		document.getElementById(layer).style.visibility = 'hidden';
+		document.getElementById('embossFrame').style.visibility = 'hidden';		
+	}
+
+	function showLOVPopup1(popupName, fields, params, functionRef, e, height, width, acceptableEvent)
+	{
+	
+		var eventObj = getEvent(e);
+		targetField = getTarget(eventObj);
+		triggerObj = getPopupTriggerer(eventObj);
+		if(getEventType(e)=='dblclick' || isF8Key(e) || triggerObj.id=='popupTrigger' || acceptableEvent)
+		{
+			document.getElementById("PopupInnerFrame").width=width-20;
+			document.getElementById("PopupInnerFrame").height=height-30;
+			document.getElementById("PopupInnerFrame").align='center';
+
+			if (document.all)
+	       	{
+	        	popupFrame.removeParameters();
+	        	popupFrame.removeFields();
+	        	popupFrame.createParameters(params);
+	        	popupFrame.createFields(fields);
+	        	popupFrame.setPopuName(popupName);
+				popupFrame.document.forms[0].submit();
+				popupFrame.focus();
+	    	} 
+	    	else
+	    	{
+	        	frames["popupFrame"].removeParameters();
+	        	frames["popupFrame"].removeFields();
+	        	frames["popupFrame"].createParameters(params);
+	        	frames["popupFrame"].createFields(fields);
+	        	frames["popupFrame"].setPopuName(popupName);
+	        	frames["popupFrame"].document.forms[0].action = "/echain/PopupAction.echn?params="+encodeURIComponent(params)+"&fields="+fields;
+				frames["popupFrame"].document.forms[0].submit();
+				frames["popupFrame"].focus();
+	   		}
+            
+			showPopupLayer('PopupLayer', height, width);
+
+	   		endFunctionRef = functionRef;
+	   	}
+	}
+	
+	function showIFrameLOVPopup(popupName, fields, params, functionRef, e, height, width, target)
+	{
+        
+			targetField =target;
+		
+			document.getElementById("PopupInnerFrame").width=width-20;
+			document.getElementById("PopupInnerFrame").height=height-30;
+			document.getElementById("PopupInnerFrame").align='center';
+
+			if (document.all)
+	       	{
+	        	popupFrame.removeParameters();
+	        	popupFrame.removeFields();
+	        	popupFrame.createParameters(params);
+	        	popupFrame.createFields(fields);
+	        	popupFrame.setPopuName(popupName);
+				popupFrame.document.forms[0].submit();
+				popupFrame.focus();
+	    	} 
+	    	else
+	    	{
+	        	frames["popupFrame"].removeParameters();
+	        	frames["popupFrame"].removeFields();
+	        	frames["popupFrame"].createParameters(params);
+	        	frames["popupFrame"].createFields(fields);
+	        	frames["popupFrame"].setPopuName(popupName);
+				frames["popupFrame"].document.forms[0].submit();
+				frames["popupFrame"].focus();
+	   		}
+
+			showPopupLayer('PopupLayer', height, width);
+
+	   		endFunctionRef = functionRef;
+	   		
+	   	
+	}
+	function showAjaxPopup(popupName, fields, params, functionRef, height, width){
+	
+			document.getElementById("PopupInnerFrame").width=width-20;
+			document.getElementById("PopupInnerFrame").height=height-60;
+			document.getElementById("PopupInnerFrame").align='center';
+
+			if (document.all)
+	       	{
+	        	popupFrame.removeParameters();
+	        	popupFrame.removeFields();
+	        	popupFrame.createParameters(params);
+	        	popupFrame.createFields(fields);
+	        	popupFrame.setPopuName(popupName);
+				popupFrame.document.forms[0].submit();
+				popupFrame.focus();
+	    	} 
+	    	else
+	    	{
+	        	frames["popupFrame"].removeParameters();
+	        	frames["popupFrame"].removeFields();
+	        	frames["popupFrame"].createParameters(params);
+	        	frames["popupFrame"].createFields(fields);
+	        	frames["popupFrame"].setPopuName(popupName);
+				frames["popupFrame"].document.forms[0].submit();
+				frames["popupFrame"].focus();
+	   		}
+
+			showPopupLayer('PopupLayer', height, width);
+
+	   		endFunctionRef = functionRef;
+	}
+	
+	
+	function showPopup(popupName, fields, params, functionRef, e)
+	{  
+		showLOVPopup(popupName, fields, params, functionRef, e, 380, 400, false);
+	}
+
+	function openPopup(popupName, fields, params, functionRef, e, acceptableEvent)
+	{
+		showLOVPopup(popupName, fields, params, functionRef, e, 250, 350, acceptableEvent);
+	}
+
+	function isNumber(n) {
+		return !isNaN(parseFloat(n)) && isFinite(n);
+	}
+	
+	function showLOVPopup(popupName, fields, params, functionRef, e, height, width, acceptableEvent) {
+		for(var i=0;i<params.length;i++) {
+			if(params[i] != null && !isNumber(params[i]) && params[i].indexOf("%") != -1) {
+				params[i] = escape(params[i]);
+			}
+		}
+		var eventObj = getEvent(e);
+		targetField = getTarget(eventObj);
+		triggerObj = getPopupTriggerer(eventObj);
+
+		if(getEventType(e)=='dblclick' || isF8Key(e) || (triggerObj != null && triggerObj.id=='popupTrigger') || acceptableEvent) {
+			endFunctionRef = functionRef; 
+			var ht = height;
+	   		var wd = width;
+	   		var left = (screen.width/2)-(wd/2);
+	   		var top = (screen.height/2)-(ht/2);
+	   		
+	   		popupWin = window.open('/echain/PopupAction.echn?popupName='+popupName+'&fields='+fields+'&params='+(params)+'&height='+height+'&width='+width, "",
+					"height="+ht +", menubar=no, location=0, resize=true, status=no, titlebar=no, toolbar=0, navigation=0, width="+wd+", top="+top+", left="+left);
+	   	}
+	}
+	
+	function showCalendar(fieldName, timeReqd, e)
+	{
+		var eventObj = getEvent(e);
+		targetField = getTarget(eventObj);
+		triggerObj = getPopupTriggerer(eventObj);
+
+		if(getEventType(e)=='dblclick' || isF8Key(e) || triggerObj.id=='popupTrigger')
+		{
+			document.getElementById("CalInnerFrame").width=280;
+			document.getElementById("CalInnerFrame").height=190;
+			document.getElementById("CalInnerFrame").align='center';
+
+			if (document.all)
+	       	{
+	        	calFrame.setFieldName(fieldName);
+	      		calFrame.setTimeRequired(timeReqd);
+	
+				calFrame.document.forms[0].submit();
+				calFrame.focus();
+	    	} 
+	    	else
+	    	{
+	        	frames["calFrame"].setFieldName(fieldName);
+	       		frames["calFrame"].setTimeRequired(timeReqd);
+	
+				frames["calFrame"].document.forms[0].submit();
+				frames["calFrame"].focus();
+	   		}
+
+			showPopupLayer('CalendarLayer', 220, 300);
+	   	}
+	}
+	
+	function hideCalendar()
+	{
+		targetField.focus();
+		hidePopupLayer('CalendarLayer');
+	}
+	
+	function checkForClose(e){
+		eventObj = getEvent(e);
+		
+		if(isTABKey(eventObj)){
+			negateReturnValue(eventObj);
+			return;
+		}else if(isEnterKey(e)){
+			hideDescription();
+			return;
+		}
+		if(isEscKey(eventObj)){
+			hideDescription();
+			return;
+		}
+
+	}
+	
+	function showDescription(e)
+	{
+		var eventObj = getEvent(e);
+		descriptionField = getActualTarget(eventObj);
+		hiddenDescription = descriptionField;
+		
+		if(isTABKey(eventObj)){
+			return;
+		}
+         if(descriptionField.readOnly){
+        
+			document.getElementById("echainDescriptionWithoutLoad").width=300;
+			document.getElementById("echainDescriptionWithoutLoad").height=200;
+			document.getElementById("echainDescriptionWithoutLoad").align='center';
+	
+			if(ylib_getW(descriptionField)<getTextLength(descriptionField.value, descriptionField.className)){
+				showPopupLayer('DescriptionLayerWithoutLoad',  250, 350);
+		
+				document.getElementById('echainDescriptionWithoutLoad').focus();
+				document.getElementById('echainDescriptionWithoutLoad').value=descriptionField.value;
+			}
+		}else {
+		
+		    document.getElementById("echainDescription").width=300;
+			document.getElementById("echainDescription").height=200;
+			document.getElementById("echainDescription").align='center';
+	
+			if(ylib_getW(descriptionField)<getTextLength(descriptionField.value, descriptionField.className)){
+				showPopupLayer('DescriptionLayer',  250, 350);
+		
+				document.getElementById('echainDescription').focus();
+				document.getElementById('echainDescription').value=descriptionField.value;
+		
+		    }	
+	    }
+	}
+	function hideDescription()
+	{
+		descriptionField.value=document.getElementById('echainDescription').value;
+		
+		if(hiddenDescription)
+		{
+			hiddenDescription.value=descriptionField.value;
+		}
+		
+		descriptionField.focus();
+		hidePopupLayer('DescriptionLayer');
+	}
+	
+	function showEHtmlDesc(e)
+	{
+	
+	 
+		var eventObj = getEvent(e);
+		 
+		descriptionField = getActualTarget(eventObj);
+		
+		
+		var rowIndex = getRowIndex(descriptionField);
+		var tempHidden = eval("document.forms[0]."+descriptionField.name.substring(8));
+		
+		if(isTABKey(eventObj)){
+			hiddenDescription.value = descriptionField.value;
+			return;
+		}
+		
+		if(tempHidden)
+		{
+			if(isNaN(tempHidden.length))
+			{
+				hiddenDescription = tempHidden;
+			}
+			else
+			{
+				hiddenDescription = tempHidden[rowIndex];
+			}
+		}
+		descriptionField.title = hiddenDescription.value;
+
+		if(ylib_getW(descriptionField)<getTextLength(descriptionField.value, descriptionField.className) 
+			|| ylib_getW(descriptionField)<getTextLength(hiddenDescription.value, descriptionField.className)){
+			
+			
+	        if(descriptionField.readOnly){
+	                document.getElementById("echainDescriptionWithoutLoad").width=300;
+					document.getElementById("echainDescriptionWithoutLoad").height=200;
+					document.getElementById("echainDescriptionWithoutLoad").align='center';
+				   showPopupLayer('DescriptionLayerWithoutLoad', 250, 350);
+				   document.getElementById('echainDescriptionWithoutLoad').focus();
+			     document.getElementById('echainDescriptionWithoutLoad').value=hiddenDescription.value;
+		    }else {
+				     document.getElementById("echainDescription").width=300;
+					document.getElementById("echainDescription").height=200;
+					document.getElementById("echainDescription").align='center';
+		   		 showPopupLayer('DescriptionLayer', 250, 350);
+		   		 document.getElementById('echainDescription').focus();
+			     document.getElementById('echainDescription').value=hiddenDescription.value;
+		    }
+		}
+		else
+		{
+			hiddenDescription.value = descriptionField.value;
+		}
+	}
+	
+	function hideAttachmentWindow(){
+	
+	    document.getElementById("AttachmentInnerFrame").src='';
+		hidePopupLayer('AttachmentLayer');
+	}
+	
+	function hidePopup()
+	{
+		if(targetField && targetField.tagName.toUpperCase()=='INPUT')
+		{
+			if(targetField.type.toUpperCase()!='HIDDEN')
+			{
+				setTimeout("targetField.focus();",10);
+			}
+		}
+		
+		hidePopupLayer('PopupLayer');
+
+		if (document.all)
+       	{
+       		if(popupFrame.clearPopup){
+	        	popupFrame.clearPopup();
+	        }else{
+		      	popupAction = popupFrame.window.location.href;
+		      	popupFrame.window.location = popupAction.substring(0, popupAction.indexOf("PopupAction.echn"))+"PopupForm.echn";
+	        }
+        }
+        else
+        {
+       		if(frames["popupFrame"].clearPopup){
+       			frames["popupFrame"].clearPopup();
+       		}else{
+		      	popupAction = frames["popupFrame"].window.location.href;
+		      	frames["popupFrame"].window.location.href = popupAction.substring(0, popupAction.indexOf("PopupAction.echn"))+"PopupForm.echn";
+       		}
+        }
+	}
+	
+	function execEndFunction()
+	{
+		if(eval(endFunctionRef))
+			endFunctionRef();
+	}
+	
+	function submitPopup(url)
+	{
+		if (document.all)
+       	{
+       		popupFrame.submitPage(url);
+    	} 
+    	else
+    	{
+        	frames["popupFrame"].submitPage(url);
+	   	}
+	}
+	
+	function showTrnMessageReason(reasonText) 
+	{
+		document.getElementById('reasonContent').innerHTML = reasonText;
+		showPopupLayer('reasonLayer', 200, 400);
+	}
+	
+	function hideReasonLayer()
+	{
+		hidePopupLayer('reasonLayer');
+	}
+
+	
+	function hideConcurrentInLineLayer()
+	{
+		clearInterval(concurrentIntervalName);
+		hidePopupLayer('concurrentInlineLayer');
+	}
+	
+	function showConcurrentInLineLayer()
+	{
+		hidePopupLayer('reasonLayer');
+		showPopupLayer('concurrentInlineLayer', 360, 320);
+	}
+	
+	function callConcurrentInLineLayerContentFill(mgrId, parentFormName, parentScriptName)
+	{
+		$.ajax({
+			url : "/echain/core/ConcurrentOnlineMonitorAjaxAction.echn?mgrId="+mgrId+"&parentFormName="+parentFormName+"&parentScriptName="+parentScriptName,
+			cache: false,
+			success : function(data) {
+				document.getElementById('concurrentInlineContent').innerHTML = data;
+				if(document.getElementById('concurrentStatusId').value == "COMPLETED")
+				{
+					clearInterval(concurrentIntervalName);
+				}
+			}
+		});
+	}
+
+	function checkEnteredKey(e)
+	{
+		if(isEscKey(e))
+	        {
+	        	if(document.getElementById('reasonLayer').style.visibility == 'visible') {
+	        		hideReasonLayer();
+	        	}       	
+	        }
+	}
+	
+	function callViewLog(logName)
+	{
+		mywindow = open('/echain'+logName, 'logInfo',
+		'width=700,height=400,top='+(screen.height - 400)+',left=0,scrollbars=yes');
+	}
+	
+</script>
+
+<iframe id="embossFrame" name="embossFrame" src="./eChain_files/saved_resource.html" scroll="none" style="visibility: hidden; width: 300px; height: 220px; z-index: 10; position: absolute; left: 533px; top: 218.5px;"></iframe>
+
+<div id="ModalLayer" class="LayerClass" style="visibility: hidden; width: 1366px; height: 657px; z-index: 1000; position: absolute; left: 0px; top: 0px;">
+	<div align="center" id="PopupLayer" style="z-index:1001;
+	position:absolute;visibility:hidden;" class="PopupOuterBody">
+		<table class="PopupMainBody" border="0px" cellspacing="0" top="0" id="PopupTitleTbl" left="0" cellpadding="0" align="center" width="100%" height="250px">
+			<tbody><tr height="20px" valign="top">
+				<td id="popupHead" class="PopupHeadingBody" valign="center" style="padding-left:10px;">&nbsp;
+				</td>
+				<td width="16px" class="CloseFont" onclick="hidePopup()" style="background-repeat:no-repeat;" align="right">
+				</td>
+			</tr>
+			
+			<tr valign="top">
+				<td align="center" width="100%" colspan="2" boder="0">
+					<iframe width="330px" height="230px" frameborder="0" id="PopupInnerFrame" scrolling="no" name="popupFrame" src="./eChain_files/PopupForm.html" class="PopupFrameBorder">
+					</iframe>
+				</td>
+			</tr>
+		</tbody></table>
+	</div>
+	
+	
+	<div align="center" id="AttachmentLayer" style="z-index:1001;
+	position:absolute;visibility:hidden;">
+		<table border="0px" cellspacing="0" top="0" id="PopupTitleTbl" left="0" cellpadding="0" align="center" width="100%" height="275px" class="styleallthin">
+			<tbody><tr height="25px" valign="top" class="SummaryRowBodyHeader">
+				<td width="334px" valign="center" style="padding-left:10px;">
+				Attachments
+				</td>
+				<td width="16px" onclick="hideAttachmentWindow()" style="background-repeat:no-repeat;" align="center">
+					X
+				</td>
+			</tr>
+			
+			<tr valign="top">
+				<td align="center" width="100%" colspan="2" boder="0">
+					<iframe width="350px" height="250px" frameborder="0" id="AttachmentInnerFrame" scrolling="no" name="AttachmentFrame" src="./eChain_files/saved_resource(1).html">
+					</iframe>
+				</td>
+			</tr>
+		</tbody></table>
+	</div>
+	
+	<div align="center" id="messageLayer" style="z-index:1001;
+	position:absolute;visibility:hidden;" class="PopupOuterBody">
+		<table class="PopupMainBody" border="0px" cellspacing="0" top="0" id="messageTitleTbl" left="0" cellpadding="0" align="center" width="100%" height="250px">
+						
+			<tbody><tr height="16px" valign="top" class="PopupTitleBody">
+				<td width="100%" class="PopupHeadingFont" align="left">
+					ECHAIN
+				</td>
+				<td class="CloseFont" style="background-repeat:no-repeat;background-position:center;" align="left" width="10px" onclick="hidePopupLayer(&#39;messageLayer&#39;);">
+					<img src="./eChain_files/transparent.gif" width="20px" height="20px">
+				</td>
+			</tr>
+			<tr height="24px">
+				<td colspan="2" id="popupHead" width="100%" class="PopupHeadingBody" align="center">&nbsp;
+				</td>
+			</tr>
+			<tr height="24px">
+				<td colspan="2" id="popupHead" width="100%" class="PopupHeadingBody" align="center">
+				FORECAST CONSUMPTION DETAIL	
+				</td>
+			</tr>
+			<tr height="215px" valign="top">
+				<td align="center" width="100%" colspan="2">
+					<iframe align="center" width="90%" height="215px" frameborder="0" id="messageInnerFrame" name="forecastConsumptionFrame" src="./eChain_files/saved_resource(2).html" class="PopupFrameBorder">
+					</iframe>
+				</td>
+			</tr>
+		</tbody></table>
+	</div>
+	
+	<div align="center" id="CalendarLayer" style="z-index: 1001; position: absolute; visibility: hidden; height: 220px; width: 300px; top: 218.5px; left: 533px;" class="PopupOuterBody">
+		<table class="CalendarMainBody" border="0px" cellspacing="0" top="0" id="CalendarTitleTbl" left="0" cellpadding="0" align="center" width="100%" height="220px">
+			<tbody><tr height="20px" valign="top" class="calendarHeader">
+				<td id="popupHead" valign="center" class="CalendarHeadingFont" style="padding-left:10px;border-top:0px;">
+				E-CHAIN CALENDAR
+				</td>
+				<td width="16px" class="CloseFont" onclick="hideCalendar()" style="background-repeat:no-repeat;" align="right">
+				</td>
+			</tr>
+		
+			<tr height="190px">
+				<td align="center" colspan="2">
+					<iframe height="190" width="280" id="CalInnerFrame" name="calFrame" src="./eChain_files/CalendarForm.html" class="PopupFrameBorder" frameborder="0" align="center">
+					</iframe>
+				</td>
+			</tr>
+		</tbody></table>
+	</div>
+
+	
+	<div align="center" id="DescriptionLayer" style="z-index:1001;
+	position:absolute;visibility:hidden;" class="PopupOuterBody">
+		<table class="PopupMainBody" border="0px" cellspacing="0" top="0" id="DescriptionTitleTbl" left="0" cellpadding="0" align="center" width="100%" height="250px">
+			<tbody><tr height="20px" valign="top" class="PopupTitleBody">
+				<td class="PopupHeadingFont" align="left">
+					ECHAIN
+				</td>
+			</tr>
+			<tr height="150px">
+				<td align="center">
+					<textarea cols="35" rows="10" id="echainDescription" style="overflow:never"></textarea>
+				</td>
+			</tr>
+			<tr height="30px">
+				<td align="center">
+					<table id="cmdDescPopup" cellpadding="0" cellspacing="10px">
+<tbody><tr>
+<td><table id="cmdLoad" cellpadding="0" cellspacing="0" onmouseover="buttonOver(&#39;cmdLoad&#39;)" onmouseout="buttonOut(&#39;cmdLoad&#39;)" onclick="hideDescription(this)"><tbody><tr><td class="btnleft">&nbsp;</td><td class="btnmid" width="80px"><font class="btn">
+							Load
+						</font></td><td class="btnright">&nbsp;</td></tr></tbody></table></td>
+</tr>
+</tbody></table>
+
+				</td>
+			</tr>
+		</tbody></table>
+	</div>
+	
+	<div align="center" id="DescriptionLayerWithoutLoad" style="z-index:1001;
+	position:absolute;visibility:hidden;" class="PopupOuterBody">
+		<table class="PopupMainBody" border="0px" cellspacing="0" top="0" id="DescriptionTitleTbl" left="0" cellpadding="0" align="center" width="100%" height="250px">
+			<tbody><tr height="20px" valign="top" class="PopupTitleBody">
+				<td class="PopupHeadingFont" align="left">
+					ECHAIN
+				</td>
+			</tr>
+			<tr height="150px">
+				<td align="center">
+					<textarea cols="35" rows="10" id="echainDescriptionWithoutLoad" style="overflow:never" readonly="true"></textarea>
+				</td>
+			</tr>
+			<tr height="30px">
+				<td align="center">
+					<table id="cmdDescPopupWithoutLoad" cellpadding="0" cellspacing="10px">
+<tbody><tr>
+<td><table id="cmdLoad" cellpadding="0" cellspacing="0" onmouseover="buttonOver(&#39;cmdLoad&#39;)" onmouseout="buttonOut(&#39;cmdLoad&#39;)" onclick="hidePopupLayer(&#39;DescriptionLayerWithoutLoad&#39;)"><tbody><tr><td class="btnleft">&nbsp;</td><td class="btnmid" width="80px"><font class="btn">
+							Close 
+						</font></td><td class="btnright">&nbsp;</td></tr></tbody></table></td>
+</tr>
+</tbody></table>
+
+				</td>
+			</tr>
+		</tbody></table>
+	</div>
+
+	<div align="center" id="AlertLayer" style="z-index:1001;
+	position:absolute;visibility:hidden;width:400px;height:100px;
+	border:2px solid #000000">
+		<table class="AlertMainBody" border="0px" cellspacing="0" top="0" left="0" cellpadding="0" align="center" width="100%" height="100px">
+			<tbody><tr height="20px" valign="top">
+				<td>
+					<table id="AlertHeaderTable" border="0" cellspacing="0" width="100%" cellpadding="0" align="center" class="AlertHeadingBody">
+						<tbody><tr>
+							<td class="AlertHeadingFont" align="left">
+								ECHAIN
+							</td>
+						</tr>
+					</tbody></table>
+				</td>
+			</tr>
+			<tr height="50px">
+				<td>
+					<table id="AlertBody" border="0" cellspacing="0" cellpadding="0" align="center" width="100%">
+						<tbody><tr>
+							<td width="10%">&nbsp;</td>
+							<td width="80%" id="MessageCell" align="center"></td>
+							<td width="10%">&nbsp;</td>
+						</tr>
+					</tbody></table>
+				</td><td>
+			</td></tr>
+			<tr height="30px" valign="top">
+				<td>
+					<table id="AlertButtons" border="0" cellspacing="0" cellpadding="0" align="center" width="100%">
+						<tbody><tr>
+							<td width="10%">&nbsp;</td>
+							<td width="80%" align="center">
+								<table id="cmdOK" cellpadding="0" cellspacing="10px">
+<tbody><tr>
+<td><table id="save" cellpadding="0" cellspacing="0" onmouseover="buttonOver(&#39;save&#39;)" onmouseout="buttonOut(&#39;save&#39;)" onclick="return hideAlert()"><tbody><tr><td class="btnleft">&nbsp;</td><td class="btnmid" width="80px"><font class="btn">
+											OK
+									</font></td><td class="btnright">&nbsp;</td></tr></tbody></table></td>
+</tr>
+</tbody></table>
+
+							</td>
+							<td width="10%">&nbsp;</td>
+						</tr>
+					</tbody></table>
+				</td>
+			</tr>
+		</tbody></table>
+	</div>
+	
+	<div align="center" id="BlockLayer" style="z-index:1001;
+	position:absolute;visibility:hidden;width:400px;height:100px;
+	border:0px solid #000000">
+		<table class="BlockMainBody" border="0" cellspacing="0" top="0" left="0" cellpadding="0" align="center" width="100%" height="100%">
+			<tbody><tr height="130px">
+				<td valign="bottom" align="center">
+					<div id="BlockLayerDivId">
+						<table id="BlockLayertblId">
+							<tbody><tr>
+								<td>
+									&nbsp;
+								</td>
+							</tr>
+						</tbody></table>
+					</div>
+				</td>
+			</tr>
+		</tbody></table>
+	</div>	
+
+	<div align="center" id="budgetConsumptionLayer" style="z-index:1001;
+		position:absolute;visibility:hidden;" class="PopupOuterBody">
+		<table class="PopupMainBody" border="0px" cellspacing="0" top="0" id="budgetTitleTbl" left="0" cellpadding="0" align="center" width="100%" height="250px">
+			<tbody><tr height="16px" valign="top" class="PopupTitleBody">
+				<td width="100%" class="PopupHeadingFont" align="left">
+					Budget Consumption Details
+				</td>
+				<td class="CloseFont" align="left" width="10px" onclick="hidePopupLayer(&#39;budgetConsumptionLayer&#39;);">
+					X
+				</td>
+			</tr>
+			<tr height="24px">
+				<td colspan="2" id="popupHead" width="100%" class="PopupHeadingBody" align="center">&nbsp;
+				</td>
+			</tr>
+			<tr height="24px">
+				<td colspan="2" id="popupHead" width="100%" class="PopupHeadingBody" align="center">
+					Budget Consumption Details
+				</td>
+			</tr>
+			<tr height="190px" valign="top">
+				<td align="center" width="100%" colspan="2">
+					<iframe align="center" width="550px" height="190px" frameborder="0" id="budgetInnerFrame" scrolling="no" name="budgetConsumptionFrame" src="./eChain_files/saved_resource(3).html" class="PopupFrameBorder">
+					</iframe>
+				</td>
+			</tr>
+		</tbody></table>
+	</div>
+	<div align="center" id="reasonLayer" style="z-index:1001;
+	position:absolute;visibility:hidden;width:400px;" class="PopupOuterBody">
+		<table class="" border="0px" cellspacing="0" top="0" id="ReasonTitleTbl" left="0" cellpadding="0" align="center" width="100%" height="200px">
+			<tbody><tr height="16px" valign="top">
+				<td>&nbsp;
+				</td>
+				<td width="16px" class="CloseFont" onclick="hideReasonLayer()" style="background-repeat:no-repeat;" align="right">
+					&nbsp;
+				</td>
+			</tr>
+			
+			<tr valign="top">
+				<td align="center" width="100%" colspan="2" boder="0">
+					<div scrolling="yes" style="height:175px;width:390px;overflow:auto;overflow-x:hidden;">
+					<table width="390px" height="175px" class="PopupFrameBorder">
+						<tbody><tr>
+							<td id="reasonContent" align="center" class="ReasonMessageFont" style="padding-right:20px;padding-left:10px;">
+								&nbsp;
+							</td>
+						</tr>
+					</tbody></table>
+					</div>
+				</td>
+			</tr>
+		</tbody></table>
+	</div>
+	
+	<div align="center" id="concurrentInlineLayer" style="position:relative;
+	visibility:hidden;width:320px;height:360px;margin:0px; padding:0px;-moz-border-radius: 2em 2em 2em 2em;border-radius: 2em 2em 2em 2em;border: 0px;" class="ConcurrentInlineMonitorBody">
+			
+		<div style="position:absolute; top:0px; left:0px; margin: 2px 2px 2px 2px;height:356px;width:316px;overflow-x:hidden;-moz-border-radius: 2em 2em 2em 2em;border-radius: 2em 2em 2em 2em;border: 0px;" class="ConcurrentInlineMonitorInnerBody">
+			<table align="center" cellspacing="5px">
+				<tbody><tr height="16px" width="100%" valign="middle">
+					<td width="85%" align="center" style="font-family:arial;color:#080808;font-size:12px;">
+						<b>CONCURRENT INLINE MONITOR</b>
+					</td>
+					<td width="15%" class="CloseFont" align="left" onclick="hideConcurrentInLineLayer()" style="background-repeat:no-repeat;BACKGROUND-POSITION:left;">
+						&nbsp;
+					</td>
+				</tr>
+				<tr>
+					<td id="concurrentInlineContent" colspan="2" align="center" style="padding-right:0px;padding-left:0px;">
+						&nbsp;
+					</td>
+				</tr>
+			</tbody></table>
+		</div>
+	</div>
+	
+</div>
+<script>
+    document.onmouseup=clearDragFlag;
+	document.onkeydown=checkEnteredKey;
+    document.getElementById('PopupTitleTbl').onmousemove=dragModalLayer;
+    document.getElementById('PopupTitleTbl').onmousedown=setDragFlag;
+
+    document.getElementById('CalendarTitleTbl').onmousemove=dragModalLayer;
+    document.getElementById('CalendarTitleTbl').onmousedown=setDragFlag;
+
+    document.getElementById('DescriptionTitleTbl').onmousemove=dragModalLayer;
+    document.getElementById('DescriptionTitleTbl').onmousedown=setDragFlag;
+    
+    setEventListener(document.getElementById("echainDescription"), "keydown", checkForClose);
+</script>
+<script>
+function callAfterAddRow() {
+		
+}
+</script>
+	<table id="bodyTable" border="0" cellpadding="0" cellspacing="0" width="100%" class="bodyBorderColor">
+		<tbody><tr>
+			<td>
+			<table border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tbody><tr>
+					<td>
+					<table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tbody><tr>
+							<td>
+							<table style="height: 487px; width: 100%;" cellpadding="0px" cellspacing="0px" id="MainTbl" border="0">
+								
+								<tbody><tr style="height:20px;">								
+									<td id="pageHead" align="center" class="BodyColor" style="width: 1341px;">
+										
+										
+											<font class="PageHeadingFont"> 
+												&nbsp;
+											</font>
+										 
+									</td>
+								</tr>
+																
+								<tr>
+									<td id="pageContent" class="BodyColor" align="center" style="width: 1341px;">
+										<div id="bodyLayer" style="width: 100%; height: 502px; overflow: hidden auto; position: relative;">
+											<table id="InnerMainTbl" cellspacing="0" cellpadding="0" style="width:99%;vertical-align:center;" height="100%">
+												<tbody><tr>
+													<td>
+															<!--
+/*******************************************************************
+*	Date			Name		Version			Comments
+*	17-AUG-2013		JRR			450.101			Removed duplicated onclick() attributes
+*	21-SEP-2013		KAVI		450.102			Added unit testing
+*   28-NOV-2014		RUBAN		450.103			Added UserLocation and UserLocationId
+*   23-JUN-2015		VEERA		450.104			Added contactNumber
+*******************************************************************/
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+/*******************************************************************
+DATE                    Version             Name          	Comment
+09-MAR-2006            411.101              AR      		Status value changed as O from Open
+10-MAR-2006            411.102              AR      		Added businessCase
+07-APR-2006            411.103              SS      		Added issueType,ncDescription,ncBusinessCase,ncProposedChange
+09-MAY-2006            411.104              AR      		Realonly removed for clientName
+11-MAY-2006            411.105              AR      		Added taskNo, taskId
+09-AUG-2006            411.106              SS      		Added mail for Awaiting for input
+14-AUG-2006            411.107              SS      		Added Log attach
+17-AUG-2006            411.108              SS      		Added Date and time for attachment
+17-AUG-2006            411.109              SS      		Added alert message for attachment
+21-AUG-2006            411.110              SS      		Changed the cond for logfile check
+01-SEP-2006            411.111              SUN      		taskid condtion added in attachment validation
+06-SEP-2006            411.111              SUN      		font size increased
+11-SEP-2006            411.112              AR      		Save button disabled for tested and closed status
+25-SEP-2006            411.113              AR      		Added delivery date and qaFlag
+05-JAN-2007            411.114              SS      		Moved From Portal(Project)
+05-JAN-2009            411.115              KAR      		Change task button
+15-MAY-2009            411.116              RKP             Remove the Attachment button and added Attachment Framework,Added alert and clientUserId parameter in getContractNames popup, Requested on  and Requested By Fields are displayed as labels, Realigned the UI
+16-MAY-2009            411.117              RKP             Modified the clientUserName textbox depends upon the logged user 
+26-MAY-2009            411.118              RKP             Modified date Validation and Realigned the UI
+05-JUN-2009			   411.119				PSD				business case made mandatory 
+29-JUN-2009			   411.120				JSAT			Contract cleared when the Client changed.
+21-JUL-2009			   411.121				PSD				status and priority field changed to bring value as collection
+23-JUL-2009			   411.122				PSD				Modified the callComponentPopup() 
+27-JUL-2009			   411.123				PSD				mappings corrected
+05-AUG-2009			   411.124				SNR				Rename one property as 'gav_enableUserModuleRestriction'
+10-AUG-2009			   411.125				SNR				Added the validation in callSubmit()
+27-AUG-2009			   411.126				GUNA			Added new status
+29-JUL-2010			   411.127				JSEN			Added the property of severity
+09-SEP-2010			   411.128				RPD				Changes in callSubmit Script method for Severity Validation
+17-SEP-2010			   411.129				VAS				Added Requester
+30-NOV-2010			   411.130				JSEN			Added Remarks
+30-DEC-2010			   411.131				VAS 			Added portalTrackViewFlag.
+09-FEB-2011			   411.132				RPD 			Changes in callSubmit java script method for Business Case Validation
+23-MAR-2011			   411.131				RPD 			Added previousStatus and constarint While Saving and in Displaying Create Task Button
+13-JUL-2011			   411.134				JSEN			Added gavFeedback and feedback
+18-JUL-2011			   411.135				JSEN			Validation changed in selectFeedback() method
+16-AUG-2011			   411.136				JSEN			Logical condition of feedback modified
+19-OCT-2011			   411.137				JSEN			feedback validation modified again
+22-OCT-2011			   411.138				JSEN			feedback validation ordered in submit() method
+22-MAR-2012            411.139              SPS             Added supervisorApprovalFlag
+05-APR-2012			   411.140				JRR				Copied script tag from ChangeRequest.jsp pasted
+07-MAY-2012			   411.141				SMM				Changes in ComponentPopup
+21-SEP-2013			   411.142				KAVI			Added unit testing
+28-NOV-2014			   451.101				RUBAN			Added projectmgmtLocationPopup
+23-JUN-2015			   451.102				VEERA			Added in callSubmit Script method for contactNumber,userLocation Validation
+23-JUN-2015			   451.103				VEERA			Location and contactNumber validation message is renamed
+*******************************************************************/
+-->
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+var isNS4 = (navigator.appName=="Netscape")?1:0;
+	function checkSpecialChars(str)
+	{
+		//str = obj.value;
+		//alert(str.indexOf('"'));
+ 		if(str.indexOf('"') != -1 || str.indexOf("'") != -1){
+			alert("\" and \' can not be allowed and will be replaced with ` ");		
+			str = replaceAll(str,'\"','');
+			str = replaceAll(str,'\'','');
+			//obj.value= str;	
+		 }	
+	}
+
+	function callSubmit()
+	{
+		with (document.forms[0])
+		{
+			if(componentId.value == 0 || contractId.value==0){
+				alert("Select Valid Module / Contract from Popup");
+				return false;
+			}	
+
+		}
+		
+		if (document.forms[0].description.value == '' && document.forms[0].descFlag.value != 'Y' )
+		{
+			alert("Enter the Description ");
+			return false;
+		}
+		
+		if((document.forms[0].priority.value == 'P1' || document.forms[0].priority.value == 'P2' ) && (document.forms[0].businessCase.value == '') && (document.forms[0].descFlag.value != 'Y'))
+		{
+			alert("Enter the Business Case");
+			return false;
+		}
+		
+		if(document.forms[0].priority.value == "SELECT")
+		{
+			alert("Priority is required");
+			return false;
+		}
+		
+		if(document.forms[0].severity.value == "SELECT")
+		{
+			alert("Severity is required");
+			return false;
+		}
+		
+		if((document.forms[0].userLocationId.value == "" || document.forms[0].userLocationId.value == 0) 
+				|| (document.forms[0].userLocationId.value != 0 && document.forms[0].userLocation.value == "" )){
+			alert("Location is required");
+			document.forms[0].userLocationId.value = 0;
+			return false;
+		}	
+		
+		if(document.forms[0].contactNumber.value == "") {
+			alert('Contact Number is required');
+			return false;
+		}
+		
+		if(document.forms[0].status.value == 'TESTED'){
+			if(document.forms[0].qaFlag.value != 'Y'){
+				alert("QA Flag must be checked");
+				return false;
+			}
+		}
+		
+		if ((document.forms[0].status.value == 'TESTED' || document.forms[0].status.value == "C") && document.forms[0].feedback.value == "" && document.forms[0].gavFeedback.value == "Y" && document.forms[0].taskId.value != 0)
+		{
+			alert("Please select the Feedback");
+			return false;
+		}
+		
+		if(document.forms[0].description.value != '' ){
+			//checkSpecialChars(document.forms[0].description.value);
+			var str = document.forms[0].description.value;
+ 			if(str.indexOf('"') != -1 || str.indexOf("'") != -1){
+				alert("\" and \' can not be allowed and will be replaced with ` in description");		
+				str = replaceAll(str,'\"','`');
+				str = replaceAll(str,'\'','`');
+				document.forms[0].description.value= str;	
+			 }	
+		}
+		if(document.forms[0].businessCase.value != '' ){
+			//checkSpecialChars(document.forms[0].businessCase.value);
+			var str = document.forms[0].businessCase.value;
+ 			if(str.indexOf('"') != -1 || str.indexOf("'") != -1){
+				alert("\" and \' can not be allowed and will be replaced with ` in business case");		
+				str = replaceAll(str,'\"','`');
+				str = replaceAll(str,'\'','`');
+				document.forms[0].businessCase.value= str;	
+			 }	
+		}
+		if(document.forms[0].proposedChange && document.forms[0].proposedChange.value != '' ){
+			//checkSpecialChars(document.forms[0].proposedChange.value);
+			var str = document.forms[0].proposedChange.value;
+ 			if(str.indexOf('"') != -1 || str.indexOf("'") != -1){
+ 				if(document.forms[0].issueType.value=='ISSUE'){
+					alert("\" and \' can not be allowed and will be replaced with ` in solution");		
+				}else{
+					alert("\" and \' can not be allowed and will be replaced with ` in proposed change");		
+				}
+				str = replaceAll(str,'\"','`');
+				str = replaceAll(str,'\'','`');
+				document.forms[0].proposedChange.value= str;	
+			 }	
+		}
+		var str1=document.forms[0].expectedDate.value;
+       	var str2=document.forms[0].requestedDate.value;
+       	var str3=(str2.substring(0, 11)); 
+       	
+       	str1=str1.replace("-"," ");
+       	str1=str1.replace("-"," ");
+       	str3=str3.replace("-"," ");
+       	str3=str3.replace("-"," ");
+        
+       	date1 = new Date(str1);
+       	date2 = new Date(str3);
+       	
+		if (document.forms[0].issueType.value == 'ISSUE') {
+		     document.forms[0].action = 'IssueAction.echn';
+		} else {
+		     document.forms[0].action = 'ChangeRequestAction.echn';
+		}             
+       	
+        if (document.forms[0].issueType.value=='ISSUE' ||document.forms[0].issueType.value=='REQUEST')
+        {
+		   	if (date2 > date1)
+		   	{ 
+			     alert("Expected date must be greater than Requested date ");
+			     return false;
+			} 
+		   	if (document.forms[0].status.value == "TOBETESTED" || document.forms[0].status.value == "AWAITINGFORINPUT")
+		   	{
+		   		//if(document.forms[0].logFlag.value != 'Y' && document.forms[0].status.value == "TOBETESTED" 
+		   			//&& document.forms[0].taskId.value != 0)
+		   		//{
+		   			//alert('Attach Log File');
+		   			//return false;
+		   		//}
+		   		if (document.forms[0].issueType.value == 'ISSUE' 
+		   			&& document.forms[0].status.value == "TOBETESTED"
+		   			&& document.forms[0].proposedChange.value == '') {
+		   			alert('Enter Solution');
+		   			return false;
+		   		} else if (document.forms[0].description.value == '' && document.forms[0].status.value != "TOBETESTED") {
+		   		
+		   			alert('Enter Description');
+		   			return false;
+		   		}
+		   		
+				if (document.forms[0].issueType.value == 'ISSUE') 
+				{
+				     document.forms[0].action = 'CreateIssueEmailAction.echn';
+				} else 
+				{
+				     document.forms[0].action = 'CreateRequestEmailAction.echn';
+				}
+				
+				document.forms[0].submit();
+				return false;   
+		    }
+		}
+		
+		if (document.forms[0].status.value == "TESTED" || document.forms[0].status.value == "TESTFAILED" )
+		{
+			if (document.forms[0].proposedChange.value =='' ) 
+			{
+				if (document.forms[0].issueType.value=='ISSUE') 
+				{
+					alert("Enter the test results in solution");
+				} else
+				{
+					alert("Enter the test results in proposed change");
+				}
+				return false;
+												
+			} else 
+			{
+				document.forms[0].action = "CreateRequestEmailAction.echn";
+				document.forms[0].submit();
+				return false;
+			}
+		}   
+		
+		if (document.forms[0].logicalStatus.value == "TOBETESTED")
+		{
+			if (document.forms[0].status.value != "TOBETESTED" && document.forms[0].proposedChange.value =='' ) 
+			{
+				if (document.forms[0].issueType.value=='ISSUE')
+				{
+					alert("Enter the test results in solution");
+				} else 
+				{
+					alert("Enter the test results in proposed change");
+				}
+				return false;				
+			}
+		}
+	
+		if (document.forms[0].status.value == "C" &&  document.forms[0].loginUserId.value != document.forms[0].requesterId.value) 
+		{ 
+		 	if (document.forms[0].responsibility.value != 'Administrator') 
+		 	{
+				alert(" Only  " +document.forms[0].requesterName.value +"  or Administrator can only close this");
+				return false;
+			}
+		}
+		
+		if (validateChangeRequestForm(document.forms[0]))
+		{
+			document.forms[0].submit();			
+		}
+	}
+	
+	function callChangeRequestList()
+	{
+		if(document.forms[0].changeFlag.value == 'Y') {
+			var confirmVar = confirm("Quit Without Saving?");
+	      	if (!(confirmVar)){
+	        	return false;
+	      	}
+		}
+		if (document.forms[0].issueType.value=='ISSUE')
+		{
+			location.href="IssueListAction.echn";
+		} else
+		{
+			location.href="ChangeRequestListAction.echn";
+		}
+	}
+	
+	function clearChangeRequest()
+	{
+		with(document.forms[0])
+		{ document.forms[0].reset();
+		}
+	}
+	
+	function newChangeRequest()
+	{
+		if(document.forms[0].changeFlag.value == 'Y') {
+			var confirmVar = confirm("Quit Without Saving?");
+	      	if (!(confirmVar)){
+	        	return false;
+	      	}
+		}
+		if(document.forms[0].issueType.value=='ISSUE'){
+			location.href="Issue.echn?autoURL=Y";
+		}else{
+			location.href="ChangeRequest.echn?autoURL=Y";
+		}
+	}
+
+	
+	function callComponentPopup(e)
+	{
+		objEvent = getEvent(e);
+		
+		if(document.forms[0].gav_enableUserModuleRestriction.value == 'Y') {
+		
+			var fields = new Array(3);
+				fields[0] = 'componentId';
+				fields[1] = 'componentName';
+				fields[2] = 'componentName';
+				fields[3] = 'supervisorApprovalFlag';
+				
+			var params = new Array(2);
+				params[0] = document.forms[0].componentName.value.toUpperCase()+'%';
+				params[1] = document.forms[0].loggedEmployeeId.value;
+				
+			showPopup('ComponentPopupAgainstUser', fields, params, alertOnChange, objEvent);
+			
+		} else {
+			showPopup('PMComponentPopup', 
+				new Array('componentId', 'componentName','componentName','supervisorApprovalFlag'),new Array(getTarget(objEvent).value.toUpperCase()+'%'), alertOnChange, objEvent);
+		}
+	}
+	
+
+	function expectedDatePopup(e)
+	{
+	    objEvent = getEvent(e);
+	    showCalendar('expectedDate', 'false', objEvent);
+	    alertOnChange();
+	}
+	
+	function attach(){
+		var pId = document.forms[0].changeRequestId.value;
+		document.forms[0].action = "/echain/projmgmt/EChainChangeRequestLinkAttach.echn?changeRequestId="+ pId +"&&scrName=C&&autoURL=Y";
+		document.forms[0].submit();
+	}
+	
+	function attach1(){
+		var pId = document.forms[0].changeRequestId.value;
+		document.forms[0].action = "/echain/projmgmt/EChainIssueLinkAttach.echn?changeRequestId="+ pId +"&&scrName=C&&autoURL=Y";
+		document.forms[0].submit();
+	}
+	
+	function logAttach(){
+		var crId = document.forms[0].changeRequestId.value;
+		if(crId == '0') 
+		{
+			alert('Save ChangeRequest');
+			return false;
+		}
+		document.forms[0].action = "/echain/projmgmt/EChainProjectsAttachForm.echn?crId="+ crId +"&&scrName=LC&&autoURL=Y";
+		document.forms[0].submit();
+	}
+	
+	function logAttach1(){
+		var crId = document.forms[0].changeRequestId.value;
+		if(crId == '0')
+		{
+			alert('Save Issue');
+			return false;
+		}
+		document.forms[0].action = "/echain/projmgmt/EChainProjectsAttachForm.echn?crId="+ crId +"&&scrName=LI&&autoURL=Y";
+		document.forms[0].submit();
+	}
+	
+	function delAttach(idVal){
+		document.forms[0].action = "/echain/projmgmt/ChangeRequestAttDelAction.echn?attachId=" + idVal + "&autoURL=Y";
+		document.forms[0].submit();
+	}
+	
+	function delAttach1(idVal){
+		document.forms[0].action = "/echain/projmgmt/IssueAttDelAction.echn?attachId=" + idVal + "&autoURL=Y";
+		document.forms[0].submit();
+	}
+	
+	function delLogAttach(idVal){
+		document.forms[0].action = "/echain/projmgmt/ChangeRequestLogAttDelAction.echn?attachId=" + idVal + "&autoURL=Y";
+		document.forms[0].submit();
+	}
+	
+	function delLogAttach1(idVal){
+		document.forms[0].action = "/echain/projmgmt/IssuelogAttDelAction.echn?attachId=" + idVal + "&autoURL=Y";
+		document.forms[0].submit();
+	}
+	
+	function callClientUserPopup(e)
+	{	
+		objEvent = getEvent(e);
+		showPopup('getProjmgmtClientUserPopup', 
+		new Array('clientUserId', 'clientUserName','clientUserName'),new Array(getTarget(objEvent).value.toUpperCase()+'%'), alertOnChange, objEvent);
+	}
+	
+	function callCreateTask()
+	{
+		if(document.forms[0].changeRequestNo.value != "" && document.forms[0].status.value != 'C' )
+		{
+			document.forms[0].action = "CreateChangeRequestTaskAction.echn";
+			document.forms[0].submit();
+		}
+		else
+		{
+			alert('Task cannot be created');
+		}
+	}
+	
+	function getContractNames(e)
+	{
+		 if(document.forms[0].clientUserName.value=="")
+	    {
+	      
+	      alert('Select the client');
+	      return false;
+	    }
+		objEvent=getEvent(e);
+		var fields=new Array(4);
+	      fields[0]="contractId";
+	   	  fields[1]="contractName";
+	   	  fields[2]="clientUserId";
+	   	  fields[3]="clientUserName";
+	   	  var params = new Array(2);
+	   	  params[0] =document.forms[0].contractName.value.toUpperCase()+'%';
+	   	  params[1] =document.forms[0].clientUserId.value;
+	   	  
+	   	  
+			showPopup('ContractPopupWithClient', fields, params, alertOnChange, objEvent);
+			
+			}
+	
+	function customerNamePopup(e)
+	{
+		objEvent = getEvent(e);
+		var rowIndex = getRowIndex(getTarget(objEvent));
+		document.forms[0].tempClientUserId.value = document.forms[0].clientUserId.value;
+		var fields=new Array(2);
+	      fields[0]="clientUserId";
+	   	  fields[1]="clientUserName";
+	      var params = new Array(1);
+	
+		  params[0] =document.forms[0].clientUserName.value.toUpperCase()+'%';
+			showPopup('CoreAllCustomers', fields, params, clearContract, objEvent);
+			
+	}	
+	
+	function clearContract() {
+		if(document.forms[0].tempClientUserId.value != document.forms[0].clientUserId.value) {
+			document.forms[0].contractId.value = 0;
+			document.forms[0].contractName.value = "";
+		}
+		alertOnChange();
+	}
+	
+	function validateSpecialCharacter(event){
+
+		if(!isNS4)
+		{
+			alert("Inside if");
+			if (event.keyCode==34 || event.keyCode==39){ 
+			event.returnValue = false;}
+		}
+		else
+		{
+			alert("Inside else");
+			alert(event.which);
+			if (event.which==34 || event.which==39) {
+			return false;}
+		}
+	}
+	
+	function disableSave()
+	{
+		if(document.forms[0].status.value == 'TESTED' || document.forms[0].status.value == 'C')
+		{
+			document.getElementById("idSave").style.visibility='hidden';
+		}
+		if(document.forms[0].qaFlag.value == 'Y')
+		{
+			document.getElementById("qa").checked=true;
+			
+		} else {
+			document.forms[0].qaFlagCheck.checked=false;
+		}
+	}
+	
+	function checkQA()
+	{
+		if(document.forms[0].qaFlagCheck.checked==true)	{
+			document.forms[0].qaFlag.value = "Y";
+		} else {
+			document.forms[0].qaFlag.value = "N";
+		}	
+	}
+	
+	function callStatusChange()
+	{
+		if(document.forms[0].status.value == 'TESTED'  ){
+			if(document.forms[0].qaFlag.value != 'Y' ){
+				document.getElementById("qa").disabled='true';
+			}
+		}
+	}
+
+	function CheckForTaskId() 
+	{
+		alert(document.forms[0].status.value);
+		alert(document.forms[0].previousStatus.value);
+		if(document.forms[0].status.value == 'TC' || document.forms[0].status.value == 'TA') {
+			
+			if(!document.forms[0].taskId.value == "" &&  document.forms[0].taskId.value != null) {
+				
+				document.forms[0].status.value = document.forms[0].previousStatus.value;
+				
+				if(document.forms[0].issueType.value=='ISSUE') {
+					
+					alert(document.forms[0].status.value);
+					alert("Task is not Created against this Issue");
+					
+				} else {
+					
+					alert(document.forms[0].status.value);
+					alert("Task is not Created against this Change Request");
+					
+				}
+				
+				return false
+			}
+			
+		}
+		
+	}
+	
+	function selectFeedback()
+	{
+		if ((document.forms[0].status.value == 'TESTED' || document.forms[0].status.value == 'C') && document.forms[0].feedback.value == '' && document.forms[0].gavFeedback.value == 'Y' && document.forms[0].taskId.value != 0)
+		{
+			alert("Please select the Feedback");
+			return false;
+		}
+		alertOnChange();
+	}
+	
+	function alertOnChange(e) {
+		document.forms[0].changeFlag.value = 'Y';
+	}
+	
+	function projectmgmtLocationPopup(e)
+	{
+		objEvent = getEvent(e);
+		objTarget = getTarget(objEvent);
+
+		if (objTarget.readOnly == true) {
+			return false;
+		}
+		
+		var fields = new Array(1);
+			fields[0] = 'userLocation';
+			fields[1] = 'userLocationId';
+			
+		var params = new Array(1);
+		params[0] = document.forms[0].userLocation.value.toUpperCase();
+		showPopup('PROJECT_MANAGEMENT_LOCATION_POPUP', fields, params, null, objEvent);
+	}
+	
+	function checkNumber(e) {
+		
+		var unicode = e.charCode? e.charCode : e.keyCode
+    	
+		if (unicode != 8 && unicode != 13 && unicode != 46) {
+		
+			if (unicode < 48 || unicode > 57) {
+				return false;
+			}
+		} 
+		return true;
+	}
+	
+</script>
+
+
+<form name="crForm" method="post" action="http://192.168.0.102:2020/echain/projmgmt/ChangeRequestAction.echn">
+<table cellpadding="5" cellspacing="1px" border="0" style="width:90%;" valign="top" align="center">
+  <tbody>
+   <tr>
+  	   <td class="PageHeadingFont" colspan="8" style="text-align:center">
+  	   	  <input type="hidden" name="tempClientUserId" value="0">
+      	  
+      	  
+      		  Issue
+      	  
+      </td>
+  </tr>
+  <tr height="22px"><td colspan="8"></td> 
+  </tr> 
+  <tr>
+      
+      
+     	 <td width="10%" class="LabelFont">      
+      		Issue No
+     	 </td>
+      
+      
+        <td width="20%">
+			<input type="text" name="changeRequestNo" value="" readonly="readonly" class="MandatoryTextboxFont">
+			<input type="hidden" name="changeRequestId" value="0">
+			<input type="hidden" name="requestFlag" value="false">
+			<input type="hidden" name="issueType" value="ISSUE">
+			<input type="hidden" name="descFlag" value="">
+			<input type="hidden" name="logFlag" value="">
+			<input type="hidden" name="taskFlag" value="N">
+			<input type="hidden" name="loginUserId" value="0">
+			<input type="hidden" name="responsibility" value="">
+			<input type="hidden" name="requestedDate" value="25-APR-2022 16:41:00">
+			<input type="hidden" name="requesterName" value="SUJA3005">
+			<input type="hidden" name="gav_enableUserModuleRestriction" value="N">
+			<input type="hidden" name="loggedEmployeeId" value="12897">
+			<input type="hidden" name="portalTrackViewFlag" value="">
+			<input type="hidden" name="previousStatus" value="O">
+			<input type="hidden" name="supervisorApprovalFlag" value="Y">
+			<input type="hidden" name="changeFlag" value="Y">
+       </td>
+       <td width="10%" class="LabelFont">
+	      Requested On
+       </td>
+      
+       <td width="20%" style="FONT-SIZE: 11px;FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;TEXT-ALIGN:LEFT;">
+		  25-APR-2022 16:41:00
+       </td>
+       <td width="10%" class="LabelFont">
+	      Requested By
+       </td>
+       <td width="20%" style="FONT-SIZE: 11px;FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;TEXT-ALIGN:LEFT;" "="">
+		  SUJA3005
+		  <input type="hidden" name="requesterId" value="12821">
+       </td>
+  </tr>
+  <tr>
+      <td width="10%" class="LabelFont">
+	     Module 
+      </td>
+      <td width="20%" class="ListLabelFont">
+		<input type="text" name="componentName" value="" class="MandatoryTextboxFont">
+		<input type="hidden" name="componentId" value="7">
+		<input type="hidden" name="changeRequestType" value="">
+		<input type="hidden" name="userName" value="">
+      </td>
+      <td width="10%" class="LabelFont">
+	      Priority
+      </td>
+      
+      <td width="20%" class="ListLabelFont">
+      	
+			<input type="text" name="cmb_text_priority" value="--Select--" readonly="true" class="MandatoryTextboxFont">
+
+<input type="hidden" name="priority" value="P1">
+<div id="cmb_layer_priority" onmouseout="waitToSelect();" onmouseover="clearSelectHide();" class="ComboLayer" style="left: 612px; top: 106px; width: 154px; height: 80px; visibility: hidden;">
+<table cellspacing="1px" cellpadding="1px" border="0" id="cmb_table_priority" class="ComboBG" height="72px">
+<tbody><tr id="cmb_tr_0_priority" height="16px" onmousedown="selectValue();" onmouseover="changeSelectColor(this);" class="ComboBG" style="cursor: pointer;"><td id="cmb_td_0_priority" class="ComboFont">
+<a href="javascript:selectValue();" id="cmb_a_0_priority" class="selectBoxNormalFont" style="text-decoration:none">--Select--</a>
+<input type="hidden" name="cmb_0_priority_value" value="SELECT">
+ <input type="hidden" name="cmb_0_priority_display" value="--Select--">
+</td></tr>
+<tr id="cmb_tr_1_priority" height="16px" onmousedown="selectValue();" onmouseover="changeSelectColor(this);" class="ComboBG" style="cursor: pointer;"><td id="cmb_td_1_priority" class="ComboFont">
+<a href="javascript:selectValue();" id="cmb_a_1_priority" class="selectBoxNormalFont" style="text-decoration:none">P3</a>
+<input type="hidden" name="cmb_1_priority_value" value="P3">
+ <input type="hidden" name="cmb_1_priority_display" value="P3">
+</td></tr>
+<tr id="cmb_tr_2_priority" height="16px" onmousedown="selectValue();" onmouseover="changeSelectColor(this);" class="ComboBG" style="cursor: pointer;"><td id="cmb_td_2_priority" class="ComboFont">
+<a href="javascript:selectValue();" id="cmb_a_2_priority" class="selectBoxNormalFont" style="text-decoration:none">P2</a>
+<input type="hidden" name="cmb_2_priority_value" value="P2">
+ <input type="hidden" name="cmb_2_priority_display" value="P2">
+</td></tr>
+<tr id="cmb_tr_3_priority" height="16px" onmousedown="selectValue();" onmouseover="changeSelectColor(this);" class="selectBoxOverFont" style="cursor: pointer;"><td id="cmb_td_3_priority" class="ComboFont">
+<a href="javascript:selectValue();" id="cmb_a_3_priority" class="selectBoxOverFont" style="text-decoration:none">P1</a>
+<input type="hidden" name="cmb_3_priority_value" value="P1">
+ <input type="hidden" name="cmb_3_priority_display" value="P1">
+</td></tr>
+</tbody></table></div>
+<input type="hidden" id="cmb_visible_priority" value="3"><script>
+setSelectKeyEvent(document.getElementById('cmb_a_0_priority'));
+setSelectKeyEvent(document.getElementById('cmb_a_1_priority'));
+setSelectKeyEvent(document.getElementById('cmb_a_2_priority'));
+setSelectKeyEvent(document.getElementById('cmb_a_3_priority'));
+</script>
+<script>
+
+setEventListener(document.forms[0].cmb_text_priority, 'focus', setSelectTarget);
+
+setEventListener(document.forms[0].cmb_text_priority, 'click', placeSelectLayer);
+
+setEventListener(document.forms[0].cmb_text_priority, 'keydown', placeSelectLayer);
+
+onChangeFns['priority']=alertOnChange;
+
+</script>
+
+ 
+      </td>
+      
+      <td width="10%" class="LabelFont">
+	      Severity
+      </td>
+      
+      <td width="20%" class="ListLabelFont">
+      	
+			<input type="text" name="cmb_text_severity" value="--Select--" readonly="true" class="MandatoryTextboxFont">
+
+<input type="hidden" name="severity" value="S1">
+<div id="cmb_layer_severity" onmouseout="waitToSelect();" onmouseover="clearSelectHide();" class="ComboLayer" style="visibility: hidden; left: 1012px; top: 106px; width: 154px; height: 100px;">
+<table cellspacing="1px" cellpadding="1px" border="0" id="cmb_table_severity" class="ComboBG" height="90px">
+<tbody><tr id="cmb_tr_0_severity" height="16px" onmousedown="selectValue();" onmouseover="changeSelectColor(this);" class="ComboBG" style="cursor: pointer;"><td id="cmb_td_0_severity" class="ComboFont">
+<a href="javascript:selectValue();" id="cmb_a_0_severity" class="selectBoxNormalFont" style="text-decoration:none">--Select--</a>
+<input type="hidden" name="cmb_0_severity_value" value="SELECT">
+ <input type="hidden" name="cmb_0_severity_display" value="--Select--">
+</td></tr>
+<tr id="cmb_tr_1_severity" height="16px" onmousedown="selectValue();" onmouseover="changeSelectColor(this);" class="ComboBG" style="cursor: pointer;"><td id="cmb_td_1_severity" class="ComboFont">
+<a href="javascript:selectValue();" id="cmb_a_1_severity" class="selectBoxNormalFont" style="text-decoration:none">S4</a>
+<input type="hidden" name="cmb_1_severity_value" value="S4">
+ <input type="hidden" name="cmb_1_severity_display" value="S4">
+</td></tr>
+<tr id="cmb_tr_2_severity" height="16px" onmousedown="selectValue();" onmouseover="changeSelectColor(this);" class="AnchorRow"><td id="cmb_td_2_severity" class="ComboFont">
+<a href="javascript:selectValue();" id="cmb_a_2_severity" class="ComboFont" style="text-decoration:none">S3</a>
+<input type="hidden" name="cmb_2_severity_value" value="S3">
+ <input type="hidden" name="cmb_2_severity_display" value="S3">
+</td></tr>
+<tr id="cmb_tr_3_severity" height="16px" onmousedown="selectValue();" onmouseover="changeSelectColor(this);" class="AnchorRow"><td id="cmb_td_3_severity" class="ComboFont">
+<a href="javascript:selectValue();" id="cmb_a_3_severity" class="ComboFont" style="text-decoration:none">S2</a>
+<input type="hidden" name="cmb_3_severity_value" value="S2">
+ <input type="hidden" name="cmb_3_severity_display" value="S2">
+</td></tr>
+<tr id="cmb_tr_4_severity" height="16px" onmousedown="selectValue();" onmouseover="changeSelectColor(this);" class="ComboBG" style="cursor: pointer;"><td id="cmb_td_4_severity" class="ComboFont">
+<a href="javascript:selectValue();" id="cmb_a_4_severity" class="selectBoxNormalFont" style="text-decoration:none">S1</a>
+<input type="hidden" name="cmb_4_severity_value" value="S1">
+ <input type="hidden" name="cmb_4_severity_display" value="S1">
+</td></tr>
+</tbody></table></div>
+<input type="hidden" id="cmb_visible_severity" value="4"><script>
+setSelectKeyEvent(document.getElementById('cmb_a_0_severity'));
+setSelectKeyEvent(document.getElementById('cmb_a_1_severity'));
+setSelectKeyEvent(document.getElementById('cmb_a_2_severity'));
+setSelectKeyEvent(document.getElementById('cmb_a_3_severity'));
+setSelectKeyEvent(document.getElementById('cmb_a_4_severity'));
+</script>
+<script>
+
+setEventListener(document.forms[0].cmb_text_severity, 'focus', setSelectTarget);
+
+setEventListener(document.forms[0].cmb_text_severity, 'click', placeSelectLayer);
+
+setEventListener(document.forms[0].cmb_text_severity, 'keydown', placeSelectLayer);
+
+onChangeFns['severity']=alertOnChange;
+
+</script>
+
+ 
+      </td>
+      
+  </tr>
+  <tr>
+     <td width="10%" class="LabelFont">
+	      Title
+     </td>
+     <td colspan="3" class="ListLabelFont">
+          <input type="text" name="changeRequestTitle" value="" style="width:86%;" class="MandatoryTextboxFont">
+     </td>
+     
+     <td width="10%" class="LabelFont">
+	      Status
+      </td>
+      <td width="20%" class="ListLabelFont">
+          
+    	 
+    	  	
+			<input type="text" name="cmb_text_status" value="Open" readonly="true" class="MandatoryTextboxFont">
+
+<input type="hidden" name="status" value="O">
+<div id="cmb_layer_status" onmouseout="waitToSelect();" onmouseover="clearSelectHide();" class="ComboLayer">
+<table cellspacing="1px" cellpadding="1px" border="0" id="cmb_table_status" class="ComboBG" height="18px">
+<tbody><tr id="cmb_tr_0_status" height="16px" onmousedown="selectValue();" onmouseover="changeSelectColor(this);" class="AnchorRow"><td id="cmb_td_0_status" class="ComboFont">
+<a href="javascript:selectValue();" id="cmb_a_0_status" class="ComboFont" style="text-decoration:none">Open</a>
+<input type="hidden" name="cmb_0_status_value" value="O">
+ <input type="hidden" name="cmb_0_status_display" value="Open">
+</td></tr>
+</tbody></table></div>
+<input type="hidden" id="cmb_visible_status" value="9"><script>
+setSelectKeyEvent(document.getElementById('cmb_a_0_status'));
+</script>
+<script>
+
+setEventListener(document.forms[0].cmb_text_status, 'focus', setSelectTarget);
+
+setEventListener(document.forms[0].cmb_text_status, 'click', placeSelectLayer);
+
+setEventListener(document.forms[0].cmb_text_status, 'keydown', placeSelectLayer);
+
+onChangeFns['status']=selectFeedback;
+
+</script>
+
+ 
+		
+    	  		
+		
+		
+        <input type="hidden" name="logicalStatus" value="">
+        
+     </td>
+     
+  </tr>
+  <tr>
+      <td width="10%" class="LabelFont">
+          Expected Date
+      </td>
+      <td width="20%" class="ListLabelFont">
+		  <input type="text" name="expectedDate" value="" class="MandatoryTextboxFont">
+      </td>
+      <td width="10%" class="LabelFont">
+	      Client
+      </td>
+      <td width="20%" class="ListLabelFont">
+         
+		 
+		    <input type="text" name="clientUserName" value="" class="MandatoryTextboxFont">
+		 
+		    <input type="hidden" name="clientUserId" value="159">
+		    <input type="hidden" name="userType" value="">
+      </td>
+    
+      <td width="10%" class="LabelFont">
+	       Contract
+      </td>
+      <td width="20%" class="ListLabelFont">
+	       <input type="text" name="contractName" value="" class="MandatoryTextboxFont">
+		   <input type="hidden" name="contractId" value="160">
+      </td>
+  </tr>   
+  <tr height="5px"> <td colspan="6" bgcolor="gray"> </td> </tr>
+  <tr>
+       <td class="LabelFont">
+	       Delivery Date
+       </td>
+       <td class="ListLabelFont">
+		   <input type="text" name="deliveryDate" value="" readonly="readonly" class="LinesReadOnlyTextboxFont">
+       </td>
+       <td class="LabelFont">
+	       Task No
+       </td>
+       <td class="ListLabelFont">
+		   <input type="text" name="taskNo" value="" readonly="readonly" class="LinesReadOnlyTextboxFont">
+		   <input type="hidden" name="taskId" value="0">
+	   </td>
+        <td class="LabelFont">
+	       Location
+       </td>
+       <td width="20%" class="ListLabelFont">
+	       <input type="text" name="userLocation" value="" class="MandatoryTextboxFont">
+		   <input type="hidden" name="userLocationId" value="11042">
+      </td>
+   </tr> 
+  <tr>
+  		<td class="LabelFont">
+	       Requestor
+       </td>
+       <td class="ListLabelFont">
+		   <input type="text" name="requester" value="" class="TextboxFont">
+       </td>
+       <td class="LabelFont">
+	       Remarks
+       </td>
+       <td class="ListLabelFont">
+		   <input type="text" name="remarks" value="" class="TextboxFont">
+       </td>
+       
+	   
+	   		<input type="hidden" name="feedback" value="">
+	   
+	   <input type="hidden" name="gavFeedback" value="N">
+  </tr>
+    <tr>
+     <td class="LabelFont">
+       Contact Number
+     </td>
+     <td width="20%" class="ListLabelFont">
+       <input type="text" name="contactNumber" value="" onkeypress="return checkNumber(event)" class="MandatoryTextboxFont">
+     </td>
+     <td></td><td></td>
+     <td id="beanqa" class="LabelFont">
+	       QA Flag
+       </td>
+       <td class="ListLabelFont">
+		   <input id="qa" type="checkBox" name="qaFlagCheck" onclick="checkQA()">
+		   <input type="hidden" name="qaFlag" value="">
+	   </td>	
+   </tr> 
+  <tr>
+      <td colspan="4">
+      	<table width="77%" align="center" cellspacing="0" cellpadding="0">
+      		<tbody><tr>
+      			
+				    
+					
+				  
+      		</tr>
+      	</tbody></table>
+      </td>
+
+   </tr> 
+ 
+	
+<tr>
+	<td class="LabelFont" style="border-bottom:solid 1px #4967a1;border-left:solid 1px #4967a1; border-top:solid 1px #4967a1;border-right:solid 1px #4967a1;">
+		Problem Description
+    </td>
+    <td colspan="5" style="border-bottom:solid 1px #4967a1;border-top:solid 1px #4967a1;border-right:solid 1px #4967a1;">
+    	<table>
+			 
+    	   <tbody><tr>
+		     <td>
+				<textarea name="description" cols="110" rows="10" class="LinesTextboxFont"></textarea>
+			 </td>
+		   </tr>
+	   </tbody></table>
+	 </td>
+</tr>
+
+
+<tr>
+	<td class="LabelFont" style="border-bottom:solid 1px #4967a1;border-left:solid 1px #4967a1; border-right:solid 1px #4967a1;">
+		Business Case
+    </td>
+    <td colspan="5" style="border-bottom:solid 1px #4967a1;border-right:solid 1px #4967a1;">
+    	<table>
+ 
+    	   <tbody><tr>
+		     <td>
+				<textarea name="businessCase" cols="110" rows="10" class="LinesTextboxFont"></textarea>
+			 </td>
+		   </tr>
+	   </tbody></table>
+	 </td>
+</tr>
+
+
+
+
+
+    
+
+
+       
+     <tr>
+		<td colspan="4" align="center">
+			<table border="0" cellspacing="3" cellpadding="0" align="center" width="77%">
+				<tbody><tr>
+					
+					
+					
+					
+				</tr>
+			</tbody></table>
+			</td>			
+		</tr>
+    
+  </tbody>
+</table>
+<input name="announcementMessage" type="hidden" value=""><input name="dateFormat" type="hidden" value="dd-MMM-yyyy"><input name="currentFormBean" type="hidden" value="com.echain.projmgmt.web.form.ChangeRequestForm"><input name="currentDate" type="hidden" value="25-APR-2022"><input name="userSourceName" type="hidden" value="SUJATHA  S"><input name="userSourceId" type="hidden" value="12897"><input name="defaultHRUnitId" type="hidden" value="0"><input name="defaultHRUnitName" type="hidden" value=""><input name="autoFillInput" type="hidden" value=""><input name="MouseX" type="hidden" value="762"><input name="MouseY" type="hidden" value="315"></form></td></tr><tr>
+     </tr></tbody></table><table align="center">
+      <tbody><tr><td style="vertical-align: top; text-align: center; rowspan=" 1"="" colspan="8">
+       
+		<table id="buttonRow" cellpadding="0" cellspacing="30px">
+<tbody><tr>
+<td><table id="componentList" cellpadding="0" cellspacing="0" onmouseover="buttonOver(&#39;componentList&#39;)" onmouseout="buttonOut(&#39;componentList&#39;)" onclick="callChangeRequestList()"><tbody><tr><td class="btnleft">&nbsp;</td><td class="btnmid" width="100px"><font class="btn">
+					Search &amp; List
+				</font></td><td class="btnright">&nbsp;</td></tr></tbody></table></td>
+<td><table id="newRec" cellpadding="0" cellspacing="0" onmouseover="buttonOver(&#39;newRec&#39;)" onmouseout="buttonOut(&#39;newRec&#39;)" onclick="newChangeRequest()"><tbody><tr><td class="btnleft">&nbsp;</td><td class="btnmid" width="80px"><font class="btn">
+						New Issue
+					</font></td><td class="btnright">&nbsp;</td></tr></tbody></table></td>
+<td><table id="clear" cellpadding="0" cellspacing="0" onmouseover="buttonOver(&#39;clear&#39;)" onmouseout="buttonOut(&#39;clear&#39;)" onclick="clearChangeRequest()"><tbody><tr><td class="btnleft">&nbsp;</td><td class="btnmid" width="80px"><font class="btn">
+					Clear
+				</font></td><td class="btnright">&nbsp;</td></tr></tbody></table></td>
+<td><table id="idSave" cellpadding="0" cellspacing="0" onmouseover="buttonOver(&#39;idSave&#39;)" onmouseout="buttonOut(&#39;idSave&#39;)" onclick="callSubmit();"><tbody><tr><td class="btnleft">&nbsp;</td><td class="btnmid" width="80px"><font class="btn">
+				Save
+			</font></td><td class="btnright">&nbsp;</td></tr></tbody></table></td>
+</tr>
+</tbody></table>
+
+      </td>
+      </tr></tbody></table>
+    </div></td></tr>
+
+<script type="text/javascript" language="Javascript1.1"> 
+
+<!-- Begin 
+
+     var bCancel = false; 
+
+    function validateChangeRequestForm(form) {                                                                   
+        if (bCancel) 
+      return true; 
+        else 
+       return validateRequired(form); 
+   } 
+
+    function required () { 
+     this.aa = new Array("changeRequestTitle", "Title is required.", new Function ("varName", " return this[varName];"));
+     this.ab = new Array("componentName", "Component Name is required.", new Function ("varName", " return this[varName];"));
+     this.ac = new Array("expectedDate", "Expected Date is required.", new Function ("varName", " return this[varName];"));
+     this.ad = new Array("contractName", "Contract is required.", new Function ("varName", " return this[varName];"));
+    } 
+
+
+
+function validateMinLength(form) {
+                var isValid = true;
+                var focusField = null;
+                var i = 0;
+                var fields = new Array();
+                oMinLength = new minlength();
+                for (x in oMinLength) {
+                    var field = form[oMinLength[x][0]];
+                    
+                    if (field.type == 'text' ||
+                        field.type == 'textarea') {
+                        
+                        var iMin = parseInt(oMinLength[x][2]("minlength"));
+                        if ((trim(field.value).length > 0) && (field.value.length < iMin)) {
+                            if (i == 0) {
+                                focusField = field;
+                            }
+                            fields[i++] = oMinLength[x][1];
+                            isValid = false;
+                        }
+                    }
+                }
+                if (fields.length > 0) {
+                   focusField.focus();
+                   alert(fields.join('\n'));
+                }
+                return isValid;
+            }
+function validateFloatRange(form) {
+                var isValid = true;
+                var focusField = null;
+                var i = 0;
+                var fields = new Array();
+                oRange = new floatRange();
+                for (x in oRange) {
+                    var field = form[oRange[x][0]];
+                    
+                    if ((field.type == 'text' ||
+                         field.type == 'textarea') &&
+                        (field.value.length > 0)) {
+                        
+                        var fMin = parseFloat(oRange[x][2]("min"));
+                        var fMax = parseFloat(oRange[x][2]("max"));
+                        var fValue = parseFloat(field.value);
+                        if (!(fValue >= fMin && fValue <= fMax)) {
+                            if (i == 0) {
+                                focusField = field;
+                            }
+                            fields[i++] = oRange[x][1];
+                            isValid = false;
+                        }
+                    }
+                }
+                if (fields.length > 0) {
+                    focusField.focus();
+                    alert(fields.join('\n'));
+                }
+                return isValid;
+            }
+function validateIntRange(form) {
+                var isValid = true;
+                var focusField = null;
+                var i = 0;
+                var fields = new Array();
+                oRange = new intRange();
+                for (x in oRange) {
+                    var field = form[oRange[x][0]];
+                    
+                    if ((field.type == 'text' ||
+                         field.type == 'textarea') &&
+                        (field.value.length > 0)) {
+                        
+                        var iMin = parseInt(oRange[x][2]("min"));
+                        var iMax = parseInt(oRange[x][2]("max"));
+                        var iValue = parseInt(field.value);
+                        if (!(iValue >= iMin && iValue <= iMax)) {
+                            if (i == 0) {
+                                focusField = field;
+                            }
+                            fields[i++] = oRange[x][1];
+                            isValid = false;
+                        }
+                    }
+                }
+                if (fields.length > 0) {
+                    focusField.focus();
+                    alert(fields.join('\n'));
+                }
+                return isValid;
+            }
+function validateRange(form) {
+                return validateIntRange(form);
+            }
+function validateInteger(form) {
+                var bValid = true;
+                var focusField = null;
+                var i = 0;
+                var fields = new Array();
+                oInteger = new IntegerValidations();
+                for (x in oInteger) {
+                	var field = form[oInteger[x][0]];
+
+                    if (field.type == 'text' ||
+                        field.type == 'textarea' ||
+                        field.type == 'select-one' ||
+                        field.type == 'radio') {
+                        
+                        var value = '';
+						// get field's value
+						if (field.type == "select-one") {
+							var si = field.selectedIndex;
+						    if (si >= 0) {
+							    value = field.options[si].value;
+						    }
+						} else {
+							value = field.value;
+						}
+                        
+                        if (value.length > 0) {
+                        
+                            if (!isAllDigits(value)) {
+                                bValid = false;
+                                if (i == 0) {
+	                                focusField = field;
+	                            }
+						        fields[i++] = oInteger[x][1];
+						        
+                            } else {
+	                            var iValue = parseInt(value);
+	                            if (isNaN(iValue) || !(iValue >= -2147483648 && iValue <= 2147483647)) {
+	                                if (i == 0) {
+	                                    focusField = field;
+	                                }
+	                                fields[i++] = oInteger[x][1];
+	                                bValid = false;
+	                           }
+                           }
+                       }
+                    }
+                }
+                if (fields.length > 0) {
+                   focusField.focus();
+                   alert(fields.join('\n'));
+                }
+                return bValid;
+            }
+
+            function isAllDigits(argvalue) {
+                argvalue = argvalue.toString();
+                var validChars = "0123456789";
+                var startFrom = 0;
+                if (argvalue.substring(0, 2) == "0x") {
+                   validChars = "0123456789abcdefABCDEF";
+                   startFrom = 2;
+                } else if (argvalue.charAt(0) == "0") {
+                   validChars = "01234567";
+                   startFrom = 1;
+                } else if (argvalue.charAt(0) == "-") {
+                    startFrom = 1;
+                }
+                
+                for (var n = startFrom; n < argvalue.length; n++) {
+                    if (validChars.indexOf(argvalue.substring(n, n+1)) == -1) return false;
+                }
+                return true;
+            }
+function validateMask(form) {
+                var isValid = true;
+                var focusField = null;
+                var i = 0;
+                var fields = new Array();
+                oMasked = new mask();
+                for (x in oMasked) {
+                    var field = form[oMasked[x][0]];
+                    
+                    if ((field.type == 'text' || 
+                         field.type == 'textarea') && 
+                         (field.value.length > 0)) {
+                        
+                        if (!matchPattern(field.value, oMasked[x][2]("mask"))) {
+                            if (i == 0) {
+                                focusField = field;
+                            }
+                            fields[i++] = oMasked[x][1];
+                            isValid = false;
+                        }
+                    }
+                }
+                
+                if (fields.length > 0) {
+                   focusField.focus();
+                   alert(fields.join('\n'));
+                }
+                return isValid;
+            }
+
+            function matchPattern(value, mask) {
+               return mask.exec(value);
+            }
+function validateDate(form) {
+               var bValid = true;
+               var focusField = null;
+               var i = 0;
+               var fields = new Array();
+               oDate = new DateValidations();
+               for (x in oDate) {
+                   var value = form[oDate[x][0]].value;
+                   var datePattern = oDate[x][2]("datePatternStrict");
+                   if ((form[oDate[x][0]].type == 'text' ||
+                        form[oDate[x][0]].type == 'textarea') &&
+                       (value.length > 0) &&
+                       (datePattern.length > 0)) {
+                     var MONTH = "MM";
+                     var DAY = "dd";
+                     var YEAR = "yyyy";
+                     var orderMonth = datePattern.indexOf(MONTH);
+                     var orderDay = datePattern.indexOf(DAY);
+                     var orderYear = datePattern.indexOf(YEAR);
+                     if ((orderDay < orderYear && orderDay > orderMonth)) {
+                         var iDelim1 = orderMonth + MONTH.length;
+                         var iDelim2 = orderDay + DAY.length;
+                         var delim1 = datePattern.substring(iDelim1, iDelim1 + 1);
+                         var delim2 = datePattern.substring(iDelim2, iDelim2 + 1);
+                         if (iDelim1 == orderDay && iDelim2 == orderYear) {
+                            dateRegexp = new RegExp("^(\\d{2})(\\d{2})(\\d{4})$");
+                         } else if (iDelim1 == orderDay) {
+                            dateRegexp = new RegExp("^(\\d{2})(\\d{2})[" + delim2 + "](\\d{4})$");
+                         } else if (iDelim2 == orderYear) {
+                            dateRegexp = new RegExp("^(\\d{2})[" + delim1 + "](\\d{2})(\\d{4})$");
+                         } else {
+                            dateRegexp = new RegExp("^(\\d{2})[" + delim1 + "](\\d{2})[" + delim2 + "](\\d{4})$");
+                         }
+                         var matched = dateRegexp.exec(value);
+                         if(matched != null) {
+                            if (!isValidDate(matched[2], matched[1], matched[3])) {
+                               if (i == 0) {
+                                   focusField = form[oDate[x][0]];
+                               }
+                               fields[i++] = oDate[x][1];
+                               bValid =  false;
+                            }
+                         } else {
+                            if (i == 0) {
+                                focusField = form[oDate[x][0]];
+                            }
+                            fields[i++] = oDate[x][1];
+                            bValid =  false;
+                         }
+                     } else if ((orderMonth < orderYear && orderMonth > orderDay)) {
+                         var iDelim1 = orderDay + DAY.length;
+                         var iDelim2 = orderMonth + MONTH.length;
+                         var delim1 = datePattern.substring(iDelim1, iDelim1 + 1);
+                         var delim2 = datePattern.substring(iDelim2, iDelim2 + 1);
+                         if (iDelim1 == orderMonth && iDelim2 == orderYear) {
+                             dateRegexp = new RegExp("^(\\d{2})(\\d{2})(\\d{4})$");
+                         } else if (iDelim1 == orderMonth) {
+                             dateRegexp = new RegExp("^(\\d{2})(\\d{2})[" + delim2 + "](\\d{4})$");
+                         } else if (iDelim2 == orderYear) {
+                             dateRegexp = new RegExp("^(\\d{2})[" + delim1 + "](\\d{2})(\\d{4})$");
+                         } else {
+                             dateRegexp = new RegExp("^(\\d{2})[" + delim1 + "](\\d{2})[" + delim2 + "](\\d{4})$");
+                         }
+                         var matched = dateRegexp.exec(value);
+                         if(matched != null) {
+                             if (!isValidDate(matched[1], matched[2], matched[3])) {
+                                 if (i == 0) {
+                                     focusField = form[oDate[x][0]];
+                                 }
+                                 fields[i++] = oDate[x][1];
+                                 bValid =  false;
+                              }
+                         } else {
+                             if (i == 0) {
+                                 focusField = form[oDate[x][0]];
+                             }
+                             fields[i++] = oDate[x][1];
+                             bValid =  false;
+                         }
+                     } else if ((orderMonth > orderYear && orderMonth < orderDay)) {
+                         var iDelim1 = orderYear + YEAR.length;
+                         var iDelim2 = orderMonth + MONTH.length;
+                         var delim1 = datePattern.substring(iDelim1, iDelim1 + 1);
+                         var delim2 = datePattern.substring(iDelim2, iDelim2 + 1);
+                         if (iDelim1 == orderMonth && iDelim2 == orderDay) {
+                             dateRegexp = new RegExp("^(\\d{4})(\\d{2})(\\d{2})$");
+                         } else if (iDelim1 == orderMonth) {
+                             dateRegexp = new RegExp("^(\\d{4})(\\d{2})[" + delim2 + "](\\d{2})$");
+                         } else if (iDelim2 == orderDay) {
+                             dateRegexp = new RegExp("^(\\d{4})[" + delim1 + "](\\d{2})(\\d{2})$");
+                         } else {
+                             dateRegexp = new RegExp("^(\\d{4})[" + delim1 + "](\\d{2})[" + delim2 + "](\\d{2})$");
+                         }
+                         var matched = dateRegexp.exec(value);
+                         if(matched != null) {
+                             if (!isValidDate(matched[3], matched[2], matched[1])) {
+                                 if (i == 0) {
+                                     focusField = form[oDate[x][0]];
+                                  }
+                                  fields[i++] = oDate[x][1];
+                                  bValid =  false;
+                              }
+                          } else {
+                              if (i == 0) {
+                                  focusField = form[oDate[x][0]];
+                              }
+                              fields[i++] = oDate[x][1];
+                              bValid =  false;
+                          }
+                     } else {
+                         if (i == 0) {
+                             focusField = form[oDate[x][0]];
+                         }
+                         fields[i++] = oDate[x][1];
+                         bValid =  false;
+                     }
+                  }
+               }
+               if (fields.length > 0) {
+                  focusField.focus();
+                  alert(fields.join('\n'));
+               }
+               return bValid;
+            }
+
+	    function isValidDate(day, month, year) {
+	        if (month < 1 || month > 12) {
+                    return false;
+                }
+                if (day < 1 || day > 31) {
+                    return false;
+                }
+                if ((month == 4 || month == 6 || month == 9 || month == 11) &&
+                    (day == 31)) {
+                    return false;
+                }
+                if (month == 2) {
+                    var leap = (year % 4 == 0 &&
+                               (year % 100 != 0 || year % 400 == 0));
+                    if (day>29 || (day == 29 && !leap)) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+function validateFloat(form) {
+                var bValid = true;
+                var focusField = null;
+                var i = 0;
+                var fields = new Array();
+                oFloat = new FloatValidations();
+                for (x in oFloat) {
+                	var field = form[oFloat[x][0]];
+                	
+                    if (field.type == 'text' ||
+                        field.type == 'textarea' ||
+                        field.type == 'select-one' ||
+                        field.type == 'radio') {
+                        
+                    	var value = '';
+						// get field's value
+						if (field.type == "select-one") {
+							var si = field.selectedIndex;
+							if (si >= 0) {
+							    value = field.options[si].value;
+							}
+						} else {
+							value = field.value;
+						}
+                        
+                        if (value.length > 0) {
+                            // remove '.' before checking digits
+                            var tempArray = value.split('.');
+                            var joinedString= tempArray.join('');
+
+                            if (!isAllDigits(joinedString)) {
+                                bValid = false;
+                                if (i == 0) {
+                                    focusField = field;
+                                }
+                                fields[i++] = oFloat[x][1];
+
+                            } else {
+	                            var iValue = parseFloat(value);
+	                            if (isNaN(iValue)) {
+	                                if (i == 0) {
+	                                    focusField = field;
+	                                }
+	                                fields[i++] = oFloat[x][1];
+	                                bValid = false;
+	                            }
+                            }
+                        }
+                    }
+                }
+                if (fields.length > 0) {
+                   focusField.focus();
+                   alert(fields.join('\n'));
+                }
+                return bValid;
+            }
+function validateCreditCard(form) {
+                var bValid = true;
+                var focusField = null;
+                var i = 0;
+                var fields = new Array();
+                oCreditCard = new creditCard();
+                for (x in oCreditCard) {
+                    if ((form[oCreditCard[x][0]].type == 'text' ||
+                         form[oCreditCard[x][0]].type == 'textarea') &&
+                        (form[oCreditCard[x][0]].value.length > 0)) {
+                        if (!luhnCheck(form[oCreditCard[x][0]].value)) {
+                            if (i == 0) {
+                                focusField = form[oCreditCard[x][0]];
+                            }
+                            fields[i++] = oCreditCard[x][1];
+                            bValid = false;
+                        }
+                    }
+                }
+                if (fields.length > 0) {
+                    focusField.focus();
+                    alert(fields.join('\n'));
+                }
+                return bValid;
+            }
+
+            /**
+             * Reference: http://www.ling.nwu.edu/~sburke/pub/luhn_lib.pl
+             */
+            function luhnCheck(cardNumber) {
+                if (isLuhnNum(cardNumber)) {
+                    var no_digit = cardNumber.length;
+                    var oddoeven = no_digit & 1;
+                    var sum = 0;
+                    for (var count = 0; count < no_digit; count++) {
+                        var digit = parseInt(cardNumber.charAt(count));
+                        if (!((count & 1) ^ oddoeven)) {
+                            digit *= 2;
+                            if (digit > 9) digit -= 9;
+                        };
+                        sum += digit;
+                    };
+                    if (sum == 0) return false;
+                    if (sum % 10 == 0) return true;
+                };
+                return false;
+            }
+
+            function isLuhnNum(argvalue) {
+                argvalue = argvalue.toString();
+                if (argvalue.length == 0) {
+                    return false;
+                }
+                for (var n = 0; n < argvalue.length; n++) {
+                    if ((argvalue.substring(n, n+1) < "0") ||
+                        (argvalue.substring(n,n+1) > "9")) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+function validateShort(form) {
+                var bValid = true;
+                var focusField = null;
+                var i = 0;
+                var fields = new Array();
+                oShort = new ShortValidations();
+                for (x in oShort) {
+                	var field = form[oShort[x][0]];
+                	
+                    if (field.type == 'text' ||
+                        field.type == 'textarea' ||
+                        field.type == 'select-one' ||
+                        field.type == 'radio') {
+                        
+                        var value = '';
+						// get field's value
+						if (field.type == "select-one") {
+							var si = field.selectedIndex;
+							if (si >= 0) {
+								value = field.options[si].value;
+							}
+						} else {
+							value = field.value;
+						}
+                        
+                        if (value.length > 0) {
+                            if (!isAllDigits(value)) {
+                                bValid = false;
+                                if (i == 0) {
+                                    focusField = field;
+                                }
+                                fields[i++] = oShort[x][1];
+
+                            } else {
+                        
+	                            var iValue = parseInt(value);
+	                            if (isNaN(iValue) || !(iValue >= -32768 && iValue <= 32767)) {
+	                                if (i == 0) {
+	                                    focusField = field;
+	                                }
+	                                fields[i++] = oShort[x][1];
+	                                bValid = false;
+	                            }
+	                       }
+                       }
+                    }
+                }
+                if (fields.length > 0) {
+                   focusField.focus();
+                   alert(fields.join('\n'));
+                }
+                return bValid;
+            }
+function validateMaxLength(form) {
+                var isValid = true;
+                var focusField = null;
+                var i = 0;
+                var fields = new Array();
+                oMaxLength = new maxlength();
+                for (x in oMaxLength) {
+                    var field = form[oMaxLength[x][0]];
+                    
+                    if (field.type == 'text' ||
+                        field.type == 'textarea') {
+                        
+                        var iMax = parseInt(oMaxLength[x][2]("maxlength"));
+                        if (field.value.length > iMax) {
+                            if (i == 0) {
+                                focusField = field;
+                            }
+                            fields[i++] = oMaxLength[x][1];
+                            isValid = false;
+                        }
+                    }
+                }
+                if (fields.length > 0) {
+                   focusField.focus();
+                   alert(fields.join('\n'));
+                }
+                return isValid;
+            }
+function validateEmail(form) {
+                var bValid = true;
+                var focusField = null;
+                var i = 0;
+                var fields = new Array();
+                oEmail = new email();
+                for (x in oEmail) {
+                    if ((form[oEmail[x][0]].type == 'text' ||
+                         form[oEmail[x][0]].type == 'textarea') &&
+                        (form[oEmail[x][0]].value.length > 0)) {
+                        if (!checkEmail(form[oEmail[x][0]].value)) {
+                            if (i == 0) {
+                                focusField = form[oEmail[x][0]];
+                            }
+                            fields[i++] = oEmail[x][1];
+                            bValid = false;
+                        }
+                    }
+                }
+                if (fields.length > 0) {
+                    focusField.focus();
+                    alert(fields.join('\n'));
+                }
+                return bValid;
+            }
+
+            /**
+             * Reference: Sandeep V. Tamhankar (stamhankar@hotmail.com),
+             * http://javascript.internet.com
+             */
+            function checkEmail(emailStr) {
+               if (emailStr.length == 0) {
+                   return true;
+               }
+               var emailPat=/^(.+)@(.+)$/;
+               var specialChars="\\(\\)<>@,;:\\\\\\\"\\.\\[\\]";
+               var validChars="\[^\\s" + specialChars + "\]";
+               var quotedUser="(\"[^\"]*\")";
+               var ipDomainPat=/^(\d{1,3})[.](\d{1,3})[.](\d{1,3})[.](\d{1,3})$/;
+               var atom=validChars + '+';
+               var word="(" + atom + "|" + quotedUser + ")";
+               var userPat=new RegExp("^" + word + "(\\." + word + ")*$");
+               var domainPat=new RegExp("^" + atom + "(\\." + atom + ")*$");
+               var matchArray=emailStr.match(emailPat);
+               if (matchArray == null) {
+                   return false;
+               }
+               var user=matchArray[1];
+               var domain=matchArray[2];
+               if (user.match(userPat) == null) {
+                   return false;
+               }
+               var IPArray = domain.match(ipDomainPat);
+               if (IPArray != null) {
+                   for (var i = 1; i <= 4; i++) {
+                      if (IPArray[i] > 255) {
+                         return false;
+                      }
+                   }
+                   return true;
+               }
+               var domainArray=domain.match(domainPat);
+               if (domainArray == null) {
+                   return false;
+               }
+               var atomPat=new RegExp(atom,"g");
+               var domArr=domain.match(atomPat);
+               var len=domArr.length;
+               if ((domArr[domArr.length-1].length < 2) ||
+                   (domArr[domArr.length-1].length > 3)) {
+                   return false;
+               }
+               if (len < 2) {
+                   return false;
+               }
+               return true;
+            }
+function validateByte(form) {
+                var bValid = true;
+                var focusField = null;
+                var i = 0;
+                var fields = new Array();
+                oByte = new ByteValidations();
+                for (x in oByte) {
+                	var field = form[oByte[x][0]];
+                	
+                    if (field.type == 'text' ||
+                        field.type == 'textarea' ||
+                        field.type == 'select-one' ||
+						field.type == 'radio') {
+
+						var value = '';
+						// get field's value
+						if (field.type == "select-one") {
+							var si = field.selectedIndex;
+							if (si >= 0) {
+								value = field.options[si].value;
+							}
+						} else {
+							value = field.value;
+						}
+                        
+                        if (value.length > 0) {
+                            if (!isAllDigits(value)) {
+                                bValid = false;
+                                if (i == 0) {
+                                    focusField = field;
+                                }
+                                fields[i++] = oByte[x][1];
+
+                            } else {
+
+	                            var iValue = parseInt(value);
+	                            if (isNaN(iValue) || !(iValue >= -128 && iValue <= 127)) {
+	                                if (i == 0) {
+	                                    focusField = field;
+	                                }
+	                                fields[i++] = oByte[x][1];
+	                                bValid = false;
+	                            }
+                            }
+						}
+						
+                    }
+                }
+                if (fields.length > 0) {
+                   focusField.focus();
+                   alert(fields.join('\n'));
+                }
+                return bValid;
+            }
+function validateRequired(form) {
+                var isValid = true;
+                var focusField = null;
+                var i = 0;
+                var fields = new Array();
+                oRequired = new required();
+                for (x in oRequired) {
+                	var field = form[oRequired[x][0]];
+                	
+                    if (field.type == 'text' ||
+                        field.type == 'textarea' ||
+                        field.type == 'file' ||
+                        field.type == 'select-one' ||
+                        field.type == 'radio' ||
+                        field.type == 'password') {
+                        
+                        var value = '';
+						// get field's value
+						if (field.type == "select-one") {
+							var si = field.selectedIndex;
+							if (si >= 0) {
+								value = field.options[si].value;
+							}
+						} else {
+							value = field.value;
+						}
+                        
+                        if (trim(value).length == 0) {
+                        
+	                        if (i == 0) {
+	                            focusField = field;
+	                        }
+	                        fields[i++] = oRequired[x][1];
+	                        isValid = false;
+                        }
+                    }
+                }
+                if (fields.length > 0) {
+                   focusField.focus();
+                   alert(fields.join('\n'));
+                }
+                return isValid;
+            }
+            
+            // Trim whitespace from left and right sides of s.
+            function trim(s) {
+                return s.replace( /^\s*/, "" ).replace( /\s*$/, "" );
+            }
+
+//End --> 
+</script>
+
+
+<script>
+	setEventListener(document.forms[0].changeRequestTitle, "change", alertOnChange);
+	setEventListener(document.forms[0].qaFlagCheck, "change", alertOnChange);
+	setEventListener(document.forms[0].requester, "change", alertOnChange);
+	setEventListener(document.forms[0].remarks, "change", alertOnChange);
+	setEventListener(document.forms[0].description, "change", alertOnChange);
+	setEventListener(document.forms[0].businessCase, "change", alertOnChange);
+	setEventListener(document.forms[0].proposedChange, "change", alertOnChange);
+	
+	setEventListener(document.forms[0].componentName,"mouseover",showPopupImage);
+	setEventListener(document.forms[0].componentName,"focus",showPopupImage);
+	setEventListener(document.forms[0].componentName, "dblclick", callComponentPopup,true);
+    setEventListener(document.forms[0].componentName, "keydown", callComponentPopup,true);
+    setEventListener(document.forms[0].componentName, "change", alertOnChange);
+    addPopupHiddenProperty('componentName', 'componentId', 'Module');
+    setEventListener(document.forms[0].componentName,"blur",validateHiddenPropertyValue);
+
+	setEventListener(document.forms[0].expectedDate,"mouseover",showPopupImage);
+	setEventListener(document.forms[0].expectedDate,"focus",showPopupImage);
+	setEventListener(document.forms[0].expectedDate, "dblclick", expectedDatePopup,true);
+    setEventListener(document.forms[0].expectedDate, "keydown", expectedDatePopup,true);
+    setEventListener(document.forms[0].expectedDate, "blur", checkDate); 
+    setEventListener(document.forms[0].expectedDate, "change", alertOnChange);
+    
+    if(document.forms[0].userType.value != "CUSTOMER")
+    {
+    setEventListener(document.forms[0].clientUserName,"mouseover",showPopupImage);
+	setEventListener(document.forms[0].clientUserName,"focus",showPopupImage);
+	setEventListener(document.forms[0].clientUserName, "dblclick", customerNamePopup,true);
+    setEventListener(document.forms[0].clientUserName, "keydown", customerNamePopup,true);
+    addPopupHiddenProperty('clientUserName', 'clientUserId', 'Client');
+    setEventListener(document.forms[0].clientUserName,"blur",validateHiddenPropertyValue);
+    setEventListener(document.forms[0].clientUserName, "change", alertOnChange);
+    }
+    setEventListener(document.forms[0].contractName,"mouseover",showPopupImage);
+	setEventListener(document.forms[0].contractName,"focus",showPopupImage);
+	setEventListener(document.forms[0].contractName, "dblclick", getContractNames,true);
+    setEventListener(document.forms[0].contractName, "keydown", getContractNames,true);
+    addPopupHiddenProperty('contractName', 'contractId', 'Contract Name');
+    setEventListener(document.forms[0].contractName,"blur",validateHiddenPropertyValue);
+    setEventListener(document.forms[0].contractName, "change", alertOnChange);
+    
+    setEventListener(document.forms[0].changeRequestTitle,"click",showDescription);
+	setEventListener(document.forms[0].changeRequestTitle,"keydown",showDescription);
+	
+	setEventListener(document.forms[0].remarks,"click",showDescription);
+	setEventListener(document.forms[0].remarks,"keydown",showDescription);   
+    
+    registerFunction('clientUserName', customerNamePopup);
+    registerFunction('componentName', callComponentPopup);
+    registerFunction('expectedDate', expectedDatePopup);
+	registerFunction('contractName', getContractNames);	 
+	
+	 setEventListener(document.forms[0].userLocation,"mouseover",showPopupImage);
+	 setEventListener(document.forms[0].userLocation,"focus",showPopupImage);
+	 setEventListener(document.forms[0].userLocation, "dblclick", projectmgmtLocationPopup,true);
+	 setEventListener(document.forms[0].userLocation, "keydown", projectmgmtLocationPopup,true);
+	 setEventListener(document.forms[0].userLocation, "change", alertOnChange);    
+	 setEventListener(document.forms[0].userLocation,"blur",validateHiddenPropertyValue);
+	 
+	 addPopupHiddenProperty('userLocation', 'userLocationId', 'Location');
+	 registerFunction('userLocation', projectmgmtLocationPopup);	 
+	
+	disableSave();   		    
+    
+</script>
+
+
+													
+												
+											</tbody></table>
+										
+									</td>
+								</tr>
+								 <script> 
+
+ var decimalDelimiter='.'
+ var digitDelimiter=','
+ var maxFractionDigits='2'
+ var minFractionDigits='2'
+ var numberFormat='lakhs'
+ var curencyMaxFractionDigits='2'
+ var currencyMinFractionDigits='2'
+ </script> 
+
+							</tbody></table>
+							</td>
+						</tr>
+					</tbody></table>
+					</td>
+				</tr>
+			</tbody></table>
+			<div id="PopupImageLayer" style="position: absolute; width: 12px; z-index: 1; height: 18px; visibility: hidden; left: 355px; top: 168px; display: none;">				
+				<img src="./eChain_files/transperant-button.gif" height="19px" width="12px" border="0" style="cursor:pointer;" class="popupIcon" id="popupTrigger">	
+			</div>
+			<div id="SelectImageLayer" style="position:absolute; width:10px; height:20px; visibility:hidden; overflow:none; display:none">
+					<input type="image" name="" src="./eChain_files/SelectArow.gif">
+			</div> 
+		
+	
+
+
+<div id="auditInformation" class="whocolumDiv">
+	<iframe marginheight="0" marginwidth="0" style="width:0px;height:0px;visibility:hidden;" name="whoColumnIframe" border="0" scrolling="no" id="whoColumnIframe" src="./eChain_files/saved_resource(4).html">
+	</iframe>
+</div>
+
+<div id="bubble_tooltip">
+<div class="bubble_top">
+	<span></span>
+</div>
+<div class="bubble_middle">
+	<span id="bubble_tooltip_content">
+		EMPTY 
+	</span>
+</div>
+<div class="bubble_bottom">
+</div>
+
+</div>
+
+<div id="echainQuickLinkRel" class="echainQuickLinkWindow" style="top: 0px; left: 0px;">
+
+
+
+
+
+	
+	
+	
+	
+		<table width="100%" cellpadding="0" cellspacing="0" border="0" align="center">
+			<tbody><tr>
+				<td class="ListQuickLinkFont" align="center">
+					Not Available
+				</td>
+			</tr>
+		</tbody></table>
+	
+
+</div>
+
+<div id="echainEntityLinkRel" class="echainQuickLinkWindow">
+	EntityLink</div>
+
+<div id="echainFormLinkRel" class="echainQuickLinkWindow">
+	EchainFormLink</div>
+	
+<div id="echainAttachmentLinkRel" class="echainQuickLinkWindow">
+ AttachmentLink</div>
+
+
+
+<div id="announcementContainerDiv" style="position:absolute;overflow:hidden;width:1000px;height:30px;top:60px;z-index:0;" onmouseover="mseOver()" onmouseout="mseOut()">
+	<div id="memoryscroller" style="position: absolute; left: 272px; height: 0px; top: 0px; z-index: 0;"><nobr><span style="font: Verdana"></span></nobr></div>
+</div>
+
+
+
+<script>
+	
+	var memorycontent;
+	
+	function generateMemoryContentForAnnouncement()
+	{
+		var hiddenAnnouncementMessage = createInput(document, 'announcementMessage', 'hidden');
+	    setAttribute(hiddenAnnouncementMessage, "value",'');
+	    addElementTo(document.forms[0], hiddenAnnouncementMessage);
+		
+		var scrollerContent = document.forms[0].announcementMessage.value;
+		
+		
+		
+		memorycontent = '<nobr><span style="font: Verdana">' + scrollerContent + '</span></nobr>';
+	}
+	
+	generateMemoryContentForAnnouncement();
+	
+</script>
+
+<script type="text/javascript" src="./eChain_files/announcement.js.download"> </script><span id="temp" style="visibility:hidden;position:absolute;top:-100px;left:-10000px"><nobr><span style="font: Verdana"></span></nobr></span>
+
+<script>
+    var height, width;
+	var dummySubmit;
+	var refreshFlag;
+	var refreshFlag_Submit;
+	var refreshFlag_Refresh;
+	var refreshFlag_Refresh_IE
+	var refreshProcessxhr;
+       
+	   function callBlockSubmit(){
+	   
+	       var actionValue = document.forms[0].action;
+	       var actionIndex = actionValue.indexOf("SubmitWithoutBlockingAction.echn");
+	       if(actionIndex == -1){
+		      	document.getElementById('BlockLayer').style.visibility = 'visible';
+	    		document.getElementById('BlockLayer').style.left = 0;
+				document.getElementById('BlockLayer').style.top = 0;
+				document.getElementById('BlockLayer').style.width = document.body.clientWidth;
+				document.getElementById('BlockLayer').style.height = document.body.clientHeight; 
+				if(document.getElementById('tblProcessImage')){
+					document.getElementById('tblProcessImage').style.visibility = 'visible';
+				}
+			
+			}
+			document.forms[0].submit=dummySubmit;
+			callAjaxForm("/echain/core/RefreshDetectorResetForm.echn", 1);
+	   }
+
+	   function AjaxSubmitProcess()
+		{		
+	    	if(refreshProcessxhr.readyState == 4)
+	        {
+				refreshFlag_Submit = "SUBMIT";
+	    		document.forms[0].submit();
+			}
+	   }   
+
+	   function callAjaxForm(formName,actionDecider){
+	   	
+	  	 
+	  	 if (window.XMLHttpRequest){
+        	refreshProcessxhr = new XMLHttpRequest();
+	     }else if (window.ActiveXObject){
+        	refreshProcessxhr = new ActiveXObject("Microsoft.XMLHTTP");
+         }
+         	if(actionDecider == 1){
+			 	refreshProcessxhr.onreadystatechange = AjaxSubmitProcess;
+         	}
+			refreshProcessxhr.open("POST",formName);
+			refreshProcessxhr.send(null);
+	   }
+	   
+    if(document.forms[0])
+    {
+
+	    var hidDateFormat = createInput(document, 'dateFormat', 'hidden');
+	    setAttribute(hidDateFormat, "value","dd-MMM-yyyy");
+	    addElementTo(document.forms[0], hidDateFormat);
+	    
+	    var hiddenCurrentFormBean = createInput(document, 'currentFormBean', 'hidden');
+	    setAttribute(hiddenCurrentFormBean, "value",'com.echain.projmgmt.web.form.ChangeRequestForm');
+	    addElementTo(document.forms[0], hiddenCurrentFormBean);
+
+		
+		    var hidCurrentDate = createInput(document, 'currentDate', 'hidden')
+		    setAttribute(hidCurrentDate, "value","25-APR-2022");
+		    addElementTo(document.forms[0], hidCurrentDate);
+
+		    var hidUserSourceName = createInput(document, 'userSourceName', 'hidden')
+		    setAttribute(hidUserSourceName, "value","SUJATHA  S");
+		    addElementTo(document.forms[0], hidUserSourceName);
+
+		    var hidUserSourceId = createInput(document, 'userSourceId', 'hidden')
+		    setAttribute(hidUserSourceId,  "value","12897");
+		    addElementTo(document.forms[0], hidUserSourceId);
+	    
+	    
+	    
+		    var hidDefaultHRUnitId = createInput(document, 'defaultHRUnitId', 'hidden')
+		    setAttribute(hidDefaultHRUnitId,  "value","0");
+		    addElementTo(document.forms[0], hidDefaultHRUnitId);
+		    
+		    var hidDefaultHRUnitName = createInput(document, 'defaultHRUnitName', 'hidden')
+		    setAttribute(hidDefaultHRUnitName,  "value","");
+		    addElementTo(document.forms[0], hidDefaultHRUnitName);
+	    	    
+
+	    var hidFillSelect = createInput(document, 'autoFillInput', 'hidden');
+	    setAttribute(hidFillSelect, "value", "");
+	    addElementTo(document.forms[0], hidFillSelect);
+	}
+	
+	if (window.addEventListener)
+		window.addEventListener("load", createhintbox, false)
+	else if (window.attachEvent)
+		window.attachEvent("onload", createhintbox)
+	else if (document.getElementById)
+		window.onload=createhintbox		
+		
+		if (window.addEventListener)
+		window.addEventListener("resize", alignPageHeadingCenter, false)
+	else if (window.attachEvent)
+		window.attachEvent("onresize", alignPageHeadingCenter)
+	else if (document.getElementById)
+		window.onload=alignPageHeadingCenter	
+	
+    if (document.all)
+    {
+        height = document.body.offsetHeight, width = document.body.offsetWidth;
+    }
+    else if (document.layers || navigator.appName=="Netscape")
+    {
+        height = window.innerHeight, width = window.innerWidth;
+    }
+
+    document.getElementById("MainTbl").style.height=height-170;
+    
+    if(document.getElementById("pageHead"))
+    {
+    	 document.getElementById("pageHead").style.width=width-25;
+    }   
+    document.getElementById("pageContent").style.width=width-25;
+    setEventListener(document.getElementById("popupTrigger"), "click", callPopup);
+
+		window.onload = function() {
+			dummySubmit=document.forms[0].submit;
+			document.forms[0].submit= function() {
+				return callBlockSubmit();
+			};
+		};
+
+		document.getElementById('bodyLayer').onscroll = function() {
+			hidePopupImage();
+		};
+
+	function detectRefresh(evt){
+		
+		refreshFlag_Refresh = "REFRESH";
+		if(refreshFlag_Refresh_IE !="REFRESH"){
+			if(refreshFlag_Refresh == "REFRESH" && refreshFlag_Submit != "SUBMIT" &&  refreshFlag != "MENU"){
+				refreshFlag_Refresh_IE = "REFRESH"
+				callAjaxForm("/echain/core/RefreshDetectorForm.echn?submitFlag=REFRESH", 0);
+		    }
+	    }
+	}
+
+		
+    // Added for Audit Trancastion
+	
+    var hidMouseX = createInput(document, 'MouseX', 'hidden');
+    var hidMouseY = createInput(document, 'MouseY', 'hidden');
+    
+    addElementTo(document.forms[0], hidMouseX);
+	addElementTo(document.forms[0], hidMouseY);
+ 	
+  var IE = document.all?true:false;
+	var tempX = 0;
+	var tempY = 0;
+	
+function initalizeMoveOverMethod()
+{
+	if (!IE) 
+		document.captureEvents(Event.MOUSEMOVE)
+
+	document.onmousemove = getMouseXY;
+}
+
+function getMouseXY(e) 
+{
+	if (IE) 
+	  { // grab the x-y pos.s if browser is IE
+	   tempX = event.clientX + document.body.scrollLeft;
+ 	   tempY = event.clientY + document.body.scrollTop;
+	  }
+	else 
+	  {  // grab the x-y pos.s if browser is NS
+	   tempX = e.pageX;
+	   tempY = e.pageY;
+	  }  
+	
+	if (tempX < 0){tempX = 0;}
+	
+	if (tempY < 0){tempY = 0;}  
+
+	document.forms[0].MouseX.value = tempX;
+	document.forms[0].MouseY.value = tempY;
+
+return true;
+
+}	
+
+
+initalizeMoveOverMethod();
+
+		window.onresize = function() {
+			placeFloatingLayer();
+		};
+
+
+setEventListener(document.forms[0], "keydown", callauditTranasction);
+
+/*
+* Used to set the Default values of a FORM like HR Unit
+*/
+	try{
+		executeDefaultFunction();
+	}catch(e){
+	}
+/* 
+* Used to describe that this is not the ecain configurator template
+*/
+econfigTemplateActive = 'FALSE';  
+
+
+	/*
+	 * Script for Modal Message window to show the graphs
+	*/
+
+	messageObj = new DHTML_modalMessage();	// We only create one object of this class
+	messageObj.setShadowOffset(5);	// Large shadow
+
+	function displayMessage(url)
+	{
+		messageObj.setSource(url);
+		messageObj.setCssClassMessageBox(false);
+		messageObj.setSize(500,300);
+		messageObj.setShadowDivVisible(true);	// Enable shadow for these boxes
+		messageObj.display();
+	}
+
+	function closeMessage()
+	{
+		messageObj.close();
+	}
+
+	function loadGraph(url)
+	{
+		closeMessage();
+		messageObj.setSource(url);
+		messageObj.setCssClassMessageBox(false);
+		messageObj.setSize(1300,550);
+		messageObj.setShadowDivVisible(true);	// Enable shadow for these boxes
+		messageObj.display();
+		//ajax_loadContent('DHTMLSuite_modalBox_contentDiv',url);
+	}
+
+	function showGraphFor(formName,params)
+	{
+		var newUrl = '/echain/GraphListDisplay.echn?SEARCHVALUE=' + formName;
+		paramsLen = params.length;
+		if(paramsLen%2 == 1)
+		{
+			alert('Wrong number of arguments');
+			return false;
+		}
+		var temp = "";
+		var paramList = "";
+		for(var i=0;i<paramsLen;i++)
+		{
+			temp = params[i];
+		    if(i != 0)
+            	temp = '^' + temp ;
+
+            paramList = paramList + temp;
+		}
+		newUrl = newUrl + '&PARAMLIST=' + paramList;
+		displayMessage(newUrl);
+		return false;
+	}
+	
+	function showQuestionnaire(functionName,qType,sourceTypeId, formType)
+	{	
+		var newUrl = '/echain/core/QuestionnaireListView.echn?functionName=' + functionName + '&&questionnaireType=' + qType + '&&sourceTypeId=' + sourceTypeId+'&formType='+formType;
+		displayMessage(newUrl);
+		return false;
+	}
+	
+	function showEchainForms(functionId, sourceValueId)
+	{	
+		var newUrl = '/echain/echnform/EchainFormListView.echn?functionId=' + functionId + '&&sourceValueId=' + sourceValueId;
+		displayMessage(newUrl);
+		return false;
+	}
+	
+	if(document.getElementById('echainQuickLinkId')) {
+
+		dropdowncontent.init("echainQuickLinkId", "left-bottom", 400, "onclick");
+	
+	}
+	
+	function callAttachmentAjaxList() {
+	
+		if(document.getElementById('echainAttachmentLinkId')) {
+		
+		dropdowncontent.initEntityDropDown("echainAttachmentLinkId", "left-bottom", 400, "onclick", "/echain/core/EchainAttachmentLinkAjaxAction.echn?currentFormBean="+document.forms[0].currentFormBean.value)
+		
+	}
+	
+	}
+	
+	function callEntityLinkAjaxList(){
+	
+		if(document.getElementById('echainEntityLinkId')) {
+			dropdowncontent.initEntityDropDown("echainEntityLinkId", "left-bottom", 400, "onclick", "/echain/core/EchainEntityLinkAjaxAction.echn?currentFormBean="+document.forms[0].currentFormBean.value)
+	
+	    }
+	
+	}
+	
+	function callEchainFormLinkAjaxList()
+	{
+		if (document.getElementById('echainFormLinkId')) 
+		{
+			dropdowncontent.initEntityDropDown("echainFormLinkId", "left-bottom", 400, "onclick", "/echain/echnform/EchainFormLinkAjaxAction.echn?currentFormBean="+document.forms[0].currentFormBean.value)
+	    }
+	}
+	
+	function callQuestionnaire(formType, properyName) {
+		
+		var page_request = false;
+		
+		if (formType == 'HEADER') {
+			propertyValue = eval("document.forms[0]."+properyName+".value");
+		} else {
+			var linesCount = eval("document.forms[0]."+properyName+".length");
+			
+			if (isNaN(linesCount))
+			{
+				propertyValue = eval("document.forms[0]."+properyName+".value");
+			}
+			else
+			{
+				var rowIndex = getCurrentRowIndex();	
+				
+				propertyValue = eval("document.forms[0]."+properyName+"["+rowIndex+"].value");
+			}
+		}
+		
+		if (propertyValue == "" || propertyValue == 0 || propertyValue == '0') {
+			alert('Select a value in this page');
+			return false;
+		}
+	
+		if (window.XMLHttpRequest) {
+			page_request = new XMLHttpRequest()
+
+		} else if (window.ActiveXObject) {
+			try {
+				page_request = new ActiveXObject("Msxml2.XMLHTTP")
+			} catch (e) {
+				try {
+					page_request = new ActiveXObject("Microsoft.XMLHTTP")
+				} catch (e) {}
+			}
+		} else {
+			return false
+		}
+		
+		page_request.onreadystatechange = function() {
+			
+			if(page_request.readyState==4) {
+
+				var result = page_request.responseText;
+				var resultData = result.split('^');
+
+				if (resultData[6] == 'LIST') {
+					// this is to get the list of Questionnaires
+					showQuestionnaire(resultData[2],"FORM",propertyValue,formType);				
+				} else if(resultData[6] == 'SINGLE') {
+					// This is to navigate directly to the Questionnaire Interaction Page
+					mywindow=open("/echain/core/QuestionnaireView.echn?questionnaireId="+resultData[7]+"&&sourceFunctionId="+resultData[8]+"&&sourceTypeId="+propertyValue+' ','questionnaire','width=900,height=600,screenX=document.body.offsetWidth,screenY=document.body.offsetHeight,top=50,left=50,scrollbars=yes');
+				} else if(resultData[6] == 'SORRY') {
+					alert('Sorry, No records found');
+					return false;
+				}
+			}
+		};
+		page_request.open('POST', "/echain/core/EchainEntityLinkListAjaxAction.echn?currentFormBean="+document.forms[0].currentFormBean.value+"&formTypeValue="+formType , true)
+		page_request.send(null);
+	}
+	
+	function callEchainForms(formType, properyName, functionId) {
+		
+		var page_request = false;
+		
+		if (formType == 'HEADER') {
+			propertyValue = eval("document.forms[0]."+properyName+".value");
+		} else {
+			var linesCount = eval("document.forms[0]."+properyName+".length");
+			
+			if (isNaN(linesCount))
+			{
+				propertyValue = eval("document.forms[0]."+properyName+".value");
+			}
+			else
+			{
+				var rowIndex = getCurrentRowIndex();	
+				
+				propertyValue = eval("document.forms[0]."+properyName+"["+rowIndex+"].value");
+			}
+		}
+		
+		if (propertyValue == "" || propertyValue == 0 || propertyValue == '0') {
+			alert('Select a value in this page');
+			return false;
+		}
+	
+		if (window.XMLHttpRequest) {
+			page_request = new XMLHttpRequest()
+
+		} else if (window.ActiveXObject) {
+			try {
+				page_request = new ActiveXObject("Msxml2.XMLHTTP")
+			} catch (e) {
+				try {
+					page_request = new ActiveXObject("Microsoft.XMLHTTP")
+				} catch (e) {}
+			}
+		} else {
+			return false
+		}
+		
+		page_request.onreadystatechange = function() {
+			
+			if(page_request.readyState==4) {
+
+				var result = page_request.responseText;
+				
+				var resultData = result.split('^');
+
+				if (resultData[0] == 'LIST') {
+					// this is to get the list of Questionnaires
+					showEchainForms(functionId, propertyValue);				
+				} else if(resultData[0] == 'SINGLE') {
+					// This is to navigate directly to the Echain Forms Page
+					mywindow=open("/echain/echnform/FormBuilderViewForm.echn?formId="+resultData[1]+"&&functionId="+functionId+"&&sourceValueId="+propertyValue+' ','echainforms','width=900,height=600,screenX=document.body.offsetWidth,screenY=document.body.offsetHeight,top=50,left=50,scrollbars=yes');
+				} else if(resultData[0] == 'SORRY') {
+					alert('Sorry, No records found');
+					return false;
+				}
+			}
+		};
+		page_request.open('POST', "/echain/echnform/EchainFormLinkListAjaxAction.echn?questionnaireFunctionId="+functionId, true)
+		page_request.send(null);
+	}
+	
+	
+	function callAttachments(formType,id, properyName) {
+		var rowIndex = getCurrentRowIndex();	
+		var page_request = false;
+		
+		if (formType == 'HEADER') {
+			propertyValue = eval("document.forms[0]."+properyName+".value");
+			//this check is for taking nested:nest with different styleids for same property
+			if(propertyValue == undefined) {
+				propertyValue = eval("document.getElementById('"+properyName+"').value");
+			}
+		} else {
+			propertyValue = eval("document.forms[0]."+properyName+"["+rowIndex+"].value");
+			//this check is for taking nested:nest with different styleids for same property
+			if(propertyValue == undefined) {
+				propertyValue = eval("document.getElementById('"+properyName+"["+rowIndex+"]').value");
+			}
+		}
+		
+		if (propertyValue == "" || propertyValue == 0 || propertyValue == '0') {
+			alert('Select a value in this page');
+			return false;
+		}   
+		    document.getElementById("AttachmentInnerFrame").src='';
+	        document.getElementById("AttachmentInnerFrame").src='/echain/core/CommonAttachmentForm.echn?sourceName='+formType+'&sourceId='+propertyValue+'&questionnaireFunctionId='+id;
+		    document.getElementById("AttachmentInnerFrame").width=350;
+			document.getElementById("AttachmentInnerFrame").height=250;
+			document.getElementById("AttachmentInnerFrame").align='center';
+    	    showPopupLayer('AttachmentLayer', 250, 350);
+	}
+	
+	
+	function callViewAttachmentFiles(formType,id, properyName){
+		var rowIndex = getCurrentRowIndex();	
+		var page_request = false;
+		
+		if (formType == 'HEADER') {
+			propertyValue = eval("document.forms[0]."+properyName+".value");
+			//this check is for taking nested:nest with different styleids for same property
+			if(propertyValue == undefined) {
+				propertyValue = eval("document.getElementById('"+properyName+"').value");
+			}
+		} else {
+			propertyValue = eval("document.forms[0]."+properyName+"["+rowIndex+"].value");
+			//this check is for taking nested:nest with different styleids for same property
+			if(propertyValue == undefined) {
+				propertyValue = eval("document.getElementById('"+properyName+"["+rowIndex+"]').value");
+			}
+		}
+		
+		if (propertyValue == "" || propertyValue == 0 || propertyValue == '0') {
+			alert('Select a value in this page');
+			return false;
+		}
+		    document.getElementById("AttachmentInnerFrame").src='';
+	        document.getElementById("AttachmentInnerFrame").src='/echain/core/CommonAttachmentFetchAction.echn?sourceName='+formType+'&sourceId='+propertyValue+'&questionnaireFunctionId='+id;
+		    document.getElementById("AttachmentInnerFrame").width=350;
+			document.getElementById("AttachmentInnerFrame").height=250;
+			document.getElementById("AttachmentInnerFrame").align='center';
+    	    showPopupLayer('AttachmentLayer', 250, 350);
+	}
+	function navigateHelpPage () {
+		
+		if (document.forms[0].currentFormBean.value == 'null' || document.forms[0].currentFormBean.value == '') {
+			alert('Not Available');
+			return false;
+		} else {
+			mywindow = open("/echain/core/HelpForm.echn?currentFormBean="+document.forms[0].currentFormBean.value,
+		 				'doc1','menubar=1,width='+(screen.width-10)+',height='+(screen.height-80)+',scrollbars=yes');
+		}
+	}
+	
+	function alignPageHeadingCenter()
+	{
+		if (document.getElementById('pageHeadingDiv'))
+		{
+			var headingWidth = document.getElementById('pageHeadingDiv').offsetWidth;
+			var pageWidth = document.getElementById('bodyTable').offsetWidth;
+			
+			var leftDifference = headingWidth / 2;
+			document.getElementById('pageHeadingDiv').style.left = (pageWidth / 2) - leftDifference;			
+		}
+	}
+	var endFunctionRef;
+	
+	function isNumber(n) {
+ 	 return !isNaN(parseFloat(n)) && isFinite(n);
+	}
+	
+	function showLOVPopup(popupName, fields, params, functionRef, e, height, width, acceptableEvent) {
+		for(var i=0;i<params.length;i++) {
+			/* if(params[i] != null && !isNumber(params[i]) && params[i].indexOf("%") != -1) {
+				params[i] = escape(params[i]);
+			} */
+			if(typeof params[i]== "string" && params[i].indexOf("%") != -1){
+				params[i] = escape(params[i]);
+			}
+		}
+		var eventObj = getEvent(e);
+		targetField = getTarget(eventObj);
+		triggerObj = getPopupTriggerer(eventObj);
+
+		if (height < 420) {
+			height = 420;
+		}
+		if(getEventType(e)=='dblclick' || isF8Key(e) || (triggerObj != null && triggerObj.id=='popupTrigger') || acceptableEvent || getEventType(e) == 'blur') {
+			enablePopupField();			
+			endFunctionRef = functionRef; 
+			var ht = height;
+	   		var wd = width;
+	   		var left = (screen.width/2)-(wd/2);
+	   		var top = (screen.height/2)-(ht/2);
+	   		popupWin = window.open('/echain/PopupAction.echn?popupName='+popupName+'&fields='+fields+'&params='+params+'&height='+height+'&width='+width, "ECHAIN",
+					"height="+ht +", menubar=no, location=0, resize=true, status=no, titlebar=no, toolbar=0, navigation=0, width="+wd+", top="+top+", left="+left);
+	   		
+	   		if (window.focus) {
+	   			popupWin.resizeTo(width,height);
+	   			popupWin.focus();
+	   		}
+	   	}
+	}
+	
+	function execEndFunction() {
+		if(eval(endFunctionRef))
+			endFunctionRef();
+	}
+	
+	function navigateeReportDownloadPage() {
+		window.open('/echain/core/EchainReportDownloaderForm.echn',"_blank", "menubar=no, location=0, resizable=false, status=no, titlebar=no, toolbar=0, navigation=0,width=800,height=250");		
+	}
+	
+    function ajaxSuccessReportNavigation(ip,curr) {
+    	var loggedUserName = 'SUJA3005';
+    	
+    	var mapForm = document.createElement("form");
+		mapForm.method = "POST";
+		mapForm.target ="_blank";
+		mapForm.action = ip;
+		
+		var tempUserName = document.createElement("input");
+		tempUserName.type = "hidden";
+		tempUserName.name = "userName";
+		tempUserName.value = loggedUserName;
+	    
+	    var tempCurr = document.createElement("input");
+	    tempCurr.type = "hidden";
+	    tempCurr.name = "curr";
+	    tempCurr.value = curr;
+	    
+	    var tempLang = document.createElement("input");
+	    tempLang.type = "hidden";
+	    tempLang.name = "language";
+	    tempLang.value = "ch";
+	    
+	    mapForm.appendChild(tempUserName);
+	    mapForm.appendChild(tempCurr);
+	    mapForm.appendChild(tempLang);
+	    
+	    document.body.appendChild(mapForm);
+	    mapForm.submit();
+    }
+	
+	function callReportCenter() {
+		$.ajax({
+			type:'POST',
+			url:'/echain/core/EchainReportCenterAction.echn',
+			dataType: "text",
+			contentType: "application/text",
+			async: true,
+			success:function(data) {
+	   			var myData = new Array();
+	       		myData = data.split("||");
+	       	
+	       		if (myData.length > 1) {
+	       		 	var ip = myData[0];
+		         	var curr = myData[1];
+		         	ajaxSuccessReportNavigation(ip,curr);
+	       		}
+  			}
+      }); 
+  }	
+	
+	
+		alignPageHeadingCenter();	
+	
+	placeFloatingLayer();
+//This code should be an end of the script , dont add any code after this
+	window.onbeforeunload = detectRefresh();
+			
+
+</script> <!-- End Body block -->
+
+
+
+
+<!-- Begin Footer Bar -->
+<table border="0" cellpadding="0" cellspacing="1px" width="100%" align="center" class="footerBG">
+   <tbody><tr height="30px">
+		<td width="50%" class="bottomStrip">
+      		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+      			<tbody><tr>
+      		      	
+	            		<td class="FooterFont" style="padding-left:10px;">	            			
+	            			You are logged in as <b>SUJATHA  S 
+	            			</b>
+	            		</td>
+	            	      				
+      				<td align="right" width="31px" height="30px" class="bottomStripCorner">
+      					&nbsp;
+      				</td>
+      			</tr>
+      		</tbody></table>
+		</td>
+      
+	    
+
+		<td align="right">
+			<table id="tblProcessImage" style="visibility:hidden">
+				<tbody><tr>
+					<td class="ProcessImage" height="26px" width="26px"></td>
+				</tr>
+			</tbody></table>
+		</td>    
+   </tr>
+   
+</tbody></table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#E0E2DF">
+	<tbody><tr>
+		<td align="center" class="FooterFont" style="font-size:9px;border-bottom: #868885 solid 1px;border-right: #868885 solid 1px;border-left: #868885 solid 1px;">
+			<font color="#5A5C59">Terms of Service and Privacy Statement
+	       		© 2003 Chainsys Corporation 
+	       	</font>
+		</td>
+	</tr>
+</tbody></table>
+
+<!-- End Footer Bar -->
+
+<script>  
+    var popupEnabled = "false";
+    
+ if (document.all)
+    {
+        height = document.body.offsetHeight - 132
+    }
+    else if (document.layers || navigator.appName=="Netscape")
+    {
+        height = window.innerHeight - 155
+    }
+	if(document.getElementById("bodyLayer"))
+	{
+		document.getElementById("bodyLayer").style.height=height;
+	}
+	
+	function enablePopupField() {
+		popupEnabled = "true";	
+	}
+    
+	function disablePopupField() {		
+		popupEnabled = "false";		
+	}
+    placeFloatingLayer();
+</script>
+
+<div id="hintbox"></div></body></html>

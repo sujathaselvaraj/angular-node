@@ -1,0 +1,6 @@
+h1 {
+    background-image: linear-gradient(rgb(143, 4, 143), pink);
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+}

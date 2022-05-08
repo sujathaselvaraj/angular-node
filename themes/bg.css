@@ -1,29 +1,40 @@
-body{
-    background-image: url("../images/sharp.jpg");
+body {
+    /* background-image: url("../images/sharp.jpg"); */
+    background-image: url('../../angular-node/images/blue.gif');
+    background-repeat: repeat;
+
     background-size: cover;
     font-size: 35px;
     color: white;
 }
-h1{
-    margin-left: 600px;
+
+h1 {
+    margin-left: 500px;
     color: rgb(240, 36, 114);
     font-size: 42px;
 }
-.image{
-    width: 700px;
-    height: 60vh;
+
+.image {
+    background-image: url('../../angular-node/images/media.io_GI8cP5dM.gif');
+    background-repeat: repeat;
+
+    width: 450px;
+    height: 55vh;
     justify-content: center;
-    margin-left: 300px;
+    margin-left: 400px;
     margin-top: 10vh;
+    border-radius: 25%;
 }
-.option{
+
+.option {
     float: right;
     display: flex;
     flex-direction: row;
     width: 400px;
     height: 5vh;
-    align-content:space-between;
+    align-content: space-between;
 }
-a:hover{
+
+a:hover {
     color: palevioletred;
 }

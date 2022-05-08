@@ -3,7 +3,7 @@ import { BooksdaoService } from '../booksdao.service'
 
 
 @Component({
-  selector: 'app-book-catlog',
+  selector: 'app-bobooksdaook-catlog',
   templateUrl: './book-catlog.component.html',
   styleUrls: ['./book-catlog.component.css']
 })

@@ -1,0 +1,93 @@
+.SummaryRowBodyHeader
+{
+	BACKGROUND-IMAGE: url(/echain/images/menu_strip_blue.gif);
+	BACKGROUND-COLOR:#35BAFF;
+	BACKGROUND-REPEAT:repeat-x;
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 11px;
+	VERTICAL-ALIGN: middle;
+	COLOR: #0056AB;
+	FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+	TEXT-ALIGN: left;
+}
+
+.calendarMainBody
+{
+	BACKGROUND: #DEF3FE;
+}
+
+.CalendarBodyFont
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    FONT-FAMILY: arial, heveltica, sans-serif;
+    COLOR: #325A70;
+}
+
+.AllSideBorderColor1PX
+{
+    BORDER-BOTTOM: #4967a1 1PX SOLID;
+    BORDER-TOP: #4967a1 1PX SOLID;
+    BORDER-LEFT: #4967a1 1PX SOLID;
+    BORDER-RIGHT: #4967a1 1PX SOLID;
+}
+
+.CalendarMonthFont
+{
+	COLOR: #325A70;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    FONT-FAMILY: arial, heveltica, sans-serif;
+    BORDER-TOP: #0A79B2 SOLID 1PX;   
+}
+
+.SelectedActiveFont
+{
+	BACKGROUND:#ADD8E6;
+	COLOR:blue;
+    FONT-SIZE: 11px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    BORDER-BOTTOM: 1px SOLID #949494;
+    BORDER-LEFT: 1px SOLID #949494;
+}
+
+.ActiveFont
+{
+	BACKGROUND:#FFFFFF;
+	COLOR:blue;
+    FONT-SIZE: 11px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    BORDER-BOTTOM: 1px SOLID #51B0E1;
+    BORDER-LEFT: 1px SOLID #51B0E1;
+}
+
+.InactiveFont
+{
+	COLOR:grey;
+    FONT-SIZE: 11px;
+    FONT-FAMILY: Arial, Helvetica, Verdana sans-serif;
+    BORDER-BOTTOM: 1px SOLID #51B0E1;
+    BORDER-LEFT: 1px SOLID #51B0E1;
+}
+
+.PopupResultOverFont
+{
+    FONT-SIZE: 11px;
+    FONT-FAMILY: arial, heveltica, sans-serif;
+    BORDER-BOTTOM: 1px SOLID #949494;
+    BORDER-LEFT: 1px SOLID #949494;
+    PADDING-LEFT: 3px;       
+    background-color:#DEF3FE;
+    cursor:pointer;    
+    
+}
+
+.PopupResultFont
+{
+    FONT-SIZE: 10px;
+    FONT-FAMILY: arial, heveltica, sans-serif;
+    BORDER-BOTTOM: 1px SOLID #949494;
+    BORDER-LEFT: 1px SOLID #949494;
+    PADDING-LEFT: 3px;
+    
+}

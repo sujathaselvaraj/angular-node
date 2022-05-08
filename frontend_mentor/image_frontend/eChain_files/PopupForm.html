@@ -1,0 +1,582 @@
+
+<!-- saved from url=(0047)http://192.168.0.102:2020/echain/PopupForm.echn -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<title>
+		
+		
+			
+		
+	</title>
+	<link rel="stylesheet" type="text/css" href="./echain_en_blue.css">
+	<script language="JavaScript" src="./echainCore.js.download"></script> 
+	<script language="JavaScript" src="./echainPopup.js.download">
+	</script>
+	<script>
+	    document.onkeydown=checkKey;
+	    document.onmousemove=placePopupHeader;
+
+	    var previousRow;
+	    var firstRow;
+	    var lastRow;
+
+	    String.prototype.startsWith = function(str){return (this.match("^"+str)==str)}
+	    
+	    function placePopupHeader(e)
+	    {
+		    ylib_setX(document.getElementById('popupHeadDiv'), 
+		    	-1 * document.getElementById('popupBodyDiv').scrollLeft);
+
+		    ylib_setW(document.getElementById('popupHeadDiv'), 
+		    	document.getElementById('popupBodyDiv').style.width);
+	    }
+
+		function setPopupFrame()
+		{
+			mainBodyObj = document.getElementById('attribs');
+			mainTblObj = document.getElementById('PopupTable');
+			resultDivObj = document.getElementById('popupBodyDiv');
+			resultTblObj = document.getElementById('ResultTable');
+			
+	    	resultHeadTbl = document.getElementById('ResultHeadTable');
+	    	
+	    	ylib_setW(resultHeadTbl, ylib_getW(resultTblObj));
+		    ylib_setX(document.getElementById('popupHeadDiv'), 0);
+	    	
+	    	if(resultTblObj.getElementsByTagName('TR')[0])
+	    	{
+	    		if(resultTblObj.getElementsByTagName('TR')[0].getElementsByTagName('TD'))
+	    		{
+	    			resultCols = resultTblObj.getElementsByTagName('TR')[0].getElementsByTagName('TD');
+	    			headCols = resultHeadTbl.getElementsByTagName('TR')[0].getElementsByTagName('TD');
+	    			noOfCols = resultHeadTbl.getElementsByTagName('TR')[0].getElementsByTagName('TD').length;
+		    		for(var i=0; i < noOfCols; i++)
+		    		{
+		    			if(resultCols[i]){
+					    	ylib_setW(headCols[i], ylib_getW(resultCols[i]));
+					    }
+				    }
+				}
+	    	}
+		}
+		
+	    function changeColor(objRow)
+	    {
+	    	if(previousRow)
+	    	{
+	    		previousRow.className="PopupResultFont";
+	    	}
+	    	
+	        objRow.className="PopupResultOverFont"; 
+	        objRow.style.cursor = 'hand';
+	        
+	        previousRow = objRow;
+	        
+	        if(objRow.getElementsByTagName('TD')[0])
+	        {
+	        	if(objRow.getElementsByTagName('TD')[0].getElementsByTagName('A')[0])
+	        	{
+	        		/*if(getParentElement(parent.document.getElementById('PopupInnerFrame'), 'DIV').style.visibility=='visible')
+	        		{*/
+		        		objRow.getElementsByTagName('TD')[0].getElementsByTagName('A')[0].focus();
+		        	//}
+	        	}
+	        }
+	    }
+	    
+	    function getColumnPosition(objCol)
+	    {
+	    	var position = -1;
+	    	var prevCol;
+
+			if(objCol)
+			{
+				do
+	    		{
+	    			position++;
+					prevCol=getPreviousSibling(objCol, "td");
+	    			objCol = prevCol;
+	    		}
+    			while(prevCol)
+    		}
+    		return position;
+	    }
+	
+	    function checkKey(e)
+	    {
+	        var resultTable = getTableBodyObject(document, 'ResultTable')
+	
+	        if(previousRow)
+	        {
+	          	if(isDownArrowKey(e) || isTabKeyWithoutShift(e))
+	          	{
+	          		if(previousRow == lastRow)
+	          		{
+	          			changeColor(firstRow);
+	          			getFirstChild(firstRow, 'A').focus();
+	          		}
+	          		else
+	          		{
+	          			changeColor(getNextSibling(previousRow,'TR'));
+	          			getFirstChild(previousRow, 'A').focus();
+	          		}
+	          	}
+	          	else if(isUpArrowKey(e) || isTabKeyWithShift(e))
+	          	{
+	          		if(previousRow == firstRow)
+	          		{
+	          			changeColor(lastRow);
+	          			getFirstChild(lastRow, 'A').focus();
+	          		}
+	          		else
+	          		{
+	          			changeColor(getPreviousSibling(previousRow, 'TR'));
+	          			getFirstChild(previousRow, 'A').focus();
+	          		}
+	          	}
+	          	else if(isHomeKey(e))
+	          	{
+	          		changeColor(firstRow);
+          			getFirstChild(firstRow, 'A').focus();
+	          	}
+	          	else if(isEndKey(e))
+	          	{
+	          		changeColor(lastRow);
+          			getFirstChild(lastRow, 'A').focus();
+	        	}
+	          	else if(isEnterKey(e))
+	          	{
+	          		setValues();
+	        	}
+	        }
+	        if(isEscKey(e))
+	        {
+	        	hidePopup();	        	
+	        	closePopup();        	
+	        }
+	        
+	       // negateReturnValue(e);
+	    }
+	    
+	    function removeAll(fieldName)
+	    {
+	    	if(!document.getElementById('attribs')){
+	    		return;
+	    	}
+	    	
+	    	var removeFields = document.getElementById('attribs').getElementsByTagName("input");
+	    	
+	    	for(var x=0; x<removeFields.length; x++)
+	    	{
+	    		if(removeFields[x].type=="hidden" && removeFields[x].name==fieldName)
+	    		{
+	    			deleteElement(document.getElementById('attribs'), removeFields[x]);
+	    			removeFields = document.getElementById('attribs').getElementsByTagName("input");
+	    			x--;
+	    		}
+	    	}
+	    }
+
+		function createHidden(fieldName, values)
+		{
+			if(values)
+			{
+				for(var i=0; i<values.length; i++)
+				{
+					var hidFields = createInput(document, fieldName, "hidden");
+					setAttribute(hidFields, "value", values[i]);
+					addElementTo(document.getElementById('attribs'), hidFields);
+				}
+			}
+		}
+		
+		function createParameters(params)
+		{
+			createHidden("params", params);
+		}
+		
+		function removeParameters()
+		{
+			removeAll("params");
+		}
+		
+		function createFields(fieldNames)
+		{
+			createHidden("fields", fieldNames);
+		}
+		
+		function removeFields()
+		{
+			removeAll("fields");
+		}
+		
+		function setPopuName(objectName)
+		{
+			document.forms[0].popupName.value=objectName;
+		}
+		
+		function setValues()
+		{
+			with(document.forms[0])
+			{	
+				var resultValue;
+				if(eval('document.forms[0].result'))
+				{
+					if(isNaN(result.length))
+					{
+						resultValue = result.value;
+					}
+					else
+					{
+						var totalCols = previousRow.getElementsByTagName("td").length;
+						var lastCol = previousRow.getElementsByTagName("td")[totalCols-1];
+						resultValue = lastCol.getElementsByTagName("input")[0].value;
+					}
+
+					if(eval('document.forms[0].fields'))
+					{
+						if(isNaN(fields.length))
+						{
+							eval("opener.document.forms[0]."+fields.value+".value='"+resultValue+"'");
+						}
+						else
+						{
+							var splitResult = resultValue.split('$$');
+							
+							for(var loop=0; loop<fields.length; loop++)
+							{   
+								var fieldName = fields[loop].value;
+								var arrayName = '';
+								if(fieldName.indexOf('[')!= -1){
+									arrayName = fields[loop].value.substring(0,fieldName.indexOf('['));
+								
+								}
+								
+								if(arrayName != '')
+								{
+									if(eval('opener.document.forms[0].longtext'+arrayName)){
+									
+									    var checkLength =eval("opener.document.forms[0].longtext"+arrayName+".length");
+									    
+									    if(isNaN(checkLength)){
+									               if(fieldName.indexOf('[0]')!= -1){
+									               	 eval("opener.document.forms[0].longtext"+arrayName+".value='"+splitResult[loop]+"'");
+									               }	 
+		                                      }else{
+										
+											if(eval('opener.document.forms[0].longtext'+fieldName)){		
+												eval("opener.document.forms[0].longtext"+fields[loop].value+".value='"+splitResult[loop]+"'");
+											}
+										
+										}
+									}	
+								}else{
+										if(eval('opener.document.forms[0].longtext'+fieldName)){									
+											eval("opener.document.forms[0].longtext"+fields[loop].value+".value='"+splitResult[loop]+"'");
+										}								
+							
+								}
+																
+								eval("opener.document.forms[0]."+fields[loop].value+".value='"+splitResult[loop]+"'");
+							}
+						}
+					}
+				}
+			}
+			
+       		opener.execEndFunction();
+			hidePopup();			
+			closePopup();
+		}
+		
+		function submitPage(url)
+		{
+			document.forms[0].action = url;
+			document.forms[0].submit();
+		}
+
+		function filterData(e) {
+			var obj = getTarget(getEvent(e));
+			var lblIdx = obj.id;
+			var tabObj = document.getElementById('ResultTable');
+			var tabRows = tabObj.rows;
+			var rowLen = tabRows.length;
+			var recordFoundCnt = 0;
+			var recordFound = false;
+			var regExp = null;
+			
+			for (i = 0; i < rowLen; i++) {
+				var match = false;
+				
+				if (i > 0 && tabRows[i].cells.length == 1 && tabRows[i].cells[0].value != "") {
+					tabObj.deleteRow(i);
+					
+				} else {
+					searchVal = obj.value;
+					colVal = Trim(tabRows[i].cells[lblIdx].firstChild.nodeValue);
+					
+					if (searchVal != "") {
+						
+						if (searchVal.indexOf("%") >= 0) {
+							replacePattern = "[a-zA-Z0-9\\s]";
+							searchVal = searchVal.replace(/%/g, replacePattern); 
+							regExp = new RegExp(searchVal, "i");
+							match = regExp.test(colVal);
+							
+							if (!match) {
+								tabRows[i].style.display = 'none';
+							} 
+							
+						} else if (!Trim(tabRows[i].cells[lblIdx].innerHTML).toUpperCase().startsWith(obj.value.toUpperCase())) {
+							tabRows[i].style.display = 'none';
+						}
+					}
+					if (searchVal == "" || match || Trim(colVal).toUpperCase().startsWith(searchVal.toUpperCase())) {
+						tabRows[i].style.display = '';
+						// Highlighting the first row in the filtered records
+						if (recordFoundCnt == 0) {
+							changeColor(tabRows[i]);
+						}
+						recordFound = true;
+						recordFoundCnt++;
+					}
+				}
+			}
+			document.getElementById(lblIdx).focus();
+			document.forms[0].rowCount.value = recordFoundCnt;
+			
+			if (!recordFound) {
+				rowLen = tabRows.length;
+				tabObj.insertRow();
+				tabRows[rowLen].innerHTML = "<td class='PopupResultFont'  valign='center' align='center' colspan="+document.forms[0].colCount.value
+										+">&nbsp;<font color='red'>RESULT NOT AVAILABLE FOR THE LIST</font>"
+										+"<a href='#' id='noresult' style='text-decoration:none'></a></td>";	
+			} 
+		}
+
+		function columnDisplay() {
+			var selIdx = document.getElementById('colSelect').value;
+			var tabObj = document.getElementById('ResultHeadTable');
+			displayColumn(tabObj, selIdx);
+			tabObj = document.getElementById('ResultTable');
+			displayColumn(tabObj, selIdx)
+		}
+		
+		function displayColumn(tabObj, selIdx) {
+			var tabRows = tabObj.rows;
+			var rowLen = tabRows.length;
+			for(i=0;i<rowLen;i++) {
+				var cols = tabRows[i].cells;
+				for(j=0;j<document.forms[0].colCount.value;j++) {
+					if(selIdx == -1) {
+						cols[j].style.display='';
+						var o = 'col'+j;
+						cols[j].width = document.getElementById(o).value;		
+					} else {
+						if(selIdx == j) {
+							cols[j].style.display = '';
+							cols[j].width = '100%';
+							
+						} else {
+							cols[j].style.display = 'none';
+						}
+					}
+				}
+			}
+		}
+
+		function reQuery() {
+            document.forms[0].params.value = '';
+            var popupName = document.forms[0].popupName.value;
+            var concatenatedFields = '';
+            if (isNaN(document.forms[0].fields.length)) {
+                concatenatedFields = document.forms[0].fields.value;
+            } else {
+                for(var loop=0; loop<document.forms[0].fields.length; loop++) {  
+                    var fieldName = document.forms[0].fields[loop].value;
+                    if (loop == 0) {
+                        concatenatedFields = fieldName;
+                    } else {
+                        concatenatedFields = concatenatedFields + ',' + fieldName;
+                    }
+                }
+            }
+            var concatenatedParams = '';
+            if (isNaN(document.forms[0].params.length)) {
+                concatenatedParams = document.forms[0].params.value;
+				//This block is used to fetch all the data irrespective of parent form value or popup form value
+				if (concatenatedParams.indexOf("%") >= 0) {
+					concatenatedParams = "%";
+				}
+				
+            } else {
+                for(var loop=0; loop<document.forms[0].params.length; loop++) {  
+                    var paramValue = document.forms[0].params[loop].value;
+					//This block is used to fetch all the data irrespective of parent form value or popup form value
+					if (paramValue.indexOf("%") >= 0) {
+						paramValue = "%";
+					}
+                    if (concatenatedParams == '') {
+                        concatenatedParams = paramValue;
+                    } else {
+                        concatenatedParams = concatenatedParams + ',' + paramValue;
+                    }
+                }
+            }
+            document.forms[0].action = '/echain/PopupAction.echn?flag=refresh&params='+escape(concatenatedParams)+'&fields='+concatenatedFields;
+            document.forms[0].submit();
+        }
+
+		function clearPopup()
+		{
+			parent.document.getElementById("popupHead").innerHTML = "";
+			
+			document.getElementById("resultHeadColumn").innerHTML = "<div id='popupHeadDiv' "+
+				"class='PopupMainBody' style='position:relative; width:330px; height:20px; "+
+				"z-index:1000; left: 0px; margin-top: 0px;overflow:none'><table id='ResultHeadTable' "+
+				"align='center' width='100%' cellspacing='0px' cellpadding='0px' class='PopupHeadStyle' "+
+				"height='20px'><thead><tr class='SummaryRowHeader' height='20px' id='popupScrollHead'> "+
+				"<td class='SummaryRowBodyHeader'>&nbsp;</td></tr></thead></table></div>";
+				
+			document.getElementById("resultColumn").innerHTML = "<div id='popupBodyDiv' "+
+				"class='PopupMainBody' style='position:relative; width:330px; height:170px; "+
+				"z-index:1000; left: 0px; margin-top: 0px;overflow:auto'><table id='ResultTable' "+
+				"align='center' width='100%' cellspacing='0px' cellpadding='0px' class='PopupTableStyle' "+
+				"height='230px'><tbody><tr id='Row0' height='20px' onclick='setValues()' "+
+				"onmouseover='changeColor(this)' class='PopupResultFont'><td class='PopupResultFont' "+
+				"nowrap='true'><a href='#' style='text-decoration:none'>&nbsp;</a></td></tr></tbody></table></div>";
+		}
+		
+		function setPopupEnableValue() {
+			window.opener.disablePopupField();
+		}
+	</script>
+</head>
+<body class="PopupMainBody" alink="#000000" vlink="#000000" link="#000000">
+<form name="popupForm" method="post" action="http://192.168.0.102:2020/echain/PopupAction.echn">
+	
+	<table id="PopupTable" width="100%" cellspacing="1px" border="0" cellpadding="1px" class="PopupTableStyle">
+		<tbody><tr>
+			<td colspan="2" class="ListLabelFont"><b>Search</b></td>
+		</tr>
+					
+		<tr>
+			<td colspan="3">
+				<table border="0" cellspacing="1" cellpadding="1" width="100%">
+					<tbody><tr>
+						<td class="ListLabelFont" width="30%"><b>Display Column</b></td>
+						<td>
+							<select id="colSelect" onchange="columnDisplay()" class="ListLabelFont">
+								<option value="-1">All Columns</option>
+								
+							</select>
+						</td>
+						<td>
+							<table id="buttonRow" cellpadding="0" cellspacing="10px">
+<tbody><tr>
+<td><table id="idView" cellpadding="0" cellspacing="0" onmouseover="buttonOver(&#39;idView&#39;)" onmouseout="buttonOut(&#39;idView&#39;)" style="height:10px" onclick="reQuery()"><tbody><tr><td class="btnleft">&nbsp;</td><td class="btnmid" width="80px"><font class="btn">
+									<b>Refresh All</b>
+								</font></td><td class="btnright">&nbsp;</td></tr></tbody></table></td>
+</tr>
+</tbody></table>
+
+						</td>
+					</tr>
+				</tbody></table>
+			</td>
+		</tr>
+	</tbody></table>
+	<table border="0" width="100%" cellspacing="0px" cellpadding="0px">
+		<tbody><tr height="20px" class="popupHeader" style="background-color:transparent;color:black;">
+			<td width="20%" class="popupHeader" style="background-color:transparent;color:black;">&nbsp;No of Records : </td>
+			<td width="60%" class="popupHeader" style="background-color:transparent;color:black;">
+				<input type="text" name="rowCount" class="popupHeader" style="border: none;background-color:transparent;color:black;" title="Record Count" readonly="">
+			</td>
+		</tr>
+	</tbody></table>
+	<div id="attribs" align="center" style="position:absolute; width:100%; height:100%; z-index:1000; left: 0px; overflow:none;">
+		<table id="PopupTable" width="100%" cellspacing="0px" cellpadding="0px" class="PopupTableStyle" height="220px">
+			<tbody><tr>
+				<td colspan="2" width="100%" id="resultHeadColumn" class="popupHeader">
+					<div id="popupHeadDiv" class="PopupMainBody" style="position: relative; width: 100%; height: 20px; z-index: 1000; left: 0px; margin-top: 0px;">
+					<table id="ResultHeadTable" align="center" width="100%" cellspacing="0px" border="0" cellpadding="0px" height="20px" style="width: 400px;">
+						<thead>
+							<tr height="20px" id="popupScrollHead">
+								
+								
+								
+							</tr>
+						</thead>
+					</table>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" width="100%" id="resultColumn">
+					<div id="popupBodyDiv" class="PopupMainBody" style="position:relative; width:100%; height:200px; 
+						z-index:1000; left: 0px; margin-top: 0px;overflow:auto">
+					<table id="ResultTable" width="100%" cellspacing="0px" style="table-layout: fixed" cellpadding="0px" class="PopupTableStyle">
+						<tbody>
+							
+							<tr valign="center">
+								<td class="PopupResultFont" valign="center" align="center" colspan="0">&nbsp;
+								
+									<font color="red">RESULT NOT AVAILABLE FOR THE LIST</font>
+									<a href="http://192.168.0.102:2020/echain/PopupForm.echn#" id="noresult" style="text-decoration:none"></a>
+								
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					</div>
+				</td>
+				</tr>
+		</tbody></table>
+		
+
+		
+
+		<input type="hidden" name="popupName" value="">
+		<input type="hidden" name="colCount" value="0">
+	</div>
+</form>
+<script>
+var totalRows = getTableBodyObject(document, 'ResultTable').getElementsByTagName("TR").length;
+if(totalRows>=2)
+{
+	firstRow = getTableBodyObject(document, 'ResultTable').getElementsByTagName("TR")[0];
+	lastRow = getTableBodyObject(document, 'ResultTable').getElementsByTagName("TR")[totalRows-2];
+	changeColor(firstRow);
+	
+	if(totalRows==2)
+	{
+		setValues();
+	}
+}
+else
+{
+	if(document.getElementById("noresult") && document.forms[0].fields)
+	{
+		document.getElementById("noresult").focus();
+	}
+}
+document.forms[0].rowCount.value = totalRows - 1;
+
+
+//document.getElementById('popupHeadDiv').style.width = document.forms[0].width.value+"px";
+document.getElementById('popupHeadDiv').style.height = "20px";
+
+//document.getElementById('popupBodyDiv').style.width = document.forms[0].width.value+"px";
+//document.getElementById('popupBodyDiv').style.height = document.forms[0].height.value+"px";
+setPopupFrame();
+placePopupHeader();
+
+	
+	window.onunload = function () {		
+		window.opener.validatingHiddenProperty();
+	}
+
+</script>
+
+
+
+</body></html>

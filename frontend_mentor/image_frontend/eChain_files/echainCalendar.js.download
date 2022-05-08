@@ -1,0 +1,162 @@
+//*******************************************************************
+//**  Revision Log:
+//**	
+
+//**	 28-APR-2009 	 411.101   		DSK   Initial Code
+
+//********************************************************************/
+
+
+
+var IE4 = (document.all && !document.getElementById) ? true : false;
+var NS4 = (document.layers) ? true : false;
+var IE5 = (document.all && document.getElementById) ? true : false;
+var NS6 =  (document.getElementById && !document.all) ? true : false;
+var OP=navigator.userAgent.toLowerCase().indexOf('opera')!=-1?1:0;
+
+function getParentElement(focusObj, tagType)
+		{
+			var lParent = focusObj;
+				
+			if(!lParent){
+				return lParent;
+			}
+			
+			while(lParent.tagName.toUpperCase()!=tagType.toUpperCase())
+			{
+				if(IE4 || IE5)
+				{
+					lParent = lParent.parentElement;
+				}
+				else
+				{
+					lParent = lParent.parentNode;
+				}
+				
+				if(!lParent || lParent==document){
+					lParent = null;
+					break;
+				}
+			}
+			
+			return lParent;
+		}
+		
+		function isRightArrowKey(e)
+		{
+		    if(IE4 || IE5)
+		    {
+		    	return (event.keyCode==39);
+		    }
+		    else
+		    {
+		    	return (e.keyCode==39);
+		    }
+		}	
+		
+		function isLeftArrowKey(e)
+		{
+		    if(IE4 || IE5)
+		    {
+		    	return (event.keyCode==37);
+		    }
+		    else
+		    {
+		    	return (e.keyCode==37);
+		    }
+		}	
+		
+		function isUpArrowKey(e)
+		{
+		    if(IE4 || IE5)
+		    {
+		    	return (event.keyCode==38);
+		    }
+		    else
+		    {
+		    	return (e.keyCode==38);
+		    }
+		}
+		
+		function isDownArrowKey(e)
+		{
+		    if(IE4 || IE5)
+		    {
+		    	return (event.keyCode==40);
+		    }
+		    else
+		    {
+		    	return (e.keyCode==40);
+		    }
+		}
+		
+		function isHomeKey(e)
+		{
+		    if(IE4 || IE5)
+		    {
+		    	return (event.keyCode==36);
+		    }
+		    else
+		    {
+		    	return (e.keyCode==36);
+		    }
+		}
+		
+		function isEndKey(e)
+		{
+		    if(IE4 || IE5)
+		    {
+		    	return (event.keyCode==35);
+		    }
+		    else
+		    {
+		    	return (e.keyCode==35);
+		    }
+		}
+		
+		function isEnterKey(e)
+		{
+		    if(IE4 || IE5)
+		    {
+		    	return (event.keyCode==13);
+		    }
+		    else
+		    {
+		    	return (e.keyCode==13);
+		    }
+		}
+		
+		function isEscKey(e)
+		{
+		    if(IE4 || IE5)
+		    {
+		    	return (event.keyCode==27);
+		    }
+		    else
+		    {
+		    	return (e.keyCode==27);
+		    }
+		}
+		
+		function getFirstChild(parentTag, tagname)
+		{
+			var firstTag;
+			if(parentTag)
+			{
+				firstTag = parentTag.getElementsByTagName(tagname)[0];
+			}
+			
+			return firstTag;
+		}
+		
+		function getLastChild(parentTag, tagname)
+		{
+			var lastTag;
+			if(parentTag)
+			{
+				var count = parentTag.getElementsByTagName(tagname).length;
+				lastTag = parentTag.getElementsByTagName(tagname)[count-1];
+			}
+			
+			return lastTag;
+		}
