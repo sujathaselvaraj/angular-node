@@ -15,7 +15,7 @@ h1 {
 }
 
 .image {
-    background-image: url('../../angular-node/images/media.io_GI8cP5dM.gif');
+    background-image: url('../images/media.io_GI8cP5dM.gif');
     background-repeat: repeat;
 
     width: 450px;
