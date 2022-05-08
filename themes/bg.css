@@ -1,6 +1,6 @@
 body {
     /* background-image: url("../images/sharp.jpg"); */
-    background-image: url('../../angular-node/images/blue.gif');
+    background-image: url('../images/blue.gif');
     background-repeat: repeat;
 
     background-size: cover;
